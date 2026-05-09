@@ -68,7 +68,7 @@ export default function Home() {
                 >
                   HF0
                 </a>{" "}
-                in San Francisco, CA
+                in San Francisco
               </li>
             </ul>
           </div>
@@ -117,7 +117,7 @@ export default function Home() {
                 Internationals
               </li>
               <li>
-                built an{" "}
+                built{" "}
                 <a
                   href="https://www.decademy.app/"
                   target="_blank"
@@ -126,7 +126,7 @@ export default function Home() {
                 >
                   edtech startup
                 </a>{" "}
-                with 30k+ users across 79 countries
+                with 30k+ users in 79 countries
               </li>
               <li>
                 wrote economics policy{" "}
