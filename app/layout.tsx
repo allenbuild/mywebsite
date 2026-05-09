@@ -32,6 +32,15 @@ const libreBaskerville = Libre_Baskerville({
 export const metadata: Metadata = {
   title: "Allen Xu",
   description: "Personal website for Allen Xu.",
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
