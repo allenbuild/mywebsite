@@ -50,6 +50,17 @@ export default function Home() {
               <li>graduating</li>
               <li>workin&apos; on the weekend (like usual) @ Jewel Osco</li>
               <li>
+                backing generational companies from day zero @{" "}
+                <a
+                  href="https://www.multimodal.ventures/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
+                >
+                  Multimodal Ventures
+                </a>
+              </li>
+              <li>
                 creating ego-exo datasets and the internet for physical AI @{" "}
                 <a
                   href="http://build.ai/"
