@@ -173,7 +173,7 @@ export default function Home() {
                 took a photo every day with graduating high school seniors
                 (750k+ views)
               </li>
-              <li>memorized 100 digits of π to win free pie in 5th grade</li>
+              <li>memorized 100 digits of π to win free apple pie in fifth grade</li>
               <li>
                 fell in love with photography, pickup basketball, and my
                 goldendoodle Winnie
