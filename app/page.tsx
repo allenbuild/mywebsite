@@ -171,9 +171,9 @@ export default function Home() {
             <ul className="mt-2 list-disc space-y-1 pl-6">
               <li>
                 took a photo every day with graduating high school seniors
-                (750K+ views)
+                (750k+ views)
               </li>
-              <li>memorized 100 digits of π</li>
+              <li>memorized 100 digits of π to win free pie in 5th grade</li>
               <li>
                 fell in love with photography, pickup basketball, and my
                 goldendoodle Winnie
