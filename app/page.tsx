@@ -44,7 +44,7 @@ export default function Home() {
             </div>
 
             <p className="mt-5 text-base font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
-              Currently:
+              currently:
             </p>
             <ul className="mt-2 list-disc space-y-1 pl-6">
               <li>graduating</li>
@@ -86,7 +86,7 @@ export default function Home() {
 
           <div className="pt-1">
             <p className="text-base font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
-              Previously:
+              previously:
             </p>
             <ul className="mt-2 list-disc space-y-1 pl-6">
               <li>
@@ -160,6 +160,23 @@ export default function Home() {
                   IJSSER
                 </a>
                 ,  Naperville City Financial Board, &amp; more
+              </li>
+            </ul>
+          </div>
+
+          <div className="pt-1">
+            <p className="text-base font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+              more:
+            </p>
+            <ul className="mt-2 list-disc space-y-1 pl-6">
+              <li>
+                took a photo every day with graduating high school seniors
+                (750K+ views)
+              </li>
+              <li>memorized 100 digits of π</li>
+              <li>
+                love photography/cinematography, pickup basketball, and my
+                goldendoodle Winnie
               </li>
             </ul>
           </div>
