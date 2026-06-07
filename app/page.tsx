@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 export default function Home() {
   return (
     <CursorGlowLayout>
-      <main className="w-full rounded-2xl bg-[color:var(--surface)] px-7 py-9 shadow-[var(--card-shadow)] sm:px-10 sm:py-11">
+      <main className="w-full rounded-2xl bg-[color:var(--surface)] px-7 py-7 shadow-[var(--card-shadow)] sm:px-10 sm:py-9">
         <header className="flex items-center justify-between gap-6">
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
             Allen Xu
@@ -21,9 +21,9 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="mt-6 h-px w-full bg-[color:var(--rule)]" />
+        <div className="mt-5 h-px w-full bg-[color:var(--rule)]" />
 
-        <section className="mt-8 space-y-4 text-[15px] leading-7 text-[color:var(--muted)]">
+        <section className="mt-6 space-y-3 text-[15px] leading-6 text-[color:var(--muted)]">
           <p className="text-[color:var(--foreground)]">
             <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an
             incoming freshman at the Wharton
@@ -44,7 +44,7 @@ export default function Home() {
               </a>
             </div>
 
-            <p className="mt-5 text-base font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="mt-4 text-base font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               currently:
             </p>
             <ul className="mt-2 list-disc space-y-1 pl-6">
@@ -189,7 +189,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="max-w-xs pt-2">
+          <div className="max-w-56 pt-1">
             <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
               <iframe
                 src="https://www.youtube.com/embed/XeHiBRtfn0o"
@@ -202,7 +202,7 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="mt-12 border-t border-[color:var(--rule)] pt-5 text-sm text-[color:var(--muted-2)]">
+        <footer className="mt-8 border-t border-[color:var(--rule)] pt-4 text-sm text-[color:var(--muted-2)]">
           allenxu@wharton.upenn.edu | allen@multimodal.ventures | allen@build.ai
         </footer>
       </main>
