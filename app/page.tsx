@@ -48,7 +48,6 @@ export default function Home() {
             </p>
             <ul className="mt-2 list-disc space-y-1 pl-6">
               <li>graduating</li>
-              <li>workin&apos; on the weekend (like usual) @ Jewel Osco</li>
               <li>
                 backing generational companies from day zero @{" "}
                 <a
@@ -166,7 +165,7 @@ export default function Home() {
 
           <div className="pt-1">
             <p className="text-base font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
-              here &apos;n there:
+              here & there:
             </p>
             <ul className="mt-2 list-disc space-y-1 pl-6">
               <li>
@@ -189,6 +188,18 @@ export default function Home() {
             </ul>
           </div>
         </section>
+
+        <div className="mt-12 max-w-xs">
+          <div className="aspect-video overflow-hidden rounded-sm border border-[color:var(--rule)]">
+            <iframe
+              src="https://www.youtube.com/embed/XeHiBRtfn0o"
+              title="YouTube video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="h-full w-full"
+            />
+          </div>
+        </div>
 
         <footer className="mt-16 border-t border-[color:var(--rule)] pt-6 text-sm text-[color:var(--muted-2)]">
           allenxu@wharton.upenn.edu | allen@multimodal.ventures | allen@build.ai
