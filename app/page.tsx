@@ -189,15 +189,28 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="max-w-56 pt-1">
-            <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
-              <iframe
-                src="https://www.youtube.com/embed/XeHiBRtfn0o"
-                title="YouTube video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="h-full w-full"
-              />
+          <div className="flex flex-wrap gap-4 pt-1">
+            <div className="w-[46%] min-w-[200px]">
+              <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
+                <iframe
+                  src="https://www.youtube.com/embed/XeHiBRtfn0o"
+                  title="Crossing the English Channel"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="h-full w-full"
+                />
+              </div>
+            </div>
+            <div className="w-[46%] min-w-[200px]">
+              <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
+                <iframe
+                  src="https://player.vimeo.com/video/1136644145"
+                  title="Naperville innovators turn inspiration into invention"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  className="h-full w-full"
+                />
+              </div>
             </div>
           </div>
         </section>
