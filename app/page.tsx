@@ -189,7 +189,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="flex flex-wrap gap-4 pt-1">
+          <div className="flex flex-wrap gap-4 pt-6">
             <div className="w-[46%] min-w-[200px]">
               <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
                 <iframe
