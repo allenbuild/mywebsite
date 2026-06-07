@@ -45,7 +45,7 @@ export default function ThemeToggle() {
         isDark ? "bg-[#36A9FF]" : "bg-[#CFCFCF]",
         "transition-colors",
         "focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] focus-visible:ring-offset-2",
-        "focus-visible:ring-offset-[color:var(--background)]",
+        "focus-visible:ring-offset-[color:var(--surface)]",
       ].join(" ")}
     >
       <span

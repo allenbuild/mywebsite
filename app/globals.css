@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFFFFF;
+  --canvas: #F0F0F0;
+  --surface: #FFFFFF;
+  --background: var(--surface);
   --foreground: #333333;
   --muted: rgba(51, 51, 51, 0.68);
   --muted-2: rgba(51, 51, 51, 0.56);
   --rule: rgba(51, 51, 51, 0.14);
   --link: #36A9FF;
   --link-hover: #36A9FF;
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+  --cursor-glow: rgba(0, 0, 0, 0.2);
 }
 
 @theme inline {
@@ -18,17 +22,21 @@
 }
 
 :root[data-theme="dark"] {
-  --background: #121212;
+  --canvas: #0A0A0A;
+  --surface: #161616;
+  --background: var(--surface);
   --foreground: #E0E0E0;
   --muted: rgba(224, 224, 224, 0.72);
   --muted-2: rgba(224, 224, 224, 0.6);
   --rule: rgba(224, 224, 224, 0.18);
   --link: #36A9FF;
   --link-hover: #36A9FF;
+  --card-shadow: 0 4px 32px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.25);
+  --cursor-glow: rgba(255, 255, 255, 0.3);
 }
 
 body {
-  background: var(--background);
+  background: var(--canvas);
   color: var(--foreground);
   font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",

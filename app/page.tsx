@@ -1,10 +1,11 @@
 import AgeCounter from "./AgeCounter";
+import CursorGlowLayout from "./CursorGlowLayout";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Home() {
   return (
-    <div className="flex min-h-dvh flex-col items-center px-6 py-12 sm:px-10 sm:py-16">
-      <main className="w-full max-w-3xl">
+    <CursorGlowLayout>
+      <main className="w-full rounded-2xl bg-[color:var(--surface)] px-7 py-9 shadow-[var(--card-shadow)] sm:px-10 sm:py-11">
         <header className="flex items-center justify-between gap-6">
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
             Allen Xu
@@ -201,10 +202,10 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="mt-16 border-t border-[color:var(--rule)] pt-6 text-sm text-[color:var(--muted-2)]">
+        <footer className="mt-12 border-t border-[color:var(--rule)] pt-5 text-sm text-[color:var(--muted-2)]">
           allenxu@wharton.upenn.edu | allen@multimodal.ventures | allen@build.ai
         </footer>
       </main>
-    </div>
+    </CursorGlowLayout>
   );
 }
