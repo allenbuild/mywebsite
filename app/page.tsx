@@ -166,7 +166,7 @@ export default function Home() {
 
           <div className="pt-1">
             <p className="text-base font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
-              more:
+              here &apos;n there:
             </p>
             <ul className="mt-2 list-disc space-y-1 pl-6">
               <li>
@@ -175,7 +175,7 @@ export default function Home() {
               </li>
               <li>memorized 100 digits of π</li>
               <li>
-                love photography/cinematography, pickup basketball, and my
+                fell in love with photography, pickup basketball, and my
                 goldendoodle Winnie
               </li>
             </ul>
@@ -183,7 +183,7 @@ export default function Home() {
         </section>
 
         <footer className="mt-16 border-t border-[color:var(--rule)] pt-6 text-sm text-[color:var(--muted-2)]">
-          allenjxu07@gmail.com | allen@build.ai
+          allenxu@wharton.upenn.edu | allen@multimodal.ventures | allen@build.ai
         </footer>
       </main>
     </div>
