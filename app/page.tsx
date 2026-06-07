@@ -28,7 +28,7 @@ export default function Home() {
             <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an
             incoming freshman at the Wharton
             School at the University of Pennsylvania. Currently interested in embodied AI, assistive
-            wearables, economics, and broadly, social
+            wearables, economics, and social
             entrepreneurship.
           </p>
 
