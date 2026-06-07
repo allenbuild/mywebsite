@@ -170,10 +170,18 @@ export default function Home() {
             </p>
             <ul className="mt-2 list-disc space-y-1 pl-6">
               <li>
-                took a photo every day with graduating high school seniors
-                (750k+ views)
+                took{" "}
+                <a
+                  href="https://www.instagram.com/xuperstrong/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
+                >
+                  daily photos
+                </a>{" "}
+                with graduating high school seniors (750k+ views)
               </li>
-              <li>memorized 100 digits of π to win free apple pie in fifth grade</li>
+              <li>memorized 100 digits of π to win some free apple pie in fifth grade</li>
               <li>
                 fell in love with photography, pickup basketball, and my
                 goldendoodle Winnie
