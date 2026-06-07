@@ -27,8 +27,8 @@ export default function Home() {
           <p className="text-[color:var(--foreground)]">
             <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an
             incoming freshman at the Wharton
-            School at the University of Pennsylvania. Currently interested in embodied AI, spatial computing, assistive
-            wearables, economics, and social
+            School at the University of Pennsylvania. Currently interested in embodied AI, assistive
+            wearables, economics, and broadly, social
             entrepreneurship.
           </p>
 
