@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 export default function Home() {
   return (
     <CursorGlowLayout>
-      <main className="w-full rounded-2xl bg-[color:var(--surface)] px-7 py-7 shadow-[var(--card-shadow)] sm:px-10 sm:py-9">
+      <main className="w-full rounded-2xl bg-[color:var(--surface)] px-6 py-7 shadow-[var(--card-shadow)] sm:px-8 sm:py-9">
         <header className="flex items-center justify-between gap-6">
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
             Allen Xu
