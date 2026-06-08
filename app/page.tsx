@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 export default function Home() {
   return (
     <CursorGlowLayout>
-      <main className="w-full rounded-2xl bg-[color:var(--surface)] px-5 py-7 shadow-[var(--card-shadow)] sm:px-8 sm:py-9">
+      <main className="@container w-full rounded-2xl bg-[color:var(--surface)] px-5 py-7 shadow-[var(--card-shadow)] sm:px-8 sm:py-9">
         <header className="flex items-center justify-between gap-6">
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
             Allen Xu
@@ -189,34 +189,34 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="flex flex-col gap-4 pt-6 sm:flex-row sm:flex-wrap sm:justify-between sm:gap-y-4">
-            <div className="w-full sm:w-[49%]">
-              <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
-                <iframe
-                  src="https://www.youtube.com/embed/XeHiBRtfn0o"
-                  title="Crossing the English Channel"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="h-full w-full"
-                />
-              </div>
+          <div className="grid grid-cols-1 gap-4 pt-6 @2xl:grid-cols-2 @2xl:gap-5">
+            <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
+              <iframe
+                src="https://www.youtube.com/embed/XeHiBRtfn0o"
+                title="Crossing the English Channel"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="h-full w-full"
+              />
             </div>
-            <div className="w-full sm:w-[49%]">
-              <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
-                <iframe
-                  src="https://player.vimeo.com/video/1136644145"
-                  title="Naperville innovators turn inspiration into invention"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                  className="h-full w-full"
-                />
-              </div>
+            <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
+              <iframe
+                src="https://player.vimeo.com/video/1136644145"
+                title="Naperville innovators turn inspiration into invention"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full"
+              />
             </div>
           </div>
         </section>
 
-        <footer className="mt-8 border-t border-[color:var(--rule)] pt-4 text-sm text-[color:var(--muted-2)]">
-          allenxu@wharton.upenn.edu | allen@multimodal.ventures | allen@build.ai
+        <footer className="mt-8 border-t border-[color:var(--rule)] pt-4 text-sm text-pretty text-[color:var(--muted-2)]">
+          <span className="block @2xl:inline">allenxu@wharton.upenn.edu</span>
+          <span className="mx-1 hidden @2xl:inline">|</span>
+          <span className="block @2xl:inline">allen@multimodal.ventures</span>
+          <span className="mx-1 hidden @2xl:inline">|</span>
+          <span className="block @2xl:inline">allen@build.ai</span>
         </footer>
       </main>
     </CursorGlowLayout>
