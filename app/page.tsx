@@ -30,8 +30,8 @@ export default function Home() {
               freshman at the Wharton School at the University of Pennsylvania.
             </span>{" "}
             <span className="@2xl:block">
-              Currently interested in embodied AI, assistive wearables, economics, and social
-              entrepreneurship.
+              Currently interested in embodied AI, spatial computing, assistive wearables,
+              economics, and more broadly, social entrepreneurship.
             </span>
           </p>
 
