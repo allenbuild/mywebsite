@@ -183,7 +183,7 @@ export default function Home() {
                 </a>{" "}
                 with graduating high school seniors (750k+{"\u00A0"}views)
               </li>
-              <li>memorized 100 digits of π to win some free apple pie in fifth grade</li>
+              <li>memorized 100 digits of π to win free pie in fifth grade</li>
               <li>
                 fell in love with photography, pickup basketball, and my
                 goldendoodle Winnie
