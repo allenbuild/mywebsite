@@ -52,7 +52,7 @@ export default function CursorGlowLayout({
   const showGlow = active && !overCard;
 
   return (
-    <div className="relative flex min-h-dvh flex-col items-center px-4 py-7 sm:px-6 sm:py-9">
+    <div className="relative flex min-h-dvh flex-col items-center px-4 py-8 sm:px-6 sm:py-9">
       <div
         aria-hidden
         className="pointer-events-none fixed inset-0 z-0 overflow-hidden transition-opacity duration-500"
@@ -70,7 +70,7 @@ export default function CursorGlowLayout({
       </div>
 
       <div
-        className="relative z-10 w-full max-w-3xl"
+        className="relative z-10 my-auto w-full max-w-3xl"
         onMouseEnter={() => setOverCard(true)}
         onMouseLeave={() => setOverCard(false)}
       >

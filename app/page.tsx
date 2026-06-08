@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 export default function Home() {
   return (
     <CursorGlowLayout>
-      <main className="@container w-full rounded-2xl bg-[color:var(--surface)] px-5 py-6 shadow-[var(--card-shadow)] sm:px-8 sm:py-7">
+      <main className="@container w-full rounded-2xl bg-[color:var(--surface)] px-5 py-7 shadow-[var(--card-shadow)] sm:px-8 sm:py-7">
         <header className="flex items-center justify-between gap-5">
           <h1 className="text-4xl font-semibold tracking-tight">
             Allen Xu
@@ -23,7 +23,7 @@ export default function Home() {
 
         <div className="mt-4 h-px w-full bg-[color:var(--rule)]" />
 
-        <section className="mt-5 space-y-2.5 text-pretty text-[14px] leading-[1.5] text-[color:var(--muted)]">
+        <section className="mt-4 space-y-2 text-pretty text-[15px] leading-6 text-[color:var(--muted)]">
           <p className="text-[color:var(--foreground)]">
             <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an
             incoming freshman at the Wharton
@@ -44,7 +44,7 @@ export default function Home() {
               </a>
             </div>
 
-            <p className="mt-3 text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="mt-3 text-base font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               currently:
             </p>
             <ul className="mt-1.5 list-disc space-y-0.5 pl-5">
@@ -85,7 +85,7 @@ export default function Home() {
           </div>
 
           <div className="pt-1">
-            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="text-base font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               previously:
             </p>
             <ul className="mt-1.5 list-disc space-y-0.5 pl-5">
@@ -165,7 +165,7 @@ export default function Home() {
           </div>
 
           <div className="pt-1">
-            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="text-base font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               here & there:
             </p>
             <ul className="mt-1.5 list-disc space-y-0.5 pl-5">
@@ -189,8 +189,8 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 gap-3 pt-5 @2xl:grid-cols-2 @2xl:gap-4">
-            <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)] @2xl:aspect-auto @2xl:h-36">
+          <div className="grid grid-cols-1 gap-3 pt-4 @2xl:grid-cols-2 @2xl:gap-4">
+            <div className="aspect-video w-full overflow-hidden rounded-lg border border-[color:var(--rule)]">
               <iframe
                 src="https://www.youtube.com/embed/XeHiBRtfn0o"
                 title="Crossing the English Channel"
@@ -199,7 +199,7 @@ export default function Home() {
                 className="h-full w-full"
               />
             </div>
-            <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)] @2xl:aspect-auto @2xl:h-36">
+            <div className="aspect-video w-full overflow-hidden rounded-lg border border-[color:var(--rule)]">
               <iframe
                 src="https://player.vimeo.com/video/1136644145"
                 title="Naperville innovators turn inspiration into invention"
@@ -211,7 +211,7 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="mt-6 border-t border-[color:var(--rule)] pt-3 text-sm text-pretty text-[color:var(--muted-2)]">
+        <footer className="mt-5 border-t border-[color:var(--rule)] pt-3 text-sm text-pretty text-[color:var(--muted-2)]">
           <span className="block @2xl:inline">allenxu@wharton.upenn.edu</span>
           <span className="mx-1 hidden @2xl:inline">|</span>
           <span className="block @2xl:inline">allen@multimodal.ventures</span>
