@@ -24,12 +24,12 @@ export default function Home() {
         <div className="mt-3.5 h-px w-full bg-[color:var(--rule)]" />
 
         <section className="mt-4 space-y-2 text-pretty text-[14px] leading-[1.5] text-[color:var(--muted)]">
-          <p className="text-[13px] leading-[1.45] text-[color:var(--foreground)]">
-            <span className="block">
-              <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an
-              incoming freshman at the Wharton School at the University of Pennsylvania.
-            </span>
-            <span className="block">
+          <p className="text-pretty text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
+            <span className="@2xl:block">
+              <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming
+              freshman at the Wharton School at the University of Pennsylvania.
+            </span>{" "}
+            <span className="@2xl:block">
               Currently interested in embodied AI, assistive wearables, economics, and social
               entrepreneurship.
             </span>
