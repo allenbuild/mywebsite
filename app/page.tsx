@@ -41,7 +41,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/allenjxu/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
+                className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
               >
                 linkedin
               </a>
@@ -58,7 +58,7 @@ export default function Home() {
                   href="https://www.multimodal.ventures/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
+                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   Multimodal Ventures
                 </a>
@@ -69,7 +69,7 @@ export default function Home() {
                   href="http://build.ai/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
+                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   Build AI
                 </a>{" "}
@@ -78,7 +78,7 @@ export default function Home() {
                   href="https://www.hf0.com/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
+                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   HF0
                 </a>
@@ -97,7 +97,7 @@ export default function Home() {
                   href="https://www.eyerobic.com/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
+                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   haptic wearable
                 </a>{" "}
@@ -107,7 +107,7 @@ export default function Home() {
                   href="https://www.nctv17.org/community-events/naperville-innovators-turn-inspiration-into-invention/?srsltid=AfmBOopQFE8INSe9B-06H2d_L_PF-96b2U1bJH2WtL1eeYjXPUnpT7qq"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
+                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   NBC 5 Chicago
                 </a>{" "} 
@@ -118,7 +118,7 @@ export default function Home() {
                   href="https://www.bizbuzz.it/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
+                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   youth startup incubator
                 </a>{" "}
@@ -135,7 +135,7 @@ export default function Home() {
                   href="https://www.decademy.app/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
+                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   edtech startup
                 </a>{" "}
@@ -148,7 +148,7 @@ export default function Home() {
                   href="https://www.thehuea.org/general-8"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
+                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   Harvard
                 </a>
@@ -157,7 +157,7 @@ export default function Home() {
                   href="https://ijsser.org/2025files/ijsser_10__68.pdf"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
+                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   IJSSER
                 </a>
@@ -177,7 +177,7 @@ export default function Home() {
                   href="https://www.instagram.com/xuperstrong/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
+                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   daily photos
                 </a>{" "}
