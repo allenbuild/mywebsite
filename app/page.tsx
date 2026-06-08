@@ -5,9 +5,9 @@ import ThemeToggle from "./ThemeToggle";
 export default function Home() {
   return (
     <CursorGlowLayout>
-      <main className="@container w-full rounded-2xl bg-[color:var(--surface)] px-5 py-7 shadow-[var(--card-shadow)] sm:px-8 sm:py-9">
-        <header className="flex items-center justify-between gap-6">
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+      <main className="@container w-full rounded-2xl bg-[color:var(--surface)] px-5 py-5 shadow-[var(--card-shadow)] sm:px-8 sm:py-6 lg:py-4">
+        <header className="flex items-center justify-between gap-4">
+          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2rem]">
             Allen Xu
           </h1>
           <div className="flex flex-col items-end gap-2">
@@ -21,9 +21,9 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="mt-5 h-px w-full bg-[color:var(--rule)]" />
+        <div className="mt-3 h-px w-full bg-[color:var(--rule)] lg:mt-2.5" />
 
-        <section className="mt-6 space-y-3 text-pretty text-[15px] leading-6 text-[color:var(--muted)]">
+        <section className="mt-4 space-y-2 text-pretty text-[14px] leading-[1.45] text-[color:var(--muted)] lg:mt-3 lg:space-y-1.5 lg:text-[13px] lg:leading-snug">
           <p className="text-[color:var(--foreground)]">
             <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an
             incoming freshman at the Wharton
@@ -44,10 +44,10 @@ export default function Home() {
               </a>
             </div>
 
-            <p className="mt-4 text-base font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="mt-2.5 text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)] lg:mt-2 lg:text-sm">
               currently:
             </p>
-            <ul className="mt-2 list-disc space-y-1 pl-6">
+            <ul className="mt-1 list-disc space-y-0.5 pl-5 lg:mt-0.5">
               <li>graduating</li>
               <li>
                 backing generational companies from day zero @{" "}
@@ -85,10 +85,10 @@ export default function Home() {
           </div>
 
           <div className="pt-1">
-            <p className="text-base font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)] lg:text-sm">
               previously:
             </p>
-            <ul className="mt-2 list-disc space-y-1 pl-6">
+            <ul className="mt-1 list-disc space-y-0.5 pl-5 lg:mt-0.5">
               <li>
                 presented an{" "}
                 <a
@@ -165,10 +165,10 @@ export default function Home() {
           </div>
 
           <div className="pt-1">
-            <p className="text-base font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)] lg:text-sm">
               here & there:
             </p>
-            <ul className="mt-2 list-disc space-y-1 pl-6">
+            <ul className="mt-1 list-disc space-y-0.5 pl-5 lg:mt-0.5">
               <li>
                 took{" "}
                 <a
@@ -189,8 +189,8 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 pt-6 @2xl:grid-cols-2 @2xl:gap-5">
-            <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
+          <div className="grid grid-cols-1 gap-3 pt-4 @2xl:grid-cols-2 @2xl:gap-4 lg:pt-2">
+            <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)] @2xl:aspect-auto @2xl:h-[7.25rem]">
               <iframe
                 src="https://www.youtube.com/embed/XeHiBRtfn0o"
                 title="Crossing the English Channel"
@@ -199,7 +199,7 @@ export default function Home() {
                 className="h-full w-full"
               />
             </div>
-            <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
+            <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)] @2xl:aspect-auto @2xl:h-[7.25rem]">
               <iframe
                 src="https://player.vimeo.com/video/1136644145"
                 title="Naperville innovators turn inspiration into invention"
@@ -211,7 +211,7 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="mt-8 border-t border-[color:var(--rule)] pt-4 text-sm text-pretty text-[color:var(--muted-2)]">
+        <footer className="mt-5 border-t border-[color:var(--rule)] pt-3 text-sm text-pretty text-[color:var(--muted-2)] lg:mt-3 lg:pt-2 lg:text-xs">
           <span className="block @2xl:inline">allenxu@wharton.upenn.edu</span>
           <span className="mx-1 hidden @2xl:inline">|</span>
           <span className="block @2xl:inline">allen@multimodal.ventures</span>
