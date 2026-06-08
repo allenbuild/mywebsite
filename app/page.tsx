@@ -189,23 +189,23 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 gap-3 pt-4 @2xl:grid-cols-2 @2xl:gap-4">
-            <div className="aspect-video w-full overflow-hidden rounded-lg border border-[color:var(--rule)]">
+          <div className="grid grid-cols-1 items-stretch gap-3 pt-4 @2xl:grid-cols-2 @2xl:gap-4">
+            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
               <iframe
                 src="https://www.youtube.com/embed/XeHiBRtfn0o"
                 title="Crossing the English Channel"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
-                className="h-full w-full"
+                className="absolute inset-0 h-full w-full border-0"
               />
             </div>
-            <div className="aspect-video w-full overflow-hidden rounded-lg border border-[color:var(--rule)]">
+            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
               <iframe
-                src="https://player.vimeo.com/video/1136644145"
+                src="https://player.vimeo.com/video/1136644145?title=0&byline=0&portrait=0"
                 title="Naperville innovators turn inspiration into invention"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
-                className="h-full w-full"
+                className="absolute inset-0 h-full w-full border-0"
               />
             </div>
           </div>
