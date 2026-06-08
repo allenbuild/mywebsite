@@ -190,7 +190,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-wrap justify-between gap-y-4 pt-6">
-            <div className="w-[46%] min-w-[200px]">
+            <div className="w-[49%] min-w-[200px]">
               <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
                 <iframe
                   src="https://www.youtube.com/embed/XeHiBRtfn0o"
@@ -201,7 +201,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="w-[46%] min-w-[200px]">
+            <div className="w-[49%] min-w-[200px]">
               <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
                 <iframe
                   src="https://player.vimeo.com/video/1136644145"
