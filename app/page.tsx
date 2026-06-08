@@ -53,7 +53,7 @@ export default function Home() {
             <ul className="mt-1.5 list-disc space-y-0.5 pl-5">
               <li>graduating</li>
               <li>
-                backing generational companies from day zero @{" "}
+                backing tomorrow&apos;s generational companies, today @{" "}
                 <a
                   href="https://www.multimodal.ventures/"
                   target="_blank"
