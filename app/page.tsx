@@ -92,14 +92,14 @@ export default function Home() {
             </p>
             <ul className="mt-1.5 list-disc space-y-0.5 pl-5">
               <li>
-                presented an{" "}
+                presented a{" "}
                 <a
                   href="https://www.eyerobic.com/"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
                 >
-                  assistive device
+                  haptic wearable
                 </a>{" "}
                 for blind athletes <span className="font-semibold">@</span> NASA
                 and {" "}
