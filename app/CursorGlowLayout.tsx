@@ -70,7 +70,7 @@ export default function CursorGlowLayout({
       </div>
 
       <div
-        className="relative z-10 my-auto w-full max-w-3xl"
+        className="relative z-10 my-auto w-full max-w-2xl"
         onMouseEnter={() => setOverCard(true)}
         onMouseLeave={() => setOverCard(false)}
       >

@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 export default function Home() {
   return (
     <CursorGlowLayout>
-      <main className="@container w-full rounded-2xl bg-[color:var(--surface)] px-5 py-6 shadow-[var(--card-shadow)] sm:px-8 sm:py-6">
+      <main className="@container w-full rounded-2xl bg-[color:var(--surface)] px-4 py-6 shadow-[var(--card-shadow)] sm:px-5 sm:py-6">
         <header className="flex items-center justify-between gap-5">
           <h1 className="text-4xl font-semibold tracking-tight">
             Allen Xu
@@ -24,12 +24,15 @@ export default function Home() {
         <div className="mt-3.5 h-px w-full bg-[color:var(--rule)]" />
 
         <section className="mt-4 space-y-2 text-pretty text-[14px] leading-[1.5] text-[color:var(--muted)]">
-          <p className="text-[color:var(--foreground)]">
-            <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an
-            incoming freshman at the Wharton
-            School at the University of Pennsylvania. Currently interested in embodied AI, assistive
-            wearables, economics, and social
-            entrepreneurship.
+          <p className="text-[13px] leading-[1.45] text-[color:var(--foreground)]">
+            <span className="block">
+              <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an
+              incoming freshman at the Wharton School at the University of Pennsylvania.
+            </span>
+            <span className="block">
+              Currently interested in embodied AI, assistive wearables, economics, and social
+              entrepreneurship.
+            </span>
           </p>
 
           <div className="pt-1">
@@ -189,8 +192,8 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 items-stretch gap-3 pt-3 @2xl:grid-cols-2 @2xl:gap-3">
-            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black @2xl:aspect-auto @2xl:h-[8.75rem]">
+          <div className="grid grid-cols-1 items-stretch gap-3 pt-3 @xl:grid-cols-2 @xl:gap-3">
+            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
               <iframe
                 src="https://www.youtube.com/embed/XeHiBRtfn0o"
                 title="Crossing the English Channel"
@@ -199,7 +202,7 @@ export default function Home() {
                 className="absolute inset-0 h-full w-full border-0"
               />
             </div>
-            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black @2xl:aspect-auto @2xl:h-[8.75rem]">
+            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
               <iframe
                 src="https://player.vimeo.com/video/1136644145?title=0&byline=0&portrait=0"
                 title="Naperville innovators turn inspiration into invention"
@@ -212,11 +215,11 @@ export default function Home() {
         </section>
 
         <footer className="mt-4 border-t border-[color:var(--rule)] pt-3 text-sm text-pretty text-[color:var(--muted-2)]">
-          <span className="block @2xl:inline">allenxu@wharton.upenn.edu</span>
-          <span className="mx-1 hidden @2xl:inline">|</span>
-          <span className="block @2xl:inline">allen@multimodal.ventures</span>
-          <span className="mx-1 hidden @2xl:inline">|</span>
-          <span className="block @2xl:inline">allen@build.ai</span>
+          <span className="block @xl:inline">allenxu@wharton.upenn.edu</span>
+          <span className="mx-1 hidden @xl:inline">|</span>
+          <span className="block @xl:inline">allen@multimodal.ventures</span>
+          <span className="mx-1 hidden @xl:inline">|</span>
+          <span className="block @xl:inline">allen@build.ai</span>
         </footer>
       </main>
     </CursorGlowLayout>
