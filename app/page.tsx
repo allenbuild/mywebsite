@@ -81,8 +81,7 @@ export default function Home() {
                   className="text-[color:var(--link)] underline underline-offset-4 hover:text-[color:var(--link-hover)]"
                 >
                   HF0
-                </a>{" "}
-                in San Francisco
+                </a>
               </li>
             </ul>
           </div>
