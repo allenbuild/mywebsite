@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 export default function Home() {
   return (
     <CursorGlowLayout>
-      <main className="w-full rounded-2xl bg-[color:var(--surface)] px-6 py-7 shadow-[var(--card-shadow)] sm:px-8 sm:py-9">
+      <main className="w-full rounded-2xl bg-[color:var(--surface)] px-5 py-7 shadow-[var(--card-shadow)] sm:px-8 sm:py-9">
         <header className="flex items-center justify-between gap-6">
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
             Allen Xu
@@ -23,7 +23,7 @@ export default function Home() {
 
         <div className="mt-5 h-px w-full bg-[color:var(--rule)]" />
 
-        <section className="mt-6 space-y-3 text-[15px] leading-6 text-[color:var(--muted)]">
+        <section className="mt-6 space-y-3 text-pretty text-[15px] leading-6 text-[color:var(--muted)]">
           <p className="text-[color:var(--foreground)]">
             <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an
             incoming freshman at the Wharton
@@ -120,7 +120,7 @@ export default function Home() {
                 >
                   youth startup incubator
                 </a>{" "}
-                with 1k+ students, $11k+ raised, and 90+ startups
+                with 1k+{"\u00A0"}students, $11k+ raised, and 90+ startups
               </li>
               <li>
                 finalist <span className="font-semibold">@</span>{" "}Conrad
@@ -137,7 +137,7 @@ export default function Home() {
                 >
                   edtech startup
                 </a>{" "}
-                with 30k+ users in 79 countries
+                with 30k+{"\u00A0"}users in 79{"\u00A0"}countries
               </li>
               <li>
                 wrote economics policy{" "}
@@ -179,7 +179,7 @@ export default function Home() {
                 >
                   daily photos
                 </a>{" "}
-                with graduating high school seniors (750k+ views)
+                with graduating high school seniors (750k+{"\u00A0"}views)
               </li>
               <li>memorized 100 digits of π to win some free apple pie in fifth grade</li>
               <li>
@@ -189,8 +189,8 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="flex flex-wrap justify-between gap-y-4 pt-6">
-            <div className="w-[49%] min-w-[200px]">
+          <div className="flex flex-col gap-4 pt-6 sm:flex-row sm:flex-wrap sm:justify-between sm:gap-y-4">
+            <div className="w-full sm:w-[49%]">
               <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
                 <iframe
                   src="https://www.youtube.com/embed/XeHiBRtfn0o"
@@ -201,7 +201,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="w-[49%] min-w-[200px]">
+            <div className="w-full sm:w-[49%]">
               <div className="aspect-video overflow-hidden rounded-lg border border-[color:var(--rule)]">
                 <iframe
                   src="https://player.vimeo.com/video/1136644145"
