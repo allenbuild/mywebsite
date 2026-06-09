@@ -27,7 +27,7 @@ export default function Home() {
           <p className="text-pretty text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
             <span className="@2xl:block">
               <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming
-              freshman at the Wharton School at the University of Pennsylvania.
+              freshman at the Wharton School at the University of{"\u00A0"}Pennsylvania.
             </span>{" "}
             <span className="@2xl:block">
               Currently interested in embodied AI, spatial computing, assistive wearables,
