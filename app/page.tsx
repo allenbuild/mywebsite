@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 export default function Home() {
   return (
     <CursorGlowLayout>
-      <main className="@container w-full rounded-2xl bg-[color:var(--surface)] px-4 py-6 shadow-[var(--card-shadow)] sm:px-5 sm:py-6">
+      <main className="@container w-full rounded-2xl bg-[color:var(--surface)] px-4 py-4 shadow-[var(--card-shadow)] sm:px-5 sm:py-5">
         <header className="flex items-center justify-between gap-5">
           <h1 className="text-4xl font-semibold tracking-tight">
             Allen Xu
@@ -21,9 +21,9 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="mt-3.5 h-px w-full bg-[color:var(--rule)]" />
+        <div className="mt-3 h-px w-full bg-[color:var(--rule)]" />
 
-        <section className="mt-4 space-y-2 text-pretty text-[14px] leading-[1.5] text-[color:var(--muted)]">
+        <section className="mt-3 space-y-1 text-pretty text-[14px] leading-[1.5] text-[color:var(--muted)]">
           <p className="text-pretty text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
             <span className="@2xl:block">
               <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming
@@ -35,7 +35,7 @@ export default function Home() {
             </span>
           </p>
 
-          <div className="pt-1">
+          <div>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[color:var(--muted-2)]">
               <a
                 href="https://www.linkedin.com/in/allenjxu/"
@@ -47,10 +47,10 @@ export default function Home() {
               </a>
             </div>
 
-            <p className="mt-2.5 text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="mt-2 text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               currently:
             </p>
-            <ul className="mt-1.5 list-disc space-y-0.5 pl-5">
+            <ul className="mt-1 list-disc space-y-0.5 pl-5">
               <li>graduating</li>
               <li>
                 backing tomorrow&apos;s generational companies, today @{" "}
@@ -86,11 +86,11 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="pt-1">
+          <div>
             <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               previously:
             </p>
-            <ul className="mt-1.5 list-disc space-y-0.5 pl-5">
+            <ul className="mt-1 list-disc space-y-0.5 pl-5">
               <li>
                 presented a{" "}
                 <a
@@ -165,11 +165,11 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="pt-1">
+          <div>
             <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               here & there:
             </p>
-            <ul className="mt-1.5 list-disc space-y-0.5 pl-5">
+            <ul className="mt-1 list-disc space-y-0.5 pl-5">
               <li>
                 took{" "}
                 <a
@@ -190,7 +190,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 items-stretch gap-3 pt-3 @xl:grid-cols-2 @xl:gap-3">
+          <div className="grid grid-cols-1 items-stretch gap-2 pt-1.5 @xl:grid-cols-2 @xl:gap-2">
             <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
               <iframe
                 src="https://www.youtube.com/embed/XeHiBRtfn0o"
@@ -212,7 +212,7 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="mt-4 border-t border-[color:var(--rule)] pt-3 text-sm text-pretty text-[color:var(--muted-2)]">
+        <footer className="mt-3 border-t border-[color:var(--rule)] pt-2.5 text-sm text-pretty text-[color:var(--muted-2)]">
           <span className="block @xl:inline">allenxu@wharton.upenn.edu</span>
           <span className="mx-1 hidden @xl:inline">|</span>
           <span className="block @xl:inline">allen@multimodal.ventures</span>
