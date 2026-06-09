@@ -101,7 +101,7 @@ export default function Home() {
                 >
                   haptic wearable
                 </a>{" "}
-                for blind athletes <span className="font-semibold">@</span> NASA
+                for blind athletes @ NASA
                 and {" "}
                 <a
                   href="https://www.nctv17.org/community-events/naperville-innovators-turn-inspiration-into-invention/?srsltid=AfmBOopQFE8INSe9B-06H2d_L_PF-96b2U1bJH2WtL1eeYjXPUnpT7qq"
@@ -125,7 +125,7 @@ export default function Home() {
                 with 1k+{"\u00A0"}students, $11k+ raised, and 90+ startups
               </li>
               <li>
-                finalist <span className="font-semibold">@</span>{" "}Conrad
+                finalist @ Conrad
                 Challenge, Blue Ocean Competition, DECA
                 Internationals
               </li>
@@ -142,8 +142,7 @@ export default function Home() {
                 with 30k+{"\u00A0"}users in 79{"\u00A0"}countries
               </li>
               <li>
-                wrote economics policy{" "}
-                <span className="font-semibold">@</span>{" "}
+                wrote economics policy @{" "}
                 <a
                   href="https://www.thehuea.org/general-8"
                   target="_blank"
