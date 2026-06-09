@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 export default function Home() {
   return (
     <CursorGlowLayout>
-      <main className="@container w-full rounded-2xl bg-[color:var(--surface)] px-4 py-4 shadow-[var(--card-shadow)] sm:px-5 sm:py-5">
+      <main className="@container min-w-0 w-full max-w-full overflow-x-hidden rounded-2xl bg-[color:var(--surface)] px-4 py-4 shadow-[var(--card-shadow)] sm:px-5 sm:py-5">
         <header className="flex items-center justify-between gap-5">
           <h1 className="text-4xl font-semibold tracking-tight">
             Allen Xu
@@ -23,11 +23,10 @@ export default function Home() {
 
         <div className="mt-3 h-px w-full bg-[color:var(--rule)]" />
 
-        <section className="mt-3 space-y-1 text-pretty text-[14px] leading-[1.5] text-[color:var(--muted)]">
+        <section className="mt-3 min-w-0 space-y-1 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
           <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
             <span className="@2xl:block">
-              <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming freshman at the Wharton School at the{" "}
-              <span className="whitespace-nowrap">University of Pennsylvania</span>.
+              <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming freshman at the Wharton School at the University of Pennsylvania.
             </span>{" "}
             <span className="@2xl:block">
               Currently interested in embodied AI, spatial computing, assistive wearables, economics, and more broadly, social entrepreneurship.
@@ -49,7 +48,7 @@ export default function Home() {
             <p className="mt-2 text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               currently:
             </p>
-            <ul className="mt-1 list-disc space-y-0.5 pl-5">
+            <ul className="mt-1 list-inside list-disc space-y-0.5">
               <li>graduating</li>
               <li>
                 backing tomorrow&apos;s generational companies, today @{" "}
@@ -89,7 +88,7 @@ export default function Home() {
             <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               previously:
             </p>
-            <ul className="mt-1 list-disc space-y-0.5 pl-5">
+            <ul className="mt-1 list-inside list-disc space-y-0.5">
               <li>
                 presented a{" "}
                 <a
@@ -121,7 +120,7 @@ export default function Home() {
                 >
                   youth startup incubator
                 </a>{" "}
-                with 1k+{"\u00A0"}students, $11k+ raised, and 90+ startups
+                with 1k+ students, $11k+ raised, and 90+ startups
               </li>
               <li>
                 finalist @ Conrad
@@ -138,7 +137,7 @@ export default function Home() {
                 >
                   edtech startup
                 </a>{" "}
-                with 30k+{"\u00A0"}users in 79{"\u00A0"}countries
+                with 30k+ users in 79 countries
               </li>
               <li>
                 wrote economics policy @{" "}
@@ -168,7 +167,7 @@ export default function Home() {
             <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               here & there:
             </p>
-            <ul className="mt-1 list-disc space-y-0.5 pl-5">
+            <ul className="mt-1 list-inside list-disc space-y-0.5">
               <li>
                 took{" "}
                 <a
@@ -179,7 +178,7 @@ export default function Home() {
                 >
                   daily photos
                 </a>{" "}
-                with graduating high school seniors (750k+{"\u00A0"}views)
+                with graduating high school seniors (750k+ views)
               </li>
               <li>memorized 100 digits of π to win free pie in fifth grade</li>
               <li>
@@ -211,7 +210,7 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="mt-3 border-t border-[color:var(--rule)] pt-2.5 text-sm text-pretty text-[color:var(--muted-2)]">
+        <footer className="mt-3 min-w-0 break-words border-t border-[color:var(--rule)] pt-2.5 text-sm text-pretty text-[color:var(--muted-2)]">
           <span className="block @xl:inline">allenxu@wharton.upenn.edu</span>
           <span className="mx-1 hidden @xl:inline">|</span>
           <span className="block @xl:inline">allen@multimodal.ventures</span>
