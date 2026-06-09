@@ -41,7 +41,14 @@
 
 html,
 body {
-  overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {

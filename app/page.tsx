@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 export default function Home() {
   return (
     <CursorGlowLayout>
-      <main className="@container min-w-0 w-full max-w-full overflow-x-hidden rounded-2xl bg-[color:var(--surface)] px-4 py-4 shadow-[var(--card-shadow)] sm:px-5 sm:py-5">
+      <main className="@container min-w-0 w-full max-w-full rounded-2xl bg-[color:var(--surface)] px-5 py-4 shadow-[var(--card-shadow)] sm:px-6 sm:py-5">
         <header className="flex items-center justify-between gap-5">
           <h1 className="text-4xl font-semibold tracking-tight">
             Allen Xu
@@ -48,7 +48,7 @@ export default function Home() {
             <p className="mt-2 text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               currently:
             </p>
-            <ul className="mt-1 list-inside list-disc space-y-0.5">
+            <ul className="mt-1 list-disc space-y-0.5 pl-6 [list-style-position:outside]">
               <li>graduating</li>
               <li>
                 backing tomorrow&apos;s generational companies, today @{" "}
@@ -88,7 +88,7 @@ export default function Home() {
             <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               previously:
             </p>
-            <ul className="mt-1 list-inside list-disc space-y-0.5">
+            <ul className="mt-1 list-disc space-y-0.5 pl-6 [list-style-position:outside]">
               <li>
                 presented a{" "}
                 <a
@@ -167,7 +167,7 @@ export default function Home() {
             <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               here & there:
             </p>
-            <ul className="mt-1 list-inside list-disc space-y-0.5">
+            <ul className="mt-1 list-disc space-y-0.5 pl-6 [list-style-position:outside]">
               <li>
                 took{" "}
                 <a
@@ -188,8 +188,8 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 items-stretch gap-2 pt-1.5 @xl:grid-cols-2 @xl:gap-2">
-            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
+          <div className="grid min-w-0 grid-cols-1 items-stretch gap-2 pt-1.5 @xl:grid-cols-2 @xl:gap-2">
+            <div className="relative aspect-video min-w-0 max-w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
               <iframe
                 src="https://www.youtube.com/embed/XeHiBRtfn0o"
                 title="Crossing the English Channel"
@@ -198,7 +198,7 @@ export default function Home() {
                 className="absolute inset-0 h-full w-full border-0"
               />
             </div>
-            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
+            <div className="relative aspect-video min-w-0 max-w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
               <iframe
                 src="https://player.vimeo.com/video/1136644145?title=0&byline=0&portrait=0"
                 title="Naperville innovators turn inspiration into invention"
