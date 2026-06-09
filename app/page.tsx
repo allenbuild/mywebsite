@@ -24,14 +24,13 @@ export default function Home() {
         <div className="mt-3 h-px w-full bg-[color:var(--rule)]" />
 
         <section className="mt-3 space-y-1 text-pretty text-[14px] leading-[1.5] text-[color:var(--muted)]">
-          <p className="text-pretty text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
+          <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
             <span className="@2xl:block">
-              <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming
-              freshman at the Wharton School at the University of{"\u00A0"}Pennsylvania.
+              <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming freshman at the Wharton School at the{" "}
+              <span className="whitespace-nowrap">University of Pennsylvania</span>.
             </span>{" "}
             <span className="@2xl:block">
-              Currently interested in embodied AI, spatial computing, assistive wearables,
-              economics, and more broadly, social entrepreneurship.
+              Currently interested in embodied AI, spatial computing, assistive wearables, economics, and more broadly, social entrepreneurship.
             </span>
           </p>
 
