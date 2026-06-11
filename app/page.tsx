@@ -23,7 +23,7 @@ export default function Home() {
 
         <div className="mt-3 h-px w-full bg-[color:var(--rule)]" />
 
-        <section className="mt-3 min-w-0 space-y-1 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
+        <section className="mt-3 min-w-0 space-y-4 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
           <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
             <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming freshman at the Wharton School at the University of Pennsylvania. Interested in embodied AI, spatial computing, assistive wearables, economics, and more broadly, social entrepreneurship.
           </p>
@@ -179,26 +179,26 @@ export default function Home() {
                 goldendoodle Winnie
               </li>
             </ul>
-          </div>
 
-          <div className="grid min-w-0 grid-cols-1 gap-2 pt-1.5 @xl:grid-cols-2 @xl:gap-2">
-            <div className="aspect-video w-full min-w-0 overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
-              <iframe
-                src="https://www.youtube.com/embed/XeHiBRtfn0o?playsinline=1"
-                title="Crossing the English Channel"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="block h-full w-full border-0"
-              />
-            </div>
-            <div className="aspect-video w-full min-w-0 overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
-              <iframe
-                src="https://player.vimeo.com/video/1136644145?title=0&byline=0&portrait=0&playsinline=1"
-                title="Naperville innovators turn inspiration into invention"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                className="block h-full w-full border-0"
-              />
+            <div className="mt-2.5 grid min-w-0 grid-cols-1 gap-2 @xl:grid-cols-2 @xl:gap-2">
+              <div className="aspect-video w-full min-w-0 overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
+                <iframe
+                  src="https://www.youtube.com/embed/XeHiBRtfn0o?playsinline=1"
+                  title="Crossing the English Channel"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="block h-full w-full border-0"
+                />
+              </div>
+              <div className="aspect-video w-full min-w-0 overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
+                <iframe
+                  src="https://player.vimeo.com/video/1136644145?title=0&byline=0&portrait=0&playsinline=1"
+                  title="Naperville innovators turn inspiration into invention"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  className="block h-full w-full border-0"
+                />
+              </div>
             </div>
           </div>
         </section>
