@@ -25,27 +25,26 @@ export default function Home() {
 
         <section className="mt-3 min-w-0 space-y-1 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
           <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
-            <span className="@2xl:block">
-              <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming freshman at the Wharton School at the University of Pennsylvania.
-            </span>{" "}
-            <span className="@2xl:block">
-              Currently interested in embodied AI, spatial computing, assistive wearables, economics, and more broadly, social entrepreneurship.
-            </span>
+            <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an
+            incoming freshman at the Wharton School at the University of
+            Pennsylvania. Currently interested in embodied AI, spatial computing,
+            assistive wearables, economics, and more broadly, social
+            entrepreneurship.
           </p>
 
-          <div>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[color:var(--muted-2)]">
-              <a
-                href="https://www.linkedin.com/in/allenjxu/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
-              >
-                linkedin
-              </a>
-            </div>
+          <div className="pt-3">
+            <a
+              href="https://www.linkedin.com/in/allenjxu/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
+            >
+              linkedin
+            </a>
+          </div>
 
-            <p className="mt-2 text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+          <div className="pt-4">
+            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               currently:
             </p>
             <ul className="mt-1 list-disc space-y-0.5 pl-6 [list-style-position:outside]">
@@ -189,18 +188,18 @@ export default function Home() {
           </div>
 
           <div className="grid min-w-0 grid-cols-1 items-stretch gap-2 pt-1.5 @xl:grid-cols-2 @xl:gap-2">
-            <div className="relative aspect-video min-w-0 max-w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
+            <div className="relative w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black pt-[56.25%]">
               <iframe
-                src="https://www.youtube.com/embed/XeHiBRtfn0o"
+                src="https://www.youtube.com/embed/XeHiBRtfn0o?playsinline=1"
                 title="Crossing the English Channel"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 className="absolute inset-0 h-full w-full border-0"
               />
             </div>
-            <div className="relative aspect-video min-w-0 max-w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
+            <div className="relative w-full overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black pt-[56.25%]">
               <iframe
-                src="https://player.vimeo.com/video/1136644145?title=0&byline=0&portrait=0"
+                src="https://player.vimeo.com/video/1136644145?title=0&byline=0&portrait=0&playsinline=1"
                 title="Naperville innovators turn inspiration into invention"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
