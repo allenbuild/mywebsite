@@ -24,11 +24,10 @@ export default function Home() {
         <div className="mt-3 h-px w-full bg-[color:var(--rule)]" />
 
         <section className="mt-3 min-w-0 space-y-4 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
-          <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
-            <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming freshman at the Wharton School at the University of Pennsylvania. Interested in embodied AI, spatial computing, assistive wearables, economics, and more broadly, social entrepreneurship.
-          </p>
-
           <div>
+            <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
+              <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming freshman at the Wharton School at the University of Pennsylvania. Interested in embodied AI, spatial computing, assistive wearables, economics, and more broadly, social entrepreneurship.
+            </p>
             <a
               href="https://www.linkedin.com/in/allenjxu/"
               target="_blank"
@@ -37,8 +36,10 @@ export default function Home() {
             >
               linkedin
             </a>
+          </div>
 
-            <p className="mt-2.5 text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+          <div>
+            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               currently:
             </p>
             <ul className="mt-1 list-inside list-disc space-y-0.5 pl-1">
