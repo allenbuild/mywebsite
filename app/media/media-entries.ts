@@ -62,6 +62,12 @@ const mediaEntries: MediaEntry[] = [
     href: "https://www.nctv17.org/news/naperville-north-juniors-hold-youth-entrepreneurship-camp-for-students/",
   },
   {
+    date: "2022-03-20",
+    outlet: "Turbo Charged FTC #14615",
+    title: "2022 Illinois State Championship Finals 1 - 277 points",
+    href: "https://www.youtube.com/watch?v=lcmc1HOwB7o",
+  },
+  {
     date: "2022-03-18",
     outlet: "Patch",
     title: "Local Robotics Team Headed To World Championship After State Win",
