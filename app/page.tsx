@@ -190,7 +190,7 @@ export default function Home() {
                 >
                   daily photos
                 </a>{" "}
-                with graduating high school seniors (750k+ views)
+                with strangers throughout senior year of high school (750k+ views)
               </li>
               <li>memorized 100 digits of π to win free pie in fifth grade</li>
               <li>
