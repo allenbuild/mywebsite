@@ -38,6 +38,12 @@ const mediaEntries: MediaEntry[] = [
     href: "https://www.nctv17.org/news/naperville-teens-create-assistive-device-for-visually-impaired-swimmers/",
   },
   {
+    date: "2025-04-05",
+    outlet: "International Journal of Social Science and Economic Research",
+    title: "The Effect of Democratic Backsliding on Carbon Emissions Intensity",
+    href: "https://ijsser.org/2025files/ijsser_10__68.pdf",
+  },
+  {
     date: "2025-04-02",
     outlet: "Harvard Undergraduate Economics Association",
     title: "Minutes to Midnight",
