@@ -221,7 +221,7 @@ export default function Home() {
 
         <nav
           aria-label="Site sections"
-          className="mt-6 flex flex-wrap gap-2.5"
+          className="mt-6 mb-6 flex flex-wrap gap-2.5"
         >
           {navLinks.map(({ href, label }) => (
             <Link
@@ -234,7 +234,7 @@ export default function Home() {
           ))}
         </nav>
 
-        <footer className="mt-3 border-t border-[color:var(--rule)] pt-3">
+        <footer className="border-t border-[color:var(--rule)] pt-3 pb-3">
           <div className="flex flex-wrap items-center justify-center gap-x-3 text-[15px]">
             {contactLinks.map((link, index) => (
               <span key={link.label} className="inline-flex items-center gap-3">
@@ -258,6 +258,12 @@ export default function Home() {
               </span>
             ))}
           </div>
+          <p className="mt-3 text-center text-[13px] text-[color:var(--muted-2)]">
+            © 2026 Allen Xu ·{" "}
+            <a href="https://allenxu.dev" className={contactLinkClass}>
+              allenxu.dev
+            </a>
+          </p>
         </footer>
       </main>
     </CursorGlowLayout>
