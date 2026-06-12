@@ -28,7 +28,7 @@ const contactLinkClass = "contact-link transition-colors";
 export default function Home() {
   return (
     <CursorGlowLayout>
-      <main className="@container min-w-0 w-full max-w-full rounded-2xl bg-[color:var(--surface)] px-5 py-4 shadow-[var(--card-shadow)] sm:px-6 sm:py-5">
+      <main className="@container min-w-0 w-full max-w-full rounded-2xl bg-[color:var(--surface)] px-5 pt-4 pb-1.5 shadow-[var(--card-shadow)] sm:px-6 sm:pt-5 sm:pb-2">
         <header className="flex items-center justify-between gap-5">
           <h1 className="text-4xl font-semibold tracking-tight">
             Allen Xu
@@ -234,7 +234,7 @@ export default function Home() {
           ))}
         </nav>
 
-        <footer className="border-t border-[color:var(--rule)] pt-3 pb-3">
+        <footer className="border-t border-[color:var(--rule)] pt-3 pb-0">
           <div className="flex flex-wrap items-center justify-center gap-x-3 text-[15px]">
             {contactLinks.map((link, index) => (
               <span key={link.label} className="inline-flex items-center gap-3">
@@ -258,7 +258,7 @@ export default function Home() {
               </span>
             ))}
           </div>
-          <p className="mt-3 text-center text-[13px] text-[color:var(--muted-2)]">
+          <p className="mt-2 text-center text-[13px] text-[color:var(--muted-2)]">
             © 2026 Allen Xu ·{" "}
             <a href="https://allenxu.dev" className={contactLinkClass}>
               allenxu.dev
