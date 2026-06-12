@@ -7,6 +7,11 @@ const books = [
     authors: "Daron Acemoglu and James A. Robinson",
     href: "https://www.amazon.com/Why-Nations-Fail-Origins-Prosperity/dp/0307719227",
   },
+  {
+    title: "The Giving Tree",
+    authors: "Shel Silverstein",
+    href: "https://www.amazon.com/Giving-Tree-Shel-Silverstein/dp/0060256656",
+  },
 ] as const;
 
 export default function BookshelfPage() {
