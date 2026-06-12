@@ -88,12 +88,12 @@ a:hover {
 }
 
 a.contact-link {
-  color: var(--muted-2);
+  color: var(--foreground);
   text-decoration: none;
 }
 
 a.contact-link:visited {
-  color: var(--muted-2);
+  color: var(--foreground);
 }
 
 a.contact-link:hover,
