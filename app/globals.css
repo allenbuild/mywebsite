@@ -102,3 +102,19 @@ a.contact-link:focus-visible {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+@media (pointer: fine) {
+  .cute-cursor,
+  .cute-cursor * {
+    cursor:
+      url("/cursors/pointer-outline.svg") 5 4,
+      auto;
+  }
+
+  :root[data-theme="dark"] .cute-cursor,
+  :root[data-theme="dark"] .cute-cursor * {
+    cursor:
+      url("/cursors/pointer-dark.svg") 5 4,
+      auto;
+  }
+}

@@ -59,7 +59,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${geistMono.variable} ${playfairDisplay.variable} ${libreBaskerville.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="cute-cursor min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
