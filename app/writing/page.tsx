@@ -9,6 +9,10 @@ export default function WritingPage() {
           ← home
         </Link>
         <h1 className="mt-3 text-2xl font-semibold tracking-tight">writing</h1>
+        <p className="mt-2 text-[15px] leading-[1.5] text-[color:var(--muted)]">
+          soon-to-be reservoir of my think pieces, rants, shower thoughts, &amp;
+          more
+        </p>
       </main>
     </CursorGlowLayout>
   );

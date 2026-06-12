@@ -16,19 +16,17 @@ export default function MediaTimeline() {
           >
             {formatMediaDate(entry.date)}
           </time>
-          <p className="min-w-0 text-[16px] leading-[1.5] text-[color:var(--foreground)]">
-            <span className="font-bold text-[color:var(--muted)]">
-              {entry.outlet}:{" "}
-            </span>
+          <div className="min-w-0 space-y-0.5 text-[16px] leading-[1.5]">
+            <p className="font-bold text-[color:var(--muted)]">{entry.outlet}:</p>
             <a
               href={entry.href}
               target="_blank"
               rel="noreferrer"
-              className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
+              className="block text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
             >
               {entry.title}
             </a>
-          </p>
+          </div>
         </li>
       ))}
     </ol>
