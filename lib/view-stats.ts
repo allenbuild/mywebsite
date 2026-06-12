@@ -4,19 +4,25 @@ import path from "path";
 const REDIS_KEY = "site-view-count";
 const LOCAL_FILE = path.join(process.cwd(), ".data", "view-count.json");
 
+function redisCredentials() {
+  const url =
+    process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL;
+  const token =
+    process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.KV_REST_API_TOKEN;
+  if (!url || !token) return null;
+  return { url, token };
+}
+
 function hasRedis() {
-  return Boolean(
-    process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN,
-  );
+  return redisCredentials() !== null;
 }
 
 async function redisGet(key: string): Promise<number | null> {
-  const url = process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
-  if (!url || !token) return null;
+  const creds = redisCredentials();
+  if (!creds) return null;
 
-  const res = await fetch(`${url}/get/${encodeURIComponent(key)}`, {
-    headers: { Authorization: `Bearer ${token}` },
+  const res = await fetch(`${creds.url}/get/${encodeURIComponent(key)}`, {
+    headers: { Authorization: `Bearer ${creds.token}` },
     cache: "no-store",
   });
   if (!res.ok) return null;
@@ -27,12 +33,11 @@ async function redisGet(key: string): Promise<number | null> {
 }
 
 async function redisIncr(key: string): Promise<number | null> {
-  const url = process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
-  if (!url || !token) return null;
+  const creds = redisCredentials();
+  if (!creds) return null;
 
-  const res = await fetch(`${url}/incr/${encodeURIComponent(key)}`, {
-    headers: { Authorization: `Bearer ${token}` },
+  const res = await fetch(`${creds.url}/incr/${encodeURIComponent(key)}`, {
+    headers: { Authorization: `Bearer ${creds.token}` },
     cache: "no-store",
   });
   if (!res.ok) return null;
