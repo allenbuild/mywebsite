@@ -6,6 +6,8 @@ import {
   Playfair_Display,
 } from "next/font/google";
 import "./globals.css";
+import AdminViewCounter from "./AdminViewCounter";
+import ViewTracker from "./ViewTracker";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -59,7 +61,11 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${geistMono.variable} ${playfairDisplay.variable} ${libreBaskerville.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <ViewTracker />
+        <AdminViewCounter />
+        {children}
+      </body>
     </html>
   );
 }
