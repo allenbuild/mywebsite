@@ -4,8 +4,10 @@ import { useEffect, useRef, useState } from "react";
 
 export default function CursorGlowLayout({
   children,
+  contentClassName,
 }: {
   children: React.ReactNode;
+  contentClassName?: string;
 }) {
   const [mouse, setMouse] = useState({ x: -9999, y: -9999 });
   const [active, setActive] = useState(false);
@@ -70,7 +72,7 @@ export default function CursorGlowLayout({
       </div>
 
       <div
-        className="relative z-10 my-auto min-w-0 w-full max-w-[45rem]"
+        className={`relative z-10 my-auto min-w-0 w-full max-w-[45rem] ${contentClassName ?? ""}`}
         onMouseEnter={() => setOverCard(true)}
         onMouseLeave={() => setOverCard(false)}
       >
