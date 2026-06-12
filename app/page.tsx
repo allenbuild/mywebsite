@@ -169,7 +169,7 @@ export default function Home() {
                 >
                   IJSSER
                 </a>
-                ,  Naperville City Financial Board, &amp; more
+                ,  Naperville City Financial Board, and more
               </li>
             </ul>
           </div>
