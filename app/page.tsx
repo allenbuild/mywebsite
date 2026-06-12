@@ -51,7 +51,7 @@ export default function Home() {
         <section className="mt-3 min-w-0 space-y-4 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
           <div>
             <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
-              <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming freshman at the Wharton School at the University of Pennsylvania. Interested in embodied AI, early-stage venture capital, wearables, economics, and more broadly, social entrepreneurship.
+              <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming freshman at the Wharton School at the University of Pennsylvania. Interested in embodied AI, early-stage venture capital, wearables, economics, and broadly, social entrepreneurship.
             </p>
           </div>
 
