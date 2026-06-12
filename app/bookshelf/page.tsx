@@ -3,6 +3,11 @@ import CursorGlowLayout from "../CursorGlowLayout";
 
 const books = [
   {
+    title: "Machines of Loving Grace",
+    authors: "Dario Amodei",
+    href: "https://darioamodei.com/essay/machines-of-loving-grace",
+  },
+  {
     title: "Why Nations Fail",
     authors: "Daron Acemoglu and James A. Robinson",
     href: "https://www.amazon.com/Why-Nations-Fail-Origins-Prosperity/dp/0307719227",
