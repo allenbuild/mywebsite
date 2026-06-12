@@ -17,7 +17,13 @@ export default function MediaTimeline() {
             {formatMediaDate(entry.date)}
           </time>
           <p className="min-w-0 text-[15px] leading-[1.45] text-[color:var(--foreground)]">
-            <span className="font-bold text-[color:var(--muted)]">
+            <span
+              className={
+                entry.outletAccent
+                  ? "font-bold text-[color:var(--media-accent)]"
+                  : "font-bold text-[color:var(--muted)]"
+              }
+            >
               {entry.outlet}:{" "}
             </span>
             <a

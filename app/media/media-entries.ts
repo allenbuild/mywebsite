@@ -4,6 +4,7 @@ export type MediaEntry = {
   outlet: string;
   title: string;
   href: string;
+  outletAccent?: boolean;
 };
 
 const mediaEntries: MediaEntry[] = [
@@ -42,12 +43,14 @@ const mediaEntries: MediaEntry[] = [
     outlet: "International Journal of Social Science and Economic Research",
     title: "The Effect of Democratic Backsliding on Carbon Emissions Intensity",
     href: "https://ijsser.org/2025files/ijsser_10__68.pdf",
+    outletAccent: true,
   },
   {
     date: "2025-04-02",
     outlet: "Harvard Undergraduate Economics Association",
     title: "Minutes to Midnight",
     href: "https://3675f99d-e14b-43c7-b4ab-9c36046ce13e.usrfiles.com/ugd/3675f9_47b5de0281954a879a8da07b9d9d12a3.pdf",
+    outletAccent: true,
   },
   {
     date: "2025-03-30",
