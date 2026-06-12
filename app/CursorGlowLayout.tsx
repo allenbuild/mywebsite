@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function CursorGlowLayout({
   children,
@@ -76,6 +77,11 @@ export default function CursorGlowLayout({
         onMouseEnter={() => setOverCard(true)}
         onMouseLeave={() => setOverCard(false)}
       >
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-end px-5 pt-4 sm:px-6 sm:pt-5">
+          <div className="pointer-events-auto">
+            <ThemeToggle />
+          </div>
+        </div>
         {children}
       </div>
     </div>

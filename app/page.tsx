@@ -1,7 +1,6 @@
 import Link from "next/link";
 import AgeCounter from "./AgeCounter";
 import CursorGlowLayout from "./CursorGlowLayout";
-import ThemeToggle from "./ThemeToggle";
 
 const contactLinks = [
   {
@@ -37,8 +36,7 @@ export default function Home() {
           <h1 className="text-4xl font-semibold tracking-tight">
             Allen Xu
           </h1>
-          <div className="flex flex-col items-end gap-2">
-            <ThemeToggle />
+          <div className="flex flex-col items-end pt-8">
             <div className="tabular-nums text-[13px] text-[color:var(--muted-2)]">
               <AgeCounter
                 birthDate={new Date("2007-11-10T00:00:00")}
