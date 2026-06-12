@@ -1,6 +1,27 @@
+import Link from "next/link";
 import AgeCounter from "./AgeCounter";
 import CursorGlowLayout from "./CursorGlowLayout";
 import ThemeToggle from "./ThemeToggle";
+
+const contactLinks = [
+  { href: "mailto:allenxu@wharton.upenn.edu", label: "email" },
+  {
+    href: "https://www.linkedin.com/in/allenjxu/",
+    label: "linkedin",
+    external: true,
+  },
+  { href: "https://x.com/allenxtech", label: "x", external: true },
+] as const;
+
+const navLinks = [
+  { href: "/media", label: "media" },
+  { href: "/writing", label: "writing" },
+  { href: "/photography", label: "photography" },
+  { href: "/bookshelf", label: "bookshelf" },
+] as const;
+
+const navBtnClass =
+  "nav-btn rounded-lg px-3.5 py-1.5 text-[13px] font-medium transition-opacity";
 
 export default function Home() {
   return (
@@ -28,14 +49,29 @@ export default function Home() {
             <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
               <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming freshman at the Wharton School at the University of Pennsylvania. Interested in embodied AI, spatial computing, assistive wearables, economics, and more broadly, social entrepreneurship.
             </p>
-            <a
-              href="https://www.linkedin.com/in/allenjxu/"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-2 inline-block text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
-            >
-              linkedin
-            </a>
+            <div className="mt-2 flex flex-wrap items-center gap-x-2 text-[13px]">
+              {contactLinks.map((link, index) => (
+                <span key={link.label} className="inline-flex items-center gap-2">
+                  {index > 0 ? (
+                    <span
+                      aria-hidden
+                      className="text-[color:var(--muted-2)]"
+                    >
+                      ·
+                    </span>
+                  ) : null}
+                  <a
+                    href={link.href}
+                    className="text-[color:var(--link)] underline underline-offset-[3px] hover:text-[color:var(--link-hover)]"
+                    {...("external" in link
+                      ? { target: "_blank", rel: "noreferrer" }
+                      : {})}
+                  >
+                    {link.label}
+                  </a>
+                </span>
+              ))}
+            </div>
           </div>
 
           <div>
@@ -203,6 +239,21 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <nav
+          aria-label="Site sections"
+          className="mt-4 flex flex-wrap gap-2"
+        >
+          {navLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={navBtnClass}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
 
         <footer className="mt-3 min-w-0 break-words border-t border-[color:var(--rule)] pt-2.5 text-sm text-pretty text-[color:var(--muted-2)]">
           <span className="block @xl:inline">allenxu@wharton.upenn.edu</span>
