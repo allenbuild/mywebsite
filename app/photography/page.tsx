@@ -10,7 +10,7 @@ export default function PhotographyPage() {
         </Link>
         <h1 className="mt-3 text-2xl font-semibold tracking-tight">photography</h1>
         <p className="mt-2 text-[15px] leading-[1.5] text-[color:var(--muted)]">
-          soon-to-be home of my 14,000+ photos.
+          soon-to-be glimpse into my 14,000+ photos.
         </p>
       </main>
     </CursorGlowLayout>
