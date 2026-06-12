@@ -35,20 +35,20 @@ export default function BookshelfPage() {
           questions, answers, and everything in between:
         </p>
         <ul className="mt-2 list-inside list-disc space-y-0.5 pl-1 text-[15px] leading-[1.5] text-[color:var(--muted)]">
-            {books.map((book) => (
-              <li key={book.href}>
-                <a
-                  href={book.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mr-1 italic text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
-                >
-                  {book.title}
-                </a>{" "}
-                by {book.authors}
-              </li>
-            ))}
-          </ul>
+          {books.map((book) => (
+            <li key={book.href}>
+              <a
+                href={book.href}
+                target="_blank"
+                rel="noreferrer"
+                className="mr-1 italic text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
+              >
+                {book.title}
+              </a>{" "}
+              by {book.authors}
+            </li>
+          ))}
+        </ul>
       </main>
     </CursorGlowLayout>
   );
