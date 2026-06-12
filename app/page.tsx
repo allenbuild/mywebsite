@@ -262,7 +262,7 @@ export default function Home() {
               </span>
             ))}
           </div>
-          <p className="mt-2 text-center text-[13px] text-[color:var(--muted-2)]">
+          <p className="mt-4 text-center text-[11px] text-[color:var(--muted-2)]">
             © 2026 Allen Xu ·{" "}
             <a href="https://allenxu.dev" className={contactLinkClass}>
               allenxu.dev
