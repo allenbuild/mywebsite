@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AgeCounter from "./AgeCounter";
+import ContactIcon from "./ContactIcon";
 import CursorGlowLayout from "./CursorGlowLayout";
 
 const contactLinks = [
@@ -250,11 +251,12 @@ export default function Home() {
                 ) : null}
                 <a
                   href={link.href}
-                  className={contactLinkClass}
+                  className={`inline-flex items-center gap-1.5 ${contactLinkClass}`}
                   {...("external" in link
                     ? { target: "_blank", rel: "noreferrer" }
                     : {})}
                 >
+                  <ContactIcon name={link.label} />
                   {link.label}
                 </a>
               </span>
