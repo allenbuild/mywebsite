@@ -27,7 +27,7 @@ export default function BookshelfPage() {
         <h1 className="mt-3 text-2xl font-semibold tracking-tight">bookshelf</h1>
 
         <p className="mt-2 text-[15px] leading-[1.5] text-[color:var(--muted)]">
-          Questions, answers, and everything in between:
+          questions, answers, and everything in between:
         </p>
         <ul className="mt-2 list-inside list-disc space-y-0.5 pl-1 text-[15px] leading-[1.5] text-[color:var(--muted)]">
             {books.map((book) => (
