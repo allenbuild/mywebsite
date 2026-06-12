@@ -25,7 +25,7 @@ const navLinks = [
 ] as const;
 
 const navBtnClass =
-  "nav-btn rounded-lg px-4 py-2 text-[14px] font-normal transition-opacity";
+  "nav-btn flex items-center justify-center rounded-lg px-1 py-1.5 text-center text-[11px] leading-tight font-normal transition-opacity sm:px-4 sm:py-2 sm:text-[14px] sm:leading-normal";
 
 const contactLinkClass = "contact-link transition-colors";
 
@@ -225,7 +225,7 @@ export default function Home() {
 
         <nav
           aria-label="Site sections"
-          className="mt-6 mb-6 flex flex-wrap gap-2.5"
+          className="mt-6 mb-6 grid grid-cols-4 gap-1 sm:flex sm:flex-wrap sm:gap-2.5"
         >
           {navLinks.map(({ href, label }) => (
             <Link
