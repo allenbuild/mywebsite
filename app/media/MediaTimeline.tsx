@@ -8,25 +8,27 @@ export default function MediaTimeline() {
       {entries.map((entry) => (
         <li
           key={`${entry.date}-${entry.href}`}
-          className="grid grid-cols-[5.5rem_minmax(0,1fr)] gap-x-4 border-b border-[color:var(--rule)] py-3.5 first:pt-0 last:border-b-0 sm:grid-cols-[7.5rem_minmax(0,1fr)] sm:gap-x-6 sm:py-4"
+          className="grid grid-cols-[5rem_minmax(0,1fr)] gap-x-4 border-b border-[color:var(--rule)] py-2.5 first:pt-0 last:border-b-0 sm:grid-cols-[6.5rem_minmax(0,1fr)] sm:gap-x-5 sm:py-3"
         >
           <time
             dateTime={entry.date}
-            className="shrink-0 tabular-nums text-[15px] leading-[1.5] text-[color:var(--muted-2)]"
+            className="shrink-0 tabular-nums text-[14px] leading-[1.45] text-[color:var(--muted-2)]"
           >
             {formatMediaDate(entry.date)}
           </time>
-          <div className="min-w-0 space-y-0.5 text-[16px] leading-[1.5]">
-            <p className="font-bold text-[color:var(--muted)]">{entry.outlet}:</p>
+          <p className="min-w-0 text-[15px] leading-[1.45] text-[color:var(--foreground)]">
+            <span className="font-bold text-[color:var(--muted)]">
+              {entry.outlet}:{" "}
+            </span>
             <a
               href={entry.href}
               target="_blank"
               rel="noreferrer"
-              className="block text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
+              className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
             >
               {entry.title}
             </a>
-          </div>
+          </p>
         </li>
       ))}
     </ol>
