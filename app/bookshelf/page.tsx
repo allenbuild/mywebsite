@@ -26,11 +26,10 @@ export default function BookshelfPage() {
         </Link>
         <h1 className="mt-3 text-2xl font-semibold tracking-tight">bookshelf</h1>
 
-        <section className="mt-4 min-w-0 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
-          <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
-            Questions, answers, and everything in between:
-          </p>
-          <ul className="mt-1 list-inside list-disc space-y-0.5 pl-1">
+        <p className="mt-2 text-[15px] leading-[1.5] text-[color:var(--muted)]">
+          Questions, answers, and everything in between:
+        </p>
+        <ul className="mt-2 list-inside list-disc space-y-0.5 pl-1 text-[15px] leading-[1.5] text-[color:var(--muted)]">
             {books.map((book) => (
               <li key={book.href}>
                 <a
@@ -45,7 +44,6 @@ export default function BookshelfPage() {
               </li>
             ))}
           </ul>
-        </section>
       </main>
     </CursorGlowLayout>
   );
