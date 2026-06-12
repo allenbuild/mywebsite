@@ -21,7 +21,9 @@ const navLinks = [
 ] as const;
 
 const navBtnClass =
-  "nav-btn rounded-lg px-3.5 py-1.5 text-[13px] font-medium transition-opacity";
+  "nav-btn rounded-lg px-4 py-2 text-[14px] font-medium transition-opacity";
+
+const contactLinkClass = "contact-link transition-colors";
 
 export default function Home() {
   return (
@@ -49,29 +51,6 @@ export default function Home() {
             <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
               <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming freshman at the Wharton School at the University of Pennsylvania. Interested in embodied AI, spatial computing, assistive wearables, economics, and more broadly, social entrepreneurship.
             </p>
-            <div className="mt-2 flex flex-wrap items-center gap-x-2 text-[13px]">
-              {contactLinks.map((link, index) => (
-                <span key={link.label} className="inline-flex items-center gap-2">
-                  {index > 0 ? (
-                    <span
-                      aria-hidden
-                      className="text-[color:var(--muted-2)]"
-                    >
-                      ·
-                    </span>
-                  ) : null}
-                  <a
-                    href={link.href}
-                    className="text-[color:var(--link)] underline underline-offset-[3px] hover:text-[color:var(--link-hover)]"
-                    {...("external" in link
-                      ? { target: "_blank", rel: "noreferrer" }
-                      : {})}
-                  >
-                    {link.label}
-                  </a>
-                </span>
-              ))}
-            </div>
           </div>
 
           <div>
@@ -242,7 +221,7 @@ export default function Home() {
 
         <nav
           aria-label="Site sections"
-          className="mt-4 flex flex-wrap gap-2"
+          className="mt-6 flex flex-wrap gap-2.5"
         >
           {navLinks.map(({ href, label }) => (
             <Link
@@ -255,12 +234,30 @@ export default function Home() {
           ))}
         </nav>
 
-        <footer className="mt-3 min-w-0 break-words border-t border-[color:var(--rule)] pt-2.5 text-sm text-pretty text-[color:var(--muted-2)]">
-          <span className="block @xl:inline">allenxu@wharton.upenn.edu</span>
-          <span className="mx-1 hidden @xl:inline">|</span>
-          <span className="block @xl:inline">allen@multimodal.ventures</span>
-          <span className="mx-1 hidden @xl:inline">|</span>
-          <span className="block @xl:inline">allen@build.ai</span>
+        <footer className="mt-3 border-t border-[color:var(--rule)] pt-3">
+          <div className="flex flex-wrap items-center justify-center gap-x-3 text-[15px]">
+            {contactLinks.map((link, index) => (
+              <span key={link.label} className="inline-flex items-center gap-3">
+                {index > 0 ? (
+                  <span
+                    aria-hidden
+                    className="text-[color:var(--muted-2)]"
+                  >
+                    ·
+                  </span>
+                ) : null}
+                <a
+                  href={link.href}
+                  className={contactLinkClass}
+                  {...("external" in link
+                    ? { target: "_blank", rel: "noreferrer" }
+                    : {})}
+                >
+                  {link.label}
+                </a>
+              </span>
+            ))}
+          </div>
         </footer>
       </main>
     </CursorGlowLayout>
