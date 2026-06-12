@@ -4,7 +4,11 @@ import CursorGlowLayout from "./CursorGlowLayout";
 import ThemeToggle from "./ThemeToggle";
 
 const contactLinks = [
-  { href: "mailto:allenxu@wharton.upenn.edu", label: "email" },
+  {
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=allenxu@wharton.upenn.edu",
+    label: "email",
+    external: true,
+  },
   {
     href: "https://www.linkedin.com/in/allenjxu/",
     label: "linkedin",
@@ -196,7 +200,7 @@ export default function Home() {
               </li>
             </ul>
 
-            <div className="mt-2.5 grid min-w-0 grid-cols-1 gap-2 @xl:grid-cols-2 @xl:gap-2">
+            <div className="mt-5 grid min-w-0 grid-cols-1 gap-2 @xl:grid-cols-2 @xl:gap-2">
               <div className="aspect-video w-full min-w-0 overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
                 <iframe
                   src="https://www.youtube.com/embed/XeHiBRtfn0o?playsinline=1"
@@ -235,7 +239,7 @@ export default function Home() {
         </nav>
 
         <footer className="border-t border-[color:var(--rule)] pt-3 pb-0">
-          <div className="flex flex-wrap items-center justify-center gap-x-3 text-[15px]">
+          <div className="flex flex-wrap items-center justify-center gap-x-3.5 text-[16px]">
             {contactLinks.map((link, index) => (
               <span key={link.label} className="inline-flex items-center gap-3">
                 {index > 0 ? (
