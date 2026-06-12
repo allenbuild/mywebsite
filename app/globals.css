@@ -16,7 +16,7 @@
   --cursor-glow: rgba(0, 0, 0, 0.2);
   --nav-btn-bg: #e8e8e8;
   --nav-btn-fg: #333333;
-  --media-accent: #c47a12;
+  --media-accent: #d49228;
 }
 
 @theme inline {
@@ -42,7 +42,7 @@
   --cursor-glow: rgba(255, 255, 255, 0.3);
   --nav-btn-bg: #ffffff;
   --nav-btn-fg: #161616;
-  --media-accent: #e8a23a;
+  --media-accent: #f0b24a;
 }
 
 html,
