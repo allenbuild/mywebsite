@@ -25,7 +25,7 @@ const navLinks = [
 ] as const;
 
 const navBtnClass =
-  "nav-btn rounded-lg px-4 py-2 text-[14px] font-medium transition-opacity";
+  "nav-btn rounded-lg px-4 py-2 text-[14px] font-normal transition-opacity";
 
 const contactLinkClass = "contact-link transition-colors";
 
