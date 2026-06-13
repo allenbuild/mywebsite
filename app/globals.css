@@ -81,12 +81,16 @@ a:hover {
   background: var(--nav-btn-bg);
   color: var(--nav-btn-fg);
   text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.nav-btn:visited {
+  color: var(--nav-btn-fg);
 }
 
 .nav-btn:hover,
-.nav-btn:visited {
-  color: var(--nav-btn-fg);
-  opacity: 0.88;
+.nav-btn:focus-visible {
+  color: var(--link);
 }
 
 a.contact-link {
