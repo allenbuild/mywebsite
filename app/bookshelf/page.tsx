@@ -8,6 +8,11 @@ const books = [
     href: "https://darioamodei.com/essay/machines-of-loving-grace",
   },
   {
+    title: "The Coming Wave",
+    authors: "Mustafa Suleyman",
+    href: "https://dn721906.ca.archive.org/0/items/the-coming-wave-by-mustafa-suleyman-michael-bhaskar-pdfread.net/The%20Coming%20Wave%20By%20Mustafa%20SuleymanMichael%20Bhaskar-pdfread.net.pdf",
+  },
+  {
     title: "Why Nations Fail",
     authors: "Daron Acemoglu and James A. Robinson",
     href: "https://www.amazon.com/Why-Nations-Fail-Origins-Prosperity/dp/0307719227",

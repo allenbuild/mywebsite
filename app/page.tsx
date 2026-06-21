@@ -191,7 +191,7 @@ export default function Home() {
                 </a>{" "}
                 with strangers throughout senior year of high school (750k+ views)
               </li>
-              <li>memorized 100 digits of π to win free pie in fifth grade</li>
+              <li>built smart poker glasses, my high school&apos;s events platform, and a personal JARVIS assistant</li>
               <li>
                 fell in love with photography, pickup basketball, and my
                 goldendoodle Winnie
