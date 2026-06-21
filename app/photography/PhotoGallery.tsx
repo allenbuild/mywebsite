@@ -61,26 +61,26 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
 
   return (
     <>
-      <ol className="mt-4 space-y-8">
+      <ol className="mt-3 space-y-6">
         {entries.map((entry, entryIndex) => (
           <li
             key={`${entry.date}-${entry.caption}`}
-            className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_26rem] sm:items-start sm:gap-5"
+            className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_20rem] sm:items-start sm:gap-4"
           >
-            <div className="min-w-0 sm:pt-1">
-              <p className="text-[17px] italic leading-[1.45] sm:text-[18px] [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <div className="min-w-0 sm:pt-0.5">
+              <p className="text-[15px] italic leading-[1.45] sm:text-[16px] [font-family:var(--font-italic)] text-[color:var(--foreground)]">
                 {entry.caption}
               </p>
               <time
                 dateTime={entry.date}
-                className="mt-1.5 block text-[16px] leading-[1.45] sm:text-[17px] text-[color:var(--muted-2)]"
+                className="mt-1 block text-[14px] leading-[1.45] sm:text-[15px] text-[color:var(--muted-2)]"
               >
                 {formatPhotoDate(entry.date)}
               </time>
             </div>
 
             <div
-              className={`grid w-full gap-2 ${
+              className={`grid w-full gap-1.5 ${
                 entry.photos.length === 3 ? "grid-cols-2" : ""
               }`}
               style={
@@ -96,7 +96,7 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
                   key={photo.src}
                   type="button"
                   onClick={() => setLightbox({ entryIndex, photoIndex })}
-                  className={`group relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-[color:var(--canvas)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] ${
+                  className={`group relative aspect-[4/3] w-full overflow-hidden rounded-md bg-[color:var(--canvas)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] ${
                     entry.photos.length === 3 && photoIndex === 0
                       ? "col-span-2"
                       : ""
@@ -116,11 +116,11 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
                     sizes={
                       entry.photos.length === 3
                         ? photoIndex === 0
-                          ? "(max-width: 640px) 100vw, 416px"
-                          : "(max-width: 640px) 45vw, 204px"
+                          ? "(max-width: 640px) 100vw, 320px"
+                          : "(max-width: 640px) 45vw, 156px"
                         : entry.photos.length > 1
-                          ? `(max-width: 640px) 45vw, ${Math.round(416 / entry.photos.length)}px`
-                          : "(max-width: 640px) 100vw, 416px"
+                          ? `(max-width: 640px) 45vw, ${Math.round(320 / entry.photos.length)}px`
+                          : "(max-width: 640px) 100vw, 320px"
                     }
                   />
                 </button>
