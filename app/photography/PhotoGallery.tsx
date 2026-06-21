@@ -80,17 +80,27 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
             </div>
 
             <div
-              className="grid w-full gap-2"
-              style={{
-                gridTemplateColumns: `repeat(${entry.photos.length}, minmax(0, 1fr))`,
-              }}
+              className={`grid w-full gap-2 ${
+                entry.photos.length === 3 ? "grid-cols-2" : ""
+              }`}
+              style={
+                entry.photos.length === 3
+                  ? undefined
+                  : {
+                      gridTemplateColumns: `repeat(${entry.photos.length}, minmax(0, 1fr))`,
+                    }
+              }
             >
               {entry.photos.map((photo, photoIndex) => (
                 <button
                   key={photo.src}
                   type="button"
                   onClick={() => setLightbox({ entryIndex, photoIndex })}
-                  className="group relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-[color:var(--canvas)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)]"
+                  className={`group relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-[color:var(--canvas)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] ${
+                    entry.photos.length === 3 && photoIndex === 0
+                      ? "col-span-2"
+                      : ""
+                  }`}
                 >
                   <Image
                     src={photo.src}
@@ -104,9 +114,13 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
                         : undefined
                     }
                     sizes={
-                      entry.photos.length > 1
-                        ? `(max-width: 640px) 45vw, ${Math.round(416 / entry.photos.length)}px`
-                        : "(max-width: 640px) 100vw, 416px"
+                      entry.photos.length === 3
+                        ? photoIndex === 0
+                          ? "(max-width: 640px) 100vw, 416px"
+                          : "(max-width: 640px) 45vw, 204px"
+                        : entry.photos.length > 1
+                          ? `(max-width: 640px) 45vw, ${Math.round(416 / entry.photos.length)}px`
+                          : "(max-width: 640px) 100vw, 416px"
                     }
                   />
                 </button>

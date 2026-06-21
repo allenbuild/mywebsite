@@ -24,12 +24,17 @@ const photoEntries: PhotoEntry[] = [
     date: "2026-06-16",
     photos: [
       {
+        src: "/photography/yc-p26-demo-day-welcome.png",
+        alt: "Welcome to Demo Day sign at YC P26",
+      },
+      {
         src: "/photography/yc-p26-demo-day-1.png",
         alt: "Selfie with a friend at YC P26 demo day",
       },
       {
         src: "/photography/yc-p26-demo-day-2.png",
         alt: "Allen Xu and Bryce Johnson at YC P26 demo day",
+        objectPosition: "center 38%",
       },
     ],
   },
