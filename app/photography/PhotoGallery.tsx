@@ -82,7 +82,9 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
             <div
               className={
                 entry.photos.length > 1
-                  ? "grid max-w-[13rem] grid-cols-2 gap-2 sm:max-w-[15rem] sm:grid-cols-3"
+                  ? entry.photos.length === 2
+                    ? "grid max-w-[31rem] grid-cols-2 gap-2"
+                    : "grid max-w-[15rem] grid-cols-2 gap-2 sm:grid-cols-3"
                   : "min-w-0 max-w-[13rem] sm:max-w-[15rem]"
               }
             >
