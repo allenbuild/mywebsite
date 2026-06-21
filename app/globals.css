@@ -28,7 +28,7 @@
 
 :root[data-theme="dark"] {
   --canvas: #0A0A0A;
-  --surface: #161616;
+  --surface: #222222;
   --background: var(--surface);
   --foreground: #E0E0E0;
   --muted: rgba(224, 224, 224, 0.72);
@@ -41,7 +41,7 @@
     0 14px 40px rgba(0, 0, 0, 0.7), 0 32px 72px rgba(0, 0, 0, 0.55);
   --cursor-glow: rgba(255, 255, 255, 0.3);
   --nav-btn-bg: #ffffff;
-  --nav-btn-fg: #161616;
+  --nav-btn-fg: #222222;
   --media-accent: #f0b24a;
 }
 
