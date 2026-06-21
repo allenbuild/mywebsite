@@ -1,7 +1,11 @@
 export type PhotoEntry = {
   caption: string;
   date: string;
-  photos: { src: string; alt: string }[];
+  photos: {
+    src: string;
+    alt: string;
+    objectPosition?: string;
+  }[];
 };
 
 const photoEntries: PhotoEntry[] = [
@@ -16,6 +20,20 @@ const photoEntries: PhotoEntry[] = [
     ],
   },
   {
+    caption: "yc p26 demo day",
+    date: "2026-06-16",
+    photos: [
+      {
+        src: "/photography/yc-p26-demo-day-1.png",
+        alt: "Selfie with a friend at YC P26 demo day",
+      },
+      {
+        src: "/photography/yc-p26-demo-day-2.png",
+        alt: "Allen Xu and Bryce Johnson at YC P26 demo day",
+      },
+    ],
+  },
+  {
     caption: "a tuesday at hf0",
     date: "2026-05-12",
     photos: [
@@ -26,6 +44,7 @@ const photoEntries: PhotoEntry[] = [
       {
         src: "/photography/a-tuesday-at-hf0-2.png",
         alt: "Five people sitting on a red couch at hf0",
+        objectPosition: "center 72%",
       },
     ],
   },

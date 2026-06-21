@@ -98,6 +98,11 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
                     width={1200}
                     height={900}
                     className="size-full object-cover transition-opacity group-hover:opacity-90"
+                    style={
+                      photo.objectPosition
+                        ? { objectPosition: photo.objectPosition }
+                        : undefined
+                    }
                     sizes={
                       entry.photos.length > 1
                         ? `(max-width: 640px) 45vw, ${Math.round(416 / entry.photos.length)}px`
