@@ -39,7 +39,7 @@ const photoEntries: PhotoEntry[] = [
     ],
   },
   {
-    caption: "a tuesday @ hf0 residency",
+    caption: "a tuesday w/ hf0",
     date: "2026-05-12",
     photos: [
       {
