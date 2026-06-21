@@ -65,7 +65,7 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
         {entries.map((entry, entryIndex) => (
           <li
             key={`${entry.date}-${entry.caption}`}
-            className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start sm:gap-8"
+            className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_26rem] sm:items-start sm:gap-5"
           >
             <div className="min-w-0 sm:pt-1">
               <p className="text-[17px] italic leading-[1.45] sm:text-[18px] [font-family:var(--font-italic)] text-[color:var(--foreground)]">
@@ -80,39 +80,28 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
             </div>
 
             <div
-              className={
-                entry.photos.length > 1
-                  ? entry.photos.length === 2
-                    ? "grid max-w-[31rem] grid-cols-2 gap-2"
-                    : "grid max-w-[15rem] grid-cols-2 gap-2 sm:grid-cols-3"
-                  : "min-w-0 max-w-[13rem] sm:max-w-[15rem]"
-              }
+              className="grid w-full gap-2"
+              style={{
+                gridTemplateColumns: `repeat(${entry.photos.length}, minmax(0, 1fr))`,
+              }}
             >
               {entry.photos.map((photo, photoIndex) => (
                 <button
                   key={photo.src}
                   type="button"
                   onClick={() => setLightbox({ entryIndex, photoIndex })}
-                  className={
-                    entry.photos.length > 1
-                      ? "group relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-[color:var(--canvas)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)]"
-                      : "group relative block w-full overflow-hidden rounded-lg bg-[color:var(--canvas)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)]"
-                  }
+                  className="group relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-[color:var(--canvas)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)]"
                 >
                   <Image
                     src={photo.src}
                     alt={photo.alt}
                     width={1200}
                     height={900}
-                    className={
-                      entry.photos.length > 1
-                        ? "size-full object-cover transition-opacity group-hover:opacity-90"
-                        : "h-auto w-full transition-opacity group-hover:opacity-95"
-                    }
+                    className="size-full object-cover transition-opacity group-hover:opacity-90"
                     sizes={
                       entry.photos.length > 1
-                        ? "(max-width: 640px) 40vw, 120px"
-                        : "(max-width: 640px) 52vw, 240px"
+                        ? `(max-width: 640px) 45vw, ${Math.round(416 / entry.photos.length)}px`
+                        : "(max-width: 640px) 100vw, 416px"
                     }
                   />
                 </button>
