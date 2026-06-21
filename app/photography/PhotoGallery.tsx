@@ -65,15 +65,15 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
         {entries.map((entry, entryIndex) => (
           <li
             key={`${entry.date}-${entry.caption}`}
-            className="grid gap-4 sm:grid-cols-[minmax(0,11rem)_minmax(0,1fr)] sm:items-start sm:gap-6"
+            className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start sm:gap-8"
           >
             <div className="min-w-0 sm:pt-1">
-              <p className="text-[15px] italic leading-[1.45] [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+              <p className="text-[17px] italic leading-[1.45] sm:text-[18px] [font-family:var(--font-italic)] text-[color:var(--foreground)]">
                 {entry.caption}
               </p>
               <time
                 dateTime={entry.date}
-                className="mt-1 block text-[14px] leading-[1.45] text-[color:var(--muted-2)]"
+                className="mt-1.5 block text-[16px] leading-[1.45] sm:text-[17px] text-[color:var(--muted-2)]"
               >
                 {formatPhotoDate(entry.date)}
               </time>
@@ -82,8 +82,8 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
             <div
               className={
                 entry.photos.length > 1
-                  ? "grid grid-cols-2 gap-2 sm:grid-cols-3"
-                  : "min-w-0"
+                  ? "grid max-w-[13rem] grid-cols-2 gap-2 sm:max-w-[15rem] sm:grid-cols-3"
+                  : "min-w-0 max-w-[13rem] sm:max-w-[15rem]"
               }
             >
               {entry.photos.map((photo, photoIndex) => (
@@ -109,8 +109,8 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
                     }
                     sizes={
                       entry.photos.length > 1
-                        ? "(max-width: 640px) 50vw, 200px"
-                        : "(max-width: 640px) 100vw, 480px"
+                        ? "(max-width: 640px) 40vw, 120px"
+                        : "(max-width: 640px) 52vw, 240px"
                     }
                   />
                 </button>
