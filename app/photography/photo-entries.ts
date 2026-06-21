@@ -105,9 +105,13 @@ const photoEntries: PhotoEntry[] = [
     ],
   },
   {
-    caption: "second annual bizbuzz fish tank",
+    caption: "second annual fish tank",
     date: "2025-08-03",
     photos: [
+      {
+        src: "/photography/bizbuzz-fish-tank-3.png",
+        alt: "Allen Xu and a friend with the BizBuzz Fish Tank poster",
+      },
       {
         src: "/photography/bizbuzz-fish-tank-1.png",
         alt: "Winners holding checks at the second annual BizBuzz Fish Tank",
@@ -116,9 +120,29 @@ const photoEntries: PhotoEntry[] = [
         src: "/photography/bizbuzz-fish-tank-2.png",
         alt: "Group photo at the second annual BizBuzz Fish Tank",
       },
+    ],
+  },
+  {
+    caption: "first annual fish tank",
+    date: "2024-07-25",
+    photos: [
       {
-        src: "/photography/bizbuzz-fish-tank-3.png",
-        alt: "Allen Xu and a friend with the BizBuzz Fish Tank poster",
+        src: "/photography/fish-tank-2024-2.png",
+        alt: "Group photo at the first annual Fish Tank",
+      },
+      {
+        src: "/photography/fish-tank-2024-1.png",
+        alt: "Fish Tank trophies lined up on a table",
+      },
+    ],
+  },
+  {
+    caption: "debating at yale",
+    date: "2023-10-01",
+    photos: [
+      {
+        src: "/photography/debating-at-yale.png",
+        alt: "Allen Xu debating on stage at Yale",
       },
     ],
   },
