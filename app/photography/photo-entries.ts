@@ -58,13 +58,13 @@ const photoEntries: PhotoEntry[] = [
     date: "2026-05-17",
     photos: [
       {
+        src: "/photography/hs-grad-2.png",
+        alt: "Allen Xu and friends in graduation gowns at Thomas G. Scullen Middle School",
+      },
+      {
         src: "/photography/hs-grad-1.png",
         alt: "Allen Xu in graduation gown with family at the ceremony",
         objectPosition: "center 42%",
-      },
-      {
-        src: "/photography/hs-grad-2.png",
-        alt: "Allen Xu and friends in graduation gowns at Thomas G. Scullen Middle School",
       },
       {
         src: "/photography/hs-grad-3.png",
