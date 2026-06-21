@@ -5,6 +5,32 @@ import { useCallback, useEffect, useState } from "react";
 import type { PhotoEntry } from "./photo-entries";
 import { formatPhotoDate } from "./photo-entries";
 
+const PHOTO_COL_PX = 320;
+
+function photoThumbSize(photoCount: number, photoIndex: number): string {
+  if (photoCount === 1) {
+    return "(max-width: 640px) 100vw, 320px";
+  }
+  if (photoCount === 3 && photoIndex === 0) {
+    return "(max-width: 640px) 100vw, 320px";
+  }
+  return `(max-width: 640px) 45vw, ${Math.round(PHOTO_COL_PX / 2)}px`;
+}
+
+function photoGridClass(photoCount: number): string {
+  if (photoCount === 3 || photoCount === 4 || photoCount === 2) {
+    return "grid-cols-2";
+  }
+  return "";
+}
+
+function photoColSpan(photoCount: number, photoIndex: number): string {
+  if (photoCount === 3 && photoIndex === 0) {
+    return "col-span-2";
+  }
+  return "";
+}
+
 type LightboxState = {
   entryIndex: number;
   photoIndex: number;
@@ -80,27 +106,14 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
             </div>
 
             <div
-              className={`grid w-full gap-1.5 ${
-                entry.photos.length === 3 ? "grid-cols-2" : ""
-              }`}
-              style={
-                entry.photos.length === 3
-                  ? undefined
-                  : {
-                      gridTemplateColumns: `repeat(${entry.photos.length}, minmax(0, 1fr))`,
-                    }
-              }
+              className={`grid w-full gap-1.5 ${photoGridClass(entry.photos.length)}`}
             >
               {entry.photos.map((photo, photoIndex) => (
                 <button
                   key={photo.src}
                   type="button"
                   onClick={() => setLightbox({ entryIndex, photoIndex })}
-                  className={`group relative aspect-[4/3] w-full overflow-hidden rounded-md bg-[color:var(--canvas)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] ${
-                    entry.photos.length === 3 && photoIndex === 0
-                      ? "col-span-2"
-                      : ""
-                  }`}
+                  className={`group relative aspect-[4/3] w-full overflow-hidden rounded-md bg-[color:var(--canvas)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] ${photoColSpan(entry.photos.length, photoIndex)}`}
                 >
                   <Image
                     src={photo.src}
@@ -113,15 +126,7 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
                         ? { objectPosition: photo.objectPosition }
                         : undefined
                     }
-                    sizes={
-                      entry.photos.length === 3
-                        ? photoIndex === 0
-                          ? "(max-width: 640px) 100vw, 320px"
-                          : "(max-width: 640px) 45vw, 156px"
-                        : entry.photos.length > 1
-                          ? `(max-width: 640px) 45vw, ${Math.round(320 / entry.photos.length)}px`
-                          : "(max-width: 640px) 100vw, 320px"
-                    }
+                    sizes={photoThumbSize(entry.photos.length, photoIndex)}
                   />
                 </button>
               ))}
