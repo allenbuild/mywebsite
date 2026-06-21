@@ -76,6 +76,52 @@ const photoEntries: PhotoEntry[] = [
       },
     ],
   },
+  {
+    caption: "nbc & nctv17 morning show",
+    date: "2025-11-13",
+    photos: [
+      {
+        src: "/photography/nbc-nctv17-morning-show-1.png",
+        alt: "Allen Xu on the NBC morning show discussing Eyerobic",
+      },
+      {
+        src: "/photography/nbc-nctv17-morning-show-2.png",
+        alt: "Allen Xu with friends at an NBC event",
+      },
+    ],
+  },
+  {
+    caption: "notre dame leadership seminars",
+    date: "2025-07-29",
+    photos: [
+      {
+        src: "/photography/notre-dame-leadership-seminars-1.png",
+        alt: "Presentation on stage at Notre Dame Leadership Seminars",
+      },
+      {
+        src: "/photography/notre-dame-leadership-seminars-2.png",
+        alt: "Group photo at Notre Dame Leadership Seminars",
+      },
+    ],
+  },
+  {
+    caption: "second annual bizbuzz fish tank",
+    date: "2025-08-03",
+    photos: [
+      {
+        src: "/photography/bizbuzz-fish-tank-1.png",
+        alt: "Winners holding checks at the second annual BizBuzz Fish Tank",
+      },
+      {
+        src: "/photography/bizbuzz-fish-tank-2.png",
+        alt: "Group photo at the second annual BizBuzz Fish Tank",
+      },
+      {
+        src: "/photography/bizbuzz-fish-tank-3.png",
+        alt: "Allen Xu and a friend with the BizBuzz Fish Tank poster",
+      },
+    ],
+  },
 ];
 
 export function getPhotoEntries(): PhotoEntry[] {
