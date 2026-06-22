@@ -80,12 +80,23 @@ a:hover {
 }
 
 .nav-btn {
+  position: relative;
+  overflow: hidden;
   background: var(--nav-btn-bg);
   color: var(--nav-btn-fg);
   text-decoration: none;
-  transition:
-    color 0.15s ease,
-    background-color 0.15s ease;
+  transition: color 0.4s ease;
+}
+
+.nav-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--link);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s ease;
 }
 
 .nav-btn:visited {
@@ -94,8 +105,12 @@ a:hover {
 
 .nav-btn:hover,
 .nav-btn:focus-visible {
-  background: var(--link);
   color: #ffffff;
+}
+
+.nav-btn:hover::before,
+.nav-btn:focus-visible::before {
+  transform: scaleX(1);
 }
 
 .nav-btn:hover:visited,
@@ -104,6 +119,8 @@ a:hover {
 }
 
 .home-back-btn {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
@@ -116,10 +133,18 @@ a:hover {
   font-weight: 400;
   line-height: 1;
   text-decoration: none;
-  transition:
-    background-color 0.15s ease,
-    color 0.15s ease,
-    border-color 0.15s ease;
+  transition: color 0.4s ease;
+}
+
+.home-back-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--link);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s ease;
 }
 
 .home-back-btn:visited {
@@ -128,9 +153,12 @@ a:hover {
 
 .home-back-btn:hover,
 .home-back-btn:focus-visible {
-  background: var(--link);
-  border-color: var(--link);
   color: #ffffff;
+}
+
+.home-back-btn:hover::before,
+.home-back-btn:focus-visible::before {
+  transform: scaleX(1);
 }
 
 .home-back-btn:hover:visited,
@@ -147,17 +175,6 @@ a:hover {
 :root[data-theme="dark"] .home-back-btn:focus-visible,
 :root[data-theme="dark"] .home-back-btn:hover:visited,
 :root[data-theme="dark"] .home-back-btn:focus-visible:visited {
-  color: #ffffff;
-}
-
-:root[data-theme="dark"] .nav-btn:hover,
-:root[data-theme="dark"] .nav-btn:focus-visible {
-  background: var(--link);
-  color: #ffffff;
-}
-
-:root[data-theme="dark"] .nav-btn:hover:visited,
-:root[data-theme="dark"] .nav-btn:focus-visible:visited {
   color: #ffffff;
 }
 
