@@ -222,13 +222,3 @@ a.contact-link:hover::after,
 a.contact-link:focus-visible::after {
   transform: scaleX(1);
 }
-
-a.contact-link-plain {
-  color: var(--muted-2);
-  text-decoration: none;
-}
-
-a.contact-link-plain:hover,
-a.contact-link-plain:focus-visible {
-  color: var(--link);
-}

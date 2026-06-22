@@ -255,12 +255,6 @@ export default function Home() {
               </span>
             ))}
           </div>
-          <p className="mt-3 text-center text-[11px] text-[color:var(--muted-2)]">
-            © 2026 Allen Xu ·{" "}
-            <a href="https://allenxu.dev" className="contact-link-plain">
-              allenxu.dev
-            </a>
-          </p>
         </footer>
       </main>
     </CursorGlowLayout>
