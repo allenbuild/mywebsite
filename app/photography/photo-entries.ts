@@ -154,6 +154,29 @@ export function getPhotoEntries(): PhotoEntry[] {
   );
 }
 
+export type PhotoYearGroup = {
+  year: number;
+  entries: PhotoEntry[];
+};
+
+export function groupPhotoEntriesByYear(entries: PhotoEntry[]): PhotoYearGroup[] {
+  const byYear = new Map<number, PhotoEntry[]>();
+
+  for (const entry of entries) {
+    const year = Number(entry.date.split("-")[0]);
+    const group = byYear.get(year);
+    if (group) {
+      group.push(entry);
+    } else {
+      byYear.set(year, [entry]);
+    }
+  }
+
+  return [...byYear.entries()]
+    .sort(([yearA], [yearB]) => yearB - yearA)
+    .map(([year, yearEntries]) => ({ year, entries: yearEntries }));
+}
+
 export function formatPhotoDate(isoDate: string): string {
   const [year, month, day] = isoDate.split("-").map(Number);
   const date = new Date(year, month - 1, day);
