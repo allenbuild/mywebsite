@@ -20,8 +20,8 @@ export default function MediaTimeline() {
             <span
               className={
                 entry.outletAccent
-                  ? "font-bold text-[color:var(--media-accent)]"
-                  : "font-bold text-[color:var(--muted)]"
+                  ? "italic [font-family:var(--font-italic)] text-[color:var(--media-accent)]"
+                  : "italic [font-family:var(--font-italic)] text-[color:var(--muted)]"
               }
             >
               {entry.outlet}:{" "}
