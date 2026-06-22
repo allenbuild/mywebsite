@@ -7,13 +7,12 @@ import {
   useEffect,
   useRef,
   useState,
-  type RefObject,
 } from "react";
 import type { PhotoEntry } from "./photo-entries";
 import { formatPhotoDate, groupPhotoEntriesByYear } from "./photo-entries";
 
 const PHOTO_COL_PX = 320;
-const STICKY_HEADER_HEIGHT = 88;
+const COLLAPSED_BAR_HEIGHT = 30;
 
 function photoThumbSize(photoCount: number, photoIndex: number): string {
   if (photoCount === 1) {
@@ -43,50 +42,6 @@ type LightboxState = {
   entryIndex: number;
   photoIndex: number;
 };
-
-function useYearCollapse(
-  sectionRef: RefObject<HTMLElement | null>,
-  defaultCollapsed: boolean,
-) {
-  const [collapsed, setCollapsed] = useState(defaultCollapsed);
-  const userLocked = useRef(false);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
-
-    const update = () => {
-      if (userLocked.current) return;
-
-      const rect = section.getBoundingClientRect();
-      const scrolledPast = rect.bottom < STICKY_HEADER_HEIGHT + 12;
-      const inView =
-        rect.top < window.innerHeight * 0.85 &&
-        rect.bottom > STICKY_HEADER_HEIGHT;
-
-      if (scrolledPast) {
-        setCollapsed(true);
-      } else if (inView) {
-        setCollapsed(false);
-      }
-    };
-
-    update();
-    window.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
-    return () => {
-      window.removeEventListener("scroll", update);
-      window.removeEventListener("resize", update);
-    };
-  }, [sectionRef]);
-
-  const toggle = useCallback(() => {
-    userLocked.current = true;
-    setCollapsed((current) => !current);
-  }, []);
-
-  return { collapsed, toggle };
-}
 
 function PhotoEntryRow({
   entry,
@@ -144,39 +99,73 @@ function PhotoYearSection({
   entries,
   entryIndexOffset,
   defaultCollapsed,
+  headerHeight,
   onOpen,
 }: {
   year: number;
   entries: PhotoEntry[];
   entryIndexOffset: number;
   defaultCollapsed: boolean;
+  headerHeight: number;
   onOpen: (entryIndex: number, photoIndex: number) => void;
 }) {
-  const sectionRef = useRef<HTMLElement>(null);
-  const { collapsed, toggle } = useYearCollapse(sectionRef, defaultCollapsed);
+  const [collapsed, setCollapsed] = useState(defaultCollapsed);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (collapsed) return;
+
+    const content = contentRef.current;
+    if (!content) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (
+          !entry.isIntersecting &&
+          entry.boundingClientRect.top < headerHeight
+        ) {
+          setCollapsed(true);
+        }
+      },
+      {
+        rootMargin: `-${headerHeight}px 0px 0px 0px`,
+        threshold: 0,
+      },
+    );
+
+    observer.observe(content);
+    return () => observer.disconnect();
+  }, [collapsed, headerHeight]);
+
+  const toggle = useCallback(() => {
+    setCollapsed((current) => !current);
+  }, []);
 
   return (
-    <section ref={sectionRef} className="border-b border-[color:var(--rule)] last:border-b-0">
+    <section>
       <button
         type="button"
         onClick={toggle}
         aria-expanded={!collapsed}
-        className="flex w-full items-center justify-between py-3 text-left transition-colors hover:text-[color:var(--link)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--surface)]"
+        style={{ top: headerHeight, height: COLLAPSED_BAR_HEIGHT }}
+        className="sticky z-20 flex w-full items-center justify-between border-b border-[color:var(--rule)] bg-[color:var(--surface)] px-0 text-left transition-colors hover:text-[color:var(--link)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--surface)]"
       >
-        <span className="text-[17px] font-semibold tracking-tight">{year}</span>
+        <span
+          className={`font-semibold tracking-tight ${collapsed ? "text-[14px]" : "text-[15px]"}`}
+        >
+          {year}
+        </span>
         <span
           aria-hidden
-          className={`text-[18px] leading-none text-[color:var(--muted-2)] transition-transform duration-200 ${collapsed ? "-rotate-90" : ""}`}
+          className={`text-[14px] leading-none text-[color:var(--muted-2)] transition-transform duration-200 ${collapsed ? "-rotate-90" : ""}`}
         >
           ∨
         </span>
       </button>
 
-      <div
-        className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${collapsed ? "grid-rows-[0fr] opacity-0" : "grid-rows-[1fr] opacity-100"}`}
-      >
-        <div className="overflow-hidden">
-          <ol className="space-y-6 pb-4">
+      {!collapsed && (
+        <div ref={contentRef} className="pb-4 pt-3">
+          <ol className="space-y-6">
             {entries.map((entry, index) => (
               <PhotoEntryRow
                 key={`${entry.date}-${entry.caption}`}
@@ -187,13 +176,15 @@ function PhotoYearSection({
             ))}
           </ol>
         </div>
-      </div>
+      )}
     </section>
   );
 }
 
 export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
   const [lightbox, setLightbox] = useState<LightboxState | null>(null);
+  const [headerHeight, setHeaderHeight] = useState(72);
+  const headerRef = useRef<HTMLDivElement>(null);
   const yearGroups = groupPhotoEntriesByYear(entries);
 
   const close = useCallback(() => setLightbox(null), []);
@@ -203,6 +194,18 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
     },
     [],
   );
+
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+
+    const update = () => setHeaderHeight(header.offsetHeight);
+    update();
+
+    const observer = new ResizeObserver(update);
+    observer.observe(header);
+    return () => observer.disconnect();
+  }, []);
 
   const active =
     lightbox === null
@@ -252,17 +255,20 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
 
   return (
     <>
-      <div className="sticky top-0 z-20 -mx-5 border-b border-[color:var(--rule)] bg-[color:var(--surface)] px-5 pb-3 pt-4 sm:-mx-6 sm:px-6 sm:pt-5">
+      <div
+        ref={headerRef}
+        className="sticky top-0 z-30 -mx-5 border-b border-[color:var(--rule)] bg-[color:var(--surface)] px-5 pb-2 pt-4 sm:-mx-6 sm:px-6 sm:pt-5"
+      >
         <Link
           href="/"
           className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
         >
           ← home
         </Link>
-        <h1 className="mt-3 text-xl font-semibold tracking-tight">photography</h1>
+        <h1 className="mt-2 text-xl font-semibold tracking-tight">photography</h1>
       </div>
 
-      <div className="mt-1">
+      <div>
         {yearGroups.map((group, groupIndex) => {
           const offset = entryIndexOffset;
           entryIndexOffset += group.entries.length;
@@ -274,6 +280,7 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
               entries={group.entries}
               entryIndexOffset={offset}
               defaultCollapsed={groupIndex > 0}
+              headerHeight={headerHeight}
               onOpen={openLightbox}
             />
           );
