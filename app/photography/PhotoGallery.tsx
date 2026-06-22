@@ -77,7 +77,7 @@ function PhotoEntryRow({
           >
             <Image
               src={photo.src}
-              alt={photo.alt}
+              alt=""
               width={1200}
               height={900}
               className="size-full object-cover transition-opacity group-hover:opacity-90"
@@ -301,7 +301,7 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
           onClick={close}
           role="dialog"
           aria-modal="true"
-          aria-label={active.photo.alt}
+          aria-label={active.entry.caption}
         >
           <button
             type="button"
@@ -318,7 +318,7 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
           >
             <Image
               src={active.photo.src}
-              alt={active.photo.alt}
+              alt=""
               width={1600}
               height={1200}
               className="max-h-[85vh] w-auto max-w-full object-contain"

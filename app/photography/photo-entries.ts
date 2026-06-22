@@ -3,7 +3,6 @@ export type PhotoEntry = {
   date: string;
   photos: {
     src: string;
-    alt: string;
     objectPosition?: string;
   }[];
 };
@@ -15,7 +14,6 @@ const photoEntries: PhotoEntry[] = [
     photos: [
       {
         src: "/photography/dropout-graduation-z-fellows.png",
-        alt: "Allen Xu holding a Dropout Graduation plaque on a rooftop",
       },
     ],
   },
@@ -25,15 +23,12 @@ const photoEntries: PhotoEntry[] = [
     photos: [
       {
         src: "/photography/yc-p26-demo-day-welcome.png",
-        alt: "Welcome to Demo Day sign at YC P26",
       },
       {
         src: "/photography/yc-p26-demo-day-1.png",
-        alt: "Selfie with a friend at YC P26 demo day",
       },
       {
         src: "/photography/yc-p26-demo-day-2.png",
-        alt: "Allen Xu and Bryce Johnson at YC P26 demo day",
         objectPosition: "center 38%",
       },
     ],
@@ -44,12 +39,19 @@ const photoEntries: PhotoEntry[] = [
     photos: [
       {
         src: "/photography/a-tuesday-at-hf0.png",
-        alt: "People working on laptops in a dimly lit room at hf0",
       },
       {
         src: "/photography/a-tuesday-at-hf0-2.png",
-        alt: "Five people sitting on a red couch at hf0",
         objectPosition: "center 72%",
+      },
+    ],
+  },
+  {
+    caption: "founders inc canopy demo day",
+    date: "2026-05-22",
+    photos: [
+      {
+        src: "/photography/founders-inc-canopy-demo-day.png",
       },
     ],
   },
@@ -59,20 +61,16 @@ const photoEntries: PhotoEntry[] = [
     photos: [
       {
         src: "/photography/hs-grad-2.png",
-        alt: "Allen Xu and friends in graduation gowns at Thomas G. Scullen Middle School",
       },
       {
         src: "/photography/hs-grad-1.png",
-        alt: "Allen Xu in graduation gown with family at the ceremony",
         objectPosition: "center 42%",
       },
       {
         src: "/photography/hs-grad-3.png",
-        alt: "Graduating class group photo on the football field",
       },
       {
         src: "/photography/hs-grad-4.png",
-        alt: "Allen Xu and friends holding diplomas in graduation gowns",
       },
     ],
   },
@@ -82,11 +80,9 @@ const photoEntries: PhotoEntry[] = [
     photos: [
       {
         src: "/photography/nbc-nctv17-morning-show-1.png",
-        alt: "Allen Xu on the NBC morning show discussing Eyerobic",
       },
       {
         src: "/photography/nbc-nctv17-morning-show-2.png",
-        alt: "Allen Xu with friends at an NBC event",
       },
     ],
   },
@@ -96,11 +92,9 @@ const photoEntries: PhotoEntry[] = [
     photos: [
       {
         src: "/photography/notre-dame-leadership-seminars-1.png",
-        alt: "Presentation on stage at Notre Dame Leadership Seminars",
       },
       {
         src: "/photography/notre-dame-leadership-seminars-2.png",
-        alt: "Group photo at Notre Dame Leadership Seminars",
       },
     ],
   },
@@ -110,15 +104,12 @@ const photoEntries: PhotoEntry[] = [
     photos: [
       {
         src: "/photography/bizbuzz-fish-tank-3.png",
-        alt: "Allen Xu and a friend with the BizBuzz Fish Tank poster",
       },
       {
         src: "/photography/bizbuzz-fish-tank-2.png",
-        alt: "Group photo at the second annual BizBuzz Fish Tank",
       },
       {
         src: "/photography/bizbuzz-fish-tank-1.png",
-        alt: "Winners holding checks at the second annual BizBuzz Fish Tank",
       },
     ],
   },
@@ -128,11 +119,9 @@ const photoEntries: PhotoEntry[] = [
     photos: [
       {
         src: "/photography/fish-tank-2024-2.png",
-        alt: "Group photo at the first annual Fish Tank",
       },
       {
         src: "/photography/fish-tank-2024-1.png",
-        alt: "Fish Tank trophies lined up on a table",
       },
     ],
   },
@@ -142,7 +131,6 @@ const photoEntries: PhotoEntry[] = [
     photos: [
       {
         src: "/photography/debating-at-yale.png",
-        alt: "Allen Xu debating on stage at Yale",
       },
     ],
   },

@@ -12,7 +12,6 @@ export default function CursorGlowLayout({
 }) {
   const [mouse, setMouse] = useState({ x: -9999, y: -9999 });
   const [active, setActive] = useState(false);
-  const [overCard, setOverCard] = useState(false);
   const targetRef = useRef({ x: -9999, y: -9999 });
   const frameRef = useRef<number | null>(null);
 
@@ -52,7 +51,7 @@ export default function CursorGlowLayout({
     };
   }, []);
 
-  const showGlow = active && !overCard;
+  const showGlow = active;
 
   return (
     <div className="relative flex min-h-dvh flex-col items-center px-4 py-4 sm:px-6 sm:py-6">
@@ -74,8 +73,6 @@ export default function CursorGlowLayout({
 
       <div
         className={`relative z-10 my-auto w-full min-w-0 ${contentClassName ?? "max-w-[45rem]"}`}
-        onMouseEnter={() => setOverCard(true)}
-        onMouseLeave={() => setOverCard(false)}
       >
         <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-end px-5 pt-4 sm:px-6 sm:pt-5">
           <div className="pointer-events-auto">
