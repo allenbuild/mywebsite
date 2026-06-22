@@ -4,6 +4,42 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import ThemeToggle from "./ThemeToggle";
 
+type Theme = "light" | "dark";
+
+function readTheme(): Theme {
+  if (typeof document === "undefined") return "light";
+  return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+}
+
+const GLOW_SIZE = 440;
+
+function GlowSpot({
+  x,
+  y,
+  background,
+}: {
+  x: number;
+  y: number;
+  background: string;
+}) {
+  return (
+    <div
+      style={{
+        position: "fixed",
+        left: x,
+        top: y,
+        width: GLOW_SIZE,
+        height: GLOW_SIZE,
+        transform: "translate(-50%, -50%)",
+        borderRadius: "50%",
+        background,
+        filter: "blur(48px)",
+        willChange: "left, top",
+      }}
+    />
+  );
+}
+
 export default function CursorGlowLayout({
   children,
   contentClassName,
@@ -13,18 +49,27 @@ export default function CursorGlowLayout({
 }) {
   const [mouse, setMouse] = useState({ x: -9999, y: -9999 });
   const [active, setActive] = useState(false);
+  const [theme, setTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
   const targetRef = useRef({ x: -9999, y: -9999 });
   const frameRef = useRef<number | null>(null);
 
   useEffect(() => {
     setMounted(true);
+    setTheme(readTheme());
+
+    const observer = new MutationObserver(() => {
+      setTheme(readTheme());
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
-    const finePointer = window.matchMedia("(pointer: fine)").matches;
-    if (!finePointer) return;
-
     const handleMove = (event: MouseEvent) => {
       targetRef.current = { x: event.clientX, y: event.clientY };
       setActive(true);
@@ -32,15 +77,15 @@ export default function CursorGlowLayout({
 
     const handleLeave = () => setActive(false);
 
-    window.addEventListener("mousemove", handleMove);
+    window.addEventListener("mousemove", handleMove, { passive: true });
     document.documentElement.addEventListener("mouseleave", handleLeave);
 
     const animate = () => {
       setMouse((current) => {
         const target = targetRef.current;
         return {
-          x: current.x + (target.x - current.x) * 0.32,
-          y: current.y + (target.y - current.y) * 0.32,
+          x: current.x + (target.x - current.x) * 0.35,
+          y: current.y + (target.y - current.y) * 0.35,
         };
       });
       frameRef.current = window.requestAnimationFrame(animate);
@@ -57,41 +102,35 @@ export default function CursorGlowLayout({
     };
   }, []);
 
-  const glow =
+  const canvasGlow =
+    theme === "dark"
+      ? "radial-gradient(circle, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.16) 42%, transparent 72%)"
+      : "radial-gradient(circle, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0.08) 42%, transparent 72%)";
+
+  const cardGlow =
+    theme === "dark"
+      ? "radial-gradient(circle, rgba(255,255,255,0.38) 0%, rgba(255,255,255,0.1) 42%, transparent 72%)"
+      : "radial-gradient(circle, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.05) 42%, transparent 72%)";
+
+  const glowOpacity = active ? 1 : 0;
+
+  const glowLayers =
     mounted &&
     createPortal(
       <>
-        {/* Canvas: visible in the margins around the card */}
         <div
           aria-hidden
-          className="cursor-glow-canvas pointer-events-none fixed inset-0 z-[1] overflow-hidden transition-opacity duration-300"
-          style={{ opacity: active ? 1 : 0 }}
+          className="pointer-events-none fixed inset-0 z-[1] transition-opacity duration-200"
+          style={{ opacity: glowOpacity }}
         >
-          <div
-            className="absolute size-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-2xl"
-            style={{
-              left: mouse.x,
-              top: mouse.y,
-              background:
-                "radial-gradient(circle, var(--cursor-glow) 0%, transparent 68%)",
-            }}
-          />
+          <GlowSpot x={mouse.x} y={mouse.y} background={canvasGlow} />
         </div>
-        {/* Card + canvas: spotlight on top of page content */}
         <div
           aria-hidden
-          className="cursor-glow-spot pointer-events-none fixed inset-0 z-[40] overflow-hidden transition-opacity duration-300"
-          style={{ opacity: active ? 1 : 0 }}
+          className="pointer-events-none fixed inset-0 z-[30] transition-opacity duration-200"
+          style={{ opacity: glowOpacity }}
         >
-          <div
-            className="absolute size-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-2xl"
-            style={{
-              left: mouse.x,
-              top: mouse.y,
-              background:
-                "radial-gradient(circle, var(--cursor-glow-spot) 0%, transparent 68%)",
-            }}
-          />
+          <GlowSpot x={mouse.x} y={mouse.y} background={cardGlow} />
         </div>
       </>,
       document.body,
@@ -99,7 +138,7 @@ export default function CursorGlowLayout({
 
   return (
     <div className="relative flex min-h-dvh flex-col items-center px-4 py-4 sm:px-6 sm:py-6">
-      {glow}
+      {glowLayers}
       <div
         className={`relative z-10 my-auto w-full min-w-0 ${contentClassName ?? "max-w-[45rem]"}`}
       >
