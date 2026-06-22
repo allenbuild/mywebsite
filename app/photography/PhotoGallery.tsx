@@ -12,7 +12,7 @@ import type { PhotoEntry } from "./photo-entries";
 import { formatPhotoDate, groupPhotoEntriesByYear } from "./photo-entries";
 
 const PHOTO_COL_PX = 320;
-const COLLAPSED_BAR_HEIGHT = 30;
+const COLLAPSED_BAR_HEIGHT = 44;
 
 function photoThumbSize(photoCount: number, photoIndex: number): string {
   if (photoCount === 1) {
@@ -148,16 +148,16 @@ function PhotoYearSection({
         onClick={toggle}
         aria-expanded={!collapsed}
         style={{ top: headerHeight, height: COLLAPSED_BAR_HEIGHT }}
-        className="sticky z-20 flex w-full items-center justify-between border-b border-[color:var(--rule)] bg-[color:var(--surface)] px-0 text-left transition-colors hover:text-[color:var(--link)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--surface)]"
+        className="sticky z-20 flex w-full items-center justify-between border-b border-[color:var(--rule)] bg-[color:var(--surface)] text-left transition-colors hover:text-[color:var(--link)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--surface)]"
       >
         <span
-          className={`font-semibold tracking-tight ${collapsed ? "text-[14px]" : "text-[15px]"}`}
+          className={`font-semibold tracking-tight ${collapsed ? "text-[16px]" : "text-[17px]"}`}
         >
           {year}
         </span>
         <span
           aria-hidden
-          className={`text-[14px] leading-none text-[color:var(--muted-2)] transition-transform duration-200 ${collapsed ? "-rotate-90" : ""}`}
+          className={`text-[18px] leading-none text-[color:var(--muted-2)] transition-transform duration-200 ${collapsed ? "-rotate-90" : ""}`}
         >
           ∨
         </span>
@@ -279,7 +279,7 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
               year={group.year}
               entries={group.entries}
               entryIndexOffset={offset}
-              defaultCollapsed={groupIndex > 0}
+              defaultCollapsed={false}
               headerHeight={headerHeight}
               onOpen={openLightbox}
             />
