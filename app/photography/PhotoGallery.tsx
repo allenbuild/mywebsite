@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import {
   useCallback,
   useEffect,
   useState,
 } from "react";
+import HomeBackLink from "../HomeBackLink";
+import { ChevronDown, CloseIcon } from "../RoundedIcons";
 import type { PhotoEntry } from "./photo-entries";
 import { formatPhotoDate, groupPhotoEntriesByYear } from "./photo-entries";
 
@@ -117,9 +118,9 @@ function YearBarButton({
       </span>
       <span
         aria-hidden
-        className={`text-[18px] leading-none text-[color:var(--muted-2)] transition-transform duration-200 ${collapsed ? "text-[14px] -rotate-90" : ""}`}
+        className={`text-[color:var(--muted-2)] transition-transform duration-200 ${collapsed ? "-rotate-90" : ""}`}
       >
-        ∨
+        <ChevronDown size={collapsed ? 15 : 18} />
       </span>
     </button>
   );
@@ -231,12 +232,7 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
   return (
     <>
       <div className="sticky top-0 z-30 -mx-5 bg-[color:var(--surface)] px-5 pb-2 pt-4 sm:-mx-6 sm:px-6 sm:pt-5">
-        <Link
-          href="/"
-          className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
-        >
-          ← home
-        </Link>
+        <HomeBackLink />
         <h1 className="mt-2 text-xl font-semibold tracking-tight">photography</h1>
       </div>
 
@@ -273,7 +269,7 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
             className="absolute right-4 top-4 text-2xl leading-none text-white/80 transition-colors hover:text-white"
             aria-label="Close"
           >
-            ×
+            <CloseIcon />
           </button>
 
           <div
