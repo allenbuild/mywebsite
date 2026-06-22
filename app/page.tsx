@@ -24,19 +24,19 @@ const navLinks = [
 ] as const;
 
 const navBtnClass =
-  "nav-btn flex items-center justify-center rounded-lg px-3 py-2 text-center text-[13px] font-normal sm:px-4 sm:py-2 sm:text-[14px]";
+  "nav-btn flex items-center justify-center rounded-md px-2.5 py-1.5 text-center text-[12px] font-normal sm:px-3 sm:py-1.5 sm:text-[13px]";
 
 const contactLinkClass = "contact-link transition-colors";
 
 export default function Home() {
   return (
     <CursorGlowLayout>
-      <main className="@container min-w-0 w-full max-w-full rounded-2xl bg-[color:var(--surface)] px-5 pt-4 pb-1.5 shadow-[var(--card-shadow)] sm:px-6 sm:pt-5 sm:pb-2">
-        <header className="flex items-center justify-between gap-5">
-          <h1 className="text-4xl font-semibold tracking-tight">
+      <main className="@container min-w-0 w-full max-w-full rounded-2xl bg-[color:var(--surface)] px-5 pt-3 pb-1.5 shadow-[var(--card-shadow)] sm:px-6 sm:pt-4 sm:pb-2">
+        <header className="flex items-center justify-between gap-4">
+          <h1 className="text-3xl font-semibold tracking-tight">
             Allen Xu
           </h1>
-          <div className="flex flex-col items-end pt-9">
+          <div className="flex flex-col items-end pt-7">
             <div className="tabular-nums text-[13px] text-[color:var(--muted-2)]">
               <AgeCounter
                 birthDate={new Date("2007-11-10T00:00:00")}
@@ -48,7 +48,7 @@ export default function Home() {
 
         <div className="mt-3 h-px w-full bg-[color:var(--rule)]" />
 
-        <section className="mt-3 min-w-0 space-y-4 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
+        <section className="mt-2.5 min-w-0 space-y-3 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
           <div>
             <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
               <span className="font-semibold">Hi, I&apos;m Allen</span>. I&apos;m an incoming freshman at the Wharton School at the University of Pennsylvania. Interested in embodied AI, early-stage venture capital, wearables, economics, and broadly, social entrepreneurship.
@@ -198,7 +198,7 @@ export default function Home() {
               </li>
             </ul>
 
-            <div className="mt-5 grid min-w-0 grid-cols-1 gap-2 @xl:grid-cols-2 @xl:gap-2">
+            <div className="mt-4 grid min-w-0 grid-cols-1 gap-2 @xl:grid-cols-2 @xl:gap-2">
               <div className="aspect-video w-full min-w-0 overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
                 <iframe
                   src="https://www.youtube.com/embed/XeHiBRtfn0o?playsinline=1"
@@ -223,7 +223,7 @@ export default function Home() {
 
         <nav
           aria-label="Site sections"
-          className="mt-6 mb-6 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-2.5"
+          className="mt-4 mb-4 grid grid-cols-2 gap-1.5 sm:flex sm:flex-wrap sm:gap-2"
         >
           {navLinks.map(({ href, label }) => (
             <Link
@@ -236,8 +236,8 @@ export default function Home() {
           ))}
         </nav>
 
-        <footer className="border-t border-[color:var(--rule)] pt-3 pb-0">
-          <div className="flex flex-wrap items-center justify-center gap-x-3.5 text-[16px]">
+        <footer className="border-t border-[color:var(--rule)] pt-2.5 pb-0">
+          <div className="flex flex-wrap items-center justify-center gap-x-3 text-[15px]">
             {contactLinks.map((link, index) => (
               <span key={link.label} className="inline-flex items-center gap-3">
                 {index > 0 ? (
@@ -260,7 +260,7 @@ export default function Home() {
               </span>
             ))}
           </div>
-          <p className="mt-4 text-center text-[11px] text-[color:var(--muted-2)]">
+          <p className="mt-3 text-center text-[11px] text-[color:var(--muted-2)]">
             © 2026 Allen Xu ·{" "}
             <a href="https://allenxu.dev" className={contactLinkClass}>
               allenxu.dev
