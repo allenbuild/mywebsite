@@ -243,7 +243,7 @@ export default function Home() {
                 {index > 0 ? (
                   <span
                     aria-hidden
-                    className="text-[color:var(--muted-2)]"
+                    className="text-[18px] leading-none text-[color:var(--muted-2)]"
                   >
                     ·
                   </span>
