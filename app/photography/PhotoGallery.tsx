@@ -99,18 +99,21 @@ function PhotoYearSection({
   year,
   entries,
   entryIndexOffset,
-  defaultCollapsed,
-  headerHeight,
+  collapsed,
+  stickyTop,
+  zIndex,
+  onCollapsedChange,
   onOpen,
 }: {
   year: number;
   entries: PhotoEntry[];
   entryIndexOffset: number;
-  defaultCollapsed: boolean;
-  headerHeight: number;
+  collapsed: boolean;
+  stickyTop: number;
+  zIndex: number;
+  onCollapsedChange: (collapsed: boolean) => void;
   onOpen: (entryIndex: number, photoIndex: number) => void;
 }) {
-  const [collapsed, setCollapsed] = useState(defaultCollapsed);
   const contentRef = useRef<HTMLDivElement>(null);
   const pinnedOpen = useRef(false);
 
@@ -120,16 +123,15 @@ function PhotoYearSection({
     const content = contentRef.current;
     if (!content) return;
 
-    const stickyBottom = headerHeight + COLLAPSED_BAR_HEIGHT;
+    const stickyBottom = stickyTop + COLLAPSED_BAR_HEIGHT;
 
     const onScroll = () => {
       if (pinnedOpen.current) return;
 
       const rect = content.getBoundingClientRect();
       const progress = (stickyBottom - rect.top) / Math.max(1, rect.height);
-      // Collapse after you've scrolled a meaningful portion of the section.
       if (progress >= AUTO_COLLAPSE_PROGRESS) {
-        setCollapsed(true);
+        onCollapsedChange(true);
       }
     };
 
@@ -139,15 +141,13 @@ function PhotoYearSection({
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };
-  }, [collapsed, headerHeight]);
+  }, [collapsed, onCollapsedChange, stickyTop]);
 
   const toggle = useCallback(() => {
-    setCollapsed((current) => {
-      const next = !current;
-      pinnedOpen.current = !next;
-      return next;
-    });
-  }, []);
+    const next = !collapsed;
+    pinnedOpen.current = !next;
+    onCollapsedChange(next);
+  }, [collapsed, onCollapsedChange]);
 
   return (
     <section>
@@ -155,8 +155,8 @@ function PhotoYearSection({
         type="button"
         onClick={toggle}
         aria-expanded={!collapsed}
-        style={{ top: headerHeight, height: COLLAPSED_BAR_HEIGHT }}
-        className="sticky z-20 flex w-full items-center justify-between border-b border-[color:var(--rule)] bg-[color:var(--surface)] text-left transition-colors hover:text-[color:var(--link)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--surface)]"
+        style={{ top: stickyTop, height: COLLAPSED_BAR_HEIGHT, zIndex }}
+        className="sticky flex w-full items-center justify-between border-b border-[color:var(--rule)] bg-[color:var(--surface)] text-left transition-colors hover:text-[color:var(--link)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--surface)]"
       >
         <span
           className={`font-semibold tracking-tight ${collapsed ? "text-[16px]" : "text-[17px]"}`}
@@ -192,8 +192,13 @@ function PhotoYearSection({
 export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
   const [lightbox, setLightbox] = useState<LightboxState | null>(null);
   const [headerHeight, setHeaderHeight] = useState(72);
+  const [collapsedYears, setCollapsedYears] = useState<Record<number, boolean>>({});
   const headerRef = useRef<HTMLDivElement>(null);
   const yearGroups = groupPhotoEntriesByYear(entries);
+
+  const setYearCollapsed = useCallback((year: number, collapsed: boolean) => {
+    setCollapsedYears((current) => ({ ...current, [year]: collapsed }));
+  }, []);
 
   const close = useCallback(() => setLightbox(null), []);
   const openLightbox = useCallback(
@@ -280,6 +285,11 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
         {yearGroups.map((group, groupIndex) => {
           const offset = entryIndexOffset;
           entryIndexOffset += group.entries.length;
+          const collapsedBefore = yearGroups
+            .slice(0, groupIndex)
+            .filter((g) => collapsedYears[g.year]).length;
+          const stickyTop =
+            headerHeight + collapsedBefore * COLLAPSED_BAR_HEIGHT;
 
           return (
             <PhotoYearSection
@@ -287,8 +297,12 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
               year={group.year}
               entries={group.entries}
               entryIndexOffset={offset}
-              defaultCollapsed={false}
-              headerHeight={headerHeight}
+              collapsed={collapsedYears[group.year] ?? false}
+              stickyTop={stickyTop}
+              zIndex={20 + groupIndex}
+              onCollapsedChange={(collapsed) =>
+                setYearCollapsed(group.year, collapsed)
+              }
               onOpen={openLightbox}
             />
           );

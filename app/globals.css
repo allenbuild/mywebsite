@@ -83,7 +83,9 @@ a:hover {
   background: var(--nav-btn-bg);
   color: var(--nav-btn-fg);
   text-decoration: none;
-  transition: color 0.15s ease;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
 }
 
 .nav-btn:visited {
@@ -93,6 +95,17 @@ a:hover {
 .nav-btn:hover,
 .nav-btn:focus-visible {
   color: var(--link);
+}
+
+:root[data-theme="dark"] .nav-btn:hover,
+:root[data-theme="dark"] .nav-btn:focus-visible {
+  background: var(--link);
+  color: #ffffff;
+}
+
+:root[data-theme="dark"] .nav-btn:hover:visited,
+:root[data-theme="dark"] .nav-btn:focus-visible:visited {
+  color: #ffffff;
 }
 
 a.contact-link {
