@@ -112,6 +112,7 @@ function PhotoYearSection({
 }) {
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
   const contentRef = useRef<HTMLDivElement>(null);
+  const pinnedOpen = useRef(false);
 
   useEffect(() => {
     if (collapsed) return;
@@ -122,13 +123,14 @@ function PhotoYearSection({
     const collapseLine = headerHeight + COLLAPSED_BAR_HEIGHT + COLLAPSE_SCROLL_OFFSET;
 
     const onScroll = () => {
+      if (pinnedOpen.current) return;
+
       const rect = content.getBoundingClientRect();
       if (rect.top <= collapseLine) {
         setCollapsed(true);
       }
     };
 
-    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     return () => {
@@ -138,7 +140,11 @@ function PhotoYearSection({
   }, [collapsed, headerHeight]);
 
   const toggle = useCallback(() => {
-    setCollapsed((current) => !current);
+    setCollapsed((current) => {
+      const next = !current;
+      pinnedOpen.current = next;
+      return next;
+    });
   }, []);
 
   return (
