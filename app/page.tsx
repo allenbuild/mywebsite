@@ -237,16 +237,11 @@ export default function Home() {
         </nav>
 
         <footer className="border-t border-[color:var(--rule)] pt-3 pb-0">
-          <div className="flex flex-wrap items-center justify-center gap-x-6 text-[14px] sm:gap-x-8">
+          <div className="flex flex-wrap items-center justify-center gap-x-2.5 text-[15px]">
             {contactLinks.map((link, index) => (
-              <span key={link.label} className="inline-flex items-center gap-x-6 sm:gap-x-8">
+              <span key={link.label} className="inline-flex items-center gap-x-2.5">
                 {index > 0 ? (
-                  <span
-                    aria-hidden
-                    className="text-[24px] leading-none text-[color:var(--muted-2)]"
-                  >
-                    ·
-                  </span>
+                  <span aria-hidden className="contact-separator" />
                 ) : null}
                 <a
                   href={link.href}
