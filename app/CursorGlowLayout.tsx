@@ -43,9 +43,11 @@ function GlowSpot({
 export default function CursorGlowLayout({
   children,
   contentClassName,
+  showThemeToggle = true,
 }: {
   children: React.ReactNode;
   contentClassName?: string;
+  showThemeToggle?: boolean;
 }) {
   const [mouse, setMouse] = useState({ x: -9999, y: -9999 });
   const [active, setActive] = useState(false);
@@ -126,11 +128,13 @@ export default function CursorGlowLayout({
       <div
         className={`relative z-10 my-auto w-full min-w-0 ${contentClassName ?? "max-w-[45rem]"}`}
       >
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-end px-5 pt-4 sm:px-6 sm:pt-5">
-          <div className="pointer-events-auto">
-            <ThemeToggle />
+        {showThemeToggle && (
+          <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-end px-5 pt-4 sm:px-6 sm:pt-5">
+            <div className="pointer-events-auto">
+              <ThemeToggle />
+            </div>
           </div>
-        </div>
+        )}
         {children}
       </div>
     </div>

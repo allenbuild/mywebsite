@@ -1,5 +1,5 @@
-import HomeBackLink from "../HomeBackLink";
 import CursorGlowLayout from "../CursorGlowLayout";
+import SubpageHeader from "../SubpageHeader";
 
 const books = [
   {
@@ -26,10 +26,9 @@ const books = [
 
 export default function BookshelfPage() {
   return (
-    <CursorGlowLayout>
+    <CursorGlowLayout showThemeToggle={false}>
       <main className="min-w-0 w-full max-w-full rounded-2xl bg-[color:var(--surface)] px-5 py-4 shadow-[var(--card-shadow)] sm:px-6 sm:py-5">
-        <HomeBackLink />
-        <h1 className="mt-3 text-2xl font-semibold tracking-tight">bookshelf</h1>
+        <SubpageHeader title="bookshelf" />
 
         <p className="mt-2 text-[15px] leading-[1.5] text-[color:var(--muted)]">
           questions, answers, and everything in between:

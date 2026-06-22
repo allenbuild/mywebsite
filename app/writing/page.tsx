@@ -1,12 +1,11 @@
-import HomeBackLink from "../HomeBackLink";
 import CursorGlowLayout from "../CursorGlowLayout";
+import SubpageHeader from "../SubpageHeader";
 
 export default function WritingPage() {
   return (
-    <CursorGlowLayout>
+    <CursorGlowLayout showThemeToggle={false}>
       <main className="min-w-0 w-full max-w-full rounded-2xl bg-[color:var(--surface)] px-5 py-4 shadow-[var(--card-shadow)] sm:px-6 sm:py-5">
-        <HomeBackLink />
-        <h1 className="mt-3 text-2xl font-semibold tracking-tight">writing</h1>
+        <SubpageHeader title="writing" />
         <p className="mt-2 text-[15px] leading-[1.5] text-[color:var(--muted)]">
           soon-to-be reservoir of my think pieces, rants, shower thoughts, &amp;
           more.
