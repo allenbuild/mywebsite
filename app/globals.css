@@ -83,6 +83,24 @@ a:hover {
   position: relative;
   overflow: hidden;
   background-color: var(--nav-btn-bg);
+  text-decoration: none;
+}
+
+.nav-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: var(--link);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s ease;
+}
+
+.nav-btn__label {
+  position: relative;
+  z-index: 1;
   color: transparent;
   background-image: linear-gradient(
     90deg,
@@ -93,29 +111,11 @@ a:hover {
   background-position: 100% 0;
   -webkit-background-clip: text;
   background-clip: text;
-  text-decoration: none;
   transition: background-position 0.4s ease;
-  position: relative;
-  z-index: 1;
 }
 
-.nav-btn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: var(--link);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.4s ease;
-}
-
-.nav-btn:visited {
-  color: transparent;
-}
-
-.nav-btn:hover,
-.nav-btn:focus-visible {
+.nav-btn:hover .nav-btn__label,
+.nav-btn:focus-visible .nav-btn__label {
   background-position: 0 0;
 }
 
@@ -144,6 +144,7 @@ a:hover {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
   border-radius: inherit;
   background: var(--link);
   transform: scaleX(0);

@@ -231,7 +231,7 @@ export default function Home() {
               href={href}
               className={navBtnClass}
             >
-              {label}
+              <span className="nav-btn__label">{label}</span>
             </Link>
           ))}
         </nav>
