@@ -67,20 +67,21 @@ body {
     sans-serif;
 }
 
-a {
+a:not(.nav-btn):not(.home-back-btn):not(.contact-link) {
   color: var(--link);
 }
 
-a:visited {
+a:not(.nav-btn):not(.home-back-btn):not(.contact-link):visited {
   color: var(--link);
 }
 
-a:hover {
+a:not(.nav-btn):not(.home-back-btn):not(.contact-link):hover,
+a:not(.nav-btn):not(.home-back-btn):not(.contact-link):focus-visible {
   color: var(--link-hover);
 }
 
-.nav-btn {
-  background: var(--nav-btn-bg);
+a.nav-btn {
+  background-color: var(--nav-btn-bg);
   color: var(--nav-btn-fg);
   text-decoration: none;
   transition:
@@ -88,29 +89,29 @@ a:hover {
     background-color 0.15s ease;
 }
 
-.nav-btn:visited {
+a.nav-btn:visited {
   color: var(--nav-btn-fg);
 }
 
-.nav-btn:hover,
-.nav-btn:focus-visible {
-  background: var(--link);
+a.nav-btn:hover,
+a.nav-btn:focus-visible {
+  background-color: var(--link);
   color: #ffffff;
 }
 
-.nav-btn:hover:visited,
-.nav-btn:focus-visible:visited {
+a.nav-btn:hover:visited,
+a.nav-btn:focus-visible:visited {
   color: #ffffff;
 }
 
-.home-back-btn {
+a.home-back-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
   padding: 0.25rem 0.625rem;
   border-radius: 0.5rem;
   border: 1.5px solid var(--link);
-  background: transparent;
+  background-color: transparent;
   color: var(--link);
   font-size: 12px;
   font-weight: 400;
@@ -122,42 +123,31 @@ a:hover {
     border-color 0.15s ease;
 }
 
-.home-back-btn:visited {
+a.home-back-btn:visited {
   color: var(--link);
 }
 
-.home-back-btn:hover,
-.home-back-btn:focus-visible {
-  background: var(--link);
+a.home-back-btn:hover,
+a.home-back-btn:focus-visible {
+  background-color: var(--link);
   border-color: var(--link);
   color: #ffffff;
 }
 
-.home-back-btn:hover:visited,
-.home-back-btn:focus-visible:visited {
+a.home-back-btn:hover:visited,
+a.home-back-btn:focus-visible:visited {
   color: #ffffff;
 }
 
-:root[data-theme="dark"] .home-back-btn,
-:root[data-theme="dark"] .home-back-btn:visited {
+:root[data-theme="dark"] a.home-back-btn,
+:root[data-theme="dark"] a.home-back-btn:visited {
   color: #ffffff;
 }
 
-:root[data-theme="dark"] .home-back-btn:hover,
-:root[data-theme="dark"] .home-back-btn:focus-visible,
-:root[data-theme="dark"] .home-back-btn:hover:visited,
-:root[data-theme="dark"] .home-back-btn:focus-visible:visited {
-  color: #ffffff;
-}
-
-:root[data-theme="dark"] .nav-btn:hover,
-:root[data-theme="dark"] .nav-btn:focus-visible {
-  background: var(--link);
-  color: #ffffff;
-}
-
-:root[data-theme="dark"] .nav-btn:hover:visited,
-:root[data-theme="dark"] .nav-btn:focus-visible:visited {
+:root[data-theme="dark"] a.home-back-btn:hover,
+:root[data-theme="dark"] a.home-back-btn:focus-visible,
+:root[data-theme="dark"] a.home-back-btn:hover:visited,
+:root[data-theme="dark"] a.home-back-btn:focus-visible:visited {
   color: #ffffff;
 }
 
