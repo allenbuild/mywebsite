@@ -231,7 +231,7 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
 
   return (
     <>
-      <div className="sticky top-0 z-30 -mx-5 bg-[color:var(--surface)] px-5 pb-2 pt-4 sm:-mx-6 sm:px-6 sm:pt-5">
+      <div className="sticky top-0 z-30 bg-[color:var(--surface)] pb-2 pt-4 sm:pt-5">
         <HomeBackLink />
         <h1 className="mt-2 text-xl font-semibold tracking-tight">photography</h1>
       </div>

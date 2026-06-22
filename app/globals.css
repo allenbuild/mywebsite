@@ -97,6 +97,31 @@ a:hover {
   color: var(--link);
 }
 
+.home-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  background: var(--link);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  transition: filter 0.15s ease;
+}
+
+.home-back-btn:visited {
+  color: #ffffff;
+}
+
+.home-back-btn:hover,
+.home-back-btn:focus-visible {
+  color: #ffffff;
+  filter: brightness(1.08);
+}
+
 :root[data-theme="dark"] .nav-btn:hover,
 :root[data-theme="dark"] .nav-btn:focus-visible {
   background: var(--link);

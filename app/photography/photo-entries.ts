@@ -126,7 +126,7 @@ const photoEntries: PhotoEntry[] = [
     ],
   },
   {
-    caption: "congress debate finals at yale",
+    caption: "congressional debate finals at yale",
     date: "2023-10-01",
     photos: [
       {
