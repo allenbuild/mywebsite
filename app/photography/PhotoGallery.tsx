@@ -95,13 +95,45 @@ function PhotoEntryRow({
   );
 }
 
+function YearBarButton({
+  year,
+  collapsed,
+  onClick,
+}: {
+  year: number;
+  collapsed: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-expanded={!collapsed}
+      style={{ height: COLLAPSED_BAR_HEIGHT }}
+      className="flex w-full shrink-0 items-center justify-between border-b border-[color:var(--rule)] bg-[color:var(--surface)] text-left transition-colors hover:text-[color:var(--link)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--surface)]"
+    >
+      <span
+        className={`font-semibold tracking-tight ${collapsed ? "text-[16px]" : "text-[17px]"}`}
+      >
+        {year}
+      </span>
+      <span
+        aria-hidden
+        className={`text-[18px] leading-none text-[color:var(--muted-2)] transition-transform duration-200 ${collapsed ? "-rotate-90" : ""}`}
+      >
+        ∨
+      </span>
+    </button>
+  );
+}
+
 function PhotoYearSection({
   year,
   entries,
   entryIndexOffset,
   collapsed,
-  stickyTop,
-  zIndex,
+  collapseAnchor,
+  isPinnedOpen,
   onCollapsedChange,
   onOpen,
 }: {
@@ -109,13 +141,17 @@ function PhotoYearSection({
   entries: PhotoEntry[];
   entryIndexOffset: number;
   collapsed: boolean;
-  stickyTop: number;
-  zIndex: number;
+  collapseAnchor: number;
+  isPinnedOpen: boolean;
   onCollapsedChange: (collapsed: boolean) => void;
   onOpen: (entryIndex: number, photoIndex: number) => void;
 }) {
   const contentRef = useRef<HTMLDivElement>(null);
-  const pinnedOpen = useRef(false);
+  const pinnedOpen = useRef(isPinnedOpen);
+
+  useEffect(() => {
+    pinnedOpen.current = isPinnedOpen;
+  }, [isPinnedOpen]);
 
   useEffect(() => {
     if (collapsed) return;
@@ -123,7 +159,7 @@ function PhotoYearSection({
     const content = contentRef.current;
     if (!content) return;
 
-    const stickyBottom = stickyTop + COLLAPSED_BAR_HEIGHT;
+    const stickyBottom = collapseAnchor + COLLAPSED_BAR_HEIGHT;
 
     const onScroll = () => {
       if (pinnedOpen.current) return;
@@ -141,50 +177,32 @@ function PhotoYearSection({
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };
-  }, [collapsed, onCollapsedChange, stickyTop]);
+  }, [collapseAnchor, collapsed, onCollapsedChange]);
 
   const toggle = useCallback(() => {
-    const next = !collapsed;
-    pinnedOpen.current = !next;
-    onCollapsedChange(next);
+    onCollapsedChange(!collapsed);
   }, [collapsed, onCollapsedChange]);
+
+  if (collapsed) {
+    return null;
+  }
 
   return (
     <section>
-      <button
-        type="button"
-        onClick={toggle}
-        aria-expanded={!collapsed}
-        style={{ top: stickyTop, height: COLLAPSED_BAR_HEIGHT, zIndex }}
-        className="sticky flex w-full items-center justify-between border-b border-[color:var(--rule)] bg-[color:var(--surface)] text-left transition-colors hover:text-[color:var(--link)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--surface)]"
-      >
-        <span
-          className={`font-semibold tracking-tight ${collapsed ? "text-[16px]" : "text-[17px]"}`}
-        >
-          {year}
-        </span>
-        <span
-          aria-hidden
-          className={`text-[18px] leading-none text-[color:var(--muted-2)] transition-transform duration-200 ${collapsed ? "-rotate-90" : ""}`}
-        >
-          ∨
-        </span>
-      </button>
+      <YearBarButton year={year} collapsed={false} onClick={toggle} />
 
-      {!collapsed && (
-        <div ref={contentRef} className="pb-4 pt-3">
-          <ol className="space-y-6">
-            {entries.map((entry, index) => (
-              <PhotoEntryRow
-                key={`${entry.date}-${entry.caption}`}
-                entry={entry}
-                entryIndex={entryIndexOffset + index}
-                onOpen={onOpen}
-              />
-            ))}
-          </ol>
-        </div>
-      )}
+      <div ref={contentRef} className="pb-4 pt-3">
+        <ol className="space-y-6">
+          {entries.map((entry, index) => (
+            <PhotoEntryRow
+              key={`${entry.date}-${entry.caption}`}
+              entry={entry}
+              entryIndex={entryIndexOffset + index}
+              onOpen={onOpen}
+            />
+          ))}
+        </ol>
+      </div>
     </section>
   );
 }
@@ -193,10 +211,16 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
   const [lightbox, setLightbox] = useState<LightboxState | null>(null);
   const [headerHeight, setHeaderHeight] = useState(72);
   const [collapsedYears, setCollapsedYears] = useState<Record<number, boolean>>({});
+  const pinnedOpenYears = useRef<Set<number>>(new Set());
   const headerRef = useRef<HTMLDivElement>(null);
   const yearGroups = groupPhotoEntriesByYear(entries);
 
   const setYearCollapsed = useCallback((year: number, collapsed: boolean) => {
+    if (collapsed) {
+      pinnedOpenYears.current.delete(year);
+    } else {
+      pinnedOpenYears.current.add(year);
+    }
     setCollapsedYears((current) => ({ ...current, [year]: collapsed }));
   }, []);
 
@@ -264,6 +288,13 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
     };
   }, [active, close, entries]);
 
+  const collapsedYearGroups = yearGroups.filter(
+    (group) => collapsedYears[group.year],
+  );
+  const collapsedRailHeight =
+    collapsedYearGroups.length * COLLAPSED_BAR_HEIGHT;
+  const collapseAnchor = headerHeight + collapsedRailHeight;
+
   let entryIndexOffset = 0;
 
   return (
@@ -281,15 +312,26 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
         <h1 className="mt-2 text-xl font-semibold tracking-tight">photography</h1>
       </div>
 
+      {collapsedYearGroups.length > 0 && (
+        <div
+          className="sticky z-[25] -mx-5 bg-[color:var(--surface)] px-5 sm:-mx-6 sm:px-6"
+          style={{ top: headerHeight }}
+        >
+          {collapsedYearGroups.map((group) => (
+            <YearBarButton
+              key={group.year}
+              year={group.year}
+              collapsed
+              onClick={() => setYearCollapsed(group.year, false)}
+            />
+          ))}
+        </div>
+      )}
+
       <div>
-        {yearGroups.map((group, groupIndex) => {
+        {yearGroups.map((group) => {
           const offset = entryIndexOffset;
           entryIndexOffset += group.entries.length;
-          const collapsedBefore = yearGroups
-            .slice(0, groupIndex)
-            .filter((g) => collapsedYears[g.year]).length;
-          const stickyTop =
-            headerHeight + collapsedBefore * COLLAPSED_BAR_HEIGHT;
 
           return (
             <PhotoYearSection
@@ -298,8 +340,8 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
               entries={group.entries}
               entryIndexOffset={offset}
               collapsed={collapsedYears[group.year] ?? false}
-              stickyTop={stickyTop}
-              zIndex={20 + groupIndex}
+              collapseAnchor={collapseAnchor}
+              isPinnedOpen={pinnedOpenYears.current.has(group.year)}
               onCollapsedChange={(collapsed) =>
                 setYearCollapsed(group.year, collapsed)
               }
