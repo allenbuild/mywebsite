@@ -5,7 +5,6 @@ import Link from "next/link";
 import {
   useCallback,
   useEffect,
-  useRef,
   useState,
 } from "react";
 import type { PhotoEntry } from "./photo-entries";
@@ -13,7 +12,6 @@ import { formatPhotoDate, groupPhotoEntriesByYear } from "./photo-entries";
 
 const PHOTO_COL_PX = 320;
 const COLLAPSED_BAR_HEIGHT = 44;
-const AUTO_COLLAPSE_PROGRESS = 0.85;
 
 function photoThumbSize(photoCount: number, photoIndex: number): string {
   if (photoCount === 1) {
@@ -132,96 +130,48 @@ function PhotoYearSection({
   entries,
   entryIndexOffset,
   collapsed,
-  collapseAnchor,
-  isPinnedOpen,
-  onCollapsedChange,
+  onToggle,
   onOpen,
 }: {
   year: number;
   entries: PhotoEntry[];
   entryIndexOffset: number;
   collapsed: boolean;
-  collapseAnchor: number;
-  isPinnedOpen: boolean;
-  onCollapsedChange: (collapsed: boolean) => void;
+  onToggle: () => void;
   onOpen: (entryIndex: number, photoIndex: number) => void;
 }) {
-  const contentRef = useRef<HTMLDivElement>(null);
-  const pinnedOpen = useRef(isPinnedOpen);
-
-  useEffect(() => {
-    pinnedOpen.current = isPinnedOpen;
-  }, [isPinnedOpen]);
-
-  useEffect(() => {
-    if (collapsed) return;
-
-    const content = contentRef.current;
-    if (!content) return;
-
-    const stickyBottom = collapseAnchor + COLLAPSED_BAR_HEIGHT;
-
-    const onScroll = () => {
-      if (pinnedOpen.current) return;
-
-      const rect = content.getBoundingClientRect();
-      const progress = (stickyBottom - rect.top) / Math.max(1, rect.height);
-      if (progress >= AUTO_COLLAPSE_PROGRESS) {
-        onCollapsedChange(true);
-      }
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, [collapseAnchor, collapsed, onCollapsedChange]);
-
-  const toggle = useCallback(() => {
-    onCollapsedChange(!collapsed);
-  }, [collapsed, onCollapsedChange]);
-
-  if (collapsed) {
-    return null;
-  }
-
   return (
     <section>
-      <YearBarButton year={year} collapsed={false} onClick={toggle} />
+      <YearBarButton year={year} collapsed={collapsed} onClick={onToggle} />
 
-      <div ref={contentRef} className="pb-4 pt-3">
-        <ol className="space-y-6">
-          {entries.map((entry, index) => (
-            <PhotoEntryRow
-              key={`${entry.date}-${entry.caption}`}
-              entry={entry}
-              entryIndex={entryIndexOffset + index}
-              onOpen={onOpen}
-            />
-          ))}
-        </ol>
-      </div>
+      {!collapsed && (
+        <div className="pb-4 pt-3">
+          <ol className="space-y-6">
+            {entries.map((entry, index) => (
+              <PhotoEntryRow
+                key={`${entry.date}-${entry.caption}`}
+                entry={entry}
+                entryIndex={entryIndexOffset + index}
+                onOpen={onOpen}
+              />
+            ))}
+          </ol>
+        </div>
+      )}
     </section>
   );
 }
 
 export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
   const [lightbox, setLightbox] = useState<LightboxState | null>(null);
-  const [headerHeight, setHeaderHeight] = useState(72);
   const [collapsedYears, setCollapsedYears] = useState<Record<number, boolean>>({});
-  const pinnedOpenYears = useRef<Set<number>>(new Set());
-  const headerRef = useRef<HTMLDivElement>(null);
   const yearGroups = groupPhotoEntriesByYear(entries);
 
-  const setYearCollapsed = useCallback((year: number, collapsed: boolean) => {
-    if (collapsed) {
-      pinnedOpenYears.current.delete(year);
-    } else {
-      pinnedOpenYears.current.add(year);
-    }
-    setCollapsedYears((current) => ({ ...current, [year]: collapsed }));
+  const toggleYear = useCallback((year: number) => {
+    setCollapsedYears((current) => ({
+      ...current,
+      [year]: !current[year],
+    }));
   }, []);
 
   const close = useCallback(() => setLightbox(null), []);
@@ -231,18 +181,6 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
     },
     [],
   );
-
-  useEffect(() => {
-    const header = headerRef.current;
-    if (!header) return;
-
-    const update = () => setHeaderHeight(header.offsetHeight);
-    update();
-
-    const observer = new ResizeObserver(update);
-    observer.observe(header);
-    return () => observer.disconnect();
-  }, []);
 
   const active =
     lightbox === null
@@ -288,21 +226,11 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
     };
   }, [active, close, entries]);
 
-  const collapsedYearGroups = yearGroups.filter(
-    (group) => collapsedYears[group.year],
-  );
-  const collapsedRailHeight =
-    collapsedYearGroups.length * COLLAPSED_BAR_HEIGHT;
-  const collapseAnchor = headerHeight + collapsedRailHeight;
-
   let entryIndexOffset = 0;
 
   return (
     <>
-      <div
-        ref={headerRef}
-        className="sticky top-0 z-30 -mx-5 bg-[color:var(--surface)] px-5 pb-2 pt-4 sm:-mx-6 sm:px-6 sm:pt-5"
-      >
+      <div className="sticky top-0 z-30 -mx-5 bg-[color:var(--surface)] px-5 pb-2 pt-4 sm:-mx-6 sm:px-6 sm:pt-5">
         <Link
           href="/"
           className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
@@ -311,22 +239,6 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
         </Link>
         <h1 className="mt-2 text-xl font-semibold tracking-tight">photography</h1>
       </div>
-
-      {collapsedYearGroups.length > 0 && (
-        <div
-          className="sticky z-[25] -mx-5 bg-[color:var(--surface)] px-5 sm:-mx-6 sm:px-6"
-          style={{ top: headerHeight }}
-        >
-          {collapsedYearGroups.map((group) => (
-            <YearBarButton
-              key={group.year}
-              year={group.year}
-              collapsed
-              onClick={() => setYearCollapsed(group.year, false)}
-            />
-          ))}
-        </div>
-      )}
 
       <div>
         {yearGroups.map((group) => {
@@ -340,11 +252,7 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
               entries={group.entries}
               entryIndexOffset={offset}
               collapsed={collapsedYears[group.year] ?? false}
-              collapseAnchor={collapseAnchor}
-              isPinnedOpen={pinnedOpenYears.current.has(group.year)}
-              onCollapsedChange={(collapsed) =>
-                setYearCollapsed(group.year, collapsed)
-              }
+              onToggle={() => toggleYear(group.year)}
               onOpen={openLightbox}
             />
           );
