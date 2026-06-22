@@ -191,7 +191,7 @@ export default function Home() {
                 </a>{" "}
                 with strangers throughout senior year of high school (750k+ views)
               </li>
-              <li>built smart poker glasses, my high school&apos;s events platform, and a personal JARVIS assistant</li>
+              <li>build smart poker glasses, a personal Jarvis, and state-winning FLL &amp; FTC robots</li>
               <li>
                 fell in love with photography, pickup basketball, and my
                 goldendoodle Winnie
