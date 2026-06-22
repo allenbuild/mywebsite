@@ -113,12 +113,12 @@ const photoEntries: PhotoEntry[] = [
         alt: "Allen Xu and a friend with the BizBuzz Fish Tank poster",
       },
       {
-        src: "/photography/bizbuzz-fish-tank-1.png",
-        alt: "Winners holding checks at the second annual BizBuzz Fish Tank",
-      },
-      {
         src: "/photography/bizbuzz-fish-tank-2.png",
         alt: "Group photo at the second annual BizBuzz Fish Tank",
+      },
+      {
+        src: "/photography/bizbuzz-fish-tank-1.png",
+        alt: "Winners holding checks at the second annual BizBuzz Fish Tank",
       },
     ],
   },
