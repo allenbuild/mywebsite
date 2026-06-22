@@ -82,10 +82,21 @@ a:hover {
 .nav-btn {
   position: relative;
   overflow: hidden;
-  background: var(--nav-btn-bg);
-  color: var(--nav-btn-fg);
+  background-color: var(--nav-btn-bg);
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    #ffffff 50%,
+    var(--nav-btn-fg) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
   text-decoration: none;
-  transition: color 0.4s ease;
+  transition: background-position 0.4s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .nav-btn::before {
@@ -100,22 +111,17 @@ a:hover {
 }
 
 .nav-btn:visited {
-  color: var(--nav-btn-fg);
+  color: transparent;
 }
 
 .nav-btn:hover,
 .nav-btn:focus-visible {
-  color: #ffffff;
+  background-position: 0 0;
 }
 
 .nav-btn:hover::before,
 .nav-btn:focus-visible::before {
   transform: scaleX(1);
-}
-
-.nav-btn:hover:visited,
-.nav-btn:focus-visible:visited {
-  color: #ffffff;
 }
 
 .home-back-btn {
@@ -128,12 +134,10 @@ a:hover {
   border-radius: 0.5rem;
   border: 1.5px solid var(--link);
   background: transparent;
-  color: var(--link);
   font-size: 12px;
   font-weight: 400;
   line-height: 1;
   text-decoration: none;
-  transition: color 0.4s ease;
 }
 
 .home-back-btn::before {
@@ -147,13 +151,51 @@ a:hover {
   transition: transform 0.4s ease;
 }
 
-.home-back-btn:visited {
+.home-back-btn__label {
+  position: relative;
+  z-index: 1;
+  color: transparent;
+  background-image: linear-gradient(90deg, #ffffff 50%, var(--link) 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-position 0.4s ease;
+}
+
+.home-back-btn__icon-wrap {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.home-back-btn__icon {
+  display: inline-flex;
+}
+
+.home-back-btn__icon--base {
   color: var(--link);
 }
 
-.home-back-btn:hover,
-.home-back-btn:focus-visible {
+.home-back-btn__icon--hover {
+  position: absolute;
+  inset: 0;
   color: #ffffff;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.4s ease;
+}
+
+.home-back-btn:hover .home-back-btn__label,
+.home-back-btn:focus-visible .home-back-btn__label {
+  background-position: 0 0;
+}
+
+.home-back-btn:hover .home-back-btn__icon--hover,
+.home-back-btn:focus-visible .home-back-btn__icon--hover {
+  clip-path: inset(0 0 0 0);
 }
 
 .home-back-btn:hover::before,
@@ -161,20 +203,14 @@ a:hover {
   transform: scaleX(1);
 }
 
-.home-back-btn:hover:visited,
-.home-back-btn:focus-visible:visited {
+:root[data-theme="dark"] .home-back-btn__label {
   color: #ffffff;
+  background-image: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
 }
 
-:root[data-theme="dark"] .home-back-btn,
-:root[data-theme="dark"] .home-back-btn:visited {
-  color: #ffffff;
-}
-
-:root[data-theme="dark"] .home-back-btn:hover,
-:root[data-theme="dark"] .home-back-btn:focus-visible,
-:root[data-theme="dark"] .home-back-btn:hover:visited,
-:root[data-theme="dark"] .home-back-btn:focus-visible:visited {
+:root[data-theme="dark"] .home-back-btn__icon--base {
   color: #ffffff;
 }
 

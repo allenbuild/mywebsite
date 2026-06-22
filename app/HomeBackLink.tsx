@@ -4,8 +4,15 @@ import { ChevronLeft } from "./RoundedIcons";
 export default function HomeBackLink({ className }: { className?: string }) {
   return (
     <Link href="/" className={className ?? "home-back-btn"}>
-      <ChevronLeft size={12} />
-      home
+      <span className="home-back-btn__icon-wrap" aria-hidden>
+        <span className="home-back-btn__icon home-back-btn__icon--base">
+          <ChevronLeft size={12} />
+        </span>
+        <span className="home-back-btn__icon home-back-btn__icon--hover">
+          <ChevronLeft size={12} />
+        </span>
+      </span>
+      <span className="home-back-btn__label">home</span>
     </Link>
   );
 }
