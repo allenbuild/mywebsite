@@ -13,6 +13,7 @@ import { formatPhotoDate, groupPhotoEntriesByYear } from "./photo-entries";
 
 const PHOTO_COL_PX = 320;
 const COLLAPSED_BAR_HEIGHT = 44;
+const COLLAPSE_SCROLL_OFFSET = 96;
 
 function photoThumbSize(photoCount: number, photoIndex: number): string {
   if (photoCount === 1) {
@@ -118,23 +119,22 @@ function PhotoYearSection({
     const content = contentRef.current;
     if (!content) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (
-          !entry.isIntersecting &&
-          entry.boundingClientRect.top < headerHeight
-        ) {
-          setCollapsed(true);
-        }
-      },
-      {
-        rootMargin: `-${headerHeight}px 0px 0px 0px`,
-        threshold: 0,
-      },
-    );
+    const collapseLine = headerHeight + COLLAPSED_BAR_HEIGHT + COLLAPSE_SCROLL_OFFSET;
 
-    observer.observe(content);
-    return () => observer.disconnect();
+    const onScroll = () => {
+      const rect = content.getBoundingClientRect();
+      if (rect.top <= collapseLine) {
+        setCollapsed(true);
+      }
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, [collapsed, headerHeight]);
 
   const toggle = useCallback(() => {
@@ -257,7 +257,7 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
     <>
       <div
         ref={headerRef}
-        className="sticky top-0 z-30 -mx-5 border-b border-[color:var(--rule)] bg-[color:var(--surface)] px-5 pb-2 pt-4 sm:-mx-6 sm:px-6 sm:pt-5"
+        className="sticky top-0 z-30 -mx-5 bg-[color:var(--surface)] px-5 pb-2 pt-4 sm:-mx-6 sm:px-6 sm:pt-5"
       >
         <Link
           href="/"
