@@ -26,7 +26,7 @@ const navLinks = [
 const navBtnClass =
   "nav-btn flex items-center justify-center rounded-md px-2.5 py-1.5 text-center text-[12px] font-normal sm:px-3 sm:py-1.5 sm:text-[13px]";
 
-const contactLinkClass = "contact-link transition-colors";
+const contactLinkClass = "contact-link";
 
 export default function Home() {
   return (
@@ -236,14 +236,14 @@ export default function Home() {
           ))}
         </nav>
 
-        <footer className="border-t border-[color:var(--rule)] pt-2.5 pb-0">
-          <div className="flex flex-wrap items-center justify-center gap-x-3 text-[15px]">
+        <footer className="border-t border-[color:var(--rule)] pt-3 pb-0">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 text-[14px] sm:gap-x-8">
             {contactLinks.map((link, index) => (
-              <span key={link.label} className="inline-flex items-center gap-3">
+              <span key={link.label} className="inline-flex items-center gap-x-6 sm:gap-x-8">
                 {index > 0 ? (
                   <span
                     aria-hidden
-                    className="text-[color:var(--foreground)]"
+                    className="text-[color:var(--muted-2)]"
                   >
                     ·
                   </span>
@@ -262,7 +262,7 @@ export default function Home() {
           </div>
           <p className="mt-3 text-center text-[11px] text-[color:var(--muted-2)]">
             © 2026 Allen Xu ·{" "}
-            <a href="https://allenxu.dev" className={contactLinkClass}>
+            <a href="https://allenxu.dev" className="contact-link-plain">
               allenxu.dev
             </a>
           </p>

@@ -169,17 +169,51 @@ a:hover {
 }
 
 a.contact-link {
-  color: var(--foreground);
+  position: relative;
+  display: inline-block;
   text-decoration: none;
+  background-image: linear-gradient(
+    90deg,
+    var(--link) 50%,
+    var(--muted-2) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background-position 0.4s ease;
 }
 
-a.contact-link:visited {
-  color: var(--foreground);
+a.contact-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.05em;
+  height: 1px;
+  background-color: var(--link);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s ease;
 }
 
 a.contact-link:hover,
 a.contact-link:focus-visible {
+  background-position: 0 0;
+}
+
+a.contact-link:hover::after,
+a.contact-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+a.contact-link-plain {
+  color: var(--muted-2);
+  text-decoration: none;
+}
+
+a.contact-link-plain:hover,
+a.contact-link-plain:focus-visible {
   color: var(--link);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
