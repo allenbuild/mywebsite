@@ -176,8 +176,8 @@ a:hover {
 
 .contact-separator {
   display: inline-block;
-  width: 0.58em;
-  height: 0.58em;
+  width: 0.46em;
+  height: 0.46em;
   flex-shrink: 0;
   border-radius: 9999px;
   background-color: var(--muted-2);
