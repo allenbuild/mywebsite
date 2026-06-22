@@ -94,7 +94,13 @@ a:hover {
 
 .nav-btn:hover,
 .nav-btn:focus-visible {
-  color: var(--link);
+  background: var(--link);
+  color: #ffffff;
+}
+
+.nav-btn:hover:visited,
+.nav-btn:focus-visible:visited {
+  color: #ffffff;
 }
 
 .home-back-btn {
