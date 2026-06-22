@@ -103,23 +103,45 @@ a:hover {
   gap: 0.25rem;
   padding: 0.375rem 0.75rem;
   border-radius: 0.375rem;
-  background: var(--link);
-  color: #ffffff;
+  border: 1px solid var(--link);
+  background: transparent;
+  color: var(--link);
   font-size: 13px;
   font-weight: 400;
   line-height: 1;
   text-decoration: none;
-  transition: filter 0.15s ease;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .home-back-btn:visited {
-  color: #ffffff;
+  color: var(--link);
 }
 
 .home-back-btn:hover,
 .home-back-btn:focus-visible {
+  background: var(--link);
+  border-color: var(--link);
   color: #ffffff;
-  filter: brightness(1.08);
+}
+
+.home-back-btn:hover:visited,
+.home-back-btn:focus-visible:visited {
+  color: #ffffff;
+}
+
+:root[data-theme="dark"] .home-back-btn,
+:root[data-theme="dark"] .home-back-btn:visited {
+  color: #ffffff;
+}
+
+:root[data-theme="dark"] .home-back-btn:hover,
+:root[data-theme="dark"] .home-back-btn:focus-visible,
+:root[data-theme="dark"] .home-back-btn:hover:visited,
+:root[data-theme="dark"] .home-back-btn:focus-visible:visited {
+  color: #ffffff;
 }
 
 :root[data-theme="dark"] .nav-btn:hover,
