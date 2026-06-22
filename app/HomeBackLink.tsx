@@ -12,7 +12,12 @@ export default function HomeBackLink({ className }: { className?: string }) {
           <ChevronLeft size={12} />
         </span>
       </span>
-      <span className="home-back-btn__label">home</span>
+      <span className="home-back-btn__label">
+        <span className="home-back-btn__label-base">home</span>
+        <span className="home-back-btn__label-hover" aria-hidden>
+          home
+        </span>
+      </span>
     </Link>
   );
 }

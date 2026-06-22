@@ -231,7 +231,12 @@ export default function Home() {
               href={href}
               className={navBtnClass}
             >
-              <span className="nav-btn__label">{label}</span>
+              <span className="nav-btn__label">
+                <span className="nav-btn__label-base">{label}</span>
+                <span className="nav-btn__label-hover" aria-hidden="true">
+                  {label}
+                </span>
+              </span>
             </Link>
           ))}
         </nav>

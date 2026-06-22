@@ -98,25 +98,34 @@ a:hover {
   transition: transform 0.4s ease;
 }
 
+.nav-btn,
+.nav-btn:visited,
+.nav-btn:hover,
+.nav-btn:focus-visible {
+  color: var(--nav-btn-fg);
+}
+
 .nav-btn__label {
   position: relative;
   z-index: 1;
-  color: transparent;
-  background-image: linear-gradient(
-    90deg,
-    #ffffff 50%,
-    var(--nav-btn-fg) 50%
-  );
-  background-size: 200% 100%;
-  background-position: 100% 0;
-  -webkit-background-clip: text;
-  background-clip: text;
-  transition: background-position 0.4s ease;
+  display: inline-block;
 }
 
-.nav-btn:hover .nav-btn__label,
-.nav-btn:focus-visible .nav-btn__label {
-  background-position: 0 0;
+.nav-btn__label-base {
+  color: var(--nav-btn-fg);
+}
+
+.nav-btn__label-hover {
+  position: absolute;
+  inset: 0;
+  color: #ffffff;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.4s ease;
+}
+
+.nav-btn:hover .nav-btn__label-hover,
+.nav-btn:focus-visible .nav-btn__label-hover {
+  clip-path: inset(0 0 0 0);
 }
 
 .nav-btn:hover::before,
@@ -152,16 +161,34 @@ a:hover {
   transition: transform 0.4s ease;
 }
 
+.home-back-btn,
+.home-back-btn:visited,
+.home-back-btn:hover,
+.home-back-btn:focus-visible {
+  color: var(--link);
+}
+
 .home-back-btn__label {
   position: relative;
   z-index: 1;
-  color: transparent;
-  background-image: linear-gradient(90deg, #ffffff 50%, var(--link) 50%);
-  background-size: 200% 100%;
-  background-position: 100% 0;
-  -webkit-background-clip: text;
-  background-clip: text;
-  transition: background-position 0.4s ease;
+  display: inline-block;
+}
+
+.home-back-btn__label-base {
+  color: var(--link);
+}
+
+.home-back-btn__label-hover {
+  position: absolute;
+  inset: 0;
+  color: #ffffff;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.4s ease;
+}
+
+.home-back-btn:hover .home-back-btn__label-hover,
+.home-back-btn:focus-visible .home-back-btn__label-hover {
+  clip-path: inset(0 0 0 0);
 }
 
 .home-back-btn__icon-wrap {
@@ -189,11 +216,6 @@ a:hover {
   transition: clip-path 0.4s ease;
 }
 
-.home-back-btn:hover .home-back-btn__label,
-.home-back-btn:focus-visible .home-back-btn__label {
-  background-position: 0 0;
-}
-
 .home-back-btn:hover .home-back-btn__icon--hover,
 .home-back-btn:focus-visible .home-back-btn__icon--hover {
   clip-path: inset(0 0 0 0);
@@ -204,11 +226,8 @@ a:hover {
   transform: scaleX(1);
 }
 
-:root[data-theme="dark"] .home-back-btn__label {
+:root[data-theme="dark"] .home-back-btn__label-base {
   color: #ffffff;
-  background-image: none;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
 }
 
 :root[data-theme="dark"] .home-back-btn__icon--base {
