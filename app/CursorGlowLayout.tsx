@@ -68,7 +68,7 @@ export default function CursorGlowLayout({
 
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0 z-[11] overflow-hidden transition-opacity duration-500"
+        className="cursor-glow-layer pointer-events-none fixed inset-0 z-[11] overflow-hidden transition-opacity duration-300"
         style={{ opacity: showGlow ? 1 : 0 }}
       >
         <div
@@ -77,7 +77,7 @@ export default function CursorGlowLayout({
             left: mouse.x,
             top: mouse.y,
             background:
-              "radial-gradient(circle, var(--cursor-glow) 0%, transparent 62%)",
+              "radial-gradient(circle, var(--cursor-glow) 0%, transparent 68%)",
           }}
         />
       </div>
