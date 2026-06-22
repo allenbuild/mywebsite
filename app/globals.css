@@ -80,62 +80,30 @@ a:hover {
 }
 
 .nav-btn {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--nav-btn-bg);
+  background: var(--nav-btn-bg);
+  color: var(--nav-btn-fg);
   text-decoration: none;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
 }
 
-.nav-btn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  border-radius: inherit;
-  background: var(--link);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.4s ease;
+.nav-btn:visited {
+  color: var(--nav-btn-fg);
 }
 
-.nav-btn,
-.nav-btn:visited,
 .nav-btn:hover,
 .nav-btn:focus-visible {
-  color: var(--nav-btn-fg);
-}
-
-.nav-btn__label {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-}
-
-.nav-btn__label-base {
-  color: var(--nav-btn-fg);
-}
-
-.nav-btn__label-hover {
-  position: absolute;
-  inset: 0;
+  background: var(--link);
   color: #ffffff;
-  clip-path: inset(0 100% 0 0);
-  transition: clip-path 0.4s ease;
 }
 
-.nav-btn:hover .nav-btn__label-hover,
-.nav-btn:focus-visible .nav-btn__label-hover {
-  clip-path: inset(0 0 0 0);
-}
-
-.nav-btn:hover::before,
-.nav-btn:focus-visible::before {
-  transform: scaleX(1);
+.nav-btn:hover:visited,
+.nav-btn:focus-visible:visited {
+  color: #ffffff;
 }
 
 .home-back-btn {
-  position: relative;
-  overflow: hidden;
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
@@ -143,94 +111,53 @@ a:hover {
   border-radius: 0.5rem;
   border: 1.5px solid var(--link);
   background: transparent;
+  color: var(--link);
   font-size: 12px;
   font-weight: 400;
   line-height: 1;
   text-decoration: none;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
 }
 
-.home-back-btn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  border-radius: inherit;
-  background: var(--link);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.4s ease;
+.home-back-btn:visited {
+  color: var(--link);
 }
 
-.home-back-btn,
-.home-back-btn:visited,
 .home-back-btn:hover,
 .home-back-btn:focus-visible {
-  color: var(--link);
-}
-
-.home-back-btn__label {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-}
-
-.home-back-btn__label-base {
-  color: var(--link);
-}
-
-.home-back-btn__label-hover {
-  position: absolute;
-  inset: 0;
-  color: #ffffff;
-  clip-path: inset(0 100% 0 0);
-  transition: clip-path 0.4s ease;
-}
-
-.home-back-btn:hover .home-back-btn__label-hover,
-.home-back-btn:focus-visible .home-back-btn__label-hover {
-  clip-path: inset(0 0 0 0);
-}
-
-.home-back-btn__icon-wrap {
-  position: relative;
-  z-index: 1;
-  display: inline-flex;
-  width: 12px;
-  height: 12px;
-  flex-shrink: 0;
-}
-
-.home-back-btn__icon {
-  display: inline-flex;
-}
-
-.home-back-btn__icon--base {
-  color: var(--link);
-}
-
-.home-back-btn__icon--hover {
-  position: absolute;
-  inset: 0;
-  color: #ffffff;
-  clip-path: inset(0 100% 0 0);
-  transition: clip-path 0.4s ease;
-}
-
-.home-back-btn:hover .home-back-btn__icon--hover,
-.home-back-btn:focus-visible .home-back-btn__icon--hover {
-  clip-path: inset(0 0 0 0);
-}
-
-.home-back-btn:hover::before,
-.home-back-btn:focus-visible::before {
-  transform: scaleX(1);
-}
-
-:root[data-theme="dark"] .home-back-btn__label-base {
+  background: var(--link);
+  border-color: var(--link);
   color: #ffffff;
 }
 
-:root[data-theme="dark"] .home-back-btn__icon--base {
+.home-back-btn:hover:visited,
+.home-back-btn:focus-visible:visited {
+  color: #ffffff;
+}
+
+:root[data-theme="dark"] .home-back-btn,
+:root[data-theme="dark"] .home-back-btn:visited {
+  color: #ffffff;
+}
+
+:root[data-theme="dark"] .home-back-btn:hover,
+:root[data-theme="dark"] .home-back-btn:focus-visible,
+:root[data-theme="dark"] .home-back-btn:hover:visited,
+:root[data-theme="dark"] .home-back-btn:focus-visible:visited {
+  color: #ffffff;
+}
+
+:root[data-theme="dark"] .nav-btn:hover,
+:root[data-theme="dark"] .nav-btn:focus-visible {
+  background: var(--link);
+  color: #ffffff;
+}
+
+:root[data-theme="dark"] .nav-btn:hover:visited,
+:root[data-theme="dark"] .nav-btn:focus-visible:visited {
   color: #ffffff;
 }
 
