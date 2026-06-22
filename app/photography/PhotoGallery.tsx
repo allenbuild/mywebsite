@@ -13,7 +13,7 @@ import { formatPhotoDate, groupPhotoEntriesByYear } from "./photo-entries";
 
 const PHOTO_COL_PX = 320;
 const COLLAPSED_BAR_HEIGHT = 44;
-const AUTO_COLLAPSE_PROGRESS = 0.35;
+const AUTO_COLLAPSE_PROGRESS = 0.85;
 
 function photoThumbSize(photoCount: number, photoIndex: number): string {
   if (photoCount === 1) {
@@ -144,7 +144,7 @@ function PhotoYearSection({
   const toggle = useCallback(() => {
     setCollapsed((current) => {
       const next = !current;
-      pinnedOpen.current = next;
+      pinnedOpen.current = !next;
       return next;
     });
   }, []);
