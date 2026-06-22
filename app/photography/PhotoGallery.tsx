@@ -13,6 +13,7 @@ import { formatPhotoDate, groupPhotoEntriesByYear } from "./photo-entries";
 
 const PHOTO_COL_PX = 320;
 const COLLAPSED_BAR_HEIGHT = 44;
+const AUTO_COLLAPSE_PROGRESS = 0.35;
 
 function photoThumbSize(photoCount: number, photoIndex: number): string {
   if (photoCount === 1) {
@@ -125,8 +126,9 @@ function PhotoYearSection({
       if (pinnedOpen.current) return;
 
       const rect = content.getBoundingClientRect();
-      // Collapse only after most of the year's content has scrolled past.
-      if (rect.bottom <= stickyBottom) {
+      const progress = (stickyBottom - rect.top) / Math.max(1, rect.height);
+      // Collapse after you've scrolled a meaningful portion of the section.
+      if (progress >= AUTO_COLLAPSE_PROGRESS) {
         setCollapsed(true);
       }
     };
