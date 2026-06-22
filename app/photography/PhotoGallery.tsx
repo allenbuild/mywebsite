@@ -107,17 +107,17 @@ function YearBarButton({
       type="button"
       onClick={onClick}
       aria-expanded={!collapsed}
-      style={{ height: COLLAPSED_BAR_HEIGHT }}
-      className="flex w-full shrink-0 items-center justify-between border-b border-[color:var(--rule)] bg-[color:var(--surface)] text-left transition-colors hover:text-[color:var(--link)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--surface)]"
+      style={{ height: collapsed ? 36 : COLLAPSED_BAR_HEIGHT }}
+      className="photo-year-bar flex w-full shrink-0 items-center justify-between border-b border-[color:var(--rule)] bg-[color:var(--surface)] text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--surface)]"
     >
       <span
-        className={`font-semibold tracking-tight ${collapsed ? "text-[16px]" : "text-[17px]"}`}
+        className={`photo-year-label font-semibold tracking-tight ${collapsed ? "text-[14px]" : "text-[17px]"}`}
       >
         {year}
       </span>
       <span
         aria-hidden
-        className={`text-[18px] leading-none text-[color:var(--muted-2)] transition-transform duration-200 ${collapsed ? "-rotate-90" : ""}`}
+        className={`text-[18px] leading-none text-[color:var(--muted-2)] transition-transform duration-200 ${collapsed ? "text-[14px] -rotate-90" : ""}`}
       >
         ∨
       </span>

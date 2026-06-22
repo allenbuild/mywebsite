@@ -108,6 +108,19 @@ a:hover {
   color: #ffffff;
 }
 
+:root[data-theme="dark"] .photo-year-label {
+  color: #ffffff;
+}
+
+.photo-year-label {
+  transition: color 0.15s ease;
+}
+
+.photo-year-bar:hover .photo-year-label,
+.photo-year-bar:focus-visible .photo-year-label {
+  color: var(--link);
+}
+
 a.contact-link {
   color: var(--foreground);
   text-decoration: none;

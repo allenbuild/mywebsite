@@ -56,8 +56,19 @@ export default function CursorGlowLayout({
   return (
     <div className="relative flex min-h-dvh flex-col items-center px-4 py-4 sm:px-6 sm:py-6">
       <div
+        className={`relative z-10 my-auto w-full min-w-0 ${contentClassName ?? "max-w-[45rem]"}`}
+      >
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-end px-5 pt-4 sm:px-6 sm:pt-5">
+          <div className="pointer-events-auto">
+            <ThemeToggle />
+          </div>
+        </div>
+        {children}
+      </div>
+
+      <div
         aria-hidden
-        className="pointer-events-none fixed inset-0 z-0 overflow-hidden transition-opacity duration-500"
+        className="pointer-events-none fixed inset-0 z-[11] overflow-hidden transition-opacity duration-500"
         style={{ opacity: showGlow ? 1 : 0 }}
       >
         <div
@@ -69,17 +80,6 @@ export default function CursorGlowLayout({
               "radial-gradient(circle, var(--cursor-glow) 0%, transparent 62%)",
           }}
         />
-      </div>
-
-      <div
-        className={`relative z-10 my-auto w-full min-w-0 ${contentClassName ?? "max-w-[45rem]"}`}
-      >
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-end px-5 pt-4 sm:px-6 sm:pt-5">
-          <div className="pointer-events-auto">
-            <ThemeToggle />
-          </div>
-        </div>
-        {children}
       </div>
     </div>
   );
