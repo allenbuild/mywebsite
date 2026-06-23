@@ -87,6 +87,15 @@ const photoEntries: PhotoEntry[] = [
     ],
   },
   {
+    caption: "eyerobic at nasa",
+    date: "2025-04-23",
+    photos: [
+      {
+        src: "/photography/eyerobic-nasa.png",
+      },
+    ],
+  },
+  {
     caption: "notre dame leadership seminars",
     date: "2025-07-29",
     photos: [
