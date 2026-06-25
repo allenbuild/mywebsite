@@ -13,7 +13,7 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
           rel="noreferrer"
           className="project-card group flex h-full min-w-0 flex-col overflow-hidden rounded-xl border border-[color:var(--rule)] bg-[color:var(--surface)]"
         >
-          <div className="relative aspect-[4/3] shrink-0 overflow-hidden bg-[color:var(--canvas)]">
+          <div className="relative aspect-[4/3] shrink-0 overflow-hidden border-b border-[color:var(--rule)] bg-[color:var(--canvas)]">
             <Image
               src={project.thumbnail}
               alt=""
