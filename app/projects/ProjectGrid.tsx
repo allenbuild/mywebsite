@@ -31,13 +31,13 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
               {project.description}
             </p>
             {project.credit ? (
-              <p className="my-1.5 text-[9px] italic leading-[1.4] [font-family:var(--font-italic)] text-[color:var(--muted-2)] sm:text-[10px]">
+              <p className="my-3 text-[9px] italic leading-[1.4] text-[color:var(--project-credit)] sm:text-[10px]">
                 {project.credit}
               </p>
             ) : null}
             <time
               dateTime={project.date}
-              className="mt-auto text-[10px] leading-none text-[color:var(--muted-2)] sm:text-[11px]"
+              className={`text-[10px] leading-none text-[color:var(--muted-2)] sm:text-[11px] ${project.credit ? "" : "mt-auto"}`}
             >
               {formatProjectDate(project.date)}
             </time>

@@ -18,6 +18,7 @@
   --nav-btn-fg: #333333;
   --media-accent: #e8a830;
   --media-date: #000000;
+  --project-credit: #5a7d94;
 }
 
 @theme inline {
@@ -45,6 +46,7 @@
   --nav-btn-fg: #222222;
   --media-accent: #ffc860;
   --media-date: #ffffff;
+  --project-credit: #7eb3d4;
 }
 
 html,
