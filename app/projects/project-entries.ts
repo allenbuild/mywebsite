@@ -3,6 +3,8 @@ export type ProjectEntry = {
   description: string;
   href: string;
   thumbnail: string;
+  thumbnailWidth: number;
+  thumbnailHeight: number;
   /** ISO date (YYYY-MM-DD) — used for sort order and display */
   date: string;
 };
@@ -14,6 +16,8 @@ const projectEntries: ProjectEntry[] = [
       "Real time poker assistant built on the Meta Wearables SDK for smart glasses. Uses computer vision, OCR, and game state reconstruction to recommend optimal plays using GTO analysis.",
     href: "https://www.instagram.com/reel/DY7v0RXhrjC/",
     thumbnail: "/projects/smart-poker-glasses.png",
+    thumbnailWidth: 772,
+    thumbnailHeight: 1024,
     date: "2026-05-29",
   },
 ];
