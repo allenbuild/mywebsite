@@ -14,13 +14,13 @@ const projectEntries: ProjectEntry[] = [
   {
     title: "Smart Poker Glasses",
     description:
-      "Real time poker assistant built on the Meta Wearables SDK for smart glasses. Uses computer vision, OCR, and game state reconstruction to recommend optimal plays using GTO analysis.",
+      "Real-time poker assistant built on the Meta Wearables SDK for smart glasses. Uses computer vision, OCR, and game state reconstruction to recommend optimal plays using GTO analysis.",
     href: "https://www.instagram.com/reel/DY7v0RXhrjC/",
     thumbnail: "/projects/smart-poker-glasses.png",
     thumbnailWidth: 772,
     thumbnailHeight: 1024,
     date: "2026-05-29",
-    credit: "Made with Colin Hu, Aiden Xie, and Andres Niño",
+    credit: "Built with Colin Hu, Aiden Xie, and Andres Niño",
   },
 ];
 

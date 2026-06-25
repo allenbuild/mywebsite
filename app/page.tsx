@@ -16,17 +16,33 @@ const contactLinks = [
   { href: "https://x.com/allenxtech", label: "x", external: true },
 ] as const;
 
-const navGridLinks = [
-  { href: "/media", label: "media" },
-  { href: "/writing", label: "writing" },
-  { href: "/projects", label: "projects" },
-  { href: "/bookshelf", label: "bookshelf" },
+const navLinks = [
+  {
+    href: "/projects",
+    label: "projects",
+    className: "order-1 sm:order-1",
+  },
+  {
+    href: "/media",
+    label: "media",
+    className: "order-2 sm:order-2",
+  },
+  {
+    href: "/photography",
+    label: "photography",
+    className: "order-5 col-span-2 sm:order-3 sm:col-span-1",
+  },
+  {
+    href: "/bookshelf",
+    label: "bookshelf",
+    className: "order-3 sm:order-4",
+  },
+  {
+    href: "/writing",
+    label: "writing",
+    className: "order-4 sm:order-5",
+  },
 ] as const;
-
-const navFullWidthLink = {
-  href: "/photography",
-  label: "photography",
-} as const;
 
 const navBtnClass =
   "nav-btn flex items-center justify-center rounded-md px-2.5 py-1.5 text-center text-[12px] font-normal text-[color:var(--nav-btn-fg)] visited:text-[color:var(--nav-btn-fg)] hover:!bg-[color:var(--link)] hover:!text-white visited:hover:!text-white sm:px-3 sm:py-1.5 sm:text-[13px]";
@@ -230,17 +246,11 @@ export default function Home() {
           aria-label="Site sections"
           className="mt-4 mb-4 grid grid-cols-2 gap-1.5 sm:flex sm:flex-wrap sm:gap-2"
         >
-          {navGridLinks.map(({ href, label }) => (
-            <Link key={href} href={href} className={navBtnClass}>
+          {navLinks.map(({ href, label, className }) => (
+            <Link key={href} href={href} className={`${navBtnClass} ${className}`}>
               {label}
             </Link>
           ))}
-          <Link
-            href={navFullWidthLink.href}
-            className={`${navBtnClass} col-span-2 sm:col-span-1`}
-          >
-            {navFullWidthLink.label}
-          </Link>
         </nav>
 
         <footer className="border-t border-[color:var(--rule)] pt-3 pb-0">

@@ -23,21 +23,21 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
             />
           </div>
 
-          <div className="flex min-h-0 flex-1 flex-col gap-1 p-2 sm:gap-1.5 sm:p-2.5">
+          <div className="flex min-h-0 flex-1 flex-col p-2 sm:p-2.5">
             <h2 className="project-card-title text-[13px] font-semibold leading-snug text-[color:var(--foreground)] sm:text-[14px]">
               {project.title}
             </h2>
-            <p className="text-[11px] leading-[1.45] text-[color:var(--muted)] sm:text-[12px]">
+            <p className="mt-1 text-[11px] leading-[1.45] text-[color:var(--muted)] sm:text-[12px]">
               {project.description}
             </p>
             {project.credit ? (
-              <p className="text-[10px] leading-[1.45] text-[color:var(--muted-2)] sm:text-[11px]">
+              <p className="my-1.5 text-[9px] italic leading-[1.4] [font-family:var(--font-italic)] text-[color:var(--muted-2)] sm:text-[10px]">
                 {project.credit}
               </p>
             ) : null}
             <time
               dateTime={project.date}
-              className="mt-auto pt-1 text-[10px] leading-none text-[color:var(--muted-2)] sm:text-[11px]"
+              className="mt-auto text-[10px] leading-none text-[color:var(--muted-2)] sm:text-[11px]"
             >
               {formatProjectDate(project.date)}
             </time>
