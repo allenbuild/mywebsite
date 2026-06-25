@@ -24,7 +24,7 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
           </div>
 
           <div className="flex min-h-0 flex-1 flex-col p-2 sm:p-2.5">
-            <h2 className="project-card-title shrink-0 text-[13px] font-semibold leading-snug text-[color:var(--foreground)] sm:text-[14px]">
+            <h2 className="project-card-title shrink-0 text-[14px] font-semibold leading-snug text-[color:var(--foreground)] sm:text-[15px]">
               {project.title}
             </h2>
             <p className="mt-1 min-h-0 flex-1 text-[11px] leading-[1.45] text-[color:var(--muted)] sm:text-[12px]">
