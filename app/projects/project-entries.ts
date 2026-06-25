@@ -5,12 +5,23 @@ export type ProjectEntry = {
   thumbnail: string;
   thumbnailWidth: number;
   thumbnailHeight: number;
-  /** ISO date (YYYY-MM-DD) — used for sort order and display */
+  /** ISO date (YYYY-MM-DD) — used for display */
   date: string;
   credit?: string;
 };
 
 const projectEntries: ProjectEntry[] = [
+  {
+    title: "Eyerobic",
+    description:
+      "Haptic wearable with a Raspberry Pi 5, 120° camera, and bone-conduction headphones to provide real-time guidance for blind swimmers and runners. Uses on-device computer vision with YOLOv11, PIDNet, HSV thresholding, contour detection, and GPS for navigation.",
+    href: "https://www.youtube.com/watch?v=XeHiBRtfn0o",
+    thumbnail: "/projects/eyerobic.png",
+    thumbnailWidth: 960,
+    thumbnailHeight: 720,
+    date: "2025-08-17",
+    credit: "Built with Steven He, Aiden Xie, and Kyle Wang",
+  },
   {
     title: "Smart Poker Glasses",
     description:
@@ -25,9 +36,7 @@ const projectEntries: ProjectEntry[] = [
 ];
 
 export function getProjectEntries(): ProjectEntry[] {
-  return [...projectEntries].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-  );
+  return [...projectEntries];
 }
 
 export function formatProjectDate(isoDate: string): string {
