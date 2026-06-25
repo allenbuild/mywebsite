@@ -7,6 +7,7 @@ export type ProjectEntry = {
   thumbnailHeight: number;
   /** ISO date (YYYY-MM-DD) — used for sort order and display */
   date: string;
+  credit?: string;
 };
 
 const projectEntries: ProjectEntry[] = [
@@ -19,6 +20,7 @@ const projectEntries: ProjectEntry[] = [
     thumbnailWidth: 772,
     thumbnailHeight: 1024,
     date: "2026-05-29",
+    credit: "Made with Colin Hu, Aiden Xie, and Andres Niño",
   },
 ];
 

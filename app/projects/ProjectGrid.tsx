@@ -30,6 +30,11 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
             <p className="text-[11px] leading-[1.45] text-[color:var(--muted)] sm:text-[12px]">
               {project.description}
             </p>
+            {project.credit ? (
+              <p className="text-[10px] leading-[1.45] text-[color:var(--muted-2)] sm:text-[11px]">
+                {project.credit}
+              </p>
+            ) : null}
             <time
               dateTime={project.date}
               className="mt-auto pt-1 text-[10px] leading-none text-[color:var(--muted-2)] sm:text-[11px]"
