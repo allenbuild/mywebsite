@@ -11,7 +11,7 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
           href={project.href}
           target="_blank"
           rel="noreferrer"
-          className="project-card group flex h-full min-w-0 flex-col overflow-hidden rounded-md border border-[color:var(--rule)] bg-[color:var(--surface)]"
+          className="project-card group flex h-full min-w-0 flex-col overflow-hidden rounded-xl border border-[color:var(--rule)] bg-[color:var(--surface)]"
         >
           <div className="relative aspect-[4/3] shrink-0 overflow-hidden bg-[color:var(--canvas)]">
             <Image
@@ -21,6 +21,7 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
               height={project.thumbnailHeight}
               className="project-card-image size-full object-cover"
             />
+            <div aria-hidden className="project-card-vignette" />
           </div>
 
           <div className="flex min-h-0 flex-1 flex-col p-2 sm:p-2.5">

@@ -114,6 +114,25 @@ a.project-card .project-card-image {
   transition: transform 0.3s ease;
 }
 
+.project-card-vignette {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(0, 0, 0, 0.24) 100%
+  );
+}
+
+:root[data-theme="dark"] .project-card-vignette {
+  background: radial-gradient(
+    ellipse at center,
+    transparent 48%,
+    rgba(0, 0, 0, 0.38) 100%
+  );
+}
+
 a.project-card:hover .project-card-image,
 a.project-card:focus-visible .project-card-image {
   transform: scale(1.04);
