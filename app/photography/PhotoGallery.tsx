@@ -11,18 +11,7 @@ import { ChevronDown, CloseIcon } from "../RoundedIcons";
 import type { PhotoEntry } from "./photo-entries";
 import { formatPhotoDate, groupPhotoEntriesByYear } from "./photo-entries";
 
-const PHOTO_COL_PX = 320;
 const COLLAPSED_BAR_HEIGHT = 44;
-
-function photoThumbSize(photoCount: number, photoIndex: number): string {
-  if (photoCount === 1) {
-    return "(max-width: 640px) 100vw, 320px";
-  }
-  if (photoCount === 3 && photoIndex === 0) {
-    return "(max-width: 640px) 100vw, 320px";
-  }
-  return `(max-width: 640px) 45vw, ${Math.round(PHOTO_COL_PX / 2)}px`;
-}
 
 function photoGridClass(photoCount: number): string {
   if (photoCount === 3 || photoCount === 4 || photoCount === 2) {
@@ -85,7 +74,6 @@ function PhotoEntryRow({
                   ? { objectPosition: photo.objectPosition }
                   : undefined
               }
-              sizes={photoThumbSize(entry.photos.length, photoIndex)}
             />
           </button>
         ))}
@@ -281,7 +269,6 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
               width={1600}
               height={1200}
               className="max-h-[85vh] w-auto max-w-full object-contain"
-              sizes="90vw"
               priority
             />
           </div>

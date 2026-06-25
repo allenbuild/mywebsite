@@ -19,7 +19,6 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
               alt=""
               width={project.thumbnailWidth}
               height={project.thumbnailHeight}
-              unoptimized
               className="project-card-image size-full object-cover"
             />
           </div>
