@@ -42,7 +42,7 @@ function PhotoEntryRow({
   onOpen: (entryIndex: number, photoIndex: number) => void;
 }) {
   return (
-    <li className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_20rem] sm:items-start sm:gap-4">
+    <li className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_10rem] sm:items-start sm:gap-4">
       <div className="min-w-0 sm:pt-0.5">
         <p className="text-[15px] italic leading-[1.45] sm:text-[16px] [font-family:var(--font-italic)] text-[color:var(--foreground)]">
           {entry.caption}
