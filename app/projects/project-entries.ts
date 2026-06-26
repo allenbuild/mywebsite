@@ -25,7 +25,7 @@ const projectEntries: ProjectEntry[] = [
   {
     title: "Robot",
     description:
-      "FTC Freight Frenzy robot with a G10 composite drivetrain, retractable odometry system, and fully 3D-printed mechanisms. Uses OpenCV, encoder-based odometry, and a custom Java navigation library for autonomous path planning, alongside Xbox controller-based teleoperation.",
+      "Robot with a G10 composite drivetrain, retractable odometry system, and fully 3D-printed mechanisms. Uses OpenCV, encoder-based odometry, and a custom Java navigation library for autonomous path planning, alongside Xbox controller-based teleoperation.",
     href: "https://www.youtube.com/watch?v=lcmc1HOwB7o",
     thumbnail: "/projects/ftc-freight-frenzy.png",
     thumbnailWidth: 1200,
