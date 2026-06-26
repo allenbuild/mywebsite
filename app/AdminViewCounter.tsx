@@ -18,7 +18,7 @@ export default async function AdminViewCounter() {
 
   return (
     <div
-      className="pointer-events-none fixed left-4 top-4 z-50 max-w-[11rem] text-[11px] text-[color:var(--muted-2)] sm:left-6 sm:top-6 sm:max-w-[12rem]"
+      className="pointer-events-none fixed left-4 top-4 z-50 max-w-[12rem] text-[11px] text-[color:var(--muted-2)] sm:left-6 sm:top-6 sm:max-w-[13rem]"
       aria-hidden
     >
       <p className="tabular-nums">{count.toLocaleString()} views</p>

@@ -138,6 +138,78 @@ export function normalizeVisitorCity(
   return trimmed;
 }
 
+function normalizeVisitorRegion(
+  region: string | null | undefined,
+): string | null {
+  if (!region) return null;
+
+  const trimmed = decodeURIComponent(region).trim().toUpperCase();
+  if (!trimmed || trimmed === "-" || trimmed === "UNKNOWN") {
+    return null;
+  }
+
+  return trimmed;
+}
+
+function normalizeVisitorCountry(
+  country: string | null | undefined,
+): string | null {
+  if (!country) return null;
+
+  const trimmed = decodeURIComponent(country).trim().toUpperCase();
+  if (!trimmed || trimmed === "-" || trimmed === "UNKNOWN") {
+    return null;
+  }
+
+  return trimmed;
+}
+
+/** Known city-only keys recorded before state/country was added. */
+const LEGACY_CITY_REGION: Record<string, string> = {
+  Chicago: "IL",
+  Glenview: "IL",
+  Wheaton: "IL",
+  "Santa Clara": "CA",
+  Manila: "PH",
+};
+
+export function formatVisitorLocation(
+  city: string | null | undefined,
+  region?: string | null,
+  country?: string | null,
+): string | null {
+  const normalizedCity = normalizeVisitorCity(city);
+  if (!normalizedCity) return null;
+
+  const normalizedRegion = normalizeVisitorRegion(region);
+  const normalizedCountry = normalizeVisitorCountry(country);
+
+  if (normalizedRegion && normalizedCountry === "US") {
+    return `${normalizedCity}, ${normalizedRegion}`;
+  }
+
+  if (normalizedCountry && normalizedCountry !== "US") {
+    return `${normalizedCity}, ${normalizedCountry}`;
+  }
+
+  if (normalizedRegion) {
+    return `${normalizedCity}, ${normalizedRegion}`;
+  }
+
+  return normalizedCity;
+}
+
+function normalizeStoredLocationKey(key: string): string {
+  if (key.includes(", ")) return key;
+
+  const legacyRegion = LEGACY_CITY_REGION[key];
+  if (legacyRegion) {
+    return `${key}, ${legacyRegion}`;
+  }
+
+  return key;
+}
+
 export async function getViewCount(): Promise<number> {
   if (hasRedis()) {
     const count = await redisGet(REDIS_KEY);
@@ -155,17 +227,21 @@ export async function incrementViewCount(): Promise<number> {
   return localSet(count);
 }
 
-export async function recordVisitorCity(city: string): Promise<void> {
-  const normalized = normalizeVisitorCity(city);
-  if (!normalized) return;
+export async function recordVisitorCity(
+  city: string,
+  region?: string,
+  country?: string,
+): Promise<void> {
+  const location = formatVisitorLocation(city, region, country);
+  if (!location) return;
 
   if (hasRedis()) {
-    await redisHashIncr(REDIS_CITIES_KEY, normalized);
+    await redisHashIncr(REDIS_CITIES_KEY, location);
     return;
   }
 
   const cities = await localGetCities();
-  cities[normalized] = (cities[normalized] ?? 0) + 1;
+  cities[location] = (cities[location] ?? 0) + 1;
   await localSetCities(cities);
 }
 
@@ -180,7 +256,13 @@ export async function getVisitorCityStats(): Promise<VisitorCityStat[]> {
     cities = await localGetCities();
   }
 
-  return Object.entries(cities)
+  const aggregated = new Map<string, number>();
+  for (const [key, count] of Object.entries(cities)) {
+    const location = normalizeStoredLocationKey(key);
+    aggregated.set(location, (aggregated.get(location) ?? 0) + count);
+  }
+
+  return [...aggregated.entries()]
     .map(([city, count]) => ({ city, count }))
     .sort((a, b) => b.count - a.count || a.city.localeCompare(b.city));
 }

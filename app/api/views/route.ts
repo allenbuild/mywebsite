@@ -13,7 +13,9 @@ export async function POST() {
 
     const headersList = await headers();
     const city = headersList.get("x-vercel-ip-city");
-    await recordVisitorCity(city ?? "");
+    const region = headersList.get("x-vercel-ip-country-region");
+    const country = headersList.get("x-vercel-ip-country");
+    await recordVisitorCity(city ?? "", region ?? undefined, country ?? undefined);
 
     return new NextResponse(null, { status: 204 });
   } catch {
