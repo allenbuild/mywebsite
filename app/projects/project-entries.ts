@@ -23,6 +23,18 @@ const projectEntries: ProjectEntry[] = [
     credit: "Built with Steven He, Aiden Xie, and Kyle Wang",
   },
   {
+    title: "FTC Freight Frenzy Robot",
+    description:
+      "FTC Freight Frenzy robot with a G10 composite drivetrain, retractable odometry system, and fully 3D-printed mechanisms. Uses OpenCV, encoder-based odometry, and a custom Java navigation library for autonomous path planning, alongside Xbox controller-based teleoperation.",
+    href: "https://www.youtube.com/watch?v=lcmc1HOwB7o",
+    thumbnail: "/projects/ftc-freight-frenzy.png",
+    thumbnailWidth: 792,
+    thumbnailHeight: 709,
+    date: "2022-03-12",
+    credit:
+      "Built with Jensen Coonradt, Ryan Oberfranc, Preeta Swaminathan, and Pranav Swaminathan",
+  },
+  {
     title: "Smart Poker Glasses",
     description:
       "Real-time poker assistant built on the Meta Wearables SDK for smart glasses. Uses computer vision, OCR, and game state reconstruction to recommend optimal plays using GTO analysis.",
