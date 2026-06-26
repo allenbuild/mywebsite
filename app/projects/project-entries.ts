@@ -23,7 +23,7 @@ const projectEntries: ProjectEntry[] = [
     credit: "Built with Steven He, Aiden Xie, and Kyle Wang",
   },
   {
-    title: "Robot",
+    title: "FTC Freight Frenzy Robot",
     description:
       "Robot with a G10 composite drivetrain, retractable odometry system, and fully 3D-printed mechanisms. Uses OpenCV, encoder-based odometry, and a custom Java navigation library for autonomous path planning, alongside Xbox controller-based teleoperation.",
     href: "https://www.youtube.com/watch?v=lcmc1HOwB7o",
