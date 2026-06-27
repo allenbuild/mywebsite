@@ -40,7 +40,7 @@ export default function BookshelfPage() {
                 href={book.href}
                 target="_blank"
                 rel="noreferrer"
-                className="italic text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
+                className="italic text-[color:var(--link)] transition-colors hover:text-[color:var(--media-accent)]"
               >
                 {book.title}
               </a>{" "}
