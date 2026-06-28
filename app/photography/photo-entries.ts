@@ -18,6 +18,15 @@ const photoEntries: PhotoEntry[] = [
     ],
   },
   {
+    caption: "hf0 s26 demo day",
+    date: "2026-06-22",
+    photos: [
+      {
+        src: "/photography/hf0-s26-demo-day.png",
+      },
+    ],
+  },
+  {
     caption: "yc p26 demo day",
     date: "2026-06-16",
     photos: [
