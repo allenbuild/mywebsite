@@ -23,7 +23,7 @@ const photoEntries: PhotoEntry[] = [
     photos: [
       {
         src: "/photography/hf0-s26-demo-day.png",
-        objectPosition: "center 40%",
+        objectPosition: "center 60%",
       },
     ],
   },
