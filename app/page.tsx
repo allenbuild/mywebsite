@@ -153,7 +153,7 @@ export default function Home() {
                 >
                   youth startup incubator
                 </a>{" "}
-                with 1.3k+ students and $12k+ invested in youth startups
+                with 1k+ students and $12k+ invested in youth startups
               </li>
               <li>
                 finalist @ Conrad
