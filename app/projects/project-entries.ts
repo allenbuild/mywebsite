@@ -12,6 +12,16 @@ export type ProjectEntry = {
 
 const projectEntries: ProjectEntry[] = [
   {
+    title: "returner.fund",
+    description:
+      "Venture platform analyzing social traction across Y Combinator and a16z Speedrun startups. Uses GitHub, X, LinkedIn, Instagram, Product Hunt, and other web signals to rank companies with log-normalized, recency-weighted scoring and an interactive Cytoscape graph built with Next.js, Node.js, React, Supabase, and TypeScript.",
+    href: "https://x.com/allenxtech/status/2077110491432804738",
+    thumbnail: "/projects/returner-fund.png",
+    thumbnailWidth: 916,
+    thumbnailHeight: 672,
+    date: "2026-07-14",
+  },
+  {
     title: "Eyerobic",
     description:
       "Haptic wearable with a Raspberry Pi 5, 120° camera, and bone-conduction headphones to provide real-time guidance for blind swimmers and runners. Uses on-device computer vision with YOLOv11, PIDNet, HSV thresholding, contour detection, and GPS for navigation.",
