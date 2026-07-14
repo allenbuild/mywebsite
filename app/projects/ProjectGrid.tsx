@@ -20,6 +20,11 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
               width={project.thumbnailWidth}
               height={project.thumbnailHeight}
               className="project-card-image size-full object-cover"
+              style={
+                project.objectPosition
+                  ? { objectPosition: project.objectPosition }
+                  : undefined
+              }
             />
             <div aria-hidden className="project-card-vignette" />
           </div>

@@ -5,6 +5,7 @@ export type ProjectEntry = {
   thumbnail: string;
   thumbnailWidth: number;
   thumbnailHeight: number;
+  objectPosition?: string;
   /** ISO date (YYYY-MM-DD) — used for display */
   date: string;
   credit?: string;
@@ -50,9 +51,10 @@ const projectEntries: ProjectEntry[] = [
     description:
       "Venture platform analyzing social traction across Y Combinator and a16z Speedrun startups. Uses GitHub, X, LinkedIn, Instagram, Product Hunt, and other web signals to rank companies with log-normalized, recency-weighted scoring and an interactive Cytoscape graph built with Next.js, Node.js, React, Supabase, and TypeScript.",
     href: "https://x.com/allenxtech/status/2077110491432804738",
-    thumbnail: "/projects/returner-fund.png",
+    thumbnail: "/projects/returner-fund-2.png",
     thumbnailWidth: 864,
     thumbnailHeight: 733,
+    objectPosition: "center 62%",
     date: "2026-07-14",
   },
 ];
