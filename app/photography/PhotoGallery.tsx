@@ -6,7 +6,6 @@ import {
   useEffect,
   useState,
 } from "react";
-import SubpageHeader from "../SubpageHeader";
 import { ChevronDown, CloseIcon } from "../RoundedIcons";
 import type { PhotoEntry } from "./photo-entries";
 import { formatPhotoDate, groupPhotoEntriesByYear } from "./photo-entries";
@@ -219,10 +218,6 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
 
   return (
     <>
-      <div className="sticky top-0 z-30 bg-[color:var(--surface)] pb-2 pt-4 sm:pt-5">
-        <SubpageHeader title="photography" titleClassName="text-xl" />
-      </div>
-
       <div>
         {yearGroups.map((group) => {
           const offset = entryIndexOffset;

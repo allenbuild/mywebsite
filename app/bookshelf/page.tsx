@@ -1,4 +1,5 @@
 import CursorGlowLayout from "../CursorGlowLayout";
+import PageCard from "../PageCard";
 import SubpageHeader from "../SubpageHeader";
 
 const books = [
@@ -27,9 +28,7 @@ const books = [
 export default function BookshelfPage() {
   return (
     <CursorGlowLayout showThemeToggle={false}>
-      <main className="min-w-0 w-full max-w-full rounded-2xl bg-[color:var(--surface)] px-5 py-4 shadow-[var(--card-shadow)] sm:px-6 sm:py-5">
-        <SubpageHeader title="bookshelf" />
-
+      <PageCard header={<SubpageHeader title="bookshelf" />}>
         <p className="mt-2 text-[15px] leading-[1.5] text-[color:var(--muted)]">
           questions, answers, and everything in between:
         </p>
@@ -48,7 +47,7 @@ export default function BookshelfPage() {
             </li>
           ))}
         </ul>
-      </main>
+      </PageCard>
     </CursorGlowLayout>
   );
 }

@@ -1,4 +1,6 @@
 import CursorGlowLayout from "../CursorGlowLayout";
+import PageCard from "../PageCard";
+import SubpageHeader from "../SubpageHeader";
 import PhotoGallery from "./PhotoGallery";
 import { getPhotoEntries } from "./photo-entries";
 
@@ -7,9 +9,13 @@ export default function PhotographyPage() {
 
   return (
     <CursorGlowLayout showThemeToggle={false}>
-      <main className="min-w-0 w-full max-w-full rounded-2xl bg-[color:var(--surface)] px-5 py-4 shadow-[var(--card-shadow)] sm:px-6 sm:py-5">
+      <PageCard
+        header={
+          <SubpageHeader title="photography" titleClassName="text-xl" />
+        }
+      >
         <PhotoGallery entries={entries} />
-      </main>
+      </PageCard>
     </CursorGlowLayout>
   );
 }

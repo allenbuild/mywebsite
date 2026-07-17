@@ -1,6 +1,7 @@
 import Link from "next/link";
 import AgeCounter from "./AgeCounter";
 import CursorGlowLayout from "./CursorGlowLayout";
+import PageCard from "./PageCard";
 
 const contactLinks = [
   {
@@ -52,21 +53,24 @@ const contactLinkClass = "contact-link";
 export default function Home() {
   return (
     <CursorGlowLayout contentClassName="max-w-[38rem]">
-      <main className="@container min-w-0 w-full max-w-full rounded-2xl bg-[color:var(--surface)] px-5 pt-3 pb-1.5 shadow-[var(--card-shadow)] sm:px-6 sm:pt-4 sm:pb-2">
-        <header className="flex items-center justify-between gap-4">
-          <h1 className="text-3xl font-semibold tracking-tight">
-            Allen Xu
-          </h1>
-          <div className="flex flex-col items-end pt-9 sm:pt-10">
-            <div className="tabular-nums text-[11px] text-[color:var(--muted-2)]">
-              <AgeCounter
-                birthDate={new Date("2007-11-10T00:00:00")}
-                decimals={8}
-              />
+      <PageCard
+        mainClassName="@container"
+        headerClassName="px-5 pt-3 sm:px-6 sm:pt-4"
+        bodyClassName="px-5 pb-1.5 sm:px-6 sm:pb-2"
+        header={
+          <header className="flex items-center justify-between gap-4">
+            <h1 className="text-3xl font-semibold tracking-tight">Allen Xu</h1>
+            <div className="flex flex-col items-end pt-9 sm:pt-10">
+              <div className="tabular-nums text-[11px] text-[color:var(--muted-2)]">
+                <AgeCounter
+                  birthDate={new Date("2007-11-10T00:00:00")}
+                  decimals={8}
+                />
+              </div>
             </div>
-          </div>
-        </header>
-
+          </header>
+        }
+      >
         <div className="mt-3 h-px w-full bg-[color:var(--rule)]" />
 
         <section className="mt-2.5 min-w-0 space-y-3 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
@@ -252,7 +256,7 @@ export default function Home() {
             ))}
           </div>
         </footer>
-      </main>
+      </PageCard>
     </CursorGlowLayout>
   );
 }
