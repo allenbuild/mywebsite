@@ -62,7 +62,7 @@ export default function Home() {
       >
         <div className="h-px w-full bg-[color:var(--rule)]" />
 
-        <section className="mt-2.5 min-w-0 space-y-3 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
+        <section className="mt-2.5 min-w-0 space-y-3 break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
           <div>
             <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)]">
               <span className="font-semibold">hey! i&apos;m allen.</span>{" "}
