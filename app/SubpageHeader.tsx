@@ -16,7 +16,7 @@ export default function SubpageHeader({
         <HomeBackLink />
         <ThemeToggle />
       </div>
-      <h1 className={`mt-2 font-semibold tracking-tight ${titleClassName}`}>
+      <h1 className={`mt-1.5 font-semibold tracking-tight ${titleClassName}`}>
         {title}
       </h1>
     </header>
