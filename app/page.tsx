@@ -144,16 +144,16 @@ export default function Home() {
                 </a>{" "} 
               </li>
               <li>
-                co-founded{" "}
+                built{" "}
                 <a
                   href="https://www.bizbuzz.it/"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
-                  youth startup incubator
+                  youth entrepreneurship incubator
                 </a>{" "}
-                with 1k+ students and $12k+ invested in youth startups
+                and &quot;fish tank&quot; contest
               </li>
               <li>
                 finalist @ Conrad
