@@ -11,7 +11,7 @@ export default function PhotographyPage() {
     <CursorGlowLayout showThemeToggle={false}>
       <PageCard
         header={
-          <SubpageHeader title="photography" titleClassName="text-xl" />
+          <SubpageHeader title="photography" />
         }
       >
         <PhotoGallery entries={entries} />

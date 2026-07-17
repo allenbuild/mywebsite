@@ -6,7 +6,7 @@ import MediaTimeline from "./MediaTimeline";
 export default function MediaPage() {
   return (
     <CursorGlowLayout showThemeToggle={false}>
-      <PageCard header={<SubpageHeader title="media" titleClassName="text-3xl" />}>
+      <PageCard header={<SubpageHeader title="media" />}>
         <MediaTimeline />
       </PageCard>
     </CursorGlowLayout>
