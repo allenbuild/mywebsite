@@ -64,7 +64,7 @@ export default function Home() {
 
         <section className="mt-2.5 min-w-0 space-y-3 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
           <div>
-            <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
+            <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)]">
               <span className="font-semibold">hey! i&apos;m allen.</span>{" "}
               i&apos;m an incoming freshman at Wharton. i&apos;m interested in
               physical ai, assistive wearables, and early-stage vc.
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="text-[14px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               currently:
             </p>
             <ul className="mt-1 list-inside list-disc space-y-0.5 pl-1">
@@ -111,7 +111,7 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="text-[14px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               previously:
             </p>
             <ul className="mt-1 list-inside list-disc space-y-0.5 pl-1">
@@ -190,7 +190,7 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="text-[14px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               here & there:
             </p>
             <ul className="mt-1 list-inside list-disc space-y-0.5 pl-1">
