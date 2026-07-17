@@ -126,7 +126,7 @@ export default function CursorGlowLayout({
     <div className="relative flex min-h-dvh flex-col items-center px-4 py-4 sm:px-6 sm:py-6">
       {glowLayer}
       <div
-        className={`relative z-10 my-auto w-full min-w-0 ${contentClassName ?? "max-w-[38rem]"}`}
+        className={`relative z-10 my-auto h-[calc(100dvh-2rem)] max-h-[38rem] w-full min-w-0 [&>main]:h-full [&>main]:overflow-y-auto sm:h-[calc(100dvh-3rem)] ${contentClassName ?? "max-w-[38rem]"}`}
       >
         {showThemeToggle && (
           <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-end px-5 pt-4 sm:px-6 sm:pt-5">

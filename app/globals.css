@@ -73,17 +73,27 @@ ul li::marker {
   color: var(--bullet);
 }
 
-a:not(.nav-btn):not(.home-back-btn):not(.contact-link):not(.project-card) {
+a:not(.nav-btn):not(.home-back-btn):not(.contact-link):not(.project-card):not(.media-link) {
   color: var(--link);
 }
 
-a:not(.nav-btn):not(.home-back-btn):not(.contact-link):not(.project-card):visited {
+a:not(.nav-btn):not(.home-back-btn):not(.contact-link):not(.project-card):not(.media-link):visited {
   color: var(--link);
 }
 
-a:not(.nav-btn):not(.home-back-btn):not(.contact-link):not(.project-card):hover,
-a:not(.nav-btn):not(.home-back-btn):not(.contact-link):not(.project-card):focus-visible {
+a:not(.nav-btn):not(.home-back-btn):not(.contact-link):not(.project-card):not(.media-link):hover,
+a:not(.nav-btn):not(.home-back-btn):not(.contact-link):not(.project-card):not(.media-link):focus-visible {
   color: var(--link-hover);
+}
+
+a.media-link,
+a.media-link:visited {
+  color: var(--muted);
+}
+
+a.media-link:hover,
+a.media-link:focus-visible {
+  color: var(--media-accent);
 }
 
 a.project-card {

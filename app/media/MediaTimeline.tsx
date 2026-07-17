@@ -24,7 +24,7 @@ export default function MediaTimeline() {
               href={entry.href}
               target="_blank"
               rel="noreferrer"
-              className="text-[color:var(--muted)] hover:text-[color:var(--link-hover)]"
+              className="media-link"
             >
               {entry.title}
             </a>
