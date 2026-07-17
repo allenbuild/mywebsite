@@ -86,5 +86,5 @@ export function getMediaEntries(): MediaEntry[] {
 
 export function formatMediaDate(isoDate: string): string {
   const [year, month, day] = isoDate.split("-");
-  return `${Number(month)}/${Number(day)}/${year}`;
+  return `${Number(month)}/${Number(day)}/${year.slice(-2)}`;
 }
