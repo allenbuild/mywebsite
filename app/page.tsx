@@ -21,27 +21,22 @@ const navLinks = [
   {
     href: "/projects",
     label: "projects",
-    className: "order-1 sm:order-1",
+    className: "order-1",
   },
   {
     href: "/media",
     label: "media",
-    className: "order-2 sm:order-2",
+    className: "order-2",
   },
   {
     href: "/photography",
     label: "photography",
-    className: "order-5 col-span-2 sm:order-3 sm:col-span-1",
+    className: "order-4 sm:order-3",
   },
   {
     href: "/bookshelf",
     label: "bookshelf",
     className: "order-3 sm:order-4",
-  },
-  {
-    href: "/writing",
-    label: "writing",
-    className: "order-4 sm:order-5",
   },
 ] as const;
 
@@ -237,8 +232,8 @@ export default function Home() {
           ))}
         </nav>
 
-        <footer className="border-t border-[color:var(--rule)] pt-3 pb-0">
-          <div className="flex flex-wrap items-center justify-center gap-x-4 text-[15px]">
+        <footer className="w-full border-t border-[color:var(--rule)] pt-3 pb-0">
+          <div className="flex w-full flex-wrap items-center justify-center gap-x-4 text-[15px]">
             {contactLinks.map((link, index) => (
               <span key={link.label} className="inline-flex items-center gap-x-4">
                 {index > 0 ? (
