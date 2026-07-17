@@ -16,7 +16,7 @@ export default function MediaTimeline() {
           >
             {formatMediaDate(entry.date)}
           </time>
-          <p className="min-w-0 text-[15px] leading-[1.45]">
+          <p className="min-w-0 text-[14px] leading-[1.45]">
             <a
               href={entry.href}
               target="_blank"
