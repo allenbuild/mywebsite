@@ -219,7 +219,7 @@ export default function Home() {
               </li>
             </ul>
 
-            <div className="mt-4 grid min-w-0 grid-cols-1 gap-2 @xl:grid-cols-2 @xl:gap-2">
+            <div className="mt-4 grid min-w-0 max-w-md grid-cols-2 gap-2">
               <div className="aspect-video w-full min-w-0 overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
                 <iframe
                   src="https://www.youtube.com/embed/XeHiBRtfn0o?playsinline=1"
