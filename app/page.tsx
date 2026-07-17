@@ -54,7 +54,9 @@ export default function Home() {
         bodyClassName="px-5 pb-1.5 sm:px-6 sm:pb-2"
         header={
           <header className="flex items-center justify-between gap-4">
-            <h1 className="text-2xl font-semibold tracking-tight">Allen Xu</h1>
+            <h1 className="text-3xl font-semibold italic tracking-tight [font-family:var(--font-italic)] sm:text-4xl">
+              Allen Xu
+            </h1>
           </header>
         }
       >
@@ -62,7 +64,7 @@ export default function Home() {
 
         <section className="mt-2.5 min-w-0 space-y-3 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
           <div>
-            <p className="text-[15px] italic leading-[1.5] [font-family:var(--font-italic)] text-[color:var(--foreground)] @2xl:text-[14px] @2xl:leading-[1.45]">
+            <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
               <span className="font-semibold">hey! i&apos;m allen.</span>{" "}
               i&apos;m an incoming freshman at Wharton. i&apos;m interested in
               physical ai, assistive wearables, and early-stage vc.
@@ -135,7 +137,7 @@ export default function Home() {
                 </a>{" "} 
               </li>
               <li>
-                built{" "}
+                built a{" "}
                 <a
                   href="https://www.bizbuzz.it/"
                   target="_blank"
@@ -152,7 +154,7 @@ export default function Home() {
                 Internationals
               </li>
               <li>
-                built{" "}
+                built an{" "}
                 <a
                   href="https://www.decademy.app/"
                   target="_blank"
