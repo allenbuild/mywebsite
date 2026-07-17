@@ -225,8 +225,8 @@ export default function Home() {
           ))}
         </nav>
 
-        <footer className="w-full pt-1 pb-0">
-          <div className="flex w-full flex-wrap items-center justify-center gap-x-4 text-center text-[15px]">
+        <footer className="flex w-full justify-center pt-1 pb-0">
+          <div className="inline-flex max-w-full flex-wrap items-center justify-center gap-x-4 text-[15px]">
             {contactLinks.map((link, index) => (
               <span key={link.label} className="inline-flex items-center gap-x-4">
                 {index > 0 ? (
