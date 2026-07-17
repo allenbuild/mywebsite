@@ -208,7 +208,7 @@ export default function Home() {
               </li>
               <li>
                 fell in love with photography, pickup basketball, and my
-                goldendoodle Winnie
+                dog Winnie
               </li>
             </ul>
           </div>
