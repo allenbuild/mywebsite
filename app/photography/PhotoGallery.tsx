@@ -10,7 +10,7 @@ import { ChevronDown, CloseIcon } from "../RoundedIcons";
 import type { PhotoEntry } from "./photo-entries";
 import { formatPhotoDate, groupPhotoEntriesByYear } from "./photo-entries";
 
-const YEAR_BAR_HEIGHT = 52;
+const YEAR_BAR_HEIGHT = 56;
 
 function photoGridClass(photoCount: number): string {
   if (photoCount === 3 || photoCount === 4 || photoCount === 2) {
@@ -101,7 +101,7 @@ function YearBarButton({
       onClick={onClick}
       aria-expanded={!collapsed}
       style={{ height: collapsed ? 36 : YEAR_BAR_HEIGHT }}
-      className="photo-year-bar sticky top-0 z-20 flex w-full shrink-0 items-center justify-between border-b border-[color:var(--rule)] bg-[color:var(--surface)] text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--surface)]"
+      className="photo-year-bar sticky top-0 z-20 flex w-full shrink-0 items-center justify-between border-b border-[color:var(--rule)] bg-[color:var(--surface)] px-5 text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--surface)] sm:px-6"
     >
       <span
         className={`photo-year-label font-semibold tracking-tight ${collapsed ? "text-[14px]" : "text-[17px]"}`}
@@ -138,7 +138,7 @@ function PhotoYearSection({
       <YearBarButton year={year} collapsed={collapsed} onClick={onToggle} />
 
       {!collapsed && (
-        <div className="pb-4 pt-3">
+        <div className="px-5 pb-4 pt-3 sm:px-6">
           <ol className="space-y-6">
             {entries.map((entry, index) => (
               <PhotoEntryRow
