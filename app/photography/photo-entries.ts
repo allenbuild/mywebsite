@@ -1,6 +1,7 @@
 export type PhotoEntry = {
   caption: string;
   date: string;
+  credit?: string;
   photos: {
     src: string;
     objectPosition?: string;
@@ -30,6 +31,7 @@ const photoEntries: PhotoEntry[] = [
   {
     caption: "yc p26 demo day",
     date: "2026-06-16",
+    credit: "with Garry Tan and Bryce Johnson",
     photos: [
       {
         src: "/photography/yc-p26-demo-day-welcome.png",
@@ -145,7 +147,7 @@ const photoEntries: PhotoEntry[] = [
     ],
   },
   {
-    caption: "congressional debate finals at yale",
+    caption: "debate finals at yale",
     date: "2023-10-01",
     photos: [
       {

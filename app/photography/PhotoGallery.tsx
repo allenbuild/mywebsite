@@ -52,6 +52,11 @@ function PhotoEntryRow({
         >
           {formatPhotoDate(entry.date)}
         </time>
+        {entry.credit ? (
+          <p className="mt-0.5 text-[12px] leading-[1.45] sm:text-[13px] text-[color:var(--muted-2)]">
+            {entry.credit}
+          </p>
+        ) : null}
       </div>
 
       <div className={`grid w-full gap-1.5 ${photoGridClass(entry.photos.length)}`}>

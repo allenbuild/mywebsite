@@ -3,8 +3,8 @@
 import { useLayoutEffect, useRef } from "react";
 
 const HEIGHT_VAR = "--page-card-height";
-const STORAGE_KEY = "page-card-height";
-const FALLBACK_HEIGHT = "34rem";
+const STORAGE_KEY = "page-card-height-v2";
+const FALLBACK_HEIGHT = "32rem";
 
 function readStoredHeight(): string {
   const fromStyle = document.documentElement.style
@@ -87,7 +87,7 @@ export default function PageCard({
     <main
       ref={ref}
       className={`flex max-h-[calc(100dvh-2rem)] w-full min-w-0 max-w-full flex-col overflow-hidden rounded-2xl bg-[color:var(--surface)] shadow-[var(--card-shadow)] sm:max-h-[calc(100dvh-3rem)] ${
-        usesSharedHeight ? "h-[var(--page-card-height,34rem)]" : ""
+        usesSharedHeight ? "h-[var(--page-card-height,32rem)]" : ""
       } ${mainClassName}`}
     >
       <div className={`shrink-0 bg-[color:var(--surface)] ${headerClassName}`}>
