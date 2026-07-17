@@ -1,5 +1,4 @@
 import Link from "next/link";
-import AgeCounter from "./AgeCounter";
 import CursorGlowLayout from "./CursorGlowLayout";
 import PageCard from "./PageCard";
 
@@ -51,23 +50,15 @@ export default function Home() {
       <PageCard
         sizeToContent
         mainClassName="@container"
-        headerClassName="px-5 pt-3 sm:px-6 sm:pt-4"
+        headerClassName="px-5 pt-3 sm:px-6 sm:pt-3.5"
         bodyClassName="px-5 pb-1.5 sm:px-6 sm:pb-2"
         header={
           <header className="flex items-center justify-between gap-4">
-            <h1 className="text-3xl font-semibold tracking-tight">Allen Xu</h1>
-            <div className="flex flex-col items-end pt-9 sm:pt-10">
-              <div className="tabular-nums text-[11px] text-[color:var(--muted-2)]">
-                <AgeCounter
-                  birthDate={new Date("2007-11-10T00:00:00")}
-                  decimals={8}
-                />
-              </div>
-            </div>
+            <h1 className="text-2xl font-semibold tracking-tight">Allen Xu</h1>
           </header>
         }
       >
-        <div className="mt-3 h-px w-full bg-[color:var(--rule)]" />
+        <div className="mt-2.5 h-px w-full bg-[color:var(--rule)]" />
 
         <section className="mt-2.5 min-w-0 space-y-3 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
           <div>
