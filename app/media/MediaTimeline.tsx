@@ -12,21 +12,18 @@ export default function MediaTimeline() {
         >
           <time
             dateTime={entry.date}
-            className="shrink-0 tabular-nums text-[14px] italic leading-[1.45] [font-family:var(--font-italic)] text-[color:var(--media-date)]"
+            className="shrink-0 tabular-nums text-[14px] italic leading-[1.45] [font-family:var(--font-italic)] text-[color:var(--muted-2)]"
           >
             {formatMediaDate(entry.date)}
           </time>
-          <p className="min-w-0 text-[15px] leading-[1.45] text-[color:var(--foreground)]">
-            <span className="text-[color:var(--muted)]">
-              {entry.outlet}:{" "}
-            </span>
+          <p className="min-w-0 text-[15px] leading-[1.45]">
             <a
               href={entry.href}
               target="_blank"
               rel="noreferrer"
               className="media-link"
             >
-              {entry.title}
+              {entry.outlet}: {entry.title}
             </a>
           </p>
         </li>
