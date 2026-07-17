@@ -32,7 +32,7 @@ export default function BookshelfPage() {
         <p className="mt-2 text-[15px] leading-[1.5] text-[color:var(--muted)]">
           questions, answers, and everything in between:
         </p>
-        <ul className="mt-2 list-inside list-disc space-y-0.5 pl-1 text-[15px] leading-[1.5] text-[color:var(--muted)]">
+        <ul className="mt-2 list-outside list-disc space-y-0.5 pl-5 text-[15px] leading-[1.5] text-[color:var(--muted)]">
           {books.map((book) => (
             <li key={book.href}>
               <a

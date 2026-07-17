@@ -75,7 +75,7 @@ export default function Home() {
             <p className="text-[14px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               currently:
             </p>
-            <ul className="mt-1 list-inside list-disc space-y-0.5 pl-1">
+            <ul className="mt-1 list-outside list-disc space-y-0.5 pl-5">
               <li>
                 building the internet for physical ai @{" "}
                 <a
@@ -114,7 +114,7 @@ export default function Home() {
             <p className="text-[14px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               previously:
             </p>
-            <ul className="mt-1 list-inside list-disc space-y-0.5 pl-1">
+            <ul className="mt-1 list-outside list-disc space-y-0.5 pl-5">
               <li>
                 presented a{" "}
                 <a
@@ -193,7 +193,7 @@ export default function Home() {
             <p className="text-[14px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               here & there:
             </p>
-            <ul className="mt-1 list-inside list-disc space-y-0.5 pl-1">
+            <ul className="mt-1 list-outside list-disc space-y-0.5 pl-5">
               <li>
                 took{" "}
                 <a
