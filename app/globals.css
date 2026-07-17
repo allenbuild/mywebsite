@@ -129,7 +129,7 @@ a.media-link:visited {
 
 a.media-link:hover,
 a.media-link:focus-visible {
-  color: var(--media-accent);
+  color: var(--link);
 }
 
 a.project-card {

@@ -31,14 +31,17 @@ export default function PageCard({
   bodyClassName = "px-5 pb-4 sm:px-6 sm:pb-5",
   mainClassName = "",
   sizeToContent = false,
+  fitContent = false,
 }: {
   header: React.ReactNode;
   children: React.ReactNode;
   headerClassName?: string;
   bodyClassName?: string;
   mainClassName?: string;
-  /** When true, card hugs content and stores that height for other pages. */
+  /** Homepage: hug content and store that height for other pages. */
   sizeToContent?: boolean;
+  /** Hug content instead of using the shared homepage height. */
+  fitContent?: boolean;
 }) {
   const ref = useRef<HTMLElement>(null);
 
@@ -71,23 +74,27 @@ export default function PageCard({
       return () => window.removeEventListener("resize", syncFromHome);
     }
 
+    if (fitContent) return;
+
     applySharedHeight();
     window.addEventListener("resize", applySharedHeight);
     return () => window.removeEventListener("resize", applySharedHeight);
-  }, [sizeToContent]);
+  }, [sizeToContent, fitContent]);
+
+  const usesSharedHeight = !sizeToContent && !fitContent;
 
   return (
     <main
       ref={ref}
       className={`flex max-h-[calc(100dvh-2rem)] w-full min-w-0 max-w-full flex-col overflow-hidden rounded-2xl bg-[color:var(--surface)] shadow-[var(--card-shadow)] sm:max-h-[calc(100dvh-3rem)] ${
-        sizeToContent ? "" : "h-[var(--page-card-height,34rem)]"
+        usesSharedHeight ? "h-[var(--page-card-height,34rem)]" : ""
       } ${mainClassName}`}
     >
       <div className={`shrink-0 bg-[color:var(--surface)] ${headerClassName}`}>
         {header}
       </div>
       <div
-        className={`page-card-scroll min-h-0 flex-1 overflow-y-auto overscroll-contain ${bodyClassName}`}
+        className={`page-card-scroll ${usesSharedHeight ? "min-h-0 flex-1 overflow-y-auto overscroll-contain" : ""} ${bodyClassName}`}
       >
         {children}
       </div>

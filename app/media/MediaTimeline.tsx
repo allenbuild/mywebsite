@@ -12,7 +12,7 @@ export default function MediaTimeline() {
         >
           <time
             dateTime={entry.date}
-            className="shrink-0 tabular-nums text-[14px] leading-[1.45] text-[color:var(--media-date)]"
+            className="shrink-0 tabular-nums text-[14px] italic leading-[1.45] [font-family:var(--font-italic)] text-[color:var(--media-date)]"
           >
             {formatMediaDate(entry.date)}
           </time>
