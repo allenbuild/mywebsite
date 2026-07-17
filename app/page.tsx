@@ -66,7 +66,7 @@ export default function Home() {
           <div>
             <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)]">
               <span className="font-semibold">hey! i&apos;m allen.</span>{" "}
-              i&apos;m an incoming freshman at Wharton. i&apos;m interested in
+              i&apos;m an incoming freshman at Wharton. currently interested in
               physical ai, assistive wearables, and early-stage vc.
             </p>
           </div>
