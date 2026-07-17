@@ -54,6 +54,7 @@ export default function Home() {
   return (
     <CursorGlowLayout contentClassName="max-w-[38rem]">
       <PageCard
+        sizeToContent
         mainClassName="@container"
         headerClassName="px-5 pt-3 sm:px-6 sm:pt-4"
         bodyClassName="px-5 pb-1.5 sm:px-6 sm:pb-2"
