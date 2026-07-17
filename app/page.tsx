@@ -51,7 +51,7 @@ const contactLinkClass = "contact-link";
 
 export default function Home() {
   return (
-    <CursorGlowLayout>
+    <CursorGlowLayout contentClassName="max-w-[38rem]">
       <main className="@container min-w-0 w-full max-w-full rounded-2xl bg-[color:var(--surface)] px-5 pt-3 pb-1.5 shadow-[var(--card-shadow)] sm:px-6 sm:pt-4 sm:pb-2">
         <header className="flex items-center justify-between gap-4">
           <h1 className="text-3xl font-semibold tracking-tight">
@@ -83,20 +83,8 @@ export default function Home() {
               currently:
             </p>
             <ul className="mt-1 list-inside list-disc space-y-0.5 pl-1">
-              <li>graduating</li>
               <li>
-                backing tomorrow&apos;s generational companies, today @{" "}
-                <a
-                  href="https://www.multimodal.ventures/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
-                >
-                  Multimodal Ventures
-                </a>
-              </li>
-              <li>
-                creating ego-exo datasets and the internet for physical AI @{" "}
+                building the internet for physical ai @{" "}
                 <a
                   href="http://build.ai/"
                   target="_blank"
@@ -113,6 +101,17 @@ export default function Home() {
                   className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   HF0
+                </a>
+              </li>
+              <li>
+                backing brilliant founders @{" "}
+                <a
+                  href="https://www.multimodal.ventures/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
+                >
+                  Multimodal Ventures
                 </a>
               </li>
             </ul>
