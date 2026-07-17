@@ -41,8 +41,8 @@ function PhotoEntryRow({
   onOpen: (entryIndex: number, photoIndex: number) => void;
 }) {
   return (
-    <li className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_20rem] sm:items-start sm:gap-4">
-      <div className="min-w-0 sm:pt-0.5">
+    <li className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_20rem] sm:items-stretch sm:gap-4">
+      <div className="flex min-w-0 flex-col sm:pt-0.5">
         <p className="text-[13px] italic leading-[1.45] sm:text-[14px] [font-family:var(--font-italic)] text-[color:var(--foreground)]">
           {entry.caption}
         </p>
@@ -53,7 +53,7 @@ function PhotoEntryRow({
           {formatPhotoDate(entry.date)}
         </time>
         {entry.credit ? (
-          <p className="mt-0.5 text-[12px] leading-[1.45] sm:text-[13px] text-[color:var(--muted-2)]">
+          <p className="mt-auto pt-3 text-[11px] leading-[1.45] sm:text-[12px] text-[color:var(--muted-2)]">
             {entry.credit}
           </p>
         ) : null}

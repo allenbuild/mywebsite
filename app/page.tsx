@@ -62,7 +62,7 @@ export default function Home() {
 
         <section className="mt-2.5 min-w-0 space-y-3 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
           <div>
-            <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
+            <p className="text-[15px] italic leading-[1.5] [font-family:var(--font-italic)] text-[color:var(--foreground)] @2xl:text-[14px] @2xl:leading-[1.45]">
               <span className="font-semibold">hey! i&apos;m allen.</span>{" "}
               i&apos;m an incoming freshman at Wharton. i&apos;m interested in
               physical ai, assistive wearables, and early-stage vc.
@@ -161,7 +161,7 @@ export default function Home() {
                 >
                   edtech startup
                 </a>{" "}
-                with 30k+ users in 79 countries
+                with 30k+ users
               </li>
               <li>
                 wrote econ policy @{" "}
@@ -182,7 +182,7 @@ export default function Home() {
                 >
                   IJSSER
                 </a>
-                ,  Naperville City Financial Board, and more
+                , University of Michigan, and more
               </li>
             </ul>
           </div>
