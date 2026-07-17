@@ -149,11 +149,6 @@ export default function Home() {
                 with 1k+ students
               </li>
               <li>
-                finalist @ Conrad
-                Challenge, Blue Ocean Competition, DECA
-                Internationals
-              </li>
-              <li>
                 built an{" "}
                 <a
                   href="https://www.decademy.app/"
@@ -185,6 +180,11 @@ export default function Home() {
                   IJSSER
                 </a>
                 , University of Michigan, and more
+              </li>
+              <li>
+                finalist @ Conrad
+                Challenge, Blue Ocean Competition, DECA
+                Internationals
               </li>
             </ul>
           </div>
