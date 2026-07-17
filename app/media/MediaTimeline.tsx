@@ -23,7 +23,8 @@ export default function MediaTimeline() {
               rel="noreferrer"
               className="media-link"
             >
-              {entry.outlet}: {entry.title}
+              <span className="font-bold">{entry.outlet}:</span>{" "}
+              {entry.title}
             </a>
           </p>
         </li>
