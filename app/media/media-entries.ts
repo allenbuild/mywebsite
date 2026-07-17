@@ -10,13 +10,13 @@ export type MediaEntry = {
 const mediaEntries: MediaEntry[] = [
   {
     date: "2025-11-14",
-    outlet: "NBC 5 Chicago & NCTV17",
+    outlet: "NCTV17",
     title: "Naperville innovators turn inspiration into invention",
     href: "https://www.nctv17.org/community-events/naperville-innovators-turn-inspiration-into-invention/",
   },
   {
     date: "2025-11-13",
-    outlet: "NBC 5 Chicago & NCTV17",
+    outlet: "NCTV17",
     title: "Innovation and community shine at NCTV17’s Morning Show",
     href: "https://www.nctv17.org/community-events/innovation-and-community-shine-at-nctv17s-morning-show/",
   },
