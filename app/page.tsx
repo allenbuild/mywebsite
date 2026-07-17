@@ -153,7 +153,7 @@ export default function Home() {
                 >
                   youth entrepreneurship incubator
                 </a>{" "}
-                and &quot;fish tank&quot; contest
+                and &quot;Fish Tank&quot; contest
               </li>
               <li>
                 finalist @ Conrad
