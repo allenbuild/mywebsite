@@ -211,34 +211,13 @@ export default function Home() {
                 >
                   daily photos
                 </a>{" "}
-                with strangers throughout senior year of high school (750k+ views)
+                with strangers throughout senior year of high school
               </li>
               <li>
                 fell in love with photography, pickup basketball, and my
                 goldendoodle Winnie
               </li>
             </ul>
-
-            <div className="mt-4 grid min-w-0 max-w-md grid-cols-2 gap-2">
-              <div className="aspect-video w-full min-w-0 overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
-                <iframe
-                  src="https://www.youtube.com/embed/XeHiBRtfn0o?playsinline=1"
-                  title="Crossing the English Channel"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="block h-full w-full border-0"
-                />
-              </div>
-              <div className="aspect-video w-full min-w-0 overflow-hidden rounded-lg border border-[color:var(--rule)] bg-black">
-                <iframe
-                  src="https://player.vimeo.com/video/1136644145?title=0&byline=0&portrait=0&playsinline=1"
-                  title="Naperville innovators turn inspiration into invention"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                  className="block h-full w-full border-0"
-                />
-              </div>
-            </div>
           </div>
         </section>
 
