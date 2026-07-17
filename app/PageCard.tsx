@@ -3,10 +3,8 @@
 import { useLayoutEffect, useRef } from "react";
 
 const HEIGHT_VAR = "--page-card-height";
-const STORAGE_KEY = "page-card-height-v3";
-const FALLBACK_HEIGHT = "30rem";
-/** Trim a little off the natural homepage height for a shorter shared card. */
-const HEIGHT_TRIM_PX = 56;
+const STORAGE_KEY = "page-card-height-v4";
+const FALLBACK_HEIGHT = "34rem";
 
 function readStoredHeight(): string {
   const fromStyle = document.documentElement.style
@@ -49,7 +47,7 @@ export default function PageCard({
   headerClassName?: string;
   bodyClassName?: string;
   mainClassName?: string;
-  /** Homepage: measure content, trim height a bit, and share with other pages. */
+  /** Homepage: hug content and store that height for other pages. */
   sizeToContent?: boolean;
   /** Hug content instead of using the shared homepage height. */
   fitContent?: boolean;
@@ -64,10 +62,7 @@ export default function PageCard({
       el.style.removeProperty("height");
       const natural = Math.round(el.getBoundingClientRect().height);
       if (natural <= 0) return;
-      const reduced = Math.max(natural - HEIGHT_TRIM_PX, Math.round(natural * 0.9));
-      const value = `${reduced}px`;
-      el.style.height = value;
-      persistHeight(value);
+      persistHeight(`${natural}px`);
     };
 
     const applySharedHeight = () => {
@@ -89,15 +84,13 @@ export default function PageCard({
     return () => window.removeEventListener("resize", applySharedHeight);
   }, [sizeToContent, fitContent]);
 
-  const usesSharedHeight = !fitContent;
+  const usesSharedHeight = !sizeToContent && !fitContent;
 
   return (
     <main
       ref={ref}
       className={`flex max-h-[calc(100dvh-2rem)] w-full min-w-0 max-w-full flex-col overflow-hidden rounded-2xl bg-[color:var(--surface)] shadow-[var(--card-shadow)] sm:max-h-[calc(100dvh-3rem)] ${
-        usesSharedHeight && !sizeToContent
-          ? "h-[var(--page-card-height,30rem)]"
-          : ""
+        usesSharedHeight ? "h-[var(--page-card-height,34rem)]" : ""
       } ${mainClassName}`}
     >
       <div className={`shrink-0 bg-[color:var(--surface)] ${headerClassName}`}>
