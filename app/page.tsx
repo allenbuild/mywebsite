@@ -47,7 +47,7 @@ const contactLinkClass = "contact-link";
 
 export default function Home() {
   return (
-    <CursorGlowLayout contentClassName="max-w-[34rem]">
+    <CursorGlowLayout contentClassName="max-w-[38rem]">
       <PageCard
         sizeToContent
         mainClassName="@container"

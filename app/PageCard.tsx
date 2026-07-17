@@ -3,8 +3,10 @@
 import { useLayoutEffect, useRef } from "react";
 
 const HEIGHT_VAR = "--page-card-height";
-const STORAGE_KEY = "page-card-height-v2";
-const FALLBACK_HEIGHT = "32rem";
+const STORAGE_KEY = "page-card-height-v3";
+const FALLBACK_HEIGHT = "30rem";
+/** Trim a little off the natural homepage height for a shorter shared card. */
+const HEIGHT_TRIM_PX = 56;
 
 function readStoredHeight(): string {
   const fromStyle = document.documentElement.style
@@ -24,6 +26,15 @@ function readStoredHeight(): string {
   }
 }
 
+function persistHeight(value: string) {
+  document.documentElement.style.setProperty(HEIGHT_VAR, value);
+  try {
+    window.localStorage.setItem(STORAGE_KEY, value);
+  } catch {
+    // ignore quota / private mode
+  }
+}
+
 export default function PageCard({
   header,
   children,
@@ -38,7 +49,7 @@ export default function PageCard({
   headerClassName?: string;
   bodyClassName?: string;
   mainClassName?: string;
-  /** Homepage: hug content and store that height for other pages. */
+  /** Homepage: measure content, trim height a bit, and share with other pages. */
   sizeToContent?: boolean;
   /** Hug content instead of using the shared homepage height. */
   fitContent?: boolean;
@@ -51,20 +62,17 @@ export default function PageCard({
 
     const syncFromHome = () => {
       el.style.removeProperty("height");
-      const px = Math.round(el.getBoundingClientRect().height);
-      if (px <= 0) return;
-      const value = `${px}px`;
-      document.documentElement.style.setProperty(HEIGHT_VAR, value);
-      try {
-        window.localStorage.setItem(STORAGE_KEY, value);
-      } catch {
-        // ignore quota / private mode
-      }
+      const natural = Math.round(el.getBoundingClientRect().height);
+      if (natural <= 0) return;
+      const reduced = Math.max(natural - HEIGHT_TRIM_PX, Math.round(natural * 0.9));
+      const value = `${reduced}px`;
+      el.style.height = value;
+      persistHeight(value);
     };
 
     const applySharedHeight = () => {
       const value = readStoredHeight();
-      document.documentElement.style.setProperty(HEIGHT_VAR, value);
+      persistHeight(value);
       el.style.height = value;
     };
 
@@ -81,13 +89,15 @@ export default function PageCard({
     return () => window.removeEventListener("resize", applySharedHeight);
   }, [sizeToContent, fitContent]);
 
-  const usesSharedHeight = !sizeToContent && !fitContent;
+  const usesSharedHeight = !fitContent;
 
   return (
     <main
       ref={ref}
       className={`flex max-h-[calc(100dvh-2rem)] w-full min-w-0 max-w-full flex-col overflow-hidden rounded-2xl bg-[color:var(--surface)] shadow-[var(--card-shadow)] sm:max-h-[calc(100dvh-3rem)] ${
-        usesSharedHeight ? "h-[var(--page-card-height,32rem)]" : ""
+        usesSharedHeight && !sizeToContent
+          ? "h-[var(--page-card-height,30rem)]"
+          : ""
       } ${mainClassName}`}
     >
       <div className={`shrink-0 bg-[color:var(--surface)] ${headerClassName}`}>
