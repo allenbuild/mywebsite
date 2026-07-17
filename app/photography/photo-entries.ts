@@ -31,7 +31,7 @@ const photoEntries: PhotoEntry[] = [
   {
     caption: "yc p26 demo day",
     date: "2026-06-16",
-    credit: "with Garry Tan and Bryce Johnson",
+    credit: "→ Garry Tan and Bryce Johnson",
     photos: [
       {
         src: "/photography/yc-p26-demo-day-welcome.png",
