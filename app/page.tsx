@@ -50,7 +50,7 @@ export default function Home() {
       <PageCard
         sizeToContent
         mainClassName="@container"
-        headerClassName="px-5 pt-4 pb-1 sm:px-6 sm:pt-5 sm:pb-1.5"
+        headerClassName="px-5 py-5 sm:px-6 sm:py-5"
         bodyClassName="px-5 pb-1.5 sm:px-6 sm:pb-2"
         header={
           <header className="flex items-center justify-between gap-4">
@@ -60,7 +60,7 @@ export default function Home() {
           </header>
         }
       >
-        <div className="mt-3 h-px w-full bg-[color:var(--rule)]" />
+        <div className="h-px w-full bg-[color:var(--rule)]" />
 
         <section className="mt-2.5 min-w-0 space-y-3 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
           <div>

@@ -129,7 +129,7 @@ export default function CursorGlowLayout({
         className={`relative z-10 my-auto w-full min-w-0 ${contentClassName ?? "max-w-[36rem]"}`}
       >
         {showThemeToggle && (
-          <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-end px-5 pt-4 sm:px-6 sm:pt-5">
+          <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-end px-5 pt-5 sm:px-6 sm:pt-5">
             <div className="pointer-events-auto">
               <ThemeToggle />
             </div>
