@@ -8,7 +8,7 @@ export default function MediaTimeline() {
       {entries.map((entry) => (
         <li
           key={`${entry.date}-${entry.href}`}
-          className="grid grid-cols-[4.25rem_minmax(0,1fr)] gap-x-2 border-b border-[color:var(--rule)] py-2.5 first:pt-0 last:border-b-0 sm:grid-cols-[5.25rem_minmax(0,1fr)] sm:gap-x-3 sm:py-3"
+          className="grid grid-cols-[3.75rem_minmax(0,1fr)] gap-x-1.5 border-b border-[color:var(--rule)] py-2.5 first:pt-0 last:border-b-0 sm:grid-cols-[4.5rem_minmax(0,1fr)] sm:gap-x-2 sm:py-3"
         >
           <time
             dateTime={entry.date}
