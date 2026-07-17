@@ -173,7 +173,7 @@ export default function Home() {
                 with 30k+ users in 79 countries
               </li>
               <li>
-                wrote economics policy @{" "}
+                wrote econ policy @{" "}
                 <a
                   href="https://www.thehuea.org/general-8"
                   target="_blank"
