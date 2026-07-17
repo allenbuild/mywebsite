@@ -52,7 +52,7 @@ const contactLinkClass = "contact-link";
 export default function Home() {
   return (
     <CursorGlowLayout>
-      <main className="@container min-w-0 w-full max-w-full rounded-2xl bg-[color:var(--surface)] px-5 pt-3 pb-1.5 shadow-[var(--card-shadow)] sm:px-6 sm:pt-4 sm:pb-2">
+      <main className="@container min-w-0 w-full max-w-full rounded-2xl bg-[color:var(--surface)] px-5 pt-3 pb-1.5 shadow-[var(--card-shadow)] font-[Georgia,serif] sm:px-6 sm:pt-4 sm:pb-2">
         <header className="flex items-center justify-between gap-4">
           <h1 className="text-3xl font-semibold tracking-tight">
             Allen Xu
@@ -72,13 +72,14 @@ export default function Home() {
         <section className="mt-2.5 min-w-0 space-y-3 text-pretty break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
           <div>
             <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)] @2xl:text-[13px] @2xl:leading-[1.45]">
-              <span className="font-semibold">Hey! I&apos;m Allen.</span>{" "}
-              I&apos;m an incoming freshman at the Wharton School at the University of Pennsylvania. Interested in embodied AI, early-stage venture capital, wearables, economics, and broadly, social entrepreneurship.
+              <span className="font-semibold">hey! i&apos;m allen.</span>{" "}
+              i&apos;m an incoming freshman at Wharton. i&apos;m interested in
+              physical ai, assistive wearables, and early-stage vc.
             </p>
           </div>
 
           <div>
-            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="text-[15px] font-bold italic text-[color:var(--foreground)]">
               currently:
             </p>
             <ul className="mt-1 list-inside list-disc space-y-0.5 pl-1">
@@ -118,7 +119,7 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="text-[15px] font-bold italic text-[color:var(--foreground)]">
               previously:
             </p>
             <ul className="mt-1 list-inside list-disc space-y-0.5 pl-1">
@@ -197,7 +198,7 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="text-[15px] font-bold italic text-[color:var(--foreground)]">
               here & there:
             </p>
             <ul className="mt-1 list-inside list-disc space-y-0.5 pl-1">
