@@ -54,7 +54,7 @@ export default function Home() {
         bodyClassName="px-5 pb-1.5 sm:px-6 sm:pb-2"
         header={
           <header className="flex items-center justify-between gap-4">
-            <h1 className="text-3xl font-semibold italic tracking-tight [font-family:var(--font-italic)] sm:text-4xl">
+            <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
               Allen Xu
             </h1>
           </header>
