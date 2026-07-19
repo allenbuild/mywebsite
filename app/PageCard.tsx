@@ -97,7 +97,7 @@ export default function PageCard({
         {header}
       </div>
       <div
-        className={`page-card-scroll ${usesSharedHeight ? "min-h-0 flex-1 overflow-y-auto overscroll-contain" : ""} ${bodyClassName}`}
+        className={`page-card-scroll min-h-0 flex-1 overflow-y-scroll overscroll-contain ${bodyClassName}`}
       >
         {children}
       </div>
