@@ -196,7 +196,7 @@ a.project-card .project-card-image {
 
 a.project-card:hover .project-card-image,
 a.project-card:focus-visible .project-card-image {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 a.project-card .project-card-title {
