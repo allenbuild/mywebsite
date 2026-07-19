@@ -40,12 +40,12 @@ export default function ProjectGrid({
               <h2 className="project-card-title shrink-0 text-[13px] font-semibold leading-snug text-[color:var(--foreground)] sm:text-[14px]">
                 {project.title}
               </h2>
-              <p className="mt-0.5 line-clamp-3 min-h-0 flex-1 text-[10px] leading-[1.4] text-[color:var(--muted)] sm:text-[11px]">
+              <p className="mt-0.5 min-h-0 flex-1 text-[10px] leading-[1.4] text-[color:var(--muted)] sm:text-[11px]">
                 {project.description}
               </p>
               <div className="mt-2 shrink-0 space-y-1.5">
                 {project.credit ? (
-                  <p className="line-clamp-2 text-[9px] italic leading-[1.35] text-[color:var(--muted-2)] sm:text-[10px]">
+                  <p className="text-[9px] italic leading-[1.35] text-[color:var(--muted-2)] sm:text-[10px]">
                     {project.credit}
                   </p>
                 ) : null}
