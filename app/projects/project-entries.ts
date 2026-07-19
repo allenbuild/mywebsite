@@ -71,6 +71,7 @@ const projectEntries: ProjectEntry[] = [
     thumbnail: "/projects/returner-fund-3.png",
     thumbnailWidth: 606,
     thumbnailHeight: 536,
+    objectPosition: "right center",
     date: "2026-07-14",
   },
 ];
