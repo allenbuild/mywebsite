@@ -78,7 +78,7 @@ const comingSoonProjects: ComingSoonProject[] = [
   {
     title: "Ramsey",
     description:
-      "Converts cooking videos from YouTube Shorts, Instagram Reels, and TikTok into structured recipes with ingredients, measurements, and step-by-step instructions.",
+      "Converts cooking videos from YouTube, Instagram, and TikTok into structured recipes with ingredients, measurements, and step-by-step instructions.",
   },
 ];
 
