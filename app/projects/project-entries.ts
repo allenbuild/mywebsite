@@ -57,9 +57,9 @@ const projectEntries: ProjectEntry[] = [
     description:
       "Business education platform used by 30,000+ students across 80+ countries, with 40,000+ practice questions and real-time roleplay scoring. Uses Next.js, React, TypeScript, Supabase Auth, and PostgreSQL.",
     href: "https://www.decademy.app/",
-    thumbnail: "/projects/decademy.png",
-    thumbnailWidth: 1024,
-    thumbnailHeight: 576,
+    thumbnail: "/projects/decademy-2.png",
+    thumbnailWidth: 600,
+    thumbnailHeight: 336,
     date: "2025-04-01",
     credit: "Built with Aiden Xie, Rohan Rao, Arnav Sharma, and Ishaan Garg",
   },
