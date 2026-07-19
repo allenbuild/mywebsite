@@ -271,3 +271,42 @@ export function isViewStatsAuthorized(cookieValue: string | undefined): boolean 
   const secret = process.env.VIEW_COUNTER_SECRET;
   return Boolean(secret && cookieValue === secret);
 }
+
+/** Owner IPs — never count these as page views. */
+const EXCLUDED_VIEW_IPS = new Set([
+  "172.59.186.166",
+  "2607:fb90:a08c:e725:fc66:db85:f9b9:6fca",
+]);
+
+function normalizeIp(ip: string): string {
+  const trimmed = ip.trim().toLowerCase();
+  if (trimmed.startsWith("::ffff:")) {
+    return trimmed.slice("::ffff:".length);
+  }
+  return trimmed;
+}
+
+export function extractClientIp(
+  forwardedFor: string | null,
+  realIp: string | null,
+  vercelForwardedFor: string | null,
+): string | null {
+  const candidates = [
+    ...(forwardedFor?.split(",") ?? []),
+    vercelForwardedFor,
+    realIp,
+  ];
+
+  for (const candidate of candidates) {
+    if (!candidate) continue;
+    const ip = normalizeIp(candidate);
+    if (ip) return ip;
+  }
+
+  return null;
+}
+
+export function isExcludedViewIp(ip: string | null | undefined): boolean {
+  if (!ip) return false;
+  return EXCLUDED_VIEW_IPS.has(normalizeIp(ip));
+}

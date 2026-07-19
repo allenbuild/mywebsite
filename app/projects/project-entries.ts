@@ -11,6 +11,11 @@ export type ProjectEntry = {
   credit?: string;
 };
 
+export type ComingSoonProject = {
+  title: string;
+  description: string;
+};
+
 const projectEntries: ProjectEntry[] = [
   {
     title: "Eyerobic",
@@ -59,8 +64,30 @@ const projectEntries: ProjectEntry[] = [
   },
 ];
 
+const comingSoonProjects: ComingSoonProject[] = [
+  {
+    title: "Basketball Real-Time Pickup Box Score",
+    description:
+      "Computer vision system that tracks makes, misses, rebounds, assists, and player statistics from pickup basketball games in real time using a sideline webcam.",
+  },
+  {
+    title: "Pool Table CV",
+    description:
+      "Computer vision system that detects balls, predicts trajectories, tracks game state, and recommends optimal shots in real time using an overhead webcam.",
+  },
+  {
+    title: "Ramsey",
+    description:
+      "Converts cooking videos from YouTube Shorts, Instagram Reels, and TikTok into structured recipes with ingredients, measurements, and step-by-step instructions.",
+  },
+];
+
 export function getProjectEntries(): ProjectEntry[] {
   return [...projectEntries];
+}
+
+export function getComingSoonProjects(): ComingSoonProject[] {
+  return [...comingSoonProjects];
 }
 
 export function formatProjectDate(isoDate: string): string {
