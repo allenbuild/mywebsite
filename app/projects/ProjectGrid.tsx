@@ -20,7 +20,7 @@ export default function ProjectGrid({
             rel="noreferrer"
             className="project-card group flex h-full min-w-0 flex-col overflow-hidden rounded-xl border border-[color:var(--rule)] bg-[color:var(--surface)]"
           >
-            <div className="relative aspect-[16/10] shrink-0 overflow-hidden border-b border-[color:var(--rule)] bg-[color:var(--canvas)] p-2.5 sm:p-3">
+            <div className="relative aspect-[16/10] shrink-0 overflow-hidden border-b border-[color:var(--rule)] bg-[#F0F0F0] p-2.5 sm:p-3">
               <Image
                 src={project.thumbnail}
                 alt=""
