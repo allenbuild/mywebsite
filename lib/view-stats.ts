@@ -275,6 +275,7 @@ export function isViewStatsAuthorized(cookieValue: string | undefined): boolean 
 /** Owner IPs — never count these as page views. */
 const EXCLUDED_VIEW_IPS = new Set([
   "172.59.186.166",
+  "192.168.12.166",
   "2607:fb90:a08c:e725:fc66:db85:f9b9:6fca",
 ]);
 
