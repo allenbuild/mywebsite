@@ -63,7 +63,7 @@ export default function ProjectGrid({
 
       {comingSoon.length > 0 ? (
         <section>
-          <h2 className="text-[14px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+          <h2 className="pl-1 text-[14px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
             coming soon:
           </h2>
           <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-3">
