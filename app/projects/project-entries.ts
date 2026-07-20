@@ -78,9 +78,9 @@ const projectEntries: ProjectEntry[] = [
 
 const comingSoonProjects: ComingSoonProject[] = [
   {
-    title: "Pickup Basketball Box Score",
+    title: "Basketball Box Score",
     description:
-      "Computer vision system that tracks makes, misses, rebounds, assists, and player statistics from pickup basketball games in real time using a sideline webcam.",
+      "Computer vision system that tracks makes, misses, rebounds, assists, and player statistics from basketball games in real time using a sideline webcam.",
   },
   {
     title: "Pool Table CV",
