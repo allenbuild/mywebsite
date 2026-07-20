@@ -48,7 +48,7 @@ const projectEntries: ProjectEntry[] = [
     thumbnail: "/projects/smart-poker-glasses.png",
     thumbnailWidth: 772,
     thumbnailHeight: 1024,
-    objectPosition: "center 72%",
+    objectPosition: "center 80%",
     date: "2026-05-29",
     credit: "Built with Colin Hu, Aiden Xie, and Andres Niño",
   },
