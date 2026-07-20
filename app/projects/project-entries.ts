@@ -66,7 +66,7 @@ const projectEntries: ProjectEntry[] = [
   {
     title: "returner.fund",
     description:
-      "Venture platform analyzing social traction across Y Combinator and a16z Speedrun startups. Uses GitHub, X, LinkedIn, Instagram, Product Hunt, and other web signals to rank companies with log-normalized, recency-weighted scoring and an interactive Cytoscape graph built with Next.js, Node.js, React, Supabase, and TypeScript.",
+      "Venture platform analyzing social traction across YC and a16z Speedrun startups. Uses GitHub, X, LinkedIn, Instagram, and other web signals to rank companies with log-normalized scoring and an interactive Cytoscape graph built with Next.js, Node.js, React, Supabase, and TypeScript.",
     href: "https://x.com/allenxtech/status/2077110491432804738",
     thumbnail: "/projects/returner-fund-3.png",
     thumbnailWidth: 606,
