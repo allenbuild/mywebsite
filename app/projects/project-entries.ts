@@ -53,7 +53,7 @@ const projectEntries: ProjectEntry[] = [
     credit: "Built with Colin Hu, Aiden Xie, and Andres Niño",
   },
   {
-    title: "decademy.app",
+    title: "www.decademy.app",
     description:
       "Business education platform used by 30,000+ students across 80+ countries, with 40,000+ practice questions and real-time roleplay scoring. Uses Next.js, React, TypeScript, Supabase Auth, and PostgreSQL.",
     href: "https://www.decademy.app/",
