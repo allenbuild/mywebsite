@@ -53,7 +53,7 @@ const projectEntries: ProjectEntry[] = [
     credit: "Built with Colin Hu, Aiden Xie, and Andres Niño",
   },
   {
-    title: "www.decademy.app",
+    title: "decademy.app",
     description:
       "Business education platform used by 30,000+ students across 80+ countries, with 40,000+ practice questions and real-time roleplay scoring. Uses Next.js, React, TypeScript, Supabase Auth, and PostgreSQL.",
     href: "https://www.decademy.app/",
@@ -64,7 +64,7 @@ const projectEntries: ProjectEntry[] = [
     credit: "Built with Aiden Xie, Rohan Rao, Arnav Sharma, and Ishaan Garg",
   },
   {
-    title: "www.returner.fund",
+    title: "returner.fund",
     description:
       "Venture platform analyzing social traction across YC and a16z Speedrun startups. Uses GitHub, X, LinkedIn, Instagram, and other web signals to rank companies with log-normalized scoring and an interactive Cytoscape graph built with Next.js, Node.js, React, Supabase, and TypeScript.",
     href: "https://x.com/allenxtech/status/2077110491432804738",
