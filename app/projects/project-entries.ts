@@ -66,7 +66,7 @@ const projectEntries: ProjectEntry[] = [
   {
     title: "returner.fund",
     description:
-      "Venture platform analyzing social traction across YC and a16z speedrun startups. Uses GitHub, X, LinkedIn, Instagram, and other apps to rank companies with log-normalized scoring and a Cytoscape graph built with Next.js, Node.js, React, Supabase, and TypeScript.",
+      "Cytoscape network map ranking YC and a16z Speedrun startups by social traction. Uses GitHub, X, LinkedIn, Instagram, and other public signals to evaluate companies with log-normalized scoring.",
     href: "https://x.com/allenxtech/status/2077110491432804738",
     thumbnail: "/projects/returner-fund-3.png",
     thumbnailWidth: 606,
