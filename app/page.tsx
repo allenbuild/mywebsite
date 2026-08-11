@@ -54,137 +54,121 @@ export default function Home() {
 
         <section className="mt-5 min-w-0 space-y-5 break-words text-[15px] leading-[1.65] text-[color:var(--muted)]">
           <p className="text-[15px] leading-[1.65] text-[color:var(--foreground)]">
-            <span className="font-semibold">hey! i&apos;m allen,</span> and
-            i&apos;m an incoming freshman at Wharton. i&apos;m interested in
+            hey, i&apos;m allen! i&apos;m an incoming freshman at wharton
+            studying finance, cs, and ai. i&apos;m broadly interested in
             physical ai, assistive wearables, and early-stage vc.
           </p>
 
           <div>
             <p className="text-[15px] font-semibold text-[color:var(--foreground)]">
-              currently:
+              things i&apos;m doing:
             </p>
             <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
               <li>
                 building the internet for physical ai @{" "}
-                <a
-                  href="http://build.ai/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Build AI
+                <a href="http://build.ai/" target="_blank" rel="noreferrer">
+                  build ai
                 </a>{" "}
-                and{" "}
-                <a
-                  href="https://www.hf0.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  HF0
-                </a>
+                &{" "}
+                <a href="https://www.hf0.com/" target="_blank" rel="noreferrer">
+                  hf0
+                </a>{" "}
+                (&lt;0.1% acceptance rate). raised $25m to scale egocentric data
+                for frontier labs
               </li>
               <li>
-                backing brilliant founders @{" "}
+                backing y-combinator and a16z speedrun startups @{" "}
                 <a
                   href="https://www.multimodal.ventures/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Multimodal Ventures
-                </a>
+                  multimodal ventures
+                </a>{" "}
+                ($25m aum)
               </li>
             </ul>
           </div>
 
           <div>
             <p className="text-[15px] font-semibold text-[color:var(--foreground)]">
-              previously:
+              things i&apos;ve done:
             </p>
             <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
               <li>
-                presented a{" "}
+                built{" "}
                 <a
                   href="https://www.eyerobic.com/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  haptic wearable
-                </a>{" "}
-                for blind athletes @ NASA and{" "}
+                  eyerobic
+                </a>
+                , a haptic wearable for blind swimmers. presented @ nasa &{" "}
                 <a
                   href="https://www.nctv17.org/community-events/naperville-innovators-turn-inspiration-into-invention/?srsltid=AfmBOopQFE8INSe9B-06H2d_L_PF-96b2U1bJH2WtL1eeYjXPUnpT7qq"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  NBC 5 Chicago
+                  nbc 5 chicago
                 </a>
+                , winning $1m+ in academic scholarships and grants
               </li>
               <li>
-                built a{" "}
+                built{" "}
                 <a
                   href="https://www.bizbuzz.it/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  youth entrepreneurship incubator
-                </a>{" "}
-                with 1k+ students
+                  bizbuzz
+                </a>
+                , a youth entrepreneurship incubator across chicagoland. ran
+                three camps and fish tank contests, awarding $15k+ in venture
+                funding
               </li>
               <li>
-                built an{" "}
+                built{" "}
                 <a
                   href="https://www.decademy.app/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  edtech startup
-                </a>{" "}
-                with 30k+ users
+                  decademy.app
+                </a>
+                , an edtech startup with 30k+ users
               </li>
               <li>
-                wrote econ policy @{" "}
+                researched carbon emissions trading and regulation @ university
+                of michigan. presented @ ijio 2025
+              </li>
+              <li>
+                researched governance effects on carbon intensity @ purdue
+                university fort wayne. published @{" "}
                 <a
                   href="https://www.thehuea.org/general-8"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Harvard
-                </a>
-                ,{" "}
+                  harvard undergraduate economics association
+                </a>{" "}
+                &{" "}
                 <a
                   href="https://ijsser.org/2025files/ijsser_10__68.pdf"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  IJSSER
+                  ijsser
                 </a>
-                , University of Michigan, and more
               </li>
               <li>
-                finalist @ Conrad Challenge, Blue Ocean Competition, DECA
-                Internationals
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-[15px] font-semibold text-[color:var(--foreground)]">
-              here & there:
-            </p>
-            <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
-              <li>
-                took{" "}
-                <a
-                  href="https://www.instagram.com/xuperstrong/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  daily photos
-                </a>{" "}
-                with strangers throughout senior year of high school
+                finalist @ conrad challenge (25/1.3k), blue ocean competition
+                (30/12.8k), deca internationals (6th/10k)
               </li>
               <li>
-                fell in love with photography, pickup basketball, and my dog
-                Winnie
+                interned @ university of notre dame (institute for global
+                investing), the city of naperville (financial advisory board),
+                and more
               </li>
             </ul>
           </div>
