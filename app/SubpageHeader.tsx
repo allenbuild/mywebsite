@@ -3,7 +3,7 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function SubpageHeader({
   title,
-  titleClassName = "text-2xl",
+  titleClassName = "text-[1.65rem] sm:text-3xl",
   className,
 }: {
   title: string;
@@ -16,7 +16,7 @@ export default function SubpageHeader({
         <HomeBackLink />
         <ThemeToggle />
       </div>
-      <h1 className={`mt-1.5 font-semibold tracking-tight ${titleClassName}`}>
+      <h1 className={`mt-5 font-semibold tracking-tight ${titleClassName}`}>
         {title}
       </h1>
     </header>

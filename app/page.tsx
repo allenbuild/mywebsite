@@ -1,6 +1,6 @@
 import Link from "next/link";
 import CursorGlowLayout from "./CursorGlowLayout";
-import PageCard from "./PageCard";
+import PageShell from "./PageShell";
 
 const contactLinks = [
   {
@@ -40,49 +40,36 @@ const navLinks = [
 ] as const;
 
 const navBtnClass =
-  "nav-btn flex items-center justify-center rounded-md px-2.5 py-1.5 text-center text-[12px] font-normal text-[color:var(--nav-btn-fg)] visited:text-[color:var(--nav-btn-fg)] hover:!bg-[color:var(--link)] hover:!text-white visited:hover:!text-white sm:px-3 sm:py-1.5 sm:text-[13px]";
-
-const contactLinkClass = "contact-link";
+  "nav-btn flex items-center justify-center rounded-md px-2.5 py-1.5 text-center text-[12px] font-normal text-[color:var(--nav-btn-fg)] visited:text-[color:var(--nav-btn-fg)] sm:px-3 sm:py-1.5 sm:text-[13px]";
 
 export default function Home() {
   return (
-    <CursorGlowLayout contentClassName="max-w-[38rem]">
-      <PageCard
-        sizeToContent
-        mainClassName="@container"
-        headerClassName="px-5 py-5 sm:px-6 sm:py-5"
-        bodyClassName="px-5 pb-1.5 sm:px-6 sm:pb-2"
-        header={
-          <header className="flex items-center justify-between gap-4">
-            <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-              Allen Xu
-            </h1>
-          </header>
-        }
-      >
-        <div className="h-px w-full bg-[color:var(--rule)]" />
+    <CursorGlowLayout contentClassName="max-w-[40rem]">
+      <PageShell>
+        <header>
+          <h1 className="text-[1.75rem] font-semibold tracking-tight sm:text-[2rem]">
+            Allen Xu
+          </h1>
+        </header>
 
-        <section className="mt-2.5 min-w-0 space-y-3 break-words text-[14px] leading-[1.5] text-[color:var(--muted)]">
-          <div>
-            <p className="text-[14px] leading-[1.5] text-[color:var(--foreground)]">
-              <span className="font-semibold">hey! i&apos;m allen,</span>{" "}
-              and i&apos;m an incoming freshman at Wharton. i&apos;m interested in
-              physical ai, assistive wearables, and early-stage vc.
-            </p>
-          </div>
+        <section className="mt-5 min-w-0 space-y-5 break-words text-[15px] leading-[1.65] text-[color:var(--muted)]">
+          <p className="text-[15px] leading-[1.65] text-[color:var(--foreground)]">
+            <span className="font-semibold">hey! i&apos;m allen,</span> and
+            i&apos;m an incoming freshman at Wharton. i&apos;m interested in
+            physical ai, assistive wearables, and early-stage vc.
+          </p>
 
           <div>
-            <p className="text-[14px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="text-[15px] font-semibold text-[color:var(--foreground)]">
               currently:
             </p>
-            <ul className="mt-1 list-outside list-disc space-y-0.5 pl-5">
+            <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
               <li>
                 building the internet for physical ai @{" "}
                 <a
                   href="http://build.ai/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   Build AI
                 </a>{" "}
@@ -91,7 +78,6 @@ export default function Home() {
                   href="https://www.hf0.com/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   HF0
                 </a>
@@ -102,7 +88,6 @@ export default function Home() {
                   href="https://www.multimodal.ventures/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   Multimodal Ventures
                 </a>
@@ -111,30 +96,27 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="text-[14px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="text-[15px] font-semibold text-[color:var(--foreground)]">
               previously:
             </p>
-            <ul className="mt-1 list-outside list-disc space-y-0.5 pl-5">
+            <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
               <li>
                 presented a{" "}
                 <a
                   href="https://www.eyerobic.com/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   haptic wearable
                 </a>{" "}
-                for blind athletes @ NASA
-                and {" "}
+                for blind athletes @ NASA and{" "}
                 <a
                   href="https://www.nctv17.org/community-events/naperville-innovators-turn-inspiration-into-invention/?srsltid=AfmBOopQFE8INSe9B-06H2d_L_PF-96b2U1bJH2WtL1eeYjXPUnpT7qq"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   NBC 5 Chicago
-                </a>{" "} 
+                </a>
               </li>
               <li>
                 built a{" "}
@@ -142,7 +124,6 @@ export default function Home() {
                   href="https://www.bizbuzz.it/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   youth entrepreneurship incubator
                 </a>{" "}
@@ -154,7 +135,6 @@ export default function Home() {
                   href="https://www.decademy.app/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   edtech startup
                 </a>{" "}
@@ -166,7 +146,6 @@ export default function Home() {
                   href="https://www.thehuea.org/general-8"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   Harvard
                 </a>
@@ -175,40 +154,37 @@ export default function Home() {
                   href="https://ijsser.org/2025files/ijsser_10__68.pdf"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   IJSSER
                 </a>
                 , University of Michigan, and more
               </li>
               <li>
-                finalist @ Conrad
-                Challenge, Blue Ocean Competition, DECA
+                finalist @ Conrad Challenge, Blue Ocean Competition, DECA
                 Internationals
               </li>
             </ul>
           </div>
 
           <div>
-            <p className="text-[14px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="text-[15px] font-semibold text-[color:var(--foreground)]">
               here & there:
             </p>
-            <ul className="mt-1 list-outside list-disc space-y-0.5 pl-5">
+            <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
               <li>
                 took{" "}
                 <a
                   href="https://www.instagram.com/xuperstrong/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[color:var(--link)] hover:text-[color:var(--link-hover)]"
                 >
                   daily photos
                 </a>{" "}
                 with strangers throughout senior year of high school
               </li>
               <li>
-                fell in love with photography, pickup basketball, and my
-                dog Winnie
+                fell in love with photography, pickup basketball, and my dog
+                Winnie
               </li>
             </ul>
           </div>
@@ -216,25 +192,32 @@ export default function Home() {
 
         <nav
           aria-label="Site sections"
-          className="mt-4 mb-4 grid grid-cols-2 gap-1.5 sm:flex sm:flex-wrap sm:gap-2"
+          className="mt-8 mb-8 grid grid-cols-2 gap-1.5 sm:flex sm:flex-wrap sm:gap-2"
         >
           {navLinks.map(({ href, label, className }) => (
-            <Link key={href} href={href} className={`${navBtnClass} ${className}`}>
+            <Link
+              key={href}
+              href={href}
+              className={`${navBtnClass} ${className}`}
+            >
               {label}
             </Link>
           ))}
         </nav>
 
-        <footer className="flex w-full justify-center pt-1 pb-0">
-          <div className="inline-flex max-w-full flex-wrap items-center justify-center gap-x-4 text-[15px]">
+        <footer className="flex w-full justify-start">
+          <div className="inline-flex max-w-full flex-wrap items-center gap-x-3 text-[14px]">
             {contactLinks.map((link, index) => (
-              <span key={link.label} className="inline-flex items-center gap-x-4">
+              <span
+                key={link.label}
+                className="inline-flex items-center gap-x-3"
+              >
                 {index > 0 ? (
                   <span aria-hidden className="contact-separator" />
                 ) : null}
                 <a
                   href={link.href}
-                  className={contactLinkClass}
+                  className="contact-link"
                   {...("external" in link
                     ? { target: "_blank", rel: "noreferrer" }
                     : {})}
@@ -245,7 +228,7 @@ export default function Home() {
             ))}
           </div>
         </footer>
-      </PageCard>
+      </PageShell>
     </CursorGlowLayout>
   );
 }

@@ -1,5 +1,5 @@
 import CursorGlowLayout from "../CursorGlowLayout";
-import PageCard from "../PageCard";
+import PageShell from "../PageShell";
 import SubpageHeader from "../SubpageHeader";
 import ProjectGrid from "./ProjectGrid";
 import { getComingSoonProjects, getProjectEntries } from "./project-entries";
@@ -10,9 +10,9 @@ export default function ProjectsPage() {
 
   return (
     <CursorGlowLayout showThemeToggle={false}>
-      <PageCard header={<SubpageHeader title="projects" />}>
+      <PageShell header={<SubpageHeader title="projects" />}>
         <ProjectGrid entries={entries} comingSoon={comingSoon} />
-      </PageCard>
+      </PageShell>
     </CursorGlowLayout>
   );
 }

@@ -1,5 +1,5 @@
 import CursorGlowLayout from "../CursorGlowLayout";
-import PageCard from "../PageCard";
+import PageShell from "../PageShell";
 import SubpageHeader from "../SubpageHeader";
 
 const books = [
@@ -28,26 +28,21 @@ const books = [
 export default function BookshelfPage() {
   return (
     <CursorGlowLayout showThemeToggle={false}>
-      <PageCard fitContent header={<SubpageHeader title="bookshelf" />}>
-        <p className="mt-2 text-[15px] leading-[1.5] text-[color:var(--muted)]">
+      <PageShell header={<SubpageHeader title="bookshelf" />}>
+        <p className="mt-5 text-[15px] leading-[1.65] text-[color:var(--muted)]">
           questions, answers, and everything in between:
         </p>
-        <ul className="mt-2 list-outside list-disc space-y-0.5 pl-5 text-[15px] leading-[1.5] text-[color:var(--muted)]">
+        <ul className="mt-3 list-outside list-disc space-y-1.5 pl-5 text-[15px] leading-[1.65] text-[color:var(--muted)]">
           {books.map((book) => (
             <li key={book.href}>
-              <a
-                href={book.href}
-                target="_blank"
-                rel="noreferrer"
-                className="italic text-[color:var(--link)] transition-colors hover:text-[color:var(--media-accent)]"
-              >
+              <a href={book.href} target="_blank" rel="noreferrer">
                 {book.title}
               </a>{" "}
               by {book.authors}
             </li>
           ))}
         </ul>
-      </PageCard>
+      </PageShell>
     </CursorGlowLayout>
   );
 }
