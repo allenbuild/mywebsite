@@ -107,16 +107,6 @@ a.project-row .project-row-title {
   transition: color 0.4s ease;
 }
 
-a.project-row .project-row-title::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0.05em;
-  height: 1px;
-  background-color: var(--rule);
-}
-
 a.project-row .project-row-title::after {
   content: "";
   position: absolute;
