@@ -208,11 +208,10 @@ export default function Home() {
               </li>
             </ul>
           </div>
-        </section>
 
         <nav
           aria-label="Site sections"
-          className="mt-8 mb-8 grid grid-cols-2 gap-1.5 sm:flex sm:flex-wrap sm:gap-2"
+          className="grid grid-cols-2 gap-1.5 sm:flex sm:flex-wrap sm:gap-2"
         >
           {navLinks.map(({ href, label, className }) => (
             <Link
@@ -248,6 +247,7 @@ export default function Home() {
             ))}
           </div>
         </footer>
+        </div>
       </PageShell>
     </CursorGlowLayout>
   );
