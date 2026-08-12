@@ -15,6 +15,7 @@ const photoEntries: PhotoEntry[] = [
     photos: [
       {
         src: "/photography/founders-inc-night-hack-1.png",
+        objectPosition: "center 72%",
       },
       {
         src: "/photography/founders-inc-night-hack-2.png",

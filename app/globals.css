@@ -229,11 +229,10 @@ a.home-back-btn:focus-visible::after {
 }
 
 .photo-year-bar {
-  /* Opaque bleed so scrolling captions can't peek beside/under the year */
+  /* Side bleed only — bottom shadow was covering the first entry */
   box-shadow:
     -1rem 0 0 0 var(--surface),
-    1rem 0 0 0 var(--surface),
-    0 1rem 0 0 var(--surface);
+    1rem 0 0 0 var(--surface);
 }
 
 .photo-year-bar:hover .photo-year-label,
