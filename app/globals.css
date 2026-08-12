@@ -233,7 +233,7 @@ a.home-back-btn:focus-visible::after {
   box-shadow:
     -1rem 0 0 0 var(--surface),
     1rem 0 0 0 var(--surface),
-    0 0.75rem 0 0 var(--surface);
+    0 1rem 0 0 var(--surface);
 }
 
 .photo-year-bar:hover .photo-year-label,
