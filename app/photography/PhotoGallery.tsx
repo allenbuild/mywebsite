@@ -100,7 +100,7 @@ function YearBarButton({
       type="button"
       onClick={onClick}
       aria-expanded={!collapsed}
-      style={{ height: collapsed ? 32 : YEAR_BAR_HEIGHT }}
+      style={{ height: collapsed ? 36 : YEAR_BAR_HEIGHT }}
       className="photo-year-bar sticky top-0 z-20 flex w-full shrink-0 items-center justify-between border-b border-[color:var(--rule)] bg-[color:var(--surface)] text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--link)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--surface)]"
     >
       <span
