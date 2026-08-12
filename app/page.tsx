@@ -47,7 +47,7 @@ export default function Home() {
           </h1>
         </header>
 
-        <div className="mt-4 min-w-0 space-y-4 break-words text-[15px] leading-[1.65] text-[color:var(--foreground)]">
+        <div className="mt-4 min-w-0 space-y-4 break-words text-[14px] leading-[1.65] text-[color:var(--foreground)]">
           <p>
             <span className="font-semibold">hey, i&apos;m allen!</span>
             {" "}
@@ -227,7 +227,7 @@ export default function Home() {
         </nav>
 
         <footer className="flex w-full justify-start">
-          <div className="inline-flex max-w-full flex-wrap items-center gap-x-3 text-[15px]">
+          <div className="inline-flex max-w-full flex-wrap items-center gap-x-3 text-[14px]">
             {contactLinks.map((link, index) => (
               <span
                 key={link.label}
