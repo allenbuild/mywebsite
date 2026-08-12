@@ -29,7 +29,7 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
             </div>
 
             <div className="min-w-0">
-              <h2 className="project-row-title text-[15px] font-semibold leading-snug text-[color:var(--foreground)] sm:text-[16px]">
+              <h2 className="project-row-title text-[15px] font-bold italic leading-snug [font-family:var(--font-italic)] text-[color:var(--foreground)]">
                 {project.title}
               </h2>
               <p className="mt-1 text-[14px] leading-[1.65] text-[color:var(--foreground)]">
