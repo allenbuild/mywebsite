@@ -202,7 +202,7 @@ export default function Home() {
                 <span className="font-semibold">
                   the city of naperville
                 </span>{" "}
-                (financial advisory board), and more
+                (financial advisory board)
               </li>
             </ul>
           </div>
