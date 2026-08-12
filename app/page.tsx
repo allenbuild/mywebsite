@@ -134,7 +134,7 @@ export default function Home() {
                 </a>
                 , a youth entrepreneurship incubator across chicagoland. ran
                 three camps and{" "}
-                <span className="font-semibold text-[color:var(--foreground)]">
+                <span className="font-semibold text-[color:var(--muted)]">
                   fish tank
                 </span>{" "}
                 contests, awarding $15k+ in venture funding
@@ -152,12 +152,21 @@ export default function Home() {
                 , an edtech startup with 30k+ users
               </li>
               <li>
-                researched carbon emissions trading and regulation @ university
-                of michigan. presented @ ijio 2025
+                researched carbon emissions trading and regulation @{" "}
+                <span className="font-semibold text-[color:var(--muted)]">
+                  university of michigan
+                </span>
+                . presented @{" "}
+                <span className="font-semibold text-[color:var(--muted)]">
+                  ijio 2025
+                </span>
               </li>
               <li>
-                researched governance effects on carbon intensity @ purdue
-                university fort wayne. published @{" "}
+                researched governance effects on carbon intensity @{" "}
+                <span className="font-semibold text-[color:var(--muted)]">
+                  purdue university fort wayne
+                </span>
+                . published @{" "}
                 <a
                   href="https://www.thehuea.org/general-8"
                   target="_blank"
@@ -181,9 +190,15 @@ export default function Home() {
                 (30/12.8k), deca internationals (6th/10k)
               </li>
               <li>
-                interned @ university of notre dame (institute for global
-                investing), the city of naperville (financial advisory board),
-                and more
+                interned @{" "}
+                <span className="font-semibold text-[color:var(--muted)]">
+                  university of notre dame
+                </span>{" "}
+                (institute for global investing),{" "}
+                <span className="font-semibold text-[color:var(--muted)]">
+                  the city of naperville
+                </span>{" "}
+                (financial advisory board), and more
               </li>
             </ul>
           </div>
