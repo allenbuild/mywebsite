@@ -38,7 +38,7 @@ const projectEntries: ProjectEntry[] = [
   {
     title: "Smart Poker Glasses",
     description:
-      "Real-time poker assistant built on the Meta Wearables SDK for smart glasses. Uses computer vision, OCR, and game state reconstruction to recommend optimal plays using GTO analysis.",
+      "Real-time poker assistant built on the Meta Wearables SDK for smart glasses. Uses computer vision, OCR, and game state reconstruction to recommend optimal plays via GTO analysis.",
     href: "https://www.instagram.com/reel/DY7v0RXhrjC/",
     thumbnail: "/projects/smart-poker-glasses.png",
     thumbnailWidth: 772,
