@@ -55,7 +55,7 @@ export default function Home() {
           </p>
 
           <div>
-            <p className="text-[15px] font-semibold text-[color:var(--foreground)]">
+            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               things i&apos;m doing:
             </p>
             <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
@@ -97,7 +97,7 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="text-[15px] font-semibold text-[color:var(--foreground)]">
+            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
               things i&apos;ve done:
             </p>
             <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
