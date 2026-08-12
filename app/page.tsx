@@ -61,11 +61,21 @@ export default function Home() {
             <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
               <li>
                 building the internet for physical ai @{" "}
-                <a href="http://build.ai/" target="_blank" rel="noreferrer">
+                <a
+                  href="http://build.ai/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-link"
+                >
                   build ai
                 </a>{" "}
                 &{" "}
-                <a href="https://www.hf0.com/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.hf0.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-link"
+                >
                   hf0
                 </a>{" "}
                 (&lt;0.1% acceptance rate). raised $25m to scale egocentric data
@@ -77,6 +87,7 @@ export default function Home() {
                   href="https://www.multimodal.ventures/"
                   target="_blank"
                   rel="noreferrer"
+                  className="inline-link"
                 >
                   multimodal ventures
                 </a>{" "}
@@ -96,6 +107,7 @@ export default function Home() {
                   href="https://www.eyerobic.com/"
                   target="_blank"
                   rel="noreferrer"
+                  className="inline-link"
                 >
                   eyerobic
                 </a>
@@ -104,6 +116,7 @@ export default function Home() {
                   href="https://www.nctv17.org/community-events/naperville-innovators-turn-inspiration-into-invention/?srsltid=AfmBOopQFE8INSe9B-06H2d_L_PF-96b2U1bJH2WtL1eeYjXPUnpT7qq"
                   target="_blank"
                   rel="noreferrer"
+                  className="inline-link"
                 >
                   nbc 5 chicago
                 </a>
@@ -115,6 +128,7 @@ export default function Home() {
                   href="https://www.bizbuzz.it/"
                   target="_blank"
                   rel="noreferrer"
+                  className="inline-link"
                 >
                   bizbuzz
                 </a>
@@ -128,6 +142,7 @@ export default function Home() {
                   href="https://www.decademy.app/"
                   target="_blank"
                   rel="noreferrer"
+                  className="inline-link"
                 >
                   decademy.app
                 </a>
@@ -144,6 +159,7 @@ export default function Home() {
                   href="https://www.thehuea.org/general-8"
                   target="_blank"
                   rel="noreferrer"
+                  className="inline-link"
                 >
                   harvard undergraduate economics association
                 </a>{" "}
@@ -152,6 +168,7 @@ export default function Home() {
                   href="https://ijsser.org/2025files/ijsser_10__68.pdf"
                   target="_blank"
                   rel="noreferrer"
+                  className="inline-link"
                 >
                   ijsser
                 </a>
