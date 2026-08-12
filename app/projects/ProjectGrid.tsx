@@ -42,7 +42,7 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
               ) : null}
               <time
                 dateTime={project.date}
-                className="mt-1.5 block text-[14px] leading-none text-[color:var(--media-accent)]"
+                className="mt-1.5 block text-[12px] leading-none text-[color:var(--link)]"
               >
                 {formatProjectDate(project.date)}
               </time>
