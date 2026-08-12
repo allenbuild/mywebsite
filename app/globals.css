@@ -81,15 +81,29 @@ a:not(.nav-btn):not(.home-back-btn):not(.contact-link):not(.inline-link):not(.pr
   color: var(--link-hover);
 }
 
-a.media-link,
-a.media-link:visited {
-  color: var(--muted);
+a.media-link {
+  position: relative;
+  display: inline;
+  color: var(--foreground);
   text-decoration: none;
+  transition: color 0.4s ease;
+  background-image: linear-gradient(var(--link), var(--link));
+  background-size: 0% 1px;
+  background-position: left 100%;
+  background-repeat: no-repeat;
+  transition:
+    color 0.4s ease,
+    background-size 0.4s ease;
+}
+
+a.media-link:visited {
+  color: var(--foreground);
 }
 
 a.media-link:hover,
 a.media-link:focus-visible {
   color: var(--link);
+  background-size: 100% 1px;
 }
 
 a.project-row {
@@ -160,6 +174,7 @@ a.nav-btn[aria-current="page"] {
 }
 
 a.home-back-btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
@@ -167,23 +182,40 @@ a.home-back-btn {
   font-size: 13px;
   font-weight: 400;
   line-height: 1;
-  text-decoration: underline;
-  text-underline-offset: 0.14em;
-  transition: color 0.15s ease;
+  text-decoration: none;
+  transition: color 0.4s ease;
 }
 
 a.home-back-btn:visited {
   color: var(--muted);
 }
 
+a.home-back-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.05em;
+  height: 1px;
+  background-color: var(--link);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s ease;
+}
+
 a.home-back-btn:hover,
 a.home-back-btn:focus-visible {
-  color: var(--foreground);
+  color: var(--link);
 }
 
 a.home-back-btn:hover:visited,
 a.home-back-btn:focus-visible:visited {
-  color: var(--foreground);
+  color: var(--link);
+}
+
+a.home-back-btn:hover::after,
+a.home-back-btn:focus-visible::after {
+  transform: scaleX(1);
 }
 
 :root[data-theme="dark"] .photo-year-label {
