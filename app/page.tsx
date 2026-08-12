@@ -47,7 +47,7 @@ export default function Home() {
           </h1>
         </header>
 
-        <div className="mt-4 min-w-0 space-y-5 break-words text-[14px] leading-[1.65] text-[color:var(--foreground)]">
+        <div className="mt-2.5 min-w-0 space-y-5 break-words text-[14px] leading-[1.65] text-[color:var(--foreground)]">
           <p>
             <span className="font-semibold">hey, i&apos;m allen!</span>
             {" "}
