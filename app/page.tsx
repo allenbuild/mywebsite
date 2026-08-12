@@ -98,7 +98,7 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="font-bold italic [font-family:var(--font-italic)]">
               things i&apos;ve done:
             </p>
             <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
@@ -135,7 +135,7 @@ export default function Home() {
                 </a>
                 , a youth entrepreneurship incubator across chicagoland. ran
                 three camps and{" "}
-                <span className="font-semibold text-[color:var(--muted)]">
+                <span className="font-semibold">
                   fish tank
                 </span>{" "}
                 contests, awarding $15k+ in venture funding
@@ -154,17 +154,17 @@ export default function Home() {
               </li>
               <li>
                 researched carbon emissions trading and regulation @{" "}
-                <span className="font-semibold text-[color:var(--muted)]">
+                <span className="font-semibold">
                   university of michigan
                 </span>
                 . presented @{" "}
-                <span className="font-semibold text-[color:var(--muted)]">
+                <span className="font-semibold">
                   ijio 2025
                 </span>
               </li>
               <li>
                 researched governance effects on carbon intensity @{" "}
-                <span className="font-semibold text-[color:var(--muted)]">
+                <span className="font-semibold">
                   purdue university fort wayne
                 </span>
                 . published @{" "}
@@ -192,11 +192,11 @@ export default function Home() {
               </li>
               <li>
                 interned @{" "}
-                <span className="font-semibold text-[color:var(--muted)]">
+                <span className="font-semibold">
                   university of notre dame
                 </span>{" "}
                 (institute for global investing),{" "}
-                <span className="font-semibold text-[color:var(--muted)]">
+                <span className="font-semibold">
                   the city of naperville
                 </span>{" "}
                 (financial advisory board), and more
@@ -221,7 +221,7 @@ export default function Home() {
         </nav>
 
         <footer className="flex w-full justify-start">
-          <div className="inline-flex max-w-full flex-wrap items-center gap-x-3 text-[14px]">
+          <div className="inline-flex max-w-full flex-wrap items-center gap-x-3 text-[15px]">
             {contactLinks.map((link, index) => (
               <span
                 key={link.label}
