@@ -10,11 +10,13 @@ export default function SubpageHeader({
   className?: string;
 }) {
   return (
-    <header className={`space-y-5 ${className ?? ""}`.trim()}>
-      <HomeBackLink />
+    <header
+      className={`flex items-end justify-between gap-4 ${className ?? ""}`.trim()}
+    >
       <h1 className={`font-semibold tracking-tight ${titleClassName}`}>
         {title}
       </h1>
+      <HomeBackLink />
     </header>
   );
 }
