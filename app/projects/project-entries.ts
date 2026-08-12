@@ -11,11 +11,6 @@ export type ProjectEntry = {
   credit?: string;
 };
 
-export type ComingSoonProject = {
-  title: string;
-  description: string;
-};
-
 const projectEntries: ProjectEntry[] = [
   {
     title: "Eyerobic",
