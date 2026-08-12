@@ -146,7 +146,7 @@ export default function Home() {
                 <span className="font-semibold">
                   fish tank
                 </span>{" "}
-                contest for 1.5k students, awarding $15k+ in venture funding
+                contests for 1.5k students, awarding $15k+ in venture funding
               </li>
               <li>
                 built{" "}
