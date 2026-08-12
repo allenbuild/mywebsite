@@ -10,7 +10,7 @@ export type PhotoEntry = {
 
 const photoEntries: PhotoEntry[] = [
   {
-    caption: "dropout graduation w/ z fellows",
+    caption: "z fellows dropout graduation",
     date: "2026-06-20",
     photos: [
       {
