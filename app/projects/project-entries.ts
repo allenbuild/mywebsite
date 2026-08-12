@@ -24,6 +24,7 @@ const projectEntries: ProjectEntry[] = [
     thumbnailHeight: 633,
     date: "2025-08-17",
     credit: "Built with Steven He, Aiden Xie, and Kyle Wang",
+    highlight: "2025 Conrad Challenge & Blue Ocean Competition Finalist",
   },
   {
     title: "FTC Freight Frenzy Robot",
@@ -36,6 +37,7 @@ const projectEntries: ProjectEntry[] = [
     date: "2022-03-12",
     credit:
       "Built with Jensen Coonradt, Ryan Oberfranc, Preeta Swaminathan, and Pranav Swaminathan",
+    highlight: "2022 Illinois State Championship Winner",
   },
   {
     title: "Smart Poker Glasses",
@@ -48,6 +50,7 @@ const projectEntries: ProjectEntry[] = [
     objectPosition: "center 64%",
     date: "2026-05-29",
     credit: "Built with Colin Hu, Aiden Xie, and Andres Niño",
+    highlight: "60k+ views",
   },
   {
     title: "decademy.app",
@@ -59,6 +62,7 @@ const projectEntries: ProjectEntry[] = [
     thumbnailHeight: 336,
     date: "2025-04-01",
     credit: "Built with Aiden Xie, Rohan Rao, Arnav Sharma, and Ishaan Garg",
+    highlight: "30k+ users",
   },
   {
     title: "returner.fund",
