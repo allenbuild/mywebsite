@@ -114,7 +114,7 @@ export default function Home() {
                 >
                   eyerobic
                 </a>
-                , a haptic wearable for blind swimmers with an uspto provisional
+                , a haptic wearable for blind swimmers w/ uspto provisional
                 patent. presented @ nasa &{" "}
                 <a
                   href="https://www.nctv17.org/community-events/naperville-innovators-turn-inspiration-into-invention/?srsltid=AfmBOopQFE8INSe9B-06H2d_L_PF-96b2U1bJH2WtL1eeYjXPUnpT7qq"
