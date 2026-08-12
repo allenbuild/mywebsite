@@ -89,6 +89,7 @@ const photoEntries: PhotoEntry[] = [
   {
     caption: "nbc & nctv17 morning show",
     date: "2025-11-13",
+    credit: "→ Mayor Scott Wehrli",
     photos: [
       {
         src: "/photography/nbc-nctv17-morning-show-1.png",
