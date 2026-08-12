@@ -49,9 +49,10 @@ export default function Home() {
 
         <section className="mt-5 min-w-0 space-y-5 break-words text-[15px] leading-[1.65] text-[color:var(--muted)]">
           <p className="text-[15px] leading-[1.65] text-[color:var(--foreground)]">
-            hey, i&apos;m allen! i&apos;m an incoming freshman at wharton
-            studying finance, cs, and ai. i&apos;m broadly interested in
-            physical ai, assistive wearables, and early-stage vc.
+            <span className="font-semibold">hey, i&apos;m allen!</span> i&apos;m
+            an incoming freshman @ wharton studying finance, cs, and ai.
+            i&apos;m broadly interested in physical ai, assistive wearables, and
+            early-stage vc.
           </p>
 
           <div>
