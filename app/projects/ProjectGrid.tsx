@@ -11,7 +11,7 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
             href={project.href}
             target="_blank"
             rel="noreferrer"
-            className="project-row group grid grid-cols-[7rem_minmax(0,1fr)] gap-x-3 sm:grid-cols-[9.5rem_minmax(0,1fr)] sm:gap-x-4"
+            className="project-row group grid grid-cols-[6rem_minmax(0,1fr)] gap-x-3 sm:grid-cols-[8rem_minmax(0,1fr)] sm:gap-x-4"
           >
             <div className="relative aspect-square overflow-hidden rounded-lg bg-[color:var(--rule)]">
               <Image
