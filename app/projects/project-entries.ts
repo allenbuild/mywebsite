@@ -84,8 +84,8 @@ export function getProjectEntries(): ProjectEntry[] {
 export function formatProjectDate(isoDate: string): string {
   const [year, month, day] = isoDate.split("-").map(Number);
   const date = new Date(year, month - 1, day);
-  return new Intl.DateTimeFormat("en-US", {
+  const monthName = new Intl.DateTimeFormat("en-US", {
     month: "long",
-    year: "numeric",
   }).format(date);
+  return `${monthName} '${String(year).slice(-2)}`;
 }
