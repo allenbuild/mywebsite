@@ -28,14 +28,9 @@ const navLinks = [
     className: "order-2",
   },
   {
-    href: "/photography",
-    label: "photography",
-    className: "order-4 sm:order-3",
-  },
-  {
     href: "/bookshelf",
     label: "bookshelf",
-    className: "order-3 sm:order-4",
+    className: "order-3",
   },
 ] as const;
 
