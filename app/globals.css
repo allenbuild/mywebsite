@@ -14,6 +14,7 @@
   --nav-btn-bg: #efefef;
   --nav-btn-fg: #1a1a1a;
   --media-accent: #c98920;
+  --project-highlight: #c62828;
   --media-date: #1a1a1a;
   --bullet: #1a1a1a;
 }
@@ -39,6 +40,7 @@
   --nav-btn-bg: #ffffff;
   --nav-btn-fg: #1a1a1a;
   --media-accent: #ffc860;
+  --project-highlight: #ff6b6b;
   --media-date: #ececec;
   --bullet: #ececec;
 }

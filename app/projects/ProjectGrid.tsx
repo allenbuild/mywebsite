@@ -40,12 +40,22 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
                   {project.credit}
                 </p>
               ) : null}
-              <time
-                dateTime={project.date}
-                className="mt-1.5 block text-[12px] leading-none text-[color:var(--link)]"
-              >
-                {formatProjectDate(project.date)}
-              </time>
+              <div className="mt-1.5 flex flex-wrap items-center gap-x-2 text-[12px] leading-none">
+                <time
+                  dateTime={project.date}
+                  className="text-[color:var(--link)]"
+                >
+                  {formatProjectDate(project.date)}
+                </time>
+                {project.highlight ? (
+                  <>
+                    <span aria-hidden className="contact-separator" />
+                    <span className="text-[color:var(--project-highlight)]">
+                      {project.highlight}
+                    </span>
+                  </>
+                ) : null}
+              </div>
             </div>
           </a>
         </li>

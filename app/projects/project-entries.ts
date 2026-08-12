@@ -9,6 +9,8 @@ export type ProjectEntry = {
   /** ISO date (YYYY-MM-DD) — used for display */
   date: string;
   credit?: string;
+  /** Short highlight shown next to the date */
+  highlight?: string;
 };
 
 const projectEntries: ProjectEntry[] = [
