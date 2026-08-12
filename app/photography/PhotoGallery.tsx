@@ -10,7 +10,7 @@ import { ChevronDown, CloseIcon } from "../RoundedIcons";
 import type { PhotoEntry } from "./photo-entries";
 import { formatPhotoDate, groupPhotoEntriesByYear } from "./photo-entries";
 
-const YEAR_BAR_HEIGHT = 40;
+const YEAR_BAR_HEIGHT = 52;
 
 function photoGridClass(photoCount: number): string {
   if (photoCount === 3 || photoCount === 4 || photoCount === 2) {

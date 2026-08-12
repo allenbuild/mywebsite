@@ -228,6 +228,14 @@ a.home-back-btn:focus-visible::after {
   transition: color 0.15s ease;
 }
 
+.photo-year-bar {
+  /* Opaque bleed so scrolling captions can't peek beside/under the year */
+  box-shadow:
+    -1rem 0 0 0 var(--surface),
+    1rem 0 0 0 var(--surface),
+    0 0.75rem 0 0 var(--surface);
+}
+
 .photo-year-bar:hover .photo-year-label,
 .photo-year-bar:focus-visible .photo-year-label {
   color: var(--link);
