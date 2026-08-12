@@ -202,6 +202,16 @@ a.contact-link {
   transition: background-position 0.4s ease;
 }
 
+a.contact-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.05em;
+  height: 1px;
+  background-color: var(--rule);
+}
+
 a.contact-link::after {
   content: "";
   position: absolute;
@@ -236,6 +246,16 @@ a.inline-link {
 
 a.inline-link:visited {
   color: var(--foreground);
+}
+
+a.inline-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.05em;
+  height: 1px;
+  background-color: var(--rule);
 }
 
 a.inline-link::after {
