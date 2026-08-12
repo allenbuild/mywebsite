@@ -11,7 +11,7 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
             href={project.href}
             target="_blank"
             rel="noreferrer"
-            className="project-row group grid grid-cols-[6rem_minmax(0,1fr)] gap-x-3 sm:grid-cols-[8rem_minmax(0,1fr)] sm:gap-x-4"
+            className="project-row group grid grid-cols-[5.5rem_minmax(0,1fr)] gap-x-3 sm:grid-cols-[7.25rem_minmax(0,1fr)] sm:gap-x-4"
           >
             <div className="relative mt-1.5 aspect-square overflow-hidden rounded-lg bg-[color:var(--rule)] sm:mt-2">
               <Image
@@ -32,7 +32,7 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
               <h2 className="project-row-title text-[15px] font-bold italic leading-snug [font-family:var(--font-italic)] text-[color:var(--foreground)]">
                 {project.title}
               </h2>
-              <p className="mt-1 text-[13px] leading-[1.65] text-[color:var(--foreground)]">
+              <p className="mt-1 text-[12px] leading-[1.65] text-[color:var(--foreground)]">
                 {project.description}
               </p>
               {project.credit ? (
