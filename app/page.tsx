@@ -39,7 +39,7 @@ const navBtnClass =
 
 export default function Home() {
   return (
-    <CursorGlowLayout contentClassName="max-w-[40rem]">
+    <CursorGlowLayout contentClassName="max-w-[36rem]">
       <PageShell>
         <header>
           <h1 className="text-[1.75rem] font-semibold tracking-tight sm:text-[2rem]">
@@ -47,7 +47,7 @@ export default function Home() {
           </h1>
         </header>
 
-        <div className="mt-4 min-w-0 space-y-4 break-words text-[14px] leading-[1.65] text-[color:var(--foreground)]">
+        <div className="mt-5 min-w-0 space-y-5 break-words text-[14px] leading-[1.65] text-[color:var(--foreground)]">
           <p>
             <span className="font-semibold">hey, i&apos;m allen!</span>
             {" "}
@@ -59,7 +59,7 @@ export default function Home() {
           </p>
 
           <div>
-            <p className="text-[16px] font-bold italic [font-family:var(--font-italic)]">
+            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)]">
               things i&apos;m doing:
             </p>
             <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="text-[16px] font-bold italic [font-family:var(--font-italic)]">
+            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)]">
               things i&apos;ve done:
             </p>
             <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
