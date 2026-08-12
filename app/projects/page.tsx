@@ -9,7 +9,7 @@ export default function ProjectsPage() {
   const comingSoon = getComingSoonProjects();
 
   return (
-    <CursorGlowLayout showThemeToggle={false}>
+    <CursorGlowLayout>
       <PageShell header={<SubpageHeader title="projects" />}>
         <ProjectGrid entries={entries} comingSoon={comingSoon} />
       </PageShell>

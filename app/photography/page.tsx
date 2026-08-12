@@ -8,7 +8,7 @@ export default function PhotographyPage() {
   const entries = getPhotoEntries();
 
   return (
-    <CursorGlowLayout showThemeToggle={false} contentClassName="max-w-[46rem]">
+    <CursorGlowLayout contentClassName="max-w-[46rem]">
       <PageShell header={<SubpageHeader title="photography" />}>
         <PhotoGallery entries={entries} />
       </PageShell>

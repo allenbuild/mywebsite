@@ -1,5 +1,4 @@
 import HomeBackLink from "./HomeBackLink";
-import ThemeToggle from "./ThemeToggle";
 
 export default function SubpageHeader({
   title,
@@ -12,10 +11,7 @@ export default function SubpageHeader({
 }) {
   return (
     <header className={className}>
-      <div className="flex items-center justify-between gap-4">
-        <HomeBackLink />
-        <ThemeToggle />
-      </div>
+      <HomeBackLink />
       <h1 className={`mt-5 font-semibold tracking-tight ${titleClassName}`}>
         {title}
       </h1>
