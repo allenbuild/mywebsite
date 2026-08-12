@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <CursorGlowLayout contentClassName="max-w-[39rem]">
       <PageShell>
-        <div className="min-w-0 space-y-5 break-words text-[15px] leading-[1.65] text-[color:var(--foreground)]">
+        <div className="min-w-0 space-y-5 break-words text-[14px] leading-[1.65] text-[color:var(--foreground)]">
           <header>
             <h1 className="text-[1.5rem] font-semibold tracking-tight sm:text-[1.75rem]">
               Allen Xu
@@ -227,7 +227,7 @@ export default function Home() {
         </nav>
 
         <footer className="flex w-full justify-start">
-          <div className="inline-flex max-w-full flex-wrap items-center gap-x-3 text-[15px]">
+          <div className="inline-flex max-w-full flex-wrap items-center gap-x-3 text-[14px]">
             {contactLinks.map((link, index) => (
               <span
                 key={link.label}
