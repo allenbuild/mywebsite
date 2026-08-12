@@ -124,7 +124,7 @@ export default function Home() {
                 >
                   nbc 5 chicago
                 </a>
-                , winning $1m+ in academic scholarships and grants
+                , winning $1m+ in academic scholarships
               </li>
               <li>
                 built{" "}
