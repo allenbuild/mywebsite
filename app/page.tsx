@@ -52,9 +52,10 @@ export default function Home() {
             <span className="font-semibold">hey, i&apos;m allen!</span>
             {" "}
             i&apos;m an incoming freshman @{" "}
-            <span className="font-semibold">wharton</span> studying finance, cs,
-            and ai. i&apos;m broadly interested in physical ai, assistive
-            wearables, and early-stage vc.
+            <span className="font-semibold">wharton</span>
+            {" "}
+            studying finance, cs, and ai. i&apos;m broadly interested in
+            physical ai, assistive wearables, and early-stage vc.
           </p>
 
           <div>
