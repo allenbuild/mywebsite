@@ -230,12 +230,12 @@ a.inline-link {
   display: inline-block;
   font-weight: 600;
   text-decoration: none;
-  color: var(--muted);
+  color: var(--foreground);
   transition: color 0.4s ease;
 }
 
 a.inline-link:visited {
-  color: var(--muted);
+  color: var(--foreground);
 }
 
 a.inline-link::after {

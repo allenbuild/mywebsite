@@ -47,8 +47,8 @@ export default function Home() {
           </h1>
         </header>
 
-        <section className="mt-5 min-w-0 space-y-5 break-words text-[15px] leading-[1.65] text-[color:var(--muted)]">
-          <p className="text-[15px] leading-[1.65] text-[color:var(--foreground)]">
+        <section className="mt-5 min-w-0 space-y-5 break-words text-[15px] leading-[1.65] text-[color:var(--foreground)]">
+          <p>
             <span className="font-semibold">hey, i&apos;m allen!</span> i&apos;m
             an incoming freshman @ wharton studying finance, cs, and ai.
             i&apos;m broadly interested in physical ai, assistive wearables, and
@@ -56,7 +56,7 @@ export default function Home() {
           </p>
 
           <div>
-            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+            <p className="font-bold italic [font-family:var(--font-italic)]">
               things i&apos;m doing:
             </p>
             <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
