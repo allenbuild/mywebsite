@@ -37,12 +37,12 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   icons: {
     icon: [
-      { url: "/favicon-16x16.png?v=4", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png?v=4", sizes: "32x32", type: "image/png" },
-      { url: "/favicon.ico?v=4", sizes: "any" },
+      { url: "/favicon-16x16.png?v=5", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png?v=5", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico?v=5", sizes: "any" },
     ],
-    apple: "/apple-icon.png?v=4",
-    shortcut: "/favicon.ico?v=4",
+    apple: "/apple-icon.png?v=5",
+    shortcut: "/favicon.ico?v=5",
   },
 };
 
