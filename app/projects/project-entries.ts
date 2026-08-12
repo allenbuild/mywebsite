@@ -71,30 +71,8 @@ const projectEntries: ProjectEntry[] = [
   },
 ];
 
-const comingSoonProjects: ComingSoonProject[] = [
-  {
-    title: "Basketball Box Score",
-    description:
-      "Computer vision system that tracks makes, misses, rebounds, assists, and player statistics from basketball games in real time using a sideline webcam.",
-  },
-  {
-    title: "Pool Table CV",
-    description:
-      "Computer vision system that detects balls, predicts trajectories, tracks game state, and recommends optimal shots in real time using an overhead webcam.",
-  },
-  {
-    title: "Ramsey",
-    description:
-      "Converts cooking videos from YouTube, Instagram, and TikTok into structured recipes with ingredients, measurements, and step-by-step instructions.",
-  },
-];
-
 export function getProjectEntries(): ProjectEntry[] {
   return [...projectEntries];
-}
-
-export function getComingSoonProjects(): ComingSoonProject[] {
-  return [...comingSoonProjects];
 }
 
 export function formatProjectDate(isoDate: string): string {
