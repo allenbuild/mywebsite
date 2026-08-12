@@ -130,7 +130,7 @@ export default function Home() {
                 >
                   bizbuzz
                 </a>
-                , a youth entrepreneurship incubator across chicagoland. ran
+                , a nonprofit entrepreneurship incubator across chicagoland. ran
                 three camps and{" "}
                 <span className="font-semibold">
                   fish tank
