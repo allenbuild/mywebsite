@@ -190,7 +190,7 @@ export default function Home() {
               </li>
               <li>
                 finalist @ conrad challenge (25/1.3k), blue ocean competition
-                (30/12.8k), deca internationals (6th/10k), ftc world championship
+                (30/13k), deca internationals (6th/10k), ftc world championship
                 (7th/7k)
               </li>
               <li>
