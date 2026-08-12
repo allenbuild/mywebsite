@@ -36,7 +36,7 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
                 {project.description}
               </p>
               {project.credit ? (
-                <p className="mt-1.5 text-[12px] italic leading-[1.4] text-[color:var(--muted-2)]">
+                <p className="mt-1.5 text-[11px] italic leading-[1.4] text-[color:var(--muted-2)]">
                   {project.credit}
                 </p>
               ) : null}
