@@ -153,7 +153,7 @@ export default function Home() {
                 >
                   decademy.app
                 </a>
-                , an edtech startup with 30k+ users
+                , an edtech startup w/ 30k+ users
               </li>
               <li>
                 researched carbon emissions trading and market regulation @{" "}
