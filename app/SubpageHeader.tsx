@@ -11,7 +11,7 @@ export default function SubpageHeader({
 }) {
   return (
     <header
-      className={`flex items-end justify-between gap-4 ${className ?? ""}`.trim()}
+      className={`flex items-baseline justify-between gap-4 ${className ?? ""}`.trim()}
     >
       <h1 className={`font-semibold tracking-tight ${titleClassName}`}>
         {title}
