@@ -101,7 +101,7 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="font-bold italic [font-family:var(--font-italic)]">
+            <p className="text-[16px] font-bold italic [font-family:var(--font-italic)]">
               things i&apos;ve done:
             </p>
             <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
