@@ -13,7 +13,7 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
             rel="noreferrer"
             className="project-row group grid grid-cols-[6rem_minmax(0,1fr)] gap-x-3 sm:grid-cols-[8rem_minmax(0,1fr)] sm:gap-x-4"
           >
-            <div className="relative aspect-square overflow-hidden rounded-lg bg-[color:var(--rule)]">
+            <div className="relative mt-1.5 aspect-square overflow-hidden rounded-lg bg-[color:var(--rule)] sm:mt-2">
               <Image
                 src={project.thumbnail}
                 alt=""
