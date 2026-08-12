@@ -158,9 +158,14 @@ export default function Home() {
                   university of michigan
                 </span>
                 . presented @{" "}
-                <span className="font-semibold">
+                <a
+                  href="https://ice.hkubs.hku.hk/events-archive/2025-ijio-special-issue-conference-on-industrial-organization-and-industrial-policy/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-link"
+                >
                   ijio 2025
-                </span>
+                </a>
               </li>
               <li>
                 researched governance effects on carbon intensity @{" "}
