@@ -4,7 +4,7 @@ export default function MediaTimeline() {
   const entries = getMediaEntries();
 
   return (
-    <ol className="mt-4 min-w-0 space-y-0">
+    <ol className="min-w-0 space-y-0">
       {entries.map((entry) => (
         <li
           key={`${entry.date}-${entry.href}`}

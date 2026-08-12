@@ -10,7 +10,7 @@ export default function ProjectGrid({
   comingSoon?: ComingSoonProject[];
 }) {
   return (
-    <div className="mt-6 space-y-8">
+    <div className="space-y-8">
       <ul className="space-y-7">
         {entries.map((project) => (
           <li key={project.href}>

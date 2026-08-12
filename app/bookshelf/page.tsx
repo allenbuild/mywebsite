@@ -29,10 +29,10 @@ export default function BookshelfPage() {
   return (
     <CursorGlowLayout>
       <PageShell header={<SubpageHeader title="bookshelf" />}>
-        <p className="mt-5 text-[15px] leading-[1.65] text-[color:var(--muted)]">
+        <p className="text-[14px] leading-[1.65] text-[color:var(--foreground)]">
           questions, answers, and everything in between:
         </p>
-        <ul className="mt-3 list-outside list-disc space-y-1.5 pl-5 text-[15px] leading-[1.65] text-[color:var(--muted)]">
+        <ul className="mt-1.5 list-outside list-disc space-y-1.5 pl-5 text-[14px] leading-[1.65] text-[color:var(--foreground)]">
           {books.map((book) => (
             <li key={book.href}>
               <a href={book.href} target="_blank" rel="noreferrer">
