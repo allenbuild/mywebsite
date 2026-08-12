@@ -138,7 +138,7 @@ function PhotoYearSection({
       <YearBarButton year={year} collapsed={collapsed} onClick={onToggle} />
 
       {!collapsed && (
-        <div className="px-2.5 pb-4 pt-2 sm:px-3">
+        <div className="pb-4 pt-2">
           <ol className="space-y-6">
             {entries.map((entry, index) => (
               <PhotoEntryRow
