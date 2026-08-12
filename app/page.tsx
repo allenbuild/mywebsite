@@ -133,8 +133,11 @@ export default function Home() {
                   bizbuzz
                 </a>
                 , a youth entrepreneurship incubator across chicagoland. ran
-                three camps and fish tank contests, awarding $15k+ in venture
-                funding
+                three camps and{" "}
+                <span className="font-semibold text-[color:var(--foreground)]">
+                  fish tank
+                </span>{" "}
+                contests, awarding $15k+ in venture funding
               </li>
               <li>
                 built{" "}
