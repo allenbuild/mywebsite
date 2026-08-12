@@ -235,11 +235,14 @@ a.home-back-btn:focus-visible::after {
 
 .contact-separator {
   display: inline-block;
-  width: 0.28em;
-  height: 0.28em;
+  width: 3px;
+  height: 3px;
   flex-shrink: 0;
-  border-radius: 9999px;
+  aspect-ratio: 1;
+  border-radius: 50%;
   background-color: var(--muted-2);
+  vertical-align: middle;
+  align-self: center;
 }
 
 a.contact-link {
