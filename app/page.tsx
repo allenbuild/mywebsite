@@ -14,6 +14,11 @@ const contactLinks = [
     external: true,
   },
   { href: "https://x.com/allenxtech", label: "x", external: true },
+  {
+    href: "https://github.com/allenbuild",
+    label: "github",
+    external: true,
+  },
 ] as const;
 
 const navLinks = [
