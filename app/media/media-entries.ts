@@ -21,6 +21,12 @@ const mediaEntries: MediaEntry[] = [
     href: "https://www.nctv17.org/community-events/innovation-and-community-shine-at-nctv17s-morning-show/",
   },
   {
+    date: "2025-09-01",
+    outlet: "Naperville News",
+    title: "The Next Generation of Innovators",
+    href: "https://napervillemagazine.com/the-next-generation-of-innovators/",
+  },
+  {
     date: "2025-08-17",
     outlet: "Eyerobic",
     title: "Crossing the English Channel",
