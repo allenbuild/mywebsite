@@ -11,9 +11,9 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
             href={project.href}
             target="_blank"
             rel="noreferrer"
-            className="project-row group grid grid-cols-[5.5rem_minmax(0,1fr)] gap-x-3 sm:grid-cols-[7.5rem_minmax(0,1fr)] sm:gap-x-4"
+            className="project-row group grid grid-cols-[7rem_minmax(0,1fr)] gap-x-3 sm:grid-cols-[9.5rem_minmax(0,1fr)] sm:gap-x-4"
           >
-            <div className="relative aspect-square overflow-hidden bg-[color:var(--rule)]">
+            <div className="relative aspect-square overflow-hidden rounded-lg bg-[color:var(--rule)]">
               <Image
                 src={project.thumbnail}
                 alt=""
@@ -32,7 +32,7 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
               <h2 className="project-row-title text-[15px] font-bold italic leading-snug [font-family:var(--font-italic)] text-[color:var(--foreground)]">
                 {project.title}
               </h2>
-              <p className="mt-1 text-[14px] leading-[1.65] text-[color:var(--foreground)]">
+              <p className="mt-1 text-[12px] leading-[1.65] text-[color:var(--foreground)]">
                 {project.description}
               </p>
               {project.credit ? (
