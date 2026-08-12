@@ -17,7 +17,7 @@ const projectEntries: ProjectEntry[] = [
   {
     title: "Eyerobic",
     description:
-      "Haptic wearable with a Raspberry Pi 5, 120° FOV camera, and bone-conduction headphones to provide real-time guidance for blind swimmers. Uses YOLOv11 computer vision, PIDNet, HSV thresholding, contour detection, and GPS for navigation.",
+      "Haptic wearable with a Raspberry Pi 5, 120° FOV camera, and bone-conduction headphones to provide real-time guidance for blind swimmers with an uspto provisional patent. Uses YOLOv11 computer vision, PIDNet, HSV thresholding, contour detection, and GPS for navigation.",
     href: "https://www.youtube.com/watch?v=XeHiBRtfn0o",
     thumbnail: "/projects/eyerobic.png",
     thumbnailWidth: 844,
