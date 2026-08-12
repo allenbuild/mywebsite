@@ -101,9 +101,43 @@ a.project-row:visited {
   color: inherit;
 }
 
+a.project-row .project-row-title {
+  position: relative;
+  display: inline-block;
+  transition: color 0.4s ease;
+}
+
+a.project-row .project-row-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.05em;
+  height: 1px;
+  background-color: var(--rule);
+}
+
+a.project-row .project-row-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.05em;
+  height: 1px;
+  background-color: var(--link);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s ease;
+}
+
 a.project-row:hover .project-row-title,
 a.project-row:focus-visible .project-row-title {
   color: var(--link);
+}
+
+a.project-row:hover .project-row-title::after,
+a.project-row:focus-visible .project-row-title::after {
+  transform: scaleX(1);
 }
 
 a.nav-btn {
