@@ -29,20 +29,20 @@ export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
             </div>
 
             <div className="min-w-0">
-              <h2 className="project-row-title text-[15px] font-semibold leading-snug text-[color:var(--foreground)] sm:text-[16px]">
+              <h2 className="project-row-title text-[14px] font-semibold leading-snug text-[color:var(--foreground)]">
                 {project.title}
               </h2>
-              <p className="mt-1 text-[13px] leading-[1.5] text-[color:var(--muted)] sm:text-[14px]">
+              <p className="mt-1 text-[14px] leading-[1.65] text-[color:var(--foreground)]">
                 {project.description}
               </p>
               {project.credit ? (
-                <p className="mt-1.5 text-[12px] italic leading-[1.4] text-[color:var(--muted-2)]">
+                <p className="mt-1.5 text-[14px] italic leading-[1.65] text-[color:var(--foreground)]">
                   {project.credit}
                 </p>
               ) : null}
               <time
                 dateTime={project.date}
-                className="mt-1.5 block text-[12px] leading-none text-[color:var(--media-accent)]"
+                className="mt-1.5 block text-[14px] leading-none text-[color:var(--media-accent)]"
               >
                 {formatProjectDate(project.date)}
               </time>
