@@ -82,8 +82,7 @@ export default function Home() {
                 >
                   hf0
                 </a>{" "}
-                (&lt;0.1% acceptance rate). raised $25m to scale egocentric data
-                for frontier labs
+                (&lt;0.1% acceptance rate). raised $25m
               </li>
               <li>
                 backing y-combinator and a16z speedrun startups @{" "}
