@@ -32,6 +32,11 @@ const navLinks = [
     label: "media",
     className: "order-2",
   },
+  {
+    href: "/photography",
+    label: "photography",
+    className: "order-3",
+  },
 ] as const;
 
 const navBtnClass =
