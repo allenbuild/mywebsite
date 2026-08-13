@@ -42,7 +42,7 @@
   --media-accent: #ffc860;
   --project-highlight: #bf6c27;
   --media-date: #ececec;
-  --bullet: #ececec;
+  --bullet: rgba(236, 236, 236, 0.45);
 }
 
 html,
