@@ -78,7 +78,7 @@ function ProjectRow({ project }: { project: ProjectEntry }) {
 
 export default function ProjectGrid({ entries }: { entries: ProjectEntry[] }) {
   return (
-    <ul className="space-y-7">
+    <ul className="space-y-4">
       {entries.map((project) => (
         <li key={project.title}>
           <ProjectRow project={project} />
