@@ -218,6 +218,17 @@ export default function Home() {
             </ul>
           </div>
 
+          <div>
+            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)]">
+              things i live by:
+            </p>
+            <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
+              <li>move fast, then make it true</li>
+              <li>build for people, not for the demo</li>
+              <li>stay curious enough to start over</li>
+            </ul>
+          </div>
+
         <nav
           aria-label="Site sections"
           className="grid grid-cols-2 gap-1.5 sm:flex sm:flex-wrap sm:gap-2"
