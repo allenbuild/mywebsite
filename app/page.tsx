@@ -220,7 +220,7 @@ export default function Home() {
 
           <div>
             <p className="text-[15px] font-bold italic [font-family:var(--font-italic)]">
-              things i believe in:
+              things i believe:
             </p>
             <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5 text-[13px]">
               <li>
