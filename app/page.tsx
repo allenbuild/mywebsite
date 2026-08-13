@@ -234,6 +234,9 @@ export default function Home() {
               <li>
                 &ldquo;stay hungry, stay foolish&rdquo; — steve jobs
               </li>
+              <li>
+                &ldquo;chase asymmetric bets&rdquo; — roy lee
+              </li>
             </ul>
           </div>
 
