@@ -47,12 +47,12 @@ export default function Home() {
     <CursorGlowLayout contentClassName="max-w-[37rem]">
       <PageShell>
         <header>
-          <h1 className="text-[1.5rem] font-semibold tracking-tight sm:text-[1.75rem]">
+          <h1 className="text-[22px] font-semibold tracking-tight sm:text-[26px]">
             Allen Xu
           </h1>
         </header>
 
-        <div className="mt-3 min-w-0 space-y-5 break-words text-[14px] leading-[1.65] text-[color:var(--foreground)]">
+        <div className="mt-2 min-w-0 space-y-4 break-words text-[14px] leading-[1.65] text-[color:var(--foreground)]">
           <p>
             <span className="font-semibold">hey, i&apos;m allen!</span>
             {" "}

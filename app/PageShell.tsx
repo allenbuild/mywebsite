@@ -13,7 +13,7 @@ export default function PageShell({
 }) {
   return (
     <main
-      className={`w-full min-w-0 ${header ? "space-y-3" : ""} ${mainClassName}`.trim()}
+      className={`w-full min-w-0 ${header ? "space-y-2" : ""} ${mainClassName}`.trim()}
     >
       {header ? <div className={headerClassName}>{header}</div> : null}
       <div className={bodyClassName}>{children}</div>

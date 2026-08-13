@@ -2,7 +2,7 @@ import HomeBackLink from "./HomeBackLink";
 
 export default function SubpageHeader({
   title,
-  titleClassName = "text-[1.5rem] sm:text-[1.75rem]",
+  titleClassName = "text-[22px] sm:text-[26px]",
   className,
 }: {
   title: string;
