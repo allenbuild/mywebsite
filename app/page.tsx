@@ -149,16 +149,9 @@ export default function Home() {
                 contests for 1.5k students, awarding $15k+ in venture funding
               </li>
               <li>
-                built{" "}
-                <a
-                  href="https://www.decademy.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-link"
-                >
-                  decademy.app
-                </a>
-                , an edtech startup w/ 30k+ users
+                finalist @ conrad challenge (25/1.3k), blue ocean competition
+                (30/13k), deca internationals (6th/10k), ftc world championship
+                (7th/7k)
               </li>
               <li>
                 researched carbon trading @{" "}
@@ -200,9 +193,16 @@ export default function Home() {
                 </a>
               </li>
               <li>
-                finalist @ conrad challenge (25/1.3k), blue ocean competition
-                (30/13k), deca internationals (6th/10k), ftc world championship
-                (7th/7k)
+                built{" "}
+                <a
+                  href="https://www.decademy.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-link"
+                >
+                  decademy.app
+                </a>
+                , an edtech startup w/ 30k+ users
               </li>
               <li>
                 interned @{" "}
