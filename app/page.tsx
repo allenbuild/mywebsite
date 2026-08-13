@@ -224,12 +224,12 @@ export default function Home() {
             </p>
             <ul className="mt-1 list-outside list-disc space-y-1 pl-5 text-[13px]">
               <li>
-                &ldquo;the only acceptable speed is as fast as physically
-                possible&rdquo; — eddy xu
-              </li>
-              <li>
                 &ldquo;the world is often unkind to new talent, new creations.
                 the new needs friends&rdquo; — ratatouille
+              </li>
+              <li>
+                &ldquo;the only acceptable speed is as fast as physically
+                possible&rdquo; — eddy xu
               </li>
               <li>
                 &ldquo;the only way to do great work is to love what you
