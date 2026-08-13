@@ -1,7 +1,7 @@
 export type ProjectEntry = {
   title: string;
   description: string;
-  href: string;
+  href?: string;
   thumbnail: string;
   thumbnailWidth: number;
   thumbnailHeight: number;
@@ -63,6 +63,15 @@ const projectEntries: ProjectEntry[] = [
     date: "2025-04-01",
     credit: "Built with Aiden Xie, Rohan Rao, Arnav Sharma, Ishaan Garg",
     highlight: "30k+ users",
+  },
+  {
+    title: "Signal",
+    description:
+      "Universal hand-to-computer interface for gesture-based macOS control. Uses MediaPipe hand pose estimation and custom gesture recognition to trigger keyboard shortcuts, launch applications, and enable touchless cursor movement, clicking, scrolling, and zooming.",
+    thumbnail: "/projects/signal.png",
+    thumbnailWidth: 1024,
+    thumbnailHeight: 763,
+    date: "2026-07-24",
   },
   {
     title: "returner.fund",
