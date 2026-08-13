@@ -61,7 +61,7 @@ const projectEntries: ProjectEntry[] = [
     thumbnailWidth: 600,
     thumbnailHeight: 336,
     date: "2025-04-01",
-    credit: "Built with Aiden Xie, Rohan Rao, Arnav Sharma, and Ishaan Garg",
+    credit: "Built with Aiden Xie, Rohan Rao, Arnav Sharma, Ishaan Garg",
     highlight: "30k+ users",
   },
   {
