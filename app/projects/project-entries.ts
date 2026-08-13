@@ -69,6 +69,7 @@ const projectEntries: ProjectEntry[] = [
     title: "Signal",
     description:
       "Universal hand-to-computer interface for macOS control. Uses MediaPipe hand pose estimation and custom gesture recognition to launch applications and enable touchless cursor movement, clicking, scrolling, and zooming.",
+    href: "https://www.youtube.com/shorts/7ObEnsUXTW8",
     thumbnail: "/projects/signal.png",
     thumbnailWidth: 1024,
     thumbnailHeight: 764,
