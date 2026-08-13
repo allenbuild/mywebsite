@@ -44,7 +44,7 @@ const navBtnClass =
 
 export default function Home() {
   return (
-    <CursorGlowLayout contentClassName="max-w-[38rem]">
+    <CursorGlowLayout contentClassName="max-w-[37rem]">
       <PageShell>
         <header>
           <h1 className="text-[22px] font-semibold tracking-tight sm:text-[26px]">
