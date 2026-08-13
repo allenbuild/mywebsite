@@ -4,33 +4,35 @@ import { formatProjectDate } from "./project-entries";
 
 function ProjectRow({ project }: { project: ProjectEntry }) {
   const className =
-    "project-row group grid grid-cols-[5.5rem_minmax(0,1fr)] gap-x-3 sm:grid-cols-[7.25rem_minmax(0,1fr)] sm:gap-x-4";
+    "project-row group grid grid-cols-[5.5rem_minmax(0,1fr)] items-stretch gap-x-3 sm:grid-cols-[7.25rem_minmax(0,1fr)] sm:gap-x-4";
 
   const body = (
     <>
-      <div className="relative mt-1.5 aspect-square overflow-hidden rounded-lg bg-[color:var(--rule)] sm:mt-2">
-        <Image
-          src={project.thumbnail}
-          alt=""
-          width={project.thumbnailWidth}
-          height={project.thumbnailHeight}
-          className="size-full object-cover"
-          style={{
-            ...(project.objectPosition
-              ? { objectPosition: project.objectPosition }
-              : {}),
-            ...(project.thumbnailScale
-              ? { transform: `scale(${project.thumbnailScale})` }
-              : {}),
-          }}
-        />
+      <div className="py-[3px]">
+        <div className="relative h-full min-h-0 overflow-hidden rounded-lg bg-[color:var(--rule)]">
+          <Image
+            src={project.thumbnail}
+            alt=""
+            fill
+            sizes="(min-width: 640px) 7.25rem, 5.5rem"
+            className="object-cover"
+            style={{
+              ...(project.objectPosition
+                ? { objectPosition: project.objectPosition }
+                : {}),
+              ...(project.thumbnailScale
+                ? { transform: `scale(${project.thumbnailScale})` }
+                : {}),
+            }}
+          />
+        </div>
       </div>
 
       <div className="min-w-0">
         <h2 className="project-row-title text-[13px] font-bold italic leading-snug [font-family:var(--font-italic)] text-[color:var(--foreground)]">
           {project.title}
         </h2>
-        <p className="mt-1 text-[11px] leading-[1.65] text-[color:var(--foreground)]">
+        <p className="mt-0.5 text-[11px] leading-[1.65] text-[color:var(--foreground)]">
           {project.description}
         </p>
         {project.credit ? (
