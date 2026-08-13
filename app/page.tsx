@@ -223,9 +223,14 @@ export default function Home() {
               things i believe in:
             </p>
             <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
-              <li>move fast, then make it true</li>
-              <li>build for people, not for the demo</li>
-              <li>stay curious enough to start over</li>
+              <li>
+                &ldquo;the only acceptable speed is as fast as physically
+                possible&rdquo; — eddy xu
+              </li>
+              <li>
+                &ldquo;the world is often unkind to new talent, new creations.
+                the new needs friends.&rdquo; — ratatouille
+              </li>
             </ul>
           </div>
 
