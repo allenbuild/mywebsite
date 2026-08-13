@@ -51,6 +51,10 @@ body {
   overflow-x: clip;
 }
 
+html[data-lightbox="open"] .theme-toggle-bar {
+  display: none;
+}
+
 *,
 *::before,
 *::after {

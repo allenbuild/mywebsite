@@ -6,6 +6,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import { createPortal } from "react-dom";
 import { ChevronDown, CloseIcon } from "../RoundedIcons";
 import type { PhotoEntry } from "./photo-entries";
 import { formatPhotoDate, groupPhotoEntriesByYear } from "./photo-entries";
