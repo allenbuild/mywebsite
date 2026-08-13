@@ -8,7 +8,7 @@ export default function ProjectsPage() {
   const entries = getProjectEntries();
 
   return (
-    <CursorGlowLayout contentClassName="max-w-[39rem]">
+    <CursorGlowLayout contentClassName="max-w-[621px]">
       <PageShell header={<SubpageHeader title="projects" />}>
         <ProjectGrid entries={entries} />
       </PageShell>
