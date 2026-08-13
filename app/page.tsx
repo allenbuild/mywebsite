@@ -237,6 +237,9 @@ export default function Home() {
               <li>
                 &ldquo;chase asymmetric bets&rdquo; — roy lee
               </li>
+              <li>
+                &ldquo;fortune favors the bold&rdquo; — virgil
+              </li>
             </ul>
           </div>
 
