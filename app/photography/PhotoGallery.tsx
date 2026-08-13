@@ -213,9 +213,11 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
     };
 
     document.body.style.overflow = "hidden";
+    document.documentElement.dataset.lightbox = "open";
     window.addEventListener("keydown", onKeyDown);
     return () => {
       document.body.style.overflow = "";
+      delete document.documentElement.dataset.lightbox;
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [active, close, entries]);
@@ -243,38 +245,40 @@ export default function PhotoGallery({ entries }: { entries: PhotoEntry[] }) {
         })}
       </div>
 
-      {active && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4"
-          onClick={close}
-          role="dialog"
-          aria-modal="true"
-          aria-label={active.entry.caption}
-        >
-          <button
-            type="button"
-            onClick={close}
-            className="absolute right-4 top-4 text-2xl leading-none text-white/80 transition-colors hover:text-white"
-            aria-label="Close"
-          >
-            <CloseIcon />
-          </button>
-
+      {active &&
+        createPortal(
           <div
-            className="relative flex max-h-[85vh] max-w-[min(90vw,56rem)] items-center justify-center"
-            onClick={(event) => event.stopPropagation()}
+            className="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 p-4"
+            onClick={close}
+            role="dialog"
+            aria-modal="true"
+            aria-label={active.entry.caption}
           >
-            <Image
-              src={active.photo.src}
-              alt=""
-              width={1600}
-              height={1200}
-              className="max-h-[85vh] w-auto max-w-full object-contain"
-              priority
-            />
-          </div>
-        </div>
-      )}
+            <button
+              type="button"
+              onClick={close}
+              className="absolute right-4 top-4 text-2xl leading-none text-white/80 transition-colors hover:text-white"
+              aria-label="Close"
+            >
+              <CloseIcon />
+            </button>
+
+            <div
+              className="relative flex max-h-[85vh] max-w-[min(90vw,56rem)] items-center justify-center"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <Image
+                src={active.photo.src}
+                alt=""
+                width={1600}
+                height={1200}
+                className="max-h-[85vh] w-auto max-w-full object-contain"
+                priority
+              />
+            </div>
+          </div>,
+          document.body,
+        )}
     </>
   );
 }
