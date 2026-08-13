@@ -21,7 +21,10 @@ function ProjectRow({ project }: { project: ProjectEntry }) {
                 ? { objectPosition: project.objectPosition }
                 : {}),
               ...(project.thumbnailScale
-                ? { transform: `scale(${project.thumbnailScale})` }
+                ? {
+                    transform: `scale(${project.thumbnailScale})`,
+                    transformOrigin: "center center",
+                  }
                 : {}),
             }}
           />

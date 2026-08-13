@@ -49,7 +49,7 @@ const projectEntries: ProjectEntry[] = [
     thumbnailWidth: 772,
     thumbnailHeight: 1024,
     thumbnailScale: 1.55,
-    objectPosition: "center 30%",
+    objectPosition: "center 50%",
     date: "2026-05-29",
     credit: "Built with Colin Hu, Aiden Xie, Andres Niño",
     highlight: "60k+ views",
