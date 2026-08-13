@@ -67,7 +67,7 @@ export default function Home() {
             <p className="text-[15px] font-bold italic [font-family:var(--font-italic)]">
               things i&apos;m doing:
             </p>
-            <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
+            <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5 text-[13px]">
               <li>
                 building the internet for physical ai @{" "}
                 <a
@@ -108,7 +108,7 @@ export default function Home() {
             <p className="text-[15px] font-bold italic [font-family:var(--font-italic)]">
               things i&apos;ve done:
             </p>
-            <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
+            <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5 text-[13px]">
               <li>
                 built{" "}
                 <a
@@ -222,7 +222,7 @@ export default function Home() {
             <p className="text-[15px] font-bold italic [font-family:var(--font-italic)]">
               things i believe in:
             </p>
-            <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5">
+            <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5 text-[13px]">
               <li>
                 &ldquo;the only acceptable speed is as fast as physically
                 possible&rdquo; — eddy xu
