@@ -76,7 +76,7 @@ const projectEntries: ProjectEntry[] = [
     objectPosition: "center 42%",
     date: "2026-07-24",
     credit: "Built with Arnav Sharma",
-    highlight: "2026 Founders, Inc. Night Hack (shipped in <6 hours)",
+    highlight: "Founders, Inc. Night Hack III (shipped in <6 hours)",
   },
   {
     title: "returner.fund",
