@@ -15,11 +15,14 @@ function ProjectRow({ project }: { project: ProjectEntry }) {
           width={project.thumbnailWidth}
           height={project.thumbnailHeight}
           className="size-full object-cover"
-          style={
-            project.objectPosition
+          style={{
+            ...(project.objectPosition
               ? { objectPosition: project.objectPosition }
-              : undefined
-          }
+              : {}),
+            ...(project.thumbnailScale
+              ? { transform: `scale(${project.thumbnailScale})` }
+              : {}),
+          }}
         />
       </div>
 

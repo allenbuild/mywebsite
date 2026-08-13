@@ -6,6 +6,7 @@ export type ProjectEntry = {
   thumbnailWidth: number;
   thumbnailHeight: number;
   objectPosition?: string;
+  thumbnailScale?: number;
   /** ISO date (YYYY-MM-DD) — used for display */
   date: string;
   credit?: string;
@@ -71,6 +72,8 @@ const projectEntries: ProjectEntry[] = [
     thumbnail: "/projects/signal.png",
     thumbnailWidth: 1024,
     thumbnailHeight: 763,
+    thumbnailScale: 1.18,
+    objectPosition: "center 42%",
     date: "2026-07-24",
   },
   {
