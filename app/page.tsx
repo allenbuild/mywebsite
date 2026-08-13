@@ -234,7 +234,7 @@ export default function Home() {
               </li>
               <li>
                 &ldquo;the world is often unkind to new talent, new creations.
-                the new needs friends.&rdquo; — ratatouille
+                the new needs friends&rdquo; — ratatouille
               </li>
               <li>
                 &ldquo;stay hungry, stay foolish&rdquo; — steve jobs
