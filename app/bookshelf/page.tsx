@@ -27,7 +27,7 @@ const books = [
 
 export default function BookshelfPage() {
   return (
-    <CursorGlowLayout>
+    <CursorGlowLayout contentClassName="max-w-[37rem]">
       <PageShell header={<SubpageHeader title="bookshelf" />}>
         <p className="text-[14px] leading-[1.65] text-[color:var(--foreground)]">
           questions, answers, and everything in between:

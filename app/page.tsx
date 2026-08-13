@@ -37,6 +37,11 @@ const navLinks = [
     label: "photography",
     className: "order-3",
   },
+  {
+    href: "/bookshelf",
+    label: "bookshelf",
+    className: "order-4",
+  },
 ] as const;
 
 const navBtnClass =
