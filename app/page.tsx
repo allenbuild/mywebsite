@@ -232,10 +232,11 @@ export default function Home() {
                 the new needs friends&rdquo; — ratatouille
               </li>
               <li>
-                &ldquo;stay hungry, stay foolish&rdquo; — steve jobs
+                &ldquo;the only way to do great work is to love what you
+                do&rdquo; — steve jobs
               </li>
               <li>
-                &ldquo;chase asymmetric bets&rdquo; — roy lee
+                &ldquo;you have to obsess over it&rdquo; — kobe bryant
               </li>
               <li>
                 &ldquo;fortune favors the bold&rdquo; — virgil
