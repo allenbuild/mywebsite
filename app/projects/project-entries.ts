@@ -23,7 +23,7 @@ const projectEntries: ProjectEntry[] = [
     thumbnailWidth: 844,
     thumbnailHeight: 633,
     date: "2025-08-17",
-    credit: "Built with Steven He, Aiden Xie, and Kyle Wang",
+    credit: "Built with Steven He, Aiden Xie, Kyle Wang",
     highlight: "2025 Conrad Challenge & Blue Ocean Competition Finalist",
   },
   {
@@ -36,7 +36,7 @@ const projectEntries: ProjectEntry[] = [
     thumbnailHeight: 900,
     date: "2022-03-12",
     credit:
-      "Built with Jensen Coonradt, Ryan Oberfranc, Preeta Swaminathan, and Pranav Swaminathan",
+      "Built with Jensen Coonradt, Ryan Oberfranc, Preeta and Pranav Swaminathan",
     highlight: "2022 Illinois State Championship Winner",
   },
   {
