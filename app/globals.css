@@ -16,7 +16,7 @@
   --media-accent: #c98920;
   --project-highlight: #bf6c27;
   --media-date: #1a1a1a;
-  --bullet: #1a1a1a;
+  --bullet: rgba(26, 26, 26, 0.45);
 }
 
 @theme inline {
