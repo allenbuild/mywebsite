@@ -27,10 +27,10 @@ function ProjectRow({ project }: { project: ProjectEntry }) {
       </div>
 
       <div className="min-w-0">
-        <h2 className="project-row-title text-[15px] font-bold italic leading-snug [font-family:var(--font-italic)] text-[color:var(--foreground)]">
+        <h2 className="project-row-title text-[14px] font-bold italic leading-snug [font-family:var(--font-italic)] text-[color:var(--foreground)]">
           {project.title}
         </h2>
-        <p className="mt-1 text-[12px] leading-[1.65] text-[color:var(--foreground)]">
+        <p className="mt-1 text-[11px] leading-[1.65] text-[color:var(--foreground)]">
           {project.description}
         </p>
         {project.credit ? (
