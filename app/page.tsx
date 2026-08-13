@@ -161,7 +161,7 @@ export default function Home() {
                 , an edtech startup w/ 30k+ users
               </li>
               <li>
-                researched carbon emissions trading and market regulation @{" "}
+                researched carbon trading @{" "}
                 <span className="font-semibold">
                   university of michigan
                 </span>
