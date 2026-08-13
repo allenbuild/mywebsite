@@ -38,7 +38,7 @@ function ProjectRow({ project }: { project: ProjectEntry }) {
             {project.credit}
           </p>
         ) : null}
-        <div className="mt-1.5 flex flex-wrap items-center gap-x-2 text-[12px] leading-none">
+        <div className="mt-1.5 flex flex-wrap items-center gap-x-2 text-[11px] leading-none">
           <time
             dateTime={project.date}
             className="text-[color:var(--link)]"
