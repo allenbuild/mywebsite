@@ -17,6 +17,7 @@
   --project-highlight: #bf6c27;
   --media-date: #1a1a1a;
   --bullet: rgba(26, 26, 26, 0.45);
+  --link-underline: rgba(26, 26, 26, 0.22);
 }
 
 @theme inline {
@@ -43,6 +44,7 @@
   --project-highlight: #bf6c27;
   --media-date: #ececec;
   --bullet: rgba(236, 236, 236, 0.45);
+  --link-underline: rgba(126, 200, 255, 0.85);
 }
 
 html,
@@ -281,7 +283,7 @@ a.contact-link::before {
   right: 0;
   bottom: 0.05em;
   height: 1px;
-  background-color: var(--rule);
+  background-color: var(--link-underline);
 }
 
 a.contact-link::after {
@@ -327,7 +329,7 @@ a.inline-link::before {
   right: 0;
   bottom: 0.05em;
   height: 1px;
-  background-color: var(--rule);
+  background-color: var(--link-underline);
 }
 
 a.inline-link::after {
