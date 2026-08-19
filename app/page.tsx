@@ -215,6 +215,18 @@ export default function Home() {
                 </span>{" "}
                 (financial advisory board)
               </li>
+              <li>
+                posted{" "}
+                <a
+                  href="https://www.instagram.com/xuperstrong/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-link"
+                >
+                  daily photos
+                </a>{" "}
+                with high school seniors (650k+ views)
+              </li>
             </ul>
           </div>
 
