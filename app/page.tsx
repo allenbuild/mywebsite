@@ -175,7 +175,7 @@ export default function Home() {
                 </span>
                 . published @{" "}
                 <a
-                  href="https://www.thehuea.org/general-8"
+                  href="https://www.thehuea.org/competitions/hiiec/results-2024-2025"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-link"
