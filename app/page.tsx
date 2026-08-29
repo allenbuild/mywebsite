@@ -69,27 +69,6 @@ export default function Home() {
             </p>
             <ul className="mt-1 list-outside list-disc space-y-1 pl-5 text-[13px]">
               <li>
-                building the internet for physical ai @{" "}
-                <a
-                  href="http://build.ai/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-link"
-                >
-                  build ai
-                </a>{" "}
-                &{" "}
-                <a
-                  href="https://www.hf0.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-link"
-                >
-                  hf0
-                </a>{" "}
-                (&lt;0.1% acceptance rate). raised $25m
-              </li>
-              <li>
                 backing y-combinator and a16z speedrun startups @{" "}
                 <a
                   href="https://www.multimodal.ventures/"
@@ -109,6 +88,27 @@ export default function Home() {
               things i&apos;ve done:
             </p>
             <ul className="mt-1 list-outside list-disc space-y-1 pl-5 text-[13px]">
+              <li>
+                built ego-exo datasets and the internet for physical ai @{" "}
+                <a
+                  href="http://build.ai/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-link"
+                >
+                  build ai
+                </a>{" "}
+                and{" "}
+                <a
+                  href="https://www.hf0.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-link"
+                >
+                  hf0
+                </a>{" "}
+                s26 (&lt;0.1% acceptance rate)
+              </li>
               <li>
                 built{" "}
                 <a
