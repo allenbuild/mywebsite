@@ -89,7 +89,7 @@ export default function Home() {
             </p>
             <ul className="mt-1 list-outside list-disc space-y-1 pl-5 text-[13px]">
               <li>
-                built ego-exo datasets and the internet for physical ai @{" "}
+                built the internet for physical ai @{" "}
                 <a
                   href="http://build.ai/"
                   target="_blank"
