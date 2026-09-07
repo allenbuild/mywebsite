@@ -53,14 +53,8 @@ export default function Home() {
         </header>
 
         <div className="mt-2 min-w-0 space-y-4 break-words text-[14px] leading-[1.65] text-[color:var(--foreground)]">
-          <p>
-            <span className="font-semibold">hey, i&apos;m allen!</span>
-            {" "}
-            i&apos;m an incoming freshman @{" "}
-            <span className="font-semibold">wharton</span>
-            {" "}
-            studying finance, cs, and ai. i&apos;m broadly interested in
-            physical ai, assistive wearables, and early-stage vc.
+          <p className="text-[16px] font-normal leading-[1.65]">
+            finance + cs @ wharton
           </p>
 
           <div>
