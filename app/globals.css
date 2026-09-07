@@ -9,7 +9,7 @@
   --muted-2: rgba(26, 26, 26, 0.55);
   --rule: rgba(26, 26, 26, 0.12);
   --link: #36a9ff;
-  --link-hover: #36a9ff;
+  --link-hover: #6b6b6b;
   --accent: #e8a830;
   --nav-btn-bg: #efefef;
   --nav-btn-fg: #1a1a1a;
@@ -36,7 +36,7 @@
   --muted-2: rgba(236, 236, 236, 0.55);
   --rule: rgba(236, 236, 236, 0.16);
   --link: #36a9ff;
-  --link-hover: #36a9ff;
+  --link-hover: #a8a8a8;
   --accent: #ffc860;
   --nav-btn-bg: #ffffff;
   --nav-btn-fg: #1a1a1a;
@@ -44,7 +44,7 @@
   --project-highlight: #bf6c27;
   --media-date: #ececec;
   --bullet: rgba(236, 236, 236, 0.45);
-  --link-underline: rgba(126, 200, 255, 0.85);
+  --link-underline: rgba(236, 236, 236, 0.45);
 }
 
 html,
@@ -95,7 +95,7 @@ a.media-link {
   color: var(--foreground);
   text-decoration: none;
   transition: color 0.4s ease;
-  background-image: linear-gradient(var(--link), var(--link));
+  background-image: linear-gradient(var(--link-hover), var(--link-hover));
   background-size: 0% 1px;
   background-position: left 100%;
   background-repeat: no-repeat;
@@ -110,7 +110,7 @@ a.media-link:visited {
 
 a.media-link:hover,
 a.media-link:focus-visible {
-  color: var(--link);
+  color: var(--link-hover);
   background-size: 100% 1px;
 }
 
@@ -136,7 +136,7 @@ a.project-row .project-row-title::after {
   right: 0;
   bottom: 0.05em;
   height: 1px;
-  background-color: var(--link);
+  background-color: var(--link-hover);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.4s ease;
@@ -144,7 +144,7 @@ a.project-row .project-row-title::after {
 
 a.project-row:hover .project-row-title,
 a.project-row:focus-visible .project-row-title {
-  color: var(--link);
+  color: var(--link-hover);
 }
 
 a.project-row:hover .project-row-title::after,
@@ -167,7 +167,7 @@ a.nav-btn:visited {
 
 a.nav-btn:hover,
 a.nav-btn:focus-visible {
-  background-color: var(--link);
+  background-color: var(--link-hover);
   color: #ffffff;
 }
 
@@ -177,7 +177,7 @@ a.nav-btn:focus-visible:visited {
 }
 
 a.nav-btn[aria-current="page"] {
-  background-color: var(--link);
+  background-color: var(--link-hover);
   color: #ffffff;
 }
 
@@ -205,7 +205,7 @@ a.home-back-btn::after {
   right: 0;
   bottom: -0.05em;
   height: 1px;
-  background-color: var(--link);
+  background-color: var(--link-hover);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.4s ease;
@@ -213,12 +213,12 @@ a.home-back-btn::after {
 
 a.home-back-btn:hover,
 a.home-back-btn:focus-visible {
-  color: var(--link);
+  color: var(--link-hover);
 }
 
 a.home-back-btn:hover:visited,
 a.home-back-btn:focus-visible:visited {
-  color: var(--link);
+  color: var(--link-hover);
 }
 
 a.home-back-btn:hover::after,
@@ -243,7 +243,7 @@ a.home-back-btn:focus-visible::after {
 
 .photo-year-bar:hover .photo-year-label,
 .photo-year-bar:focus-visible .photo-year-label {
-  color: var(--link);
+  color: var(--link-hover);
 }
 
 .contact-separator {
@@ -265,7 +265,7 @@ a.contact-link {
   text-decoration: none;
   background-image: linear-gradient(
     90deg,
-    var(--link) 50%,
+    var(--link-hover) 50%,
     var(--foreground) 50%
   );
   background-size: 200% 100%;
@@ -293,7 +293,7 @@ a.contact-link::after {
   right: 0;
   bottom: 0.05em;
   height: 1px;
-  background-color: var(--link);
+  background-color: var(--link-hover);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.4s ease;
@@ -339,7 +339,7 @@ a.inline-link::after {
   right: 0;
   bottom: 0.05em;
   height: 1px;
-  background-color: var(--link);
+  background-color: var(--link-hover);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.4s ease;
@@ -347,12 +347,12 @@ a.inline-link::after {
 
 a.inline-link:hover,
 a.inline-link:focus-visible {
-  color: var(--link);
+  color: var(--link-hover);
 }
 
 a.inline-link:hover:visited,
 a.inline-link:focus-visible:visited {
-  color: var(--link);
+  color: var(--link-hover);
 }
 
 a.inline-link:hover::after,
