@@ -219,7 +219,7 @@ export default function Home() {
                 >
                   daily photos
                 </a>{" "}
-                with high school seniors (650k+ views)
+                with high school seniors (750k+ views)
               </li>
             </ul>
           </div>
