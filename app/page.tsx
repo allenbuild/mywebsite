@@ -128,7 +128,7 @@ export default function Home() {
               <li>
                 built{" "}
                 <a
-                  href="https://www.bizbuzz.it/"
+                  href="https://www.instagram.com/bizbuzznfp/"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-link"
