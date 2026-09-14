@@ -230,12 +230,12 @@ export default function Home() {
             </p>
             <ul className="mt-1 list-outside list-disc space-y-1 pl-5 text-[13px]">
               <li>
-                &ldquo;the world is often unkind to new talent, new creations.
-                the new needs friends&rdquo; — ratatouille
-              </li>
-              <li>
                 &ldquo;unless someone like you cares a whole awful lot, nothing
                 is going to get better. it&apos;s not&rdquo; — lorax
+              </li>
+              <li>
+                &ldquo;the world is often unkind to new talent, new creations.
+                the new needs friends&rdquo; — ratatouille
               </li>
               <li>
                 &ldquo;the only acceptable speed is as fast as physically
