@@ -17,7 +17,7 @@ export default function CursorGlowLayout({
         </div>
       </div>
       <div
-        className={`relative z-10 my-auto w-full min-w-0 ${contentClassName ?? "max-w-[37.5rem]"}`}
+        className={`relative z-10 my-auto w-full min-w-0 ${contentClassName ?? "max-w-[calc(37.5rem+11px)]"}`}
       >
         {children}
       </div>
