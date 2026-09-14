@@ -5,7 +5,7 @@ import MediaTimeline from "./MediaTimeline";
 
 export default function MediaPage() {
   return (
-    <CursorGlowLayout contentClassName="max-w-[37rem]">
+    <CursorGlowLayout contentClassName="max-w-[37.5rem]">
       <PageShell header={<SubpageHeader title="media" />}>
         <MediaTimeline />
       </PageShell>
