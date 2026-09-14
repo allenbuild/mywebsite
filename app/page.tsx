@@ -234,12 +234,12 @@ export default function Home() {
                 the new needs friends&rdquo; — ratatouille
               </li>
               <li>
-                &ldquo;the only acceptable speed is as fast as physically
-                possible&rdquo; — eddy xu
+                &ldquo;unless someone like you cares a whole awful lot, nothing
+                is going to get better. it&apos;s not&rdquo; — lorax
               </li>
               <li>
-                &ldquo;the only way to do great work is to love what you
-                do&rdquo; — steve jobs
+                &ldquo;the only acceptable speed is as fast as physically
+                possible&rdquo; — eddy xu
               </li>
               <li>
                 &ldquo;you have to obsess over it&rdquo; — kobe bryant
