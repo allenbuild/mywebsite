@@ -152,7 +152,9 @@ export default function Home() {
                 <span className="font-semibold">
                   university of michigan
                 </span>
-                . presented @{" "}
+                .
+                <br />
+                presented @{" "}
                 <a
                   href="https://ice.hkubs.hku.hk/events-archive/2025-ijio-special-issue-conference-on-industrial-organization-and-industrial-policy/"
                   target="_blank"
@@ -167,7 +169,9 @@ export default function Home() {
                 <span className="font-semibold">
                   purdue university fort wayne
                 </span>
-                . published @{" "}
+                .
+                <br />
+                published @{" "}
                 <a
                   href="https://www.thehuea.org/competitions/hiiec/results-2024-2025"
                   target="_blank"
