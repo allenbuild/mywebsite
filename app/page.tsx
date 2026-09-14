@@ -114,7 +114,9 @@ export default function Home() {
                   eyerobic
                 </a>
                 , a haptic wearable for blind swimmers w/ an uspto provisional
-                patent. presented @ nasa &{" "}
+                patent.
+                <br />
+                presented @ nasa &{" "}
                 <a
                   href="https://www.nctv17.org/community-events/naperville-innovators-turn-inspiration-into-invention/?srsltid=AfmBOopQFE8INSe9B-06H2d_L_PF-96b2U1bJH2WtL1eeYjXPUnpT7qq"
                   target="_blank"
@@ -152,9 +154,7 @@ export default function Home() {
                 <span className="font-semibold">
                   university of michigan
                 </span>
-                .
-                <br />
-                presented @{" "}
+                . presented @{" "}
                 <a
                   href="https://ice.hkubs.hku.hk/events-archive/2025-ijio-special-issue-conference-on-industrial-organization-and-industrial-policy/"
                   target="_blank"
