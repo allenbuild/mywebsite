@@ -228,7 +228,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div>
+          <div className="hidden">
             <p className="text-[15px] font-bold italic [font-family:var(--font-italic)]">
               things i believe:
             </p>
