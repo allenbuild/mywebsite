@@ -77,7 +77,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div>
+          <div className="mb-2">
             <p className="text-[15px] font-bold italic [font-family:var(--font-italic)]">
               things i&apos;ve done:
             </p>
