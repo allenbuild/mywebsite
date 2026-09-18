@@ -228,32 +228,6 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="hidden">
-            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)]">
-              things i believe:
-            </p>
-            <ul className="mt-1 list-outside list-disc space-y-1 pl-5 text-[13px]">
-              <li>
-                &ldquo;unless someone like you cares a whole awful lot, nothing
-                is going to get better. it&apos;s not&rdquo; — lorax
-              </li>
-              <li>
-                &ldquo;the world is often unkind to new talent, new creations.
-                the new needs friends&rdquo; — ratatouille
-              </li>
-              <li>
-                &ldquo;the only acceptable speed is as fast as physically
-                possible&rdquo; — eddy xu
-              </li>
-              <li>
-                &ldquo;you have to obsess over it&rdquo; — kobe bryant
-              </li>
-              <li>
-                &ldquo;fortune favors the bold&rdquo; — virgil
-              </li>
-            </ul>
-          </div>
-
         <nav
           aria-label="Site sections"
           className="grid grid-cols-2 gap-1.5 sm:flex sm:flex-wrap sm:gap-2"
