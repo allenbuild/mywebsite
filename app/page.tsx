@@ -77,7 +77,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="mb-2">
+          <div>
             <p className="text-[15px] font-bold italic [font-family:var(--font-italic)]">
               things i&apos;ve done:
             </p>
@@ -230,7 +230,7 @@ export default function Home() {
 
         <nav
           aria-label="Site sections"
-          className="grid grid-cols-2 gap-1.5 sm:flex sm:flex-wrap sm:gap-2"
+          className="!mt-6 grid grid-cols-2 gap-1.5 sm:flex sm:flex-wrap sm:gap-2"
         >
           {navLinks.map(({ href, label, className }) => (
             <Link
@@ -243,7 +243,7 @@ export default function Home() {
           ))}
         </nav>
 
-        <footer className="flex w-full justify-start">
+        <footer className="!mt-6 flex w-full justify-start">
           <div className="inline-flex max-w-full flex-wrap items-center gap-x-3 text-[14px]">
             {contactLinks.map((link, index) => (
               <span
