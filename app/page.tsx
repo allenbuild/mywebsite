@@ -142,7 +142,7 @@ export default function Home() {
                 <span className="font-semibold">
                   fish tank
                 </span>{" "}
-                contests for 1.5k students, awarding $15k+ in venture funding
+                contests for 1.5k students, writing $15k+ in angel checks
               </li>
               <li>
                 finalist @ conrad challenge (25/1.3k), blue ocean competition
