@@ -48,7 +48,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  built{" "}
+                  built a{" "}
                   <a
                     href="https://www.eyerobic.com/"
                     target="_blank"
