@@ -183,7 +183,7 @@ body {
   padding: 0 0 clamp(1.4rem, 3vw, 2.4rem);
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 1.25rem 2rem;
 }
 

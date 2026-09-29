@@ -129,12 +129,6 @@ export default function Home() {
       </main>
 
       <footer className="site-footer">
-        <div className="site-stamp">
-          <small>
-            © <time dateTime="2026">2026</time> Allen Xu
-          </small>
-        </div>
-
         <nav className="footer-links" aria-label="Contact">
           {contactLinks.map((link, index) => (
             <span key={link.label} className="link-cluster">
