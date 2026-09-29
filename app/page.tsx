@@ -24,10 +24,10 @@ export default function Home() {
         <article className="letter">
           <section className="copy-section">
             <p>
-              hey! i&apos;m allen. i&apos;m working on physical AI that helps
-              robots work alongside humans and other robots. i&apos;m also a z
-              fellow (w26), hf0 fellow-in-residence (s26), and first-year @
-              wharton.
+              <strong>hey! i&apos;m allen.</strong> i&apos;m working on physical
+              ai that helps robots work alongside humans and other robots.
+              i&apos;m also a z fellow (w26), hf0 fellow-in-residence (s26), and
+              first-year @ wharton.
             </p>
 
             <div className="milestones">
