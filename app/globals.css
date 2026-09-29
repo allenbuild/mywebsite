@@ -6,7 +6,7 @@
   --accent: #7b8388;
   --accent-light: #a7adb1;
   --focus: #59666e;
-  --copy-size: clamp(0.9rem, 0.86rem + 0.12vw, 1.02rem);
+  --copy-size: clamp(1.05rem, 1rem + 0.22vw, 1.2rem);
   --flow-gap: 1.08em;
   --section-gap: 1.65em;
   --content-width: 90ch;
@@ -64,7 +64,7 @@ body {
   background-repeat: repeat;
   color: var(--ink);
   font-family: "Times New Roman", Times, serif;
-  font-size: calc(var(--copy-size) - 1px);
+  font-size: var(--copy-size);
   font-weight: 400;
   line-height: 1.36;
   letter-spacing: -0.005em;
@@ -131,55 +131,50 @@ body {
   margin-bottom: 0.05em;
 }
 
-.letter ul {
+.letter ul,
+.milestones ul {
   margin-bottom: 0;
   padding-left: 1.8em;
+  list-style: disc;
 }
 
-.letter li {
+.letter li,
+.milestones li {
   padding-left: 0.28em;
+  display: list-item;
 }
 
-.letter li::marker {
+.letter li::marker,
+.milestones li::marker {
   font-size: 0.72em;
   color: var(--bullet);
 }
 
-.paint-underline {
+.text-underline {
   position: relative;
-  display: inline-block;
+  display: inline;
   color: inherit;
-  padding-bottom: 0.3em;
   text-decoration: none;
-}
-
-.paint-underline::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 0.56em;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 14' preserveAspectRatio='none'%3E%3Cpath d='M3 8.1C31 5.9 54 9.8 81 7.5S132 6.2 160 8.4S207 6.4 237 7.7' fill='none' stroke='%23A7ADB1' stroke-width='5.2' stroke-linecap='round' stroke-linejoin='round' opacity='.8'/%3E%3Cpath d='M5 9.5C42 10.4 69 7.4 105 9.2S176 7.9 235 9.4' fill='none' stroke='%23C5CACE' stroke-width='1.8' stroke-linecap='round' opacity='.38'/%3E%3C/svg%3E");
+  background-image: linear-gradient(var(--accent-light), var(--accent-light));
+  background-position: 0 100%;
   background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 100% 100%;
-  pointer-events: none;
+  background-size: 100% 1px;
+  padding-bottom: 0.05em;
 }
 
-.paint-underline:hover {
-  color: var(--ink);
-  filter: contrast(1.06);
+.text-underline:hover {
+  color: #59636a;
 }
 
-.paint-underline:hover::after {
-  animation: paint-redraw 480ms cubic-bezier(0.22, 0.65, 0.3, 1) both;
-}
-
-.paint-underline:focus-visible {
+.text-underline:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 3px;
   border-radius: 2px;
+}
+
+.footer-links .text-underline {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .site-footer {
@@ -245,22 +240,6 @@ body {
   line-height: 1.25;
 }
 
-.footer-links .paint-underline {
-  padding-bottom: 0.24em;
-  white-space: nowrap;
-}
-
-.footer-links .paint-underline::after {
-  bottom: 0.14em;
-  height: 1px;
-  background: var(--accent-light);
-  opacity: 1;
-}
-
-.footer-links .paint-underline:hover {
-  color: #59636a;
-}
-
 .footer-sep {
   color: #6f787e;
 }
@@ -269,42 +248,6 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-}
-
-.letter-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.12rem 0.55rem;
-  margin-top: var(--section-gap);
-  color: #6f787e;
-  font-size: calc(clamp(0.78rem, 0.74rem + 0.12vw, 0.86rem) - 1px);
-}
-
-.letter-nav .paint-underline {
-  padding-bottom: 0.24em;
-  white-space: nowrap;
-}
-
-.letter-nav .paint-underline::after {
-  bottom: 0.14em;
-  height: 1px;
-  background: var(--accent-light);
-  opacity: 1;
-}
-
-.letter-nav .paint-underline:hover {
-  color: #59636a;
-}
-
-@keyframes paint-redraw {
-  from {
-    clip-path: inset(0 100% 0 0);
-  }
-
-  to {
-    clip-path: inset(0 0 0 0);
-  }
 }
 
 /* Subpage / shared link styles */
@@ -425,17 +368,13 @@ a.home-back-btn:focus-visible {
 
 @media (max-width: 600px) {
   :root {
-    --copy-size: 0.92rem;
+    --copy-size: 1.05rem;
     --flow-gap: 1.12em;
     --section-gap: 1.7em;
   }
 
   body {
-    font-size: clamp(
-      0.5rem,
-      calc((100vw - 2rem) / 36),
-      calc(var(--copy-size) - 2px)
-    );
+    font-size: clamp(0.95rem, calc((100vw - 2rem) / 32), var(--copy-size));
   }
 
   .letter {
@@ -460,21 +399,11 @@ a.home-back-btn:focus-visible {
     margin-left: 0;
   }
 
-  .letter-nav {
-    column-gap: 0.8rem;
-  }
-
   .link-cluster {
     gap: 0;
   }
 
   .link-cluster > .footer-sep {
     display: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .paint-underline:hover::after {
-    animation: none;
   }
 }

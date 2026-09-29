@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const contactLinks = [
   {
     href: "https://mail.google.com/mail/?view=cm&fs=1&to=allenxu@wharton.upenn.edu",
@@ -19,19 +17,12 @@ const contactLinks = [
   },
 ] as const;
 
-const navLinks = [
-  { href: "/projects", label: "projects" },
-  { href: "/media", label: "media" },
-  { href: "/photography", label: "photography" },
-] as const;
-
 export default function Home() {
   return (
     <div className="page-shell">
       <main className="site-main">
         <article className="letter">
-          <section className="copy-section" aria-labelledby="name-heading">
-            <h1 id="name-heading">Allen Xu</h1>
+          <section className="copy-section">
             <p>
               hey! i&apos;m allen. i&apos;m working on physical AI that helps
               robots work alongside humans and other robots. i&apos;m also a z
@@ -48,7 +39,7 @@ export default function Home() {
                     href="http://build.ai/"
                     target="_blank"
                     rel="noreferrer"
-                    className="paint-underline"
+                    className="text-underline"
                   >
                     build ai
                   </a>
@@ -59,7 +50,7 @@ export default function Home() {
                     href="https://www.decademy.app/"
                     target="_blank"
                     rel="noreferrer"
-                    className="paint-underline"
+                    className="text-underline"
                   >
                     edtech startup
                   </a>{" "}
@@ -71,7 +62,7 @@ export default function Home() {
                     href="https://ice.hkubs.hku.hk/events-archive/2025-ijio-special-issue-conference-on-industrial-organization-and-industrial-policy/"
                     target="_blank"
                     rel="noreferrer"
-                    className="paint-underline"
+                    className="text-underline"
                   >
                     ijio
                   </a>
@@ -80,7 +71,7 @@ export default function Home() {
                     href="https://www.thehuea.org/competitions/hiiec/results-2024-2025"
                     target="_blank"
                     rel="noreferrer"
-                    className="paint-underline"
+                    className="text-underline"
                   >
                     harvard
                   </a>
@@ -89,7 +80,7 @@ export default function Home() {
                     href="https://ijsser.org/2025files/ijsser_10__68.pdf"
                     target="_blank"
                     rel="noreferrer"
-                    className="paint-underline"
+                    className="text-underline"
                   >
                     ijsser
                   </a>
@@ -100,7 +91,7 @@ export default function Home() {
                     href="https://www.eyerobic.com/"
                     target="_blank"
                     rel="noreferrer"
-                    className="paint-underline"
+                    className="text-underline"
                   >
                     haptic wearable
                   </a>{" "}
@@ -109,7 +100,7 @@ export default function Home() {
                     href="https://www.nctv17.org/community-events/naperville-innovators-turn-inspiration-into-invention/?srsltid=AfmBOopQFE8INSe9B-06H2d_L_PF-96b2U1bJH2WtL1eeYjXPUnpT7qq"
                     target="_blank"
                     rel="noreferrer"
-                    className="paint-underline"
+                    className="text-underline"
                   >
                     nbc 5 chicago
                   </a>
@@ -120,7 +111,7 @@ export default function Home() {
                     href="https://www.instagram.com/bizbuzznfp/"
                     target="_blank"
                     rel="noreferrer"
-                    className="paint-underline"
+                    className="text-underline"
                   >
                     nonprofit entrepreneurship incubator
                   </a>{" "}
@@ -133,21 +124,6 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-
-            <nav className="letter-nav" aria-label="Site sections">
-              {navLinks.map(({ href, label }, index) => (
-                <span key={href} className="link-cluster">
-                  {index > 0 ? (
-                    <span aria-hidden="true" className="footer-sep">
-                      ·
-                    </span>
-                  ) : null}
-                  <Link href={href} className="paint-underline">
-                    {label}
-                  </Link>
-                </span>
-              ))}
-            </nav>
           </section>
         </article>
       </main>
@@ -169,7 +145,7 @@ export default function Home() {
               ) : null}
               <a
                 href={link.href}
-                className="paint-underline"
+                className="text-underline"
                 {...("external" in link
                   ? { target: "_blank", rel: "noreferrer" }
                   : {})}
