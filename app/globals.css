@@ -95,7 +95,7 @@ body {
 }
 
 .letter .footer-links {
-  margin-top: 0.15em;
+  margin-top: 0;
 }
 
 .letter h1,
@@ -127,7 +127,7 @@ body {
 }
 
 .milestones {
-  margin-bottom: 0.9em;
+  margin-bottom: var(--flow-gap);
 }
 
 .copy-section + .copy-section {
@@ -247,7 +247,7 @@ body {
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 0.12rem 0.55rem;
-  margin: 0.25em 0 0 auto;
+  margin: 0 0 0 auto;
   color: #6f787e;
   font-size: calc(clamp(0.78rem, 0.74rem + 0.12vw, 0.86rem) - 1px);
   line-height: 1.25;
