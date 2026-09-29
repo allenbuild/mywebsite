@@ -2,11 +2,11 @@
 
 :root {
   --paper: #fafcfc;
-  --ink: #1b1b1b;
+  --ink: #3a3a3a;
   --accent: #7b8388;
   --accent-light: #a7adb1;
   --focus: #59666e;
-  --copy-size: clamp(1.05rem, 1rem + 0.22vw, 1.2rem);
+  --copy-size: clamp(0.98rem, 0.94rem + 0.14vw, 1.1rem);
   --flow-gap: 1.08em;
   --section-gap: 1.65em;
   --content-width: 72ch;
@@ -368,7 +368,7 @@ a.home-back-btn:focus-visible {
 
 @media (max-width: 600px) {
   :root {
-    --copy-size: 1.05rem;
+    --copy-size: 0.98rem;
     --flow-gap: 1.12em;
     --section-gap: 1.7em;
   }
