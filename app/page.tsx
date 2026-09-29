@@ -127,32 +127,30 @@ export default function Home() {
                 </li>
               </ul>
             </div>
+
+            <nav className="footer-links" aria-label="Contact">
+              {contactLinks.map((link, index) => (
+                <span key={link.label} className="link-cluster">
+                  {index > 0 ? (
+                    <span aria-hidden="true" className="footer-sep">
+                      ·
+                    </span>
+                  ) : null}
+                  <a
+                    href={link.href}
+                    className="text-underline"
+                    {...("external" in link
+                      ? { target: "_blank", rel: "noreferrer" }
+                      : {})}
+                  >
+                    {link.label}
+                  </a>
+                </span>
+              ))}
+            </nav>
           </section>
         </article>
       </main>
-
-      <footer className="site-footer">
-        <nav className="footer-links" aria-label="Contact">
-          {contactLinks.map((link, index) => (
-            <span key={link.label} className="link-cluster">
-              {index > 0 ? (
-                <span aria-hidden="true" className="footer-sep">
-                  ·
-                </span>
-              ) : null}
-              <a
-                href={link.href}
-                className="text-underline"
-                {...("external" in link
-                  ? { target: "_blank", rel: "noreferrer" }
-                  : {})}
-              >
-                {link.label}
-              </a>
-            </span>
-          ))}
-        </nav>
-      </footer>
     </div>
   );
 }
