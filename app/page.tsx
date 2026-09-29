@@ -107,7 +107,7 @@ export default function Home() {
                   </a>
                   ,{" "}
                   <a
-                    href="https://www.thehuea.org/competitions/hiiec/results-2024-2025"
+                    href="https://www.thehuea.org/competitions/hieec/results-2024-2025"
                     target="_blank"
                     rel="noreferrer"
                     className="text-underline"
