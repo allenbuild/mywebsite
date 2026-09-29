@@ -55,7 +55,7 @@ const mediaEntries: MediaEntry[] = [
     date: "2025-04-02",
     outlet: "Harvard Undergraduate Economics Association",
     title: "Minutes to Midnight",
-    href: "https://www.thehuea.org/competitions/hiiec/results-2024-2025",
+    href: "https://www.thehuea.org/competitions/hieec/results-2024-2025",
     outletAccent: true,
   },
   {
