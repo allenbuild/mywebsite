@@ -80,7 +80,7 @@ export default function Home() {
                   for 1.5k students w/ $15k+ in angel checks
                 </li>
                 <li>
-                  built{" "}
+                  built an{" "}
                   <a
                     href="https://www.decademy.app/"
                     target="_blank"
