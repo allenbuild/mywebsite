@@ -28,7 +28,7 @@ export default function Home() {
               {" "}
               i&apos;m working on physical ai that helps robots work alongside
               humans and other robots.
-              i&apos;m also a z fellow (w26), hf0 fellow-in-residence (s26), and
+              i&apos;m also a z-fellow (w26), hf0 fellow-in-residence (s26), and
               first-year @ wharton.
             </p>
 
