@@ -64,7 +64,7 @@ export default function Home() {
                     rel="noreferrer"
                     className="text-underline"
                   >
-                    nbc 5 chicago
+                    nbc news
                   </a>
                 </li>
                 <li>
