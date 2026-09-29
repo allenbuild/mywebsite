@@ -50,18 +50,6 @@ export default function Home() {
                 <li>
                   built{" "}
                   <a
-                    href="https://www.decademy.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-underline"
-                  >
-                    edtech startup
-                  </a>{" "}
-                  w/ 30k+ users
-                </li>
-                <li>
-                  built{" "}
-                  <a
                     href="https://www.eyerobic.com/"
                     target="_blank"
                     rel="noreferrer"
@@ -90,6 +78,18 @@ export default function Home() {
                     nonprofit entrepreneurship incubator
                   </a>{" "}
                   for 1.5k students w/ $15k+ in angel checks
+                </li>
+                <li>
+                  built{" "}
+                  <a
+                    href="https://www.decademy.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-underline"
+                  >
+                    edtech startup
+                  </a>{" "}
+                  w/ 30k+ users
                 </li>
                 <li>
                   finalist @ conrad challenge (25/1.3k), blue ocean competition
