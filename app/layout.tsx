@@ -1,48 +1,21 @@
 import type { Metadata } from "next";
-import {
-  Geist_Mono,
-  Inter,
-  Libre_Baskerville,
-  Playfair_Display,
-} from "next/font/google";
 import "./globals.css";
 import AdminViewCounter from "./AdminViewCounter";
 import ViewTracker from "./ViewTracker";
 
-const inter = Inter({
-  variable: "--font-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const playfairDisplay = Playfair_Display({
-  variable: "--font-display",
-  subsets: ["latin"],
-});
-
-const libreBaskerville = Libre_Baskerville({
-  variable: "--font-italic",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["italic"],
-});
-
 export const metadata: Metadata = {
   title: "Allen Xu",
-  description: "Personal website for Allen Xu.",
+  description:
+    "Allen Xu — physical AI, robotics, and first-year at Wharton. Z Fellow (W26), HF0 Fellow-in-Residence (S26).",
   manifest: "/site.webmanifest",
   icons: {
     icon: [
-      { url: "/favicon-16x16.png?v=7", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png?v=7", sizes: "32x32", type: "image/png" },
-      { url: "/favicon.ico?v=7", sizes: "any" },
+      { url: "/favicon-16x16.png?v=2", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png?v=2", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico?v=2", sizes: "any" },
     ],
-    apple: "/apple-icon.png?v=7",
-    shortcut: "/favicon.ico?v=7",
+    apple: "/apple-icon.png?v=2",
+    shortcut: "/favicon.ico?v=2",
   },
 };
 
@@ -57,10 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${geistMono.variable} ${playfairDisplay.variable} ${libreBaskerville.variable} h-full antialiased`}
-    >
+    <html lang="en" className="h-full">
       <body className="min-h-full flex flex-col">
         <ViewTracker />
         <AdminViewCounter />

@@ -1,6 +1,4 @@
 import Link from "next/link";
-import CursorGlowLayout from "./CursorGlowLayout";
-import PageShell from "./PageShell";
 
 const contactLinks = [
   {
@@ -22,252 +20,166 @@ const contactLinks = [
 ] as const;
 
 const navLinks = [
-  {
-    href: "/projects",
-    label: "projects",
-    className: "order-1",
-  },
-  {
-    href: "/media",
-    label: "media",
-    className: "order-2",
-  },
-  {
-    href: "/photography",
-    label: "photography",
-    className: "order-3",
-  },
+  { href: "/projects", label: "projects" },
+  { href: "/media", label: "media" },
+  { href: "/photography", label: "photography" },
 ] as const;
-
-const navBtnClass =
-  "nav-btn flex items-center justify-center rounded-md px-2.5 py-1.5 text-center text-[12px] font-normal text-[color:var(--nav-btn-fg)] visited:text-[color:var(--nav-btn-fg)] sm:px-3 sm:py-1.5 sm:text-[13px]";
 
 export default function Home() {
   return (
-    <CursorGlowLayout contentClassName="max-w-[calc(37.5rem+11px)]">
-      <PageShell>
-        <header>
-          <h1 className="text-[22px] font-semibold tracking-tight sm:text-[26px]">
-            Allen Xu
-          </h1>
-        </header>
-
-        <div className="mt-2 min-w-0 space-y-4 break-words text-[14px] leading-[1.65] text-[color:var(--foreground)]">
-          <p className="text-[16px] font-normal leading-[1.65]">
-            finance + cs @ wharton
-          </p>
-
-          <div>
-            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)]">
-              things i&apos;m doing:
+    <div className="page-shell">
+      <main className="site-main">
+        <article className="letter">
+          <section className="copy-section" aria-labelledby="name-heading">
+            <h1 id="name-heading">Allen Xu</h1>
+            <p>
+              hey! i&apos;m allen. i&apos;m working on physical AI that helps
+              robots work alongside humans and other robots. i&apos;m also a z
+              fellow (w26), hf0 fellow-in-residence (s26), and first-year @
+              wharton.
             </p>
-            <ul className="mt-1 list-outside list-disc space-y-1 pl-5 text-[13px]">
-              <li>
-                backing y-combinator and a16z speedrun startups @{" "}
-                <a
-                  href="https://www.multimodal.ventures/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-link"
-                >
-                  multimodal ventures
-                </a>{" "}
-                ($25m aum)
-              </li>
-            </ul>
-          </div>
 
-          <div>
-            <p className="text-[15px] font-bold italic [font-family:var(--font-italic)]">
-              things i&apos;ve done:
-            </p>
-            <ul className="mt-1 list-outside list-disc space-y-1 pl-5 text-[13px]">
-              <li>
-                built ego-exo datasets for physical ai @{" "}
-                <a
-                  href="http://build.ai/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-link"
-                >
-                  build ai
-                </a>{" "}
-                and{" "}
-                <a
-                  href="https://www.hf0.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-link"
-                >
-                  hf0
-                </a>{" "}
-                s26 (&lt;0.1% acceptance rate)
-              </li>
-              <li>
-                built{" "}
-                <a
-                  href="https://www.eyerobic.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-link"
-                >
-                  eyerobic
-                </a>
-                , a haptic wearable for blind swimmers w/ an uspto provisional
-                patent.
-                <br />
-                presented @ nasa &{" "}
-                <a
-                  href="https://www.nctv17.org/community-events/naperville-innovators-turn-inspiration-into-invention/?srsltid=AfmBOopQFE8INSe9B-06H2d_L_PF-96b2U1bJH2WtL1eeYjXPUnpT7qq"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-link"
-                >
-                  nbc 5 chicago
-                </a>
-                , winning $1m+ in academic scholarships
-              </li>
-              <li>
-                built{" "}
-                <a
-                  href="https://www.instagram.com/bizbuzznfp/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-link"
-                >
-                  bizbuzz
-                </a>
-                , a nonprofit entrepreneurship incubator across chicagoland. ran
-                three camps and{" "}
-                <span className="font-semibold">
-                  fish tank
-                </span>{" "}
-                contests for 1.5k students, writing $15k+ in angel checks
-              </li>
-              <li>
-                finalist @ conrad challenge (25/1.3k), blue ocean competition
-                (30/13k), deca internationals (6th/10k), ftc world championship
-                (7th/7k)
-              </li>
-              <li>
-                researched carbon trading @{" "}
-                <span className="font-semibold">
-                  university of michigan
-                </span>
-                . presented @{" "}
-                <a
-                  href="https://ice.hkubs.hku.hk/events-archive/2025-ijio-special-issue-conference-on-industrial-organization-and-industrial-policy/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-link"
-                >
-                  ijio 2025
-                </a>
-              </li>
-              <li>
-                researched governance effects on carbon intensity @{" "}
-                <span className="font-semibold">
-                  purdue university fort wayne
-                </span>
-                .
-                <br />
-                published @{" "}
-                <a
-                  href="https://www.thehuea.org/competitions/hiiec/results-2024-2025"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-link"
-                >
-                  harvard undergraduate economics association
-                </a>{" "}
-                &{" "}
-                <a
-                  href="https://ijsser.org/2025files/ijsser_10__68.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-link"
-                >
-                  ijsser
-                </a>
-              </li>
-              <li>
-                built{" "}
-                <a
-                  href="https://www.decademy.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-link"
-                >
-                  decademy.app
-                </a>
-                , an edtech startup w/ 30k+ users
-              </li>
-              <li>
-                interned @{" "}
-                <span className="font-semibold">
-                  university of notre dame
-                </span>{" "}
-                (institute for global investing),{" "}
-                <span className="font-semibold">
-                  the city of naperville
-                </span>{" "}
-                (financial advisory board)
-              </li>
-              <li>
-                posted{" "}
-                <a
-                  href="https://www.instagram.com/xuperstrong/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-link"
-                >
-                  daily photos
-                </a>{" "}
-                with high school seniors (750k+ views)
-              </li>
-            </ul>
-          </div>
+            <div className="milestones">
+              <p>prev:</p>
+              <ul>
+                <li>
+                  built ego-exo datasets for physical ai @{" "}
+                  <a
+                    href="http://build.ai/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="paint-underline"
+                  >
+                    build ai
+                  </a>
+                </li>
+                <li>
+                  built{" "}
+                  <a
+                    href="https://www.decademy.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="paint-underline"
+                  >
+                    edtech startup
+                  </a>{" "}
+                  w/ 30k+ users
+                </li>
+                <li>
+                  economics research @ university of michigan. published @{" "}
+                  <a
+                    href="https://ice.hkubs.hku.hk/events-archive/2025-ijio-special-issue-conference-on-industrial-organization-and-industrial-policy/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="paint-underline"
+                  >
+                    ijio
+                  </a>
+                  ,{" "}
+                  <a
+                    href="https://www.thehuea.org/competitions/hiiec/results-2024-2025"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="paint-underline"
+                  >
+                    harvard
+                  </a>
+                  ,{" "}
+                  <a
+                    href="https://ijsser.org/2025files/ijsser_10__68.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="paint-underline"
+                  >
+                    ijsser
+                  </a>
+                </li>
+                <li>
+                  built{" "}
+                  <a
+                    href="https://www.eyerobic.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="paint-underline"
+                  >
+                    haptic wearable
+                  </a>{" "}
+                  for blind swimmers. presented @ nasa &{" "}
+                  <a
+                    href="https://www.nctv17.org/community-events/naperville-innovators-turn-inspiration-into-invention/?srsltid=AfmBOopQFE8INSe9B-06H2d_L_PF-96b2U1bJH2WtL1eeYjXPUnpT7qq"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="paint-underline"
+                  >
+                    nbc 5 chicago
+                  </a>
+                </li>
+                <li>
+                  built{" "}
+                  <a
+                    href="https://www.instagram.com/bizbuzznfp/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="paint-underline"
+                  >
+                    nonprofit entrepreneurship incubator
+                  </a>{" "}
+                  for 1.5k students w/ $15k+ in angel checks
+                </li>
+                <li>
+                  finalist @ conrad challenge (25/1.3k), blue ocean competition
+                  (30/13k), deca internationals (6th/10k), ftc world championship
+                  (7th/7k)
+                </li>
+              </ul>
+            </div>
 
-        <nav
-          aria-label="Site sections"
-          className="!mt-6 grid grid-cols-2 gap-1.5 sm:flex sm:flex-wrap sm:gap-2"
-        >
-          {navLinks.map(({ href, label, className }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`${navBtnClass} ${className}`}
-            >
-              {label}
-            </Link>
+            <nav className="letter-nav" aria-label="Site sections">
+              {navLinks.map(({ href, label }, index) => (
+                <span key={href} className="link-cluster">
+                  {index > 0 ? (
+                    <span aria-hidden="true" className="footer-sep">
+                      ·
+                    </span>
+                  ) : null}
+                  <Link href={href} className="paint-underline">
+                    {label}
+                  </Link>
+                </span>
+              ))}
+            </nav>
+          </section>
+        </article>
+      </main>
+
+      <footer className="site-footer">
+        <div className="site-stamp">
+          <small>
+            © <time dateTime="2026">2026</time> Allen Xu
+          </small>
+        </div>
+
+        <nav className="footer-links" aria-label="Contact">
+          {contactLinks.map((link, index) => (
+            <span key={link.label} className="link-cluster">
+              {index > 0 ? (
+                <span aria-hidden="true" className="footer-sep">
+                  ·
+                </span>
+              ) : null}
+              <a
+                href={link.href}
+                className="paint-underline"
+                {...("external" in link
+                  ? { target: "_blank", rel: "noreferrer" }
+                  : {})}
+              >
+                {link.label}
+              </a>
+            </span>
           ))}
         </nav>
-
-        <footer className="!mt-6 flex w-full justify-start">
-          <div className="inline-flex max-w-full flex-wrap items-center gap-x-3 text-[14px]">
-            {contactLinks.map((link, index) => (
-              <span
-                key={link.label}
-                className="inline-flex items-center gap-x-3"
-              >
-                {index > 0 ? (
-                  <span aria-hidden className="contact-separator" />
-                ) : null}
-                <a
-                  href={link.href}
-                  className="contact-link"
-                  {...("external" in link
-                    ? { target: "_blank", rel: "noreferrer" }
-                    : {})}
-                >
-                  {link.label}
-                </a>
-              </span>
-            ))}
-          </div>
-        </footer>
-        </div>
-      </PageShell>
-    </CursorGlowLayout>
+      </footer>
+    </div>
   );
 }

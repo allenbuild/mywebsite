@@ -2,7 +2,7 @@ import HomeBackLink from "./HomeBackLink";
 
 export default function SubpageHeader({
   title,
-  titleClassName = "text-[22px] sm:text-[26px]",
+  titleClassName = "",
   className,
 }: {
   title: string;
@@ -11,11 +11,9 @@ export default function SubpageHeader({
 }) {
   return (
     <header
-      className={`flex items-center justify-between gap-4 ${className ?? ""}`.trim()}
+      className={`mb-[var(--flow-gap)] flex items-baseline justify-between gap-4 ${className ?? ""}`.trim()}
     >
-      <h1 className={`font-semibold tracking-tight ${titleClassName}`}>
-        {title}
-      </h1>
+      <h1 className={titleClassName}>{title}</h1>
       <HomeBackLink />
     </header>
   );

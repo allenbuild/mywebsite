@@ -1,7 +1,3 @@
-"use client";
-
-import ThemeToggle from "./ThemeToggle";
-
 export default function CursorGlowLayout({
   children,
   contentClassName,
@@ -10,17 +6,14 @@ export default function CursorGlowLayout({
   contentClassName?: string;
 }) {
   return (
-    <div className="relative flex min-h-dvh flex-col items-center px-5 py-8 sm:px-8 sm:py-12">
-      <div className="theme-toggle-bar pointer-events-none fixed inset-x-0 top-0 z-50 flex justify-end px-5 pt-5 sm:px-8 sm:pt-6">
-        <div className="pointer-events-auto">
-          <ThemeToggle />
+    <div className="page-shell">
+      <main className="site-main">
+        <div
+          className={`letter ${contentClassName ?? ""}`.trim()}
+        >
+          {children}
         </div>
-      </div>
-      <div
-        className={`relative z-10 my-auto w-full min-w-0 ${contentClassName ?? "max-w-[calc(37.5rem+11px)]"}`}
-      >
-        {children}
-      </div>
+      </main>
     </div>
   );
 }
