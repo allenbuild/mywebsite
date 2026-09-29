@@ -379,6 +379,31 @@ a.home-back-btn:focus-visible {
   color: var(--accent);
 }
 
+.factory-scene {
+  width: 100%;
+  height: min(41.87vw, 40rem);
+  margin: auto 0 0;
+  flex: none;
+  position: relative;
+  overflow: hidden;
+  filter: grayscale(1) contrast(1.06);
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.factory-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  background-image: url("/factory-linework-wide.png?v=1");
+  background-position: center top;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
 @media (max-width: 600px) {
   :root {
     --copy-size: 0.98rem;
@@ -418,5 +443,25 @@ a.home-back-btn:focus-visible {
 
   .link-cluster > .footer-sep {
     display: none;
+  }
+
+  .factory-scene {
+    height: 66.986vw;
+    filter: none;
+    mix-blend-mode: normal;
+    opacity: 1;
+  }
+
+  .factory-scene::before {
+    width: 160%;
+    background-size: 100% auto;
+    mix-blend-mode: multiply;
+    opacity: 0.44;
+  }
+}
+
+@media (forced-colors: active) {
+  .factory-scene {
+    display: none !important;
   }
 }

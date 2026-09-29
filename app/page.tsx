@@ -151,6 +151,7 @@ export default function Home() {
           </section>
         </article>
       </main>
+      <div className="factory-scene" aria-hidden="true" />
     </div>
   );
 }
