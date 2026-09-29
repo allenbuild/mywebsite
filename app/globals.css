@@ -150,6 +150,11 @@ body {
   color: var(--bullet);
 }
 
+.soft-strong {
+  font-weight: 700;
+  color: #6f787e;
+}
+
 .text-underline {
   position: relative;
   display: inline;

@@ -27,8 +27,10 @@ export default function Home() {
               <strong>hey! i&apos;m allen.</strong>
               {" "}
               i&apos;m working on human-robot collaboration. i&apos;m also a{" "}
-              <em>z-fellow</em> (w26), <em>hf0</em> fellow-in-residence (s26),
-              and first-year @ <em>wharton</em>.
+              <strong className="soft-strong">z-fellow</strong> (w26),{" "}
+              <strong className="soft-strong">hf0</strong> fellow-in-residence
+              (s26), and first-year @{" "}
+              <strong className="soft-strong">wharton</strong>.
             </p>
 
             <div className="milestones">
