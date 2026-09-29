@@ -26,9 +26,9 @@ export default function Home() {
             <p>
               <strong>hey! i&apos;m allen.</strong>
               {" "}
-              i&apos;m working on human-robot collaboration. i&apos;m also a
-              z-fellow (w26), hf0 fellow-in-residence (s26), and first-year @
-              wharton.
+              i&apos;m working on human-robot collaboration. i&apos;m also a{" "}
+              <em>z-fellow</em> (w26), <em>hf0</em> fellow-in-residence (s26),
+              and first-year @ <em>wharton</em>.
             </p>
 
             <div className="milestones">
