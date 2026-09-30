@@ -75,7 +75,7 @@ export default function Home() {
                     rel="noreferrer"
                     className="text-underline"
                   >
-                    nonprofit entrepreneurship incubator
+                    nonprofit business incubator
                   </a>{" "}
                   for 1.5k students w/ $15k+ in angel checks
                 </li>
