@@ -113,6 +113,7 @@ body {
 
 .letter p,
 .letter li {
+  text-align: justify;
   text-wrap: wrap;
 }
 
@@ -241,13 +242,15 @@ body {
 
 .footer-links {
   display: flex;
+  width: 100%;
   min-width: 0;
   max-width: 100%;
+  box-sizing: border-box;
   align-items: baseline;
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 0.12rem 0.55rem;
-  margin: 0 0 0 auto;
+  margin: 0;
   color: #6f787e;
   font-size: calc(clamp(0.78rem, 0.74rem + 0.12vw, 0.86rem) - 1px);
   line-height: 1.25;
@@ -423,6 +426,11 @@ a.home-back-btn:focus-visible {
 
   .letter ul {
     padding-left: 1.45em;
+  }
+
+  .letter p,
+  .letter li {
+    text-align: start;
   }
 
   .site-footer {
