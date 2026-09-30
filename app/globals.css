@@ -111,12 +111,6 @@ body {
   margin-top: 0;
 }
 
-.letter p,
-.letter li {
-  text-align: justify;
-  text-wrap: wrap;
-}
-
 .copy-section > p,
 .copy-section > ul {
   margin-bottom: var(--flow-gap);
@@ -426,11 +420,6 @@ a.home-back-btn:focus-visible {
 
   .letter ul {
     padding-left: 1.45em;
-  }
-
-  .letter p,
-  .letter li {
-    text-align: start;
   }
 
   .site-footer {
