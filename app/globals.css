@@ -90,7 +90,7 @@ body {
 .letter {
   width: min(calc(100% - 3rem), var(--content-width));
   margin: 0 auto;
-  padding-top: clamp(2.75rem, 6vw, 4.25rem);
+  padding-top: clamp(4.25rem, 9vw, 6.5rem);
   padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
 }
 
@@ -414,7 +414,7 @@ a.home-back-btn:focus-visible {
 
   .letter {
     width: calc(100% - 2rem);
-    padding-top: 2rem;
+    padding-top: 3rem;
     padding-bottom: 1.5rem;
   }
 
