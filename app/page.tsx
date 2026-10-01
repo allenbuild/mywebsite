@@ -98,21 +98,21 @@ export default function Home() {
                 <li>
                   economics research @ university of michigan. published @{" "}
                   <a
-                    href="https://ice.hkubs.hku.hk/events-archive/2025-ijio-special-issue-conference-on-industrial-organization-and-industrial-policy/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-underline"
-                  >
-                    ijio
-                  </a>
-                  ,{" "}
-                  <a
                     href="https://www.thehuea.org/competitions/hieec/results-2024-2025"
                     target="_blank"
                     rel="noreferrer"
                     className="text-underline"
                   >
                     harvard
+                  </a>
+                  ,{" "}
+                  <a
+                    href="https://ice.hkubs.hku.hk/events-archive/2025-ijio-special-issue-conference-on-industrial-organization-and-industrial-policy/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-underline"
+                  >
+                    ijio
                   </a>
                   ,{" "}
                   <a
