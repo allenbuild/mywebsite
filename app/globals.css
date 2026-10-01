@@ -245,9 +245,10 @@ body {
   flex-wrap: wrap;
   gap: 0.12rem 0.55rem;
   margin: 0;
-  padding-right: 1rem;
+  /* Keep github/etc flush with the letter text edge (hf0), not past it */
+  padding-right: 1.75rem;
   color: #6f787e;
-  font-size: calc(clamp(0.78rem, 0.74rem + 0.12vw, 0.86rem) - 1px);
+  font-size: clamp(0.84rem, 0.8rem + 0.14vw, 0.95rem);
   line-height: 1.25;
 }
 
