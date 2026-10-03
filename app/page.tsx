@@ -70,7 +70,7 @@ export default function Home() {
                 <li>
                   built a{" "}
                   <a
-                    href="https://www.instagram.com/bizbuzznfp/"
+                    href="https://bizbuzz.it"
                     target="_blank"
                     rel="noreferrer"
                     className="text-underline"
