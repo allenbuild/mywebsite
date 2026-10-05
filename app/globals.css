@@ -9,7 +9,7 @@
   --copy-size: clamp(0.98rem, 0.94rem + 0.14vw, 1.1rem);
   --flow-gap: 1.08em;
   --section-gap: 1.65em;
-  --content-width: 72ch;
+  --content-width: 68ch;
 
   /* Compatibility aliases for existing subpages */
   --canvas: var(--paper);
@@ -245,8 +245,8 @@ body {
   flex-wrap: wrap;
   gap: 0.12rem 0.55rem;
   margin: 0;
-  /* Keep github/etc flush with the letter text edge (hf0), not past it */
-  padding-right: 1.75rem;
+  /* Keep github flush with the ijsser text edge inside the narrower letter */
+  padding-right: 0.75rem;
   color: #6f787e;
   font-size: clamp(0.84rem, 0.8rem + 0.14vw, 0.95rem);
   line-height: 1.25;
