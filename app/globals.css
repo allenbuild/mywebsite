@@ -20,7 +20,7 @@
   --muted-2: rgba(27, 27, 27, 0.55);
   --rule: rgba(27, 27, 27, 0.14);
   --link: var(--ink);
-  --link-hover: var(--accent);
+  --link-hover: #4990df;
   --nav-btn-bg: #efefef;
   --nav-btn-fg: #1a1a1a;
   --media-accent: #c98920;
@@ -171,7 +171,7 @@ body {
 }
 
 .text-underline:hover {
-  color: #59636a;
+  color: var(--link-hover);
 }
 
 .text-underline:focus-visible {
