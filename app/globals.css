@@ -415,7 +415,7 @@ a.home-back-btn:focus-visible {
   }
 
   .letter {
-    width: calc(100% - 2rem);
+    width: calc(100% - 3rem);
     padding-top: 3rem;
     padding-bottom: 1.5rem;
   }
@@ -425,7 +425,7 @@ a.home-back-btn:focus-visible {
   }
 
   .site-footer {
-    width: calc(100% - 2rem);
+    width: calc(100% - 3rem);
     padding-bottom: 0.5rem;
     flex-direction: column-reverse;
     align-items: flex-start;
@@ -445,14 +445,14 @@ a.home-back-btn:focus-visible {
   }
 
   .factory-scene {
-    height: 66.986vw;
+    height: 82.057vw;
     filter: none;
     mix-blend-mode: normal;
     opacity: 1;
   }
 
   .factory-scene::before {
-    width: 160%;
+    width: 196%;
     background-size: 100% auto;
     mix-blend-mode: multiply;
     opacity: 0.44;
