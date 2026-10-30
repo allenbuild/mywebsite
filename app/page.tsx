@@ -37,7 +37,7 @@ export default function Home() {
               <p>prev:</p>
               <ul>
                 <li>
-                  built ego-exo datasets for general-purpose robots @{" "}
+                  built ego-exo datasets @{" "}
                   <a
                     href="http://build.ai/"
                     target="_blank"
