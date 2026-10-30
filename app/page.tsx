@@ -96,7 +96,7 @@ export default function Home() {
                   (30/13k), deca internationals (6th/10k), ftc worlds (7th/7k)
                 </li>
                 <li>
-                  economics research @ university of michigan. published @{" "}
+                  econ research @ university of michigan. published @{" "}
                   <a
                     href="https://www.thehuea.org/competitions/hieec/results-2024-2025"
                     target="_blank"
