@@ -51,13 +51,33 @@ html {
   overflow-x: clip;
 }
 
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/ibm-plex-mono.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono Fallback";
+  src: local("Arial");
+  ascent-override: 76.16%;
+  descent-override: 20.43%;
+  line-gap-override: 0%;
+  size-adjust: 134.59%;
+}
+
 body {
   min-height: 100%;
   margin: 0;
   overflow-x: clip;
   background-color: var(--paper);
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.52)),
+    linear-gradient(#ffffff85, #ffffff85),
     url("/graph-paper.png");
   background-position: left top;
   background-size: 256px 256px;
@@ -462,5 +482,143 @@ a.home-back-btn:focus-visible {
 @media (forced-colors: active) {
   .factory-scene {
     display: none !important;
+  }
+}
+
+/* Homepage, matched to the reference column */
+.home {
+  width: 100%;
+  max-width: 42rem;
+  margin-inline: auto;
+  padding: 2rem 1.25rem 3rem;
+  color: #2a2a2a;
+  font-family: Times, "Times New Roman", "Liberation Serif", serif;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-transform: lowercase;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.home strong {
+  font-weight: 700;
+}
+
+.home strong.soft-strong {
+  font-weight: 400;
+  color: #2f2f2f;
+  text-shadow: 0.3px 0 0 currentColor;
+}
+
+.home a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #a0a5a8;
+  text-underline-offset: 0.15em;
+  transition: text-decoration-color 0.2s;
+}
+
+.home a:hover {
+  text-decoration-color: #2a2a2a;
+}
+
+.home :focus-visible {
+  outline: 2px solid #59666e;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.ascii-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  margin: 0 0 2.25rem;
+}
+
+.ascii-play {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-align: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.ascii-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.8062 / 1;
+}
+
+.ascii-fail {
+  margin: 1.5rem 0;
+  color: #6a7378;
+  font-size: 0.875rem;
+  line-height: calc(1.25 / 0.875);
+}
+
+.home-copy {
+  max-width: 68ch;
+}
+
+.home-copy > :not(:last-child) {
+  margin-bottom: 0.9em;
+}
+
+.home-prev > p {
+  margin: 0 0 0.12em;
+}
+
+.home-copy ul {
+  margin: 0;
+  padding-left: 1.6em;
+  list-style: disc outside;
+}
+
+.home-copy li {
+  display: list-item;
+}
+
+.home-copy li::marker {
+  color: #6a7378;
+  font-size: 0.72em;
+}
+
+.home-links {
+  margin: 1.75em 0 0;
+}
+
+.home-sep {
+  color: #6a7378;
+}
+
+@media (min-width: 40rem) {
+  .home {
+    padding: 4rem 1.5rem 5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .home {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home a {
+    transition: none;
   }
 }
