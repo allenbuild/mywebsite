@@ -22,12 +22,29 @@ export default function Home() {
       <AsciiRobots />
       <section className="home-copy">
         <p>
-          <strong>hey! i&apos;m allen, co-founder of duet (a16z sr008)</strong>.
+          <strong>
+            hey! i&apos;m allen, co-founder of{" "}
+            <a
+              href="https://www.duetlabs.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              duet
+            </a>{" "}
+            (a16z sr008)
+          </strong>.
         </p>
         <p>
-          i&apos;m leaving wharton to bring the bitter lesson to multi-actor
-          robotics. en route, we&apos;ve raised $1m+ and turned down y
-          combinator. i&apos;m also a{" "}
+          i&apos;m leaving wharton to bring the{" "}
+          <a
+            href="https://www.cs.utexas.edu/~eunsol/courses/data/bitter_lesson.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            bitter lesson
+          </a>{" "}
+          to multi-actor robotics. en route, we&apos;ve raised $1m+ and turned
+          down y combinator. i&apos;m also a{" "}
           <strong className="soft-strong">z fellow</strong>,{" "}
           <strong className="soft-strong">pareto fellow</strong>, and{" "}
           <strong className="soft-strong">hf0 <span className="keep-word">fellow-in-residence</span></strong>.
