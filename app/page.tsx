@@ -49,8 +49,9 @@ export default function Home() {
           >
             bitter lesson
           </a>{" "}
-          to multi-actor robotics. en route, we&apos;ve raised $1m+ and turned
-          down y combinator. we believe humanity's greatest achievement will
+          to multi-actor robotics. en route, we&apos;ve raised a{" "}
+          <strong className="soft-strong">$1m+ pre-seed</strong> and turned
+          down <strong className="soft-strong">y combinator</strong>. we believe humanity's greatest achievement will
           come from teaching robots to collaborate with us and each other.
         </p>
         <div className="home-prev">
