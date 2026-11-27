@@ -41,7 +41,7 @@ export default function Home() {
           </strong>.
         </p>
         <p>
-          i&apos;m leaving wharton to bring the{" "}
+          i&apos;m leaving wharton after a semester to bring the{" "}
           <a
             href="https://www.cs.utexas.edu/~eunsol/courses/data/bitter_lesson.pdf"
             target="_blank"
