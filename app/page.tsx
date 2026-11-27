@@ -23,8 +23,8 @@ export default function Home() {
       <AsciiRobots />
       <section className="home-copy">
         <p>
-          <strong>
-            hey! i&apos;m allen, co-founder &amp; coo of{" "}
+          <strong>i&apos;m allen.</strong> i&apos;m the co-founder and coo of{" "}
+          <strong className="soft-strong">
             <a
               href="https://www.duetlabs.co/"
               target="_blank"
