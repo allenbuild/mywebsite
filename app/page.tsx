@@ -23,22 +23,24 @@ export default function Home() {
       <section className="home-copy">
         <p>
           <strong>hey! i&apos;m allen, co-founder of duet (a16z sr008)</strong>.
-          i dropped out of wharton and turned down yc to bring the bitter
-          lesson to multi-actor robotics. we raised $1m+ to teach robots to
-          collaborate with us and each other. i&apos;m also a{" "}
+        </p>
+        <p>
+          i&apos;m leaving wharton and turned down y combinator to bring the
+          bitter lesson to multi-actor robotics. we raised $1m+ to teach
+          robots to collaborate with us and each other. i&apos;m also a{" "}
           <strong className="soft-strong">z fellow</strong>,{" "}
           <strong className="soft-strong">pareto fellow</strong>, and{" "}
-          <strong className="soft-strong">hf0 fellow-in-residence</strong>.
+          <strong className="soft-strong">hf0 <span className="keep-word">fellow-in-residence</span></strong>.
         </p>
         <div className="home-prev">
-          <p>prev:</p>
+          <p><strong>prev:</strong></p>
           <ul>
             <li>
               built ego-exo datasets @{" "}
               <a href="http://build.ai/" target="_blank" rel="noopener noreferrer">
                 build ai
               </a>{" "}
-              (hf0 s26). raised $30m from abstract, pear, costanoa, and more
+              (hf0 s26). raised $30m from abstract, pear, and costanoa
             </li>
             <li>
               built a{" "}
