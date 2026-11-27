@@ -486,11 +486,25 @@ a.home-back-btn:focus-visible {
 }
 
 /* Homepage, matched to the reference column */
+.home-stage {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-stage::before,
+.home-stage::after {
+  content: "";
+  flex: 1 0 auto;
+  min-height: 1.5rem;
+}
+
 .home {
   width: 100%;
   max-width: 761.66875px;
   margin-inline: auto;
-  padding: 2rem 1.25rem 3rem;
+  padding: 0 1.25rem;
   color: #2a2a2a;
   font-family: Times, "Times New Roman", "Liberation Serif", serif;
   font-size: 1.0625rem;
@@ -611,7 +625,7 @@ a.home-back-btn:focus-visible {
 
 @media (min-width: 40rem) {
   .home {
-    padding: 4rem 1.5rem 5rem;
+    padding: 0 1.5rem;
   }
 }
 

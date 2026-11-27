@@ -18,6 +18,7 @@ const contactLinks = [
 
 export default function Home() {
   return (
+    <div className="home-stage">
     <main className="home">
       <AsciiRobots />
       <section className="home-copy">
@@ -144,5 +145,6 @@ export default function Home() {
         ))}
       </p>
     </main>
+    </div>
   );
 }
