@@ -34,10 +34,10 @@ export default function Home() {
             </a>{" "}
             (a16z sr008)
           </strong>. i&apos;m also a{" "}
-          <strong className="soft-strong">z fellow</strong>,{" "}
+          <strong className="soft-strong">z fellow (w27)</strong>,{" "}
           <strong className="soft-strong">pareto fellow</strong>, and{" "}
           <strong className="soft-strong">
-            hf0 <span className="keep-word">fellow-in-residence</span>
+            hf0 <span className="keep-word">fellow-in-residence (s26)</span>
           </strong>.
         </p>
         <p>
