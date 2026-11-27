@@ -25,9 +25,9 @@ export default function Home() {
           <strong>hey! i&apos;m allen, co-founder of duet (a16z sr008)</strong>.
         </p>
         <p>
-          i&apos;m leaving wharton and turned down y combinator to bring the
-          bitter lesson to multi-actor robotics. we raised $1m+ to teach
-          robots to collaborate with us and each other. i&apos;m also a{" "}
+          i&apos;m leaving wharton to bring the bitter lesson to multi-actor
+          robotics. en route, we&apos;ve raised $1m+ and turned down y
+          combinator. i&apos;m also a{" "}
           <strong className="soft-strong">z fellow</strong>,{" "}
           <strong className="soft-strong">pareto fellow</strong>, and{" "}
           <strong className="soft-strong">hf0 <span className="keep-word">fellow-in-residence</span></strong>.
