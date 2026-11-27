@@ -487,10 +487,12 @@ a.home-back-btn:focus-visible {
 
 /* Homepage, matched to the reference column */
 .home-stage {
+  box-sizing: border-box;
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  padding-bottom: 14vh;
 }
 
 .home-stage::before,
