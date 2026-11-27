@@ -488,7 +488,7 @@ a.home-back-btn:focus-visible {
 /* Homepage, matched to the reference column */
 .home {
   width: 100%;
-  max-width: 42rem;
+  max-width: 44.75rem;
   margin-inline: auto;
   padding: 2rem 1.25rem 3rem;
   color: #2a2a2a;
@@ -511,7 +511,7 @@ a.home-back-btn:focus-visible {
 .home strong.soft-strong {
   font-weight: 400;
   color: #2f2f2f;
-  text-shadow: 0.3px 0 0 currentColor;
+  text-shadow: 0.45px 0 0 currentColor;
 }
 
 .home a {
@@ -570,11 +570,15 @@ a.home-back-btn:focus-visible {
 }
 
 .home-copy {
-  max-width: 68ch;
+  max-width: none;
 }
 
 .home-copy > :not(:last-child) {
   margin-bottom: 0.9em;
+}
+
+.home-prev {
+  font-size: 0.9375rem;
 }
 
 .home-prev > p {
@@ -614,6 +618,10 @@ a.home-back-btn:focus-visible {
   .home {
     font-size: 0.9375rem;
     line-height: 1.55;
+  }
+
+  .home-prev {
+    font-size: 0.875rem;
   }
 }
 

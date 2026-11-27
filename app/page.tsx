@@ -2,8 +2,8 @@ import AsciiRobots from "./AsciiRobots";
 
 const contactLinks = [
   {
-    href: "https://mail.google.com/mail/?view=cm&fs=1&to=allenxu@wharton.upenn.edu",
-    label: "email",
+    href: "mailto:allen@duetlabs.co",
+    label: "allen@duetlabs.co",
   },
   {
     href: "https://www.linkedin.com/in/allenjxu/",
@@ -26,9 +26,9 @@ export default function Home() {
           i dropped out of wharton and turned down yc to bring the bitter
           lesson to multi-actor robotics. we raised $1m+ to teach robots to
           collaborate with us and each other. i&apos;m also a{" "}
-          <strong className="soft-strong">
-            z fellow, pareto fellow, and hf0 fellow-in-residence
-          </strong>.
+          <strong className="soft-strong">z fellow</strong>,{" "}
+          <strong className="soft-strong">pareto fellow</strong>, and{" "}
+          <strong className="soft-strong">hf0 fellow-in-residence</strong>.
         </p>
         <div className="home-prev">
           <p>prev:</p>
@@ -78,7 +78,7 @@ export default function Home() {
             </li>
             <li>
               finalist @ conrad challenge (25/1.3k), blue ocean contest (30/13k),
-              ftc worlds (7th/7k), deca internationals (6th/10k)
+              ftc worlds (7th/7k), deca icdc (6th/10k)
             </li>
             <li>
               econ research @ university of michigan. published @{" "}
@@ -113,7 +113,12 @@ export default function Home() {
         {contactLinks.map((link, index) => (
           <span key={link.label}>
             {index > 0 ? <span className="home-sep"> · </span> : null}
-            <a href={link.href} target="_blank" rel="noopener noreferrer">
+            <a
+              href={link.href}
+              {...(link.href.startsWith("mailto:")
+                ? {}
+                : { target: "_blank", rel: "noopener noreferrer" })}
+            >
               {link.label}
             </a>
           </span>
