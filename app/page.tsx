@@ -77,8 +77,8 @@ export default function Home() {
               with 30k+ users
             </li>
             <li>
-              finalist @ conrad challenge (25/1.3k), blue ocean contest (30/13k),
-              ftc worlds (7th/7k), deca icdc (6th/10k)
+              finalist @ conrad challenge (25/5k), blue ocean contest (30/13k),
+              ftc worlds (7/7k), deca icdc (6/10k)
             </li>
             <li>
               econ research @ university of michigan. published @{" "}
