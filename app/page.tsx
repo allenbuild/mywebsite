@@ -93,7 +93,7 @@ export default function Home() {
               >
                 edtech startup
               </a>{" "}
-              with 30k+ users
+              with 30k+ users and 131k+ views
             </li>
             <li>
               finalist @ conrad challenge (25/5k), blue ocean contest (30/13k),
