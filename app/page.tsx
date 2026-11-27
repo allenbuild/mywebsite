@@ -24,7 +24,7 @@ export default function Home() {
       <section className="home-copy">
         <p>
           <strong>
-            hey! i&apos;m allen, co-founder of{" "}
+            hey! i&apos;m allen, co-founder &amp; coo of{" "}
             <a
               href="https://www.duetlabs.co/"
               target="_blank"
