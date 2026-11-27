@@ -33,6 +33,11 @@ export default function Home() {
               duet
             </a>{" "}
             (a16z sr008)
+          </strong>. i&apos;m also a{" "}
+          <strong className="soft-strong">z fellow</strong>,{" "}
+          <strong className="soft-strong">pareto fellow</strong>, and{" "}
+          <strong className="soft-strong">
+            hf0 <span className="keep-word">fellow-in-residence</span>
           </strong>.
         </p>
         <p>
@@ -45,10 +50,8 @@ export default function Home() {
             bitter lesson
           </a>{" "}
           to multi-actor robotics. en route, we&apos;ve raised $1m+ and turned
-          down y combinator. i&apos;m also a{" "}
-          <strong className="soft-strong">z fellow</strong>,{" "}
-          <strong className="soft-strong">pareto fellow</strong>, and{" "}
-          <strong className="soft-strong">hf0 <span className="keep-word">fellow-in-residence</span></strong>.
+          down y combinator. we believe humanity's greatest achievement will
+          come from teaching robots to collaborate with us and each other.
         </p>
         <div className="home-prev">
           <p><strong>prev:</strong></p>
