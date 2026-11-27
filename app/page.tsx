@@ -50,7 +50,10 @@ export default function Home() {
             bitter lesson
           </a>{" "}
           to multi-actor robotics. en route, we&apos;ve raised a{" "}
-          <strong className="soft-strong">$1m+ pre-seed</strong> and turned
+          <strong className="soft-strong">
+            $1m+ <span className="keep-word">pre-seed</span>
+          </strong>{" "}
+          and turned
           down <strong className="soft-strong">y combinator</strong>. we believe humanity's greatest achievement will
           come from teaching robots to collaborate with us and each other.
         </p>
